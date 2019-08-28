@@ -1,0 +1,9 @@
+%module(directors = "1") cppdll
+%{
+	/* 在包装代码中包含头文件 */
+#include "c++_file.h"  
+%}
+%feature("director") Addmethod;
+
+/* 解析头文件生成包装代码 */
+%include "c++_file.h"
