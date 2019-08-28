@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{F5D97846-C4BE-4635-A18B-B4BB1354FA43}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Trader</RootNamespace>
+    <AssemblyName>Trader</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CThostFtdcAccountPropertyField.cs" />
+    <Compile Include="CThostFtdcAccountregisterField.cs" />
+    <Compile Include="CThostFtdcAuthenticationInfoField.cs" />
+    <Compile Include="CThostFtdcBatchOrderActionField.cs" />
+    <Compile Include="CThostFtdcBrokerDepositField.cs" />
+    <Compile Include="CThostFtdcBrokerField.cs" />
+    <Compile Include="CThostFtdcBrokerSyncField.cs" />
+    <Compile Include="CThostFtdcBrokerTradingAlgosField.cs" />
+    <Compile Include="CThostFtdcBrokerTradingParamsField.cs" />
+    <Compile Include="CThostFtdcBrokerUserEventField.cs" />
+    <Compile Include="CThostFtdcBrokerUserField.cs" />
+    <Compile Include="CThostFtdcBrokerUserFunctionField.cs" />
+    <Compile Include="CThostFtdcBrokerUserOTPParamField.cs" />
+    <Compile Include="CThostFtdcBrokerUserPasswordField.cs" />
+    <Compile Include="CThostFtdcBrokerUserRightAssignField.cs" />
+    <Compile Include="CThostFtdcBrokerWithdrawAlgorithmField.cs" />
+    <Compile Include="CThostFtdcBulletinField.cs" />
+    <Compile Include="CThostFtdcCancelAccountField.cs" />
+    <Compile Include="CThostFtdcCFMMCBrokerKeyField.cs" />
+    <Compile Include="CThostFtdcCFMMCTradingAccountKeyField.cs" />
+    <Compile Include="CThostFtdcCFMMCTradingAccountTokenField.cs" />
+    <Compile Include="CThostFtdcChangeAccountField.cs" />
+    <Compile Include="CThostFtdcCombActionField.cs" />
+    <Compile Include="CThostFtdcCombinationLegField.cs" />
+    <Compile Include="CThostFtdcCombInstrumentGuardField.cs" />
+    <Compile Include="CThostFtdcCommPhaseField.cs" />
+    <Compile Include="CThostFtdcCommRateModelField.cs" />
+    <Compile Include="CThostFtdcContractBankField.cs" />
+    <Compile Include="CThostFtdcCurrDRIdentityField.cs" />
+    <Compile Include="CThostFtdcCurrentTimeField.cs" />
+    <Compile Include="CThostFtdcCurrTransferIdentityField.cs" />
+    <Compile Include="CThostFtdcDepartmentUserField.cs" />
+    <Compile Include="CThostFtdcDepositResultInformField.cs" />
+    <Compile Include="CThostFtdcDepthMarketDataField.cs" />
+    <Compile Include="CThostFtdcDiscountField.cs" />
+    <Compile Include="CThostFtdcDisseminationField.cs" />
+    <Compile Include="CThostFtdcDRTransferField.cs" />
+    <Compile Include="CThostFtdcErrExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcErrExecOrderField.cs" />
+    <Compile Include="CThostFtdcErrorConditionalOrderField.cs" />
+    <Compile Include="CThostFtdcErrOrderActionField.cs" />
+    <Compile Include="CThostFtdcErrOrderField.cs" />
+    <Compile Include="CThostFtdcEWarrantOffsetField.cs" />
+    <Compile Include="CThostFtdcExchangeBatchOrderActionField.cs" />
+    <Compile Include="CThostFtdcExchangeCombActionField.cs" />
+    <Compile Include="CThostFtdcExchangeExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcExchangeExecOrderField.cs" />
+    <Compile Include="CThostFtdcExchangeField.cs" />
+    <Compile Include="CThostFtdcExchangeForQuoteField.cs" />
+    <Compile Include="CThostFtdcExchangeMarginRateAdjustField.cs" />
+    <Compile Include="CThostFtdcExchangeMarginRateField.cs" />
+    <Compile Include="CThostFtdcExchangeOptionSelfCloseActionField.cs" />
+    <Compile Include="CThostFtdcExchangeOptionSelfCloseField.cs" />
+    <Compile Include="CThostFtdcExchangeOrderActionErrorField.cs" />
+    <Compile Include="CThostFtdcExchangeOrderActionField.cs" />
+    <Compile Include="CThostFtdcExchangeOrderField.cs" />
+    <Compile Include="CThostFtdcExchangeOrderInsertErrorField.cs" />
+    <Compile Include="CThostFtdcExchangeQuoteActionField.cs" />
+    <Compile Include="CThostFtdcExchangeQuoteField.cs" />
+    <Compile Include="CThostFtdcExchangeRateField.cs" />
+    <Compile Include="CThostFtdcExchangeSequenceField.cs" />
+    <Compile Include="CThostFtdcExchangeTradeField.cs" />
+    <Compile Include="CThostFtdcExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcExecOrderField.cs" />
+    <Compile Include="CThostFtdcFensUserInfoField.cs" />
+    <Compile Include="CThostFtdcForceUserLogoutField.cs" />
+    <Compile Include="CThostFtdcForQuoteField.cs" />
+    <Compile Include="CThostFtdcForQuoteParamField.cs" />
+    <Compile Include="CThostFtdcForQuoteRspField.cs" />
+    <Compile Include="CThostFtdcFrontStatusField.cs" />
+    <Compile Include="CThostFtdcFutureLimitPosiParamField.cs" />
+    <Compile Include="CThostFtdcFutureSignIOField.cs" />
+    <Compile Include="CThostFtdcIndexPriceField.cs" />
+    <Compile Include="CThostFtdcInputBatchOrderActionField.cs" />
+    <Compile Include="CThostFtdcInputCombActionField.cs" />
+    <Compile Include="CThostFtdcInputExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcInputExecOrderField.cs" />
+    <Compile Include="CThostFtdcInputForQuoteField.cs" />
+    <Compile Include="CThostFtdcInputOptionSelfCloseActionField.cs" />
+    <Compile Include="CThostFtdcInputOptionSelfCloseField.cs" />
+    <Compile Include="CThostFtdcInputOrderActionField.cs" />
+    <Compile Include="CThostFtdcInputOrderField.cs" />
+    <Compile Include="CThostFtdcInputQuoteActionField.cs" />
+    <Compile Include="CThostFtdcInputQuoteField.cs" />
+    <Compile Include="CThostFtdcInstrumentCommissionRateField.cs" />
+    <Compile Include="CThostFtdcInstrumentField.cs" />
+    <Compile Include="CThostFtdcInstrumentMarginRateAdjustField.cs" />
+    <Compile Include="CThostFtdcInstrumentMarginRateField.cs" />
+    <Compile Include="CThostFtdcInstrumentMarginRateULField.cs" />
+    <Compile Include="CThostFtdcInstrumentOrderCommRateField.cs" />
+    <Compile Include="CThostFtdcInstrumentStatusField.cs" />
+    <Compile Include="CThostFtdcInstrumentTradingRightField.cs" />
+    <Compile Include="CThostFtdcInvestorAccountField.cs" />
+    <Compile Include="CThostFtdcInvestorField.cs" />
+    <Compile Include="CThostFtdcInvestorGroupField.cs" />
+    <Compile Include="CThostFtdcInvestorPositionCombineDetailField.cs" />
+    <Compile Include="CThostFtdcInvestorPositionDetailField.cs" />
+    <Compile Include="CThostFtdcInvestorPositionField.cs" />
+    <Compile Include="CThostFtdcInvestorProductGroupMarginField.cs" />
+    <Compile Include="CThostFtdcInvestorWithdrawAlgorithmField.cs" />
+    <Compile Include="CThostFtdcInvestUnitField.cs" />
+    <Compile Include="CThostFtdcIPListField.cs" />
+    <Compile Include="CThostFtdcLinkManField.cs" />
+    <Compile Include="CThostFtdcLoadSettlementInfoField.cs" />
+    <Compile Include="CThostFtdcLoginForbiddenIPField.cs" />
+    <Compile Include="CThostFtdcLoginForbiddenUserField.cs" />
+    <Compile Include="CThostFtdcLoginInfoField.cs" />
+    <Compile Include="CThostFtdcLogoutAllField.cs" />
+    <Compile Include="CThostFtdcManualSyncBrokerUserOTPField.cs" />
+    <Compile Include="CThostFtdcMarginModelField.cs" />
+    <Compile Include="CThostFtdcMarketDataAsk23Field.cs" />
+    <Compile Include="CThostFtdcMarketDataAsk45Field.cs" />
+    <Compile Include="CThostFtdcMarketDataAveragePriceField.cs" />
+    <Compile Include="CThostFtdcMarketDataBaseField.cs" />
+    <Compile Include="CThostFtdcMarketDataBestPriceField.cs" />
+    <Compile Include="CThostFtdcMarketDataBid23Field.cs" />
+    <Compile Include="CThostFtdcMarketDataBid45Field.cs" />
+    <Compile Include="CThostFtdcMarketDataExchangeField.cs" />
+    <Compile Include="CThostFtdcMarketDataField.cs" />
+    <Compile Include="CThostFtdcMarketDataLastMatchField.cs" />
+    <Compile Include="CThostFtdcMarketDataStaticField.cs" />
+    <Compile Include="CThostFtdcMarketDataUpdateTimeField.cs" />
+    <Compile Include="CThostFtdcMDTraderOfferField.cs" />
+    <Compile Include="CThostFtdcMMInstrumentCommissionRateField.cs" />
+    <Compile Include="CThostFtdcMMOptionInstrCommRateField.cs" />
+    <Compile Include="CThostFtdcMulticastGroupInfoField.cs" />
+    <Compile Include="CThostFtdcNoticeField.cs" />
+    <Compile Include="CThostFtdcNotifyFutureSignInField.cs" />
+    <Compile Include="CThostFtdcNotifyFutureSignOutField.cs" />
+    <Compile Include="CThostFtdcNotifyQueryAccountField.cs" />
+    <Compile Include="CThostFtdcNotifySyncKeyField.cs" />
+    <Compile Include="CThostFtdcOpenAccountField.cs" />
+    <Compile Include="CThostFtdcOptionInstrCommRateField.cs" />
+    <Compile Include="CThostFtdcOptionInstrDeltaField.cs" />
+    <Compile Include="CThostFtdcOptionInstrMarginAdjustField.cs" />
+    <Compile Include="CThostFtdcOptionInstrMiniMarginField.cs" />
+    <Compile Include="CThostFtdcOptionInstrTradeCostField.cs" />
+    <Compile Include="CThostFtdcOptionInstrTradingRightField.cs" />
+    <Compile Include="CThostFtdcOptionSelfCloseActionField.cs" />
+    <Compile Include="CThostFtdcOptionSelfCloseField.cs" />
+    <Compile Include="CThostFtdcOrderActionField.cs" />
+    <Compile Include="CThostFtdcOrderField.cs" />
+    <Compile Include="CThostFtdcParkedOrderActionField.cs" />
+    <Compile Include="CThostFtdcParkedOrderField.cs" />
+    <Compile Include="CThostFtdcPartBrokerField.cs" />
+    <Compile Include="CThostFtdcPositionProfitAlgorithmField.cs" />
+    <Compile Include="CThostFtdcProductExchRateField.cs" />
+    <Compile Include="CThostFtdcProductField.cs" />
+    <Compile Include="CThostFtdcProductGroupField.cs" />
+    <Compile Include="CThostFtdcQryAccountregisterField.cs" />
+    <Compile Include="CThostFtdcQryBatchOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryBrokerField.cs" />
+    <Compile Include="CThostFtdcQryBrokerTradingAlgosField.cs" />
+    <Compile Include="CThostFtdcQryBrokerTradingParamsField.cs" />
+    <Compile Include="CThostFtdcQryBrokerUserEventField.cs" />
+    <Compile Include="CThostFtdcQryBrokerUserField.cs" />
+    <Compile Include="CThostFtdcQryBrokerUserFunctionField.cs" />
+    <Compile Include="CThostFtdcQryBulletinField.cs" />
+    <Compile Include="CThostFtdcQryCFMMCBrokerKeyField.cs" />
+    <Compile Include="CThostFtdcQryCFMMCTradingAccountKeyField.cs" />
+    <Compile Include="CThostFtdcQryCombActionField.cs" />
+    <Compile Include="CThostFtdcQryCombinationLegField.cs" />
+    <Compile Include="CThostFtdcQryCombInstrumentGuardField.cs" />
+    <Compile Include="CThostFtdcQryCommRateModelField.cs" />
+    <Compile Include="CThostFtdcQryContractBankField.cs" />
+    <Compile Include="CThostFtdcQryCurrDRIdentityField.cs" />
+    <Compile Include="CThostFtdcQryDepthMarketDataField.cs" />
+    <Compile Include="CThostFtdcQryErrExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryErrExecOrderField.cs" />
+    <Compile Include="CThostFtdcQryErrOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryErrOrderField.cs" />
+    <Compile Include="CThostFtdcQryEWarrantOffsetField.cs" />
+    <Compile Include="CThostFtdcQryExchangeCombActionField.cs" />
+    <Compile Include="CThostFtdcQryExchangeExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryExchangeExecOrderField.cs" />
+    <Compile Include="CThostFtdcQryExchangeField.cs" />
+    <Compile Include="CThostFtdcQryExchangeForQuoteField.cs" />
+    <Compile Include="CThostFtdcQryExchangeMarginRateAdjustField.cs" />
+    <Compile Include="CThostFtdcQryExchangeMarginRateField.cs" />
+    <Compile Include="CThostFtdcQryExchangeOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryExchangeOrderField.cs" />
+    <Compile Include="CThostFtdcQryExchangeQuoteActionField.cs" />
+    <Compile Include="CThostFtdcQryExchangeQuoteField.cs" />
+    <Compile Include="CThostFtdcQryExchangeRateField.cs" />
+    <Compile Include="CThostFtdcQryExchangeSequenceField.cs" />
+    <Compile Include="CThostFtdcQryExecOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryExecOrderField.cs" />
+    <Compile Include="CThostFtdcQryForQuoteField.cs" />
+    <Compile Include="CThostFtdcQryForQuoteParamField.cs" />
+    <Compile Include="CThostFtdcQryFrontStatusField.cs" />
+    <Compile Include="CThostFtdcQryHisOrderField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentCommissionRateField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentMarginRateField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentOrderCommRateField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentStatusField.cs" />
+    <Compile Include="CThostFtdcQryInstrumentTradingRightField.cs" />
+    <Compile Include="CThostFtdcQryInvestorField.cs" />
+    <Compile Include="CThostFtdcQryInvestorGroupField.cs" />
+    <Compile Include="CThostFtdcQryInvestorPositionCombineDetailField.cs" />
+    <Compile Include="CThostFtdcQryInvestorPositionDetailField.cs" />
+    <Compile Include="CThostFtdcQryInvestorPositionField.cs" />
+    <Compile Include="CThostFtdcQryInvestorProductGroupMarginField.cs" />
+    <Compile Include="CThostFtdcQryInvestUnitField.cs" />
+    <Compile Include="CThostFtdcQryIPListField.cs" />
+    <Compile Include="CThostFtdcQryLinkManField.cs" />
+    <Compile Include="CThostFtdcQryLoginForbiddenIPField.cs" />
+    <Compile Include="CThostFtdcQryLoginForbiddenUserField.cs" />
+    <Compile Include="CThostFtdcQryMarginModelField.cs" />
+    <Compile Include="CThostFtdcQryMDTraderOfferField.cs" />
+    <Compile Include="CThostFtdcQryMMInstrumentCommissionRateField.cs" />
+    <Compile Include="CThostFtdcQryMMOptionInstrCommRateField.cs" />
+    <Compile Include="CThostFtdcQryNoticeField.cs" />
+    <Compile Include="CThostFtdcQryOptionInstrCommRateField.cs" />
+    <Compile Include="CThostFtdcQryOptionInstrTradeCostField.cs" />
+    <Compile Include="CThostFtdcQryOptionInstrTradingRightField.cs" />
+    <Compile Include="CThostFtdcQryOptionSelfCloseActionField.cs" />
+    <Compile Include="CThostFtdcQryOptionSelfCloseField.cs" />
+    <Compile Include="CThostFtdcQryOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryOrderField.cs" />
+    <Compile Include="CThostFtdcQryParkedOrderActionField.cs" />
+    <Compile Include="CThostFtdcQryParkedOrderField.cs" />
+    <Compile Include="CThostFtdcQryPartBrokerField.cs" />
+    <Compile Include="CThostFtdcQryProductExchRateField.cs" />
+    <Compile Include="CThostFtdcQryProductField.cs" />
+    <Compile Include="CThostFtdcQryProductGroupField.cs" />
+    <Compile Include="CThostFtdcQryQuoteActionField.cs" />
+    <Compile Include="CThostFtdcQryQuoteField.cs" />
+    <Compile Include="CThostFtdcQrySecAgentACIDMapField.cs" />
+    <Compile Include="CThostFtdcQrySecAgentCheckModeField.cs" />
+    <Compile Include="CThostFtdcQrySecAgentTradeInfoField.cs" />
+    <Compile Include="CThostFtdcQrySettlementInfoConfirmField.cs" />
+    <Compile Include="CThostFtdcQrySettlementInfoField.cs" />
+    <Compile Include="CThostFtdcQryStrikeOffsetField.cs" />
+    <Compile Include="CThostFtdcQrySuperUserField.cs" />
+    <Compile Include="CThostFtdcQrySuperUserFunctionField.cs" />
+    <Compile Include="CThostFtdcQrySyncDelaySwapField.cs" />
+    <Compile Include="CThostFtdcQrySyncDepositField.cs" />
+    <Compile Include="CThostFtdcQrySyncFundMortgageField.cs" />
+    <Compile Include="CThostFtdcQrySyncStatusField.cs" />
+    <Compile Include="CThostFtdcQryTradeField.cs" />
+    <Compile Include="CThostFtdcQryTraderField.cs" />
+    <Compile Include="CThostFtdcQryTraderOfferField.cs" />
+    <Compile Include="CThostFtdcQryTradingAccountField.cs" />
+    <Compile Include="CThostFtdcQryTradingCodeField.cs" />
+    <Compile Include="CThostFtdcQryTradingNoticeField.cs" />
+    <Compile Include="CThostFtdcQryTransferBankField.cs" />
+    <Compile Include="CThostFtdcQryTransferSerialField.cs" />
+    <Compile Include="CThostFtdcQryUserRightsAssignField.cs" />
+    <Compile Include="CThostFtdcQryUserSessionField.cs" />
+    <Compile Include="CThostFtdcQueryBrokerDepositField.cs" />
+    <Compile Include="CThostFtdcQueryCFMMCTradingAccountTokenField.cs" />
+    <Compile Include="CThostFtdcQueryFreqField.cs" />
+    <Compile Include="CThostFtdcQueryMaxOrderVolumeField.cs" />
+    <Compile Include="CThostFtdcQueryMaxOrderVolumeWithPriceField.cs" />
+    <Compile Include="CThostFtdcQuoteActionField.cs" />
+    <Compile Include="CThostFtdcQuoteField.cs" />
+    <Compile Include="CThostFtdcRemoveParkedOrderActionField.cs" />
+    <Compile Include="CThostFtdcRemoveParkedOrderField.cs" />
+    <Compile Include="CThostFtdcReqApiHandshakeField.cs" />
+    <Compile Include="CThostFtdcReqAuthenticateField.cs" />
+    <Compile Include="CThostFtdcReqCancelAccountField.cs" />
+    <Compile Include="CThostFtdcReqChangeAccountField.cs" />
+    <Compile Include="CThostFtdcReqDayEndFileReadyField.cs" />
+    <Compile Include="CThostFtdcReqFutureSignOutField.cs" />
+    <Compile Include="CThostFtdcReqGenUserCaptchaField.cs" />
+    <Compile Include="CThostFtdcReqGenUserTextField.cs" />
+    <Compile Include="CThostFtdcReqOpenAccountField.cs" />
+    <Compile Include="CThostFtdcReqQueryAccountField.cs" />
+    <Compile Include="CThostFtdcReqQueryTradeResultBySerialField.cs" />
+    <Compile Include="CThostFtdcReqRepealField.cs" />
+    <Compile Include="CThostFtdcReqSyncKeyField.cs" />
+    <Compile Include="CThostFtdcReqTransferField.cs" />
+    <Compile Include="CThostFtdcReqUserAuthMethodField.cs" />
+    <Compile Include="CThostFtdcReqUserLoginField.cs" />
+    <Compile Include="CThostFtdcReqUserLoginWithCaptchaField.cs" />
+    <Compile Include="CThostFtdcReqUserLoginWithOTPField.cs" />
+    <Compile Include="CThostFtdcReqUserLoginWithTextField.cs" />
+    <Compile Include="CThostFtdcReqVerifyApiKeyField.cs" />
+    <Compile Include="CThostFtdcReserveOpenAccountConfirmField.cs" />
+    <Compile Include="CThostFtdcReserveOpenAccountField.cs" />
+    <Compile Include="CThostFtdcReturnResultField.cs" />
+    <Compile Include="CThostFtdcRspApiHandshakeField.cs" />
+    <Compile Include="CThostFtdcRspAuthenticateField.cs" />
+    <Compile Include="CThostFtdcRspFutureSignInField.cs" />
+    <Compile Include="CThostFtdcRspFutureSignOutField.cs" />
+    <Compile Include="CThostFtdcRspGenUserCaptchaField.cs" />
+    <Compile Include="CThostFtdcRspGenUserTextField.cs" />
+    <Compile Include="CThostFtdcRspInfoField.cs" />
+    <Compile Include="CThostFtdcRspQueryAccountField.cs" />
+    <Compile Include="CThostFtdcRspQueryTradeResultBySerialField.cs" />
+    <Compile Include="CThostFtdcRspRepealField.cs" />
+    <Compile Include="CThostFtdcRspSyncKeyField.cs" />
+    <Compile Include="CThostFtdcRspTransferField.cs" />
+    <Compile Include="CThostFtdcRspUserAuthMethodField.cs" />
+    <Compile Include="CThostFtdcRspUserLogin2Field.cs" />
+    <Compile Include="CThostFtdcRspUserLoginField.cs" />
+    <Compile Include="CThostFtdcSecAgentACIDMapField.cs" />
+    <Compile Include="CThostFtdcSecAgentCheckModeField.cs" />
+    <Compile Include="CThostFtdcSecAgentTradeInfoField.cs" />
+    <Compile Include="CThostFtdcSettlementInfoConfirmField.cs" />
+    <Compile Include="CThostFtdcSettlementInfoField.cs" />
+    <Compile Include="CThostFtdcSettlementRefField.cs" />
+    <Compile Include="CThostFtdcSpecificInstrumentField.cs" />
+    <Compile Include="CThostFtdcStrikeOffsetField.cs" />
+    <Compile Include="CThostFtdcSuperUserField.cs" />
+    <Compile Include="CThostFtdcSuperUserFunctionField.cs" />
+    <Compile Include="CThostFtdcSyncDelaySwapField.cs" />
+    <Compile Include="CThostFtdcSyncDepositField.cs" />
+    <Compile Include="CThostFtdcSyncFundMortgageField.cs" />
+    <Compile Include="CThostFtdcSyncingInstrumentCommissionRateField.cs" />
+    <Compile Include="CThostFtdcSyncingInstrumentMarginRateField.cs" />
+    <Compile Include="CThostFtdcSyncingInstrumentTradingRightField.cs" />
+    <Compile Include="CThostFtdcSyncingInvestorField.cs" />
+    <Compile Include="CThostFtdcSyncingInvestorGroupField.cs" />
+    <Compile Include="CThostFtdcSyncingInvestorPositionField.cs" />
+    <Compile Include="CThostFtdcSyncingTradingAccountField.cs" />
+    <Compile Include="CThostFtdcSyncingTradingCodeField.cs" />
+    <Compile Include="CThostFtdcSyncStatusField.cs" />
+    <Compile Include="CThostFtdcTradeField.cs" />
+    <Compile Include="CThostFtdcTradeParamField.cs" />
+    <Compile Include="CThostFtdcTraderApi.cs" />
+    <Compile Include="CThostFtdcTraderField.cs" />
+    <Compile Include="CThostFtdcTraderOfferField.cs" />
+    <Compile Include="CThostFtdcTraderSpi.cs" />
+    <Compile Include="CThostFtdcTradingAccountField.cs" />
+    <Compile Include="CThostFtdcTradingAccountPasswordField.cs" />
+    <Compile Include="CThostFtdcTradingAccountPasswordUpdateField.cs" />
+    <Compile Include="CThostFtdcTradingAccountPasswordUpdateV1Field.cs" />
+    <Compile Include="CThostFtdcTradingAccountReserveField.cs" />
+    <Compile Include="CThostFtdcTradingCodeField.cs" />
+    <Compile Include="CThostFtdcTradingNoticeField.cs" />
+    <Compile Include="CThostFtdcTradingNoticeInfoField.cs" />
+    <Compile Include="CThostFtdcTransferBankField.cs" />
+    <Compile Include="CThostFtdcTransferBankToFutureReqField.cs" />
+    <Compile Include="CThostFtdcTransferBankToFutureRspField.cs" />
+    <Compile Include="CThostFtdcTransferFutureToBankReqField.cs" />
+    <Compile Include="CThostFtdcTransferFutureToBankRspField.cs" />
+    <Compile Include="CThostFtdcTransferHeaderField.cs" />
+    <Compile Include="CThostFtdcTransferQryBankReqField.cs" />
+    <Compile Include="CThostFtdcTransferQryBankRspField.cs" />
+    <Compile Include="CThostFtdcTransferQryDetailReqField.cs" />
+    <Compile Include="CThostFtdcTransferQryDetailRspField.cs" />
+    <Compile Include="CThostFtdcTransferSerialField.cs" />
+    <Compile Include="CThostFtdcUserIPField.cs" />
+    <Compile Include="CThostFtdcUserLogoutField.cs" />
+    <Compile Include="CThostFtdcUserPasswordUpdateField.cs" />
+    <Compile Include="CThostFtdcUserRightField.cs" />
+    <Compile Include="CThostFtdcUserRightsAssignField.cs" />
+    <Compile Include="CThostFtdcUserSessionField.cs" />
+    <Compile Include="CThostFtdcUserSystemInfoField.cs" />
+    <Compile Include="CThostFtdcVerifyCustInfoField.cs" />
+    <Compile Include="CThostFtdcVerifyFuturePasswordAndCustInfoField.cs" />
+    <Compile Include="CThostFtdcVerifyFuturePasswordField.cs" />
+    <Compile Include="CThostFtdcVerifyInvestorPasswordField.cs" />
+    <Compile Include="CustomMD.cs" />
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="thosttradeapi.cs" />
+    <Compile Include="thosttradeapiPINVOKE.cs" />
+    <Compile Include="THOST_TE_RESUME_TYPE.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 和 x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
