@@ -1,8 +1,6 @@
-Debug/
 *.csv
 CTPTest/Debug/
 CTPtest/Release/
-Release/
 *.con
 Console01/Debug/
 .vs/

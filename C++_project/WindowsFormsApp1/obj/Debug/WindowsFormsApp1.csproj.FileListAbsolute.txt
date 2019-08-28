@@ -1,0 +1,10 @@
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe.config
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.exe
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\bin\Debug\WindowsFormsApp1.pdb
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csprojAssemblyReference.cache
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Form1.resources
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.Properties.Resources.resources
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.GenerateResource.cache
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.csproj.CoreCompileInputs.cache
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.exe
+C:\Users\a\Desktop\GUGW\13swigTest\C++_project\WindowsFormsApp1\obj\Debug\WindowsFormsApp1.pdb
