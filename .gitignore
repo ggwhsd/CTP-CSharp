@@ -1,11 +1,9 @@
-Debug
-Release
 *.csv
-CTPTest/Debug/
-CTPtest/Release/
+CTPWrapperForCSharp/CTPWrapperForCSharp/Debug
+CTPWrapperForCSharp/TPWrapperForCSharp_MD/Debug
+CTPWrapperForCSharp/CTPWrapperForCSharp/Release
+CTPWrapperForCSharp/TPWrapperForCSharp_MD/Release
 *.con
-Console01/Debug/
 .vs/
 *.log
-CTPtest/log
 *.dat
