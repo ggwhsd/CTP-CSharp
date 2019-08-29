@@ -1,8 +1,12 @@
 # CSharp的CTP使用方法：
 
+* CTPWrapperForCSharp_MD负责封装行情DLL
+
+* CTPWrapperForCSharp负责封装交易DLL
+
 * 先建立一个C#的工程名为CSharpCTP
 
-* 默认两个C++工程生成的文件在Debug目录下，使用的时候将debug目录下的Dll文件都拷贝到CSharpCTP的工程目录下。
+* 将debug目录下的Dll文件都拷贝到CSharpCTP的工程目录下。
 
 * 将CTPWrapperForCSharp.dll改名为thosttradeapi.dll 
 
