@@ -24,6 +24,9 @@
     <ClInclude Include="c++_file.h">
       <Filter>头文件</Filter>
     </ClInclude>
+    <ClInclude Include="c++_file_wrap.h">
+      <Filter>头文件</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="stdafx.cpp">
