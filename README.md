@@ -1,5 +1,14 @@
 # CSharp的CTP使用方法：
 
+Release文件夹中有Release版本的CTP接口，命名空间是CTPWrapper。
+所有接口名称都和C++的CTP api版本文档描述中的一致。
+
+2020-12-31 更新了CTP 6.5.1 Api版本。
+
+# 项目构建描述
+
+如果不想看可以忽略。
+
 * CTPWrapperForCSharp_MD负责封装行情DLL
 
 * CTPWrapperForCSharp负责封装交易DLL
@@ -16,9 +25,13 @@
 
 * 将CSharpLibraryCS中的所有文件拷贝到CSharpCTP的目录中，并通过VS2017添加现有项目，将这些文件添加到工程中。
 
+# 代码演示
+
 * 接下来，就可以使用如下代码来调用CTP的类和方法，如下是创建行情回调类示例
 
 ```
+using CTPWrapper;
+
 class CustomMD : CThostFtdcMdSpi
     {
         public CustomMD()
