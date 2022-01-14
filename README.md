@@ -3,7 +3,9 @@
 Release文件夹中有Release版本的CTP接口，命名空间是CTPWrapper。
 所有接口名称都和C++的CTP api版本文档描述中的一致。
 
-2020-12-31 更新了CTP 6.5.1 Api版本。
+2020-12-31 更新了CTP 6.5.1 Api版本。.NET FrameWork 4.6.2 平台测试。
+
+2022-1-14  更新了Release目录，新增.NET 5环境下的x86平台的CTP 6.5.1 Api版本。
 
 # 项目构建描述
 
