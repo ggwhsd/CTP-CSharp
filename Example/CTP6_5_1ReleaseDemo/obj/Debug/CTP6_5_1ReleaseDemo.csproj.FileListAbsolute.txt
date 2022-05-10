@@ -1,0 +1,12 @@
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\bin\Debug\CTP6_5_1ReleaseDemo.exe.config
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\bin\Debug\CTP6_5_1ReleaseDemo.exe
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\bin\Debug\CTP6_5_1ReleaseDemo.pdb
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\bin\Debug\CTPWrapper.dll
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.csproj.AssemblyReference.cache
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.Properties.Resources.resources
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.csproj.GenerateResource.cache
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.csproj.CoreCompileInputs.cache
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.csproj.CopyComplete
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.exe
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.pdb
+C:\Users\babyDaxiong\Desktop\temp\CTP-CSharp\Example\CTP6_5_1ReleaseDemo\obj\Debug\CTP6_5_1ReleaseDemo.Form1.resources
