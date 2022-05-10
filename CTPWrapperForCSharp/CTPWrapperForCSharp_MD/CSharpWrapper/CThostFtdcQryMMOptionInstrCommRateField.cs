@@ -31,7 +31,7 @@ public class CThostFtdcQryMMOptionInstrCommRateField : global::System.IDisposabl
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryMMOptionInstrCommRateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryMMOptionInstrCommRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,45 @@ public class CThostFtdcQryMMOptionInstrCommRateField : global::System.IDisposabl
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InvestorID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve1 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryMMOptionInstrCommRateField() : this(thostmdapiPINVOKE.new_CThostFtdcQryMMOptionInstrCommRateField(), true) {
+  public CThostFtdcQryMMOptionInstrCommRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryMMOptionInstrCommRateField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcNoticeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcNoticeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcNoticeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcNoticeField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcNoticeField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcNoticeField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Content {
     set {
-      thosttradeapiPINVOKE.CThostFtdcNoticeField_Content_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_Content_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcNoticeField_Content_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_Content_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SequenceLabel {
     set {
-      thosttradeapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcNoticeField() : this(thosttradeapiPINVOKE.new_CThostFtdcNoticeField(), true) {
+  public CThostFtdcNoticeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcNoticeField(), true) {
   }
 
 }

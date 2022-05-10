@@ -31,7 +31,7 @@ public class CThostFtdcQryForQuoteField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryForQuoteField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryForQuoteField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcQryForQuoteField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeStart {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeStart_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeStart_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeStart_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeStart_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeEnd {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeEnd_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeEnd_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeEnd_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InsertTimeEnd_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryForQuoteField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryForQuoteField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryForQuoteField(), true) {
+  public CThostFtdcQryForQuoteField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryForQuoteField(), true) {
   }
 
 }

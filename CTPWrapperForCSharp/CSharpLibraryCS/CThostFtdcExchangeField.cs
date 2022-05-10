@@ -31,7 +31,7 @@ public class CThostFtdcExchangeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcExchangeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcExchangeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcExchangeField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeName_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ExchangeProperty {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeProperty_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeProperty_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeProperty_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeField_ExchangeProperty_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcExchangeField() : this(thosttradeapiPINVOKE.new_CThostFtdcExchangeField(), true) {
+  public CThostFtdcExchangeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcExchangeField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcQryErrExecOrderField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryErrExecOrderField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryErrExecOrderField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryErrExecOrderField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryErrExecOrderField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryErrExecOrderField() : this(thostmdapiPINVOKE.new_CThostFtdcQryErrExecOrderField(), true) {
+  public CThostFtdcQryErrExecOrderField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryErrExecOrderField(), true) {
   }
 
 }

@@ -244,7 +244,7 @@ static void SWIGUNUSED SWIG_CSharpSetPendingExceptionArgument(SWIG_CSharpExcepti
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_thostmdapi(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_ctpthostmdapi(
                                                 SWIG_CSharpExceptionCallback_t applicationCallback,
                                                 SWIG_CSharpExceptionCallback_t arithmeticCallback,
                                                 SWIG_CSharpExceptionCallback_t divideByZeroCallback, 
@@ -272,7 +272,7 @@ SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionCallbacks_thostmdapi(
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_thostmdapi(
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterExceptionArgumentCallbacks_ctpthostmdapi(
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentNullCallback,
                                                 SWIG_CSharpExceptionArgumentCallback_t argumentOutOfRangeCallback) {
@@ -290,7 +290,7 @@ static SWIG_CSharpStringHelperCallback SWIG_csharp_string_callback = NULL;
 #ifdef __cplusplus
 extern "C" 
 #endif
-SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_thostmdapi(SWIG_CSharpStringHelperCallback callback) {
+SWIGEXPORT void SWIGSTDCALL SWIGRegisterStringCallback_ctpthostmdapi(SWIG_CSharpStringHelperCallback callback) {
   SWIG_csharp_string_callback = callback;
 }
 
@@ -444,6 +444,24 @@ void SwigDirector_CThostFtdcMdSpi::OnRspUserLogout(CThostFtdcUserLogoutField *pU
   }
 }
 
+void SwigDirector_CThostFtdcMdSpi::OnRspQryMulticastInstrument(CThostFtdcMulticastInstrumentField *pMulticastInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {
+  void * jpMulticastInstrument = 0 ;
+  void * jpRspInfo = 0 ;
+  int jnRequestID  ;
+  unsigned int jbIsLast  ;
+  
+  if (!swig_callbackOnRspQryMulticastInstrument) {
+    CThostFtdcMdSpi::OnRspQryMulticastInstrument(pMulticastInstrument,pRspInfo,nRequestID,bIsLast);
+    return;
+  } else {
+    jpMulticastInstrument = (void *) pMulticastInstrument; 
+    jpRspInfo = (void *) pRspInfo; 
+    jnRequestID = nRequestID;
+    jbIsLast = bIsLast;
+    swig_callbackOnRspQryMulticastInstrument(jpMulticastInstrument, jpRspInfo, jnRequestID, jbIsLast);
+  }
+}
+
 void SwigDirector_CThostFtdcMdSpi::OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast) {
   void * jpRspInfo = 0 ;
   int jnRequestID  ;
@@ -556,12 +574,13 @@ void SwigDirector_CThostFtdcMdSpi::OnRtnForQuoteRsp(CThostFtdcForQuoteRspField *
   }
 }
 
-void SwigDirector_CThostFtdcMdSpi::swig_connect_director(SWIG_Callback0_t callbackOnFrontConnected, SWIG_Callback1_t callbackOnFrontDisconnected, SWIG_Callback2_t callbackOnHeartBeatWarning, SWIG_Callback3_t callbackOnRspUserLogin, SWIG_Callback4_t callbackOnRspUserLogout, SWIG_Callback5_t callbackOnRspError, SWIG_Callback6_t callbackOnRspSubMarketData, SWIG_Callback7_t callbackOnRspUnSubMarketData, SWIG_Callback8_t callbackOnRspSubForQuoteRsp, SWIG_Callback9_t callbackOnRspUnSubForQuoteRsp, SWIG_Callback10_t callbackOnRtnDepthMarketData, SWIG_Callback11_t callbackOnRtnForQuoteRsp) {
+void SwigDirector_CThostFtdcMdSpi::swig_connect_director(SWIG_Callback0_t callbackOnFrontConnected, SWIG_Callback1_t callbackOnFrontDisconnected, SWIG_Callback2_t callbackOnHeartBeatWarning, SWIG_Callback3_t callbackOnRspUserLogin, SWIG_Callback4_t callbackOnRspUserLogout, SWIG_Callback5_t callbackOnRspQryMulticastInstrument, SWIG_Callback6_t callbackOnRspError, SWIG_Callback7_t callbackOnRspSubMarketData, SWIG_Callback8_t callbackOnRspUnSubMarketData, SWIG_Callback9_t callbackOnRspSubForQuoteRsp, SWIG_Callback10_t callbackOnRspUnSubForQuoteRsp, SWIG_Callback11_t callbackOnRtnDepthMarketData, SWIG_Callback12_t callbackOnRtnForQuoteRsp) {
   swig_callbackOnFrontConnected = callbackOnFrontConnected;
   swig_callbackOnFrontDisconnected = callbackOnFrontDisconnected;
   swig_callbackOnHeartBeatWarning = callbackOnHeartBeatWarning;
   swig_callbackOnRspUserLogin = callbackOnRspUserLogin;
   swig_callbackOnRspUserLogout = callbackOnRspUserLogout;
+  swig_callbackOnRspQryMulticastInstrument = callbackOnRspQryMulticastInstrument;
   swig_callbackOnRspError = callbackOnRspError;
   swig_callbackOnRspSubMarketData = callbackOnRspSubMarketData;
   swig_callbackOnRspUnSubMarketData = callbackOnRspUnSubMarketData;
@@ -577,6 +596,7 @@ void SwigDirector_CThostFtdcMdSpi::swig_init_callbacks() {
   swig_callbackOnHeartBeatWarning = 0;
   swig_callbackOnRspUserLogin = 0;
   swig_callbackOnRspUserLogout = 0;
+  swig_callbackOnRspQryMulticastInstrument = 0;
   swig_callbackOnRspError = 0;
   swig_callbackOnRspSubMarketData = 0;
   swig_callbackOnRspUnSubMarketData = 0;
@@ -816,6 +836,26 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_ICT_CptMngPrdLetter_get() {
   char result;
   
   result = (char)('L');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_ICT_UniformSocialCreditCode_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('N');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_ICT_CorporationCertNo_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('O');
   jresult = result; 
   return jresult;
 }
@@ -2031,6 +2071,106 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_PC_SpotOption_get() {
 }
 
 
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_PC_TAS_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('7');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_PC_MI_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('I');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_FutureSingle_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('1');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_OptionSingle_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('2');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_Futures_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('3');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_Options_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('4');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_TradingComb_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('5');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_UnTradingComb_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('6');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_AllTrading_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('7');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_APC_All_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('8');
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_IP_NotStart_get() {
   char jresult ;
   char result;
@@ -3116,6 +3256,26 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_TRDT_BlockTrade_get() {
   char result;
   
   result = (char)('5');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_SPOST_Common_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('#');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_SPOST_Tas_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('0');
   jresult = result; 
   return jresult;
 }
@@ -5666,6 +5826,26 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_UET_Authenticate_get() {
   char result;
   
   result = (char)('6');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_UET_SubmitSysInfo_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('7');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_UET_Transfer_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('8');
   jresult = result; 
   return jresult;
 }
@@ -11921,11 +12101,51 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_PRT_get() {
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_CLD_get() {
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_CAS_get() {
   char jresult ;
   char result;
   
   result = (char)('6');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_OPL_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('7');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_BFO_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('8');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_BLS_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('9');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_COMBT_BES_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('a');
   jresult = result; 
   return jresult;
 }
@@ -12481,6 +12701,16 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_CMDR_UnComb_get() {
 }
 
 
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_CMDR_DelComb_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('2');
+  jresult = result; 
+  return jresult;
+}
+
+
 SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_STOV_RealValue_get() {
   char jresult ;
   char result;
@@ -12732,6 +12962,96 @@ SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_OTC_MT_DV01_get() {
 
 
 SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_OTC_MT_ParValue_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('2');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_AU_WHITE_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('0');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_AU_BLACK_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('1');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_INS_ALL_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('0');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_INS_FUTURE_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('1');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_INS_OPTION_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('2');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_INS_COMB_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('3');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_TD_ALL_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('0');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_TD_TRADE_get() {
+  char jresult ;
+  char result;
+  
+  result = (char)('1');
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_THOST_FTDC_TD_UNTRADE_get() {
   char jresult ;
   char result;
   
@@ -13064,7 +13384,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_OneTimePassword
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcReqUserLoginField *arg1 = (CThostFtdcReqUserLoginField *) 0 ;
   char *arg2 ;
   
@@ -13072,22 +13392,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPAddress_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 16-1);
-      arg1->ClientIPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->ClientIPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcReqUserLoginField *arg1 = (CThostFtdcReqUserLoginField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcReqUserLoginField *)jarg1; 
-  result = (char *) ((arg1)->ClientIPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -13140,6 +13460,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPPort_get(v
   arg1 = (CThostFtdcReqUserLoginField *)jarg1; 
   result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcReqUserLoginField *arg1 = (CThostFtdcReqUserLoginField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcReqUserLoginField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 33-1);
+      arg1->ClientIPAddress[33-1] = 0;
+    } else {
+      arg1->ClientIPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginField_ClientIPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcReqUserLoginField *arg1 = (CThostFtdcReqUserLoginField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcReqUserLoginField *)jarg1; 
+  result = (char *) ((arg1)->ClientIPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -14199,6 +14548,64 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcAuthenticationInfoField_AppType_get
   arg1 = (CThostFtdcAuthenticationInfoField *)jarg1; 
   result = (TThostFtdcAppTypeType) ((arg1)->AppType);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthenticationInfoField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthenticationInfoField *arg1 = (CThostFtdcAuthenticationInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthenticationInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthenticationInfoField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthenticationInfoField *arg1 = (CThostFtdcAuthenticationInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthenticationInfoField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthenticationInfoField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthenticationInfoField *arg1 = (CThostFtdcAuthenticationInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthenticationInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 33-1);
+      arg1->ClientIPAddress[33-1] = 0;
+    } else {
+      arg1->ClientIPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthenticationInfoField_ClientIPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthenticationInfoField *arg1 = (CThostFtdcAuthenticationInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthenticationInfoField *)jarg1; 
+  result = (char *) ((arg1)->ClientIPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -16647,7 +17054,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcExchangeField(void * jarg1) 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
   char *arg2 ;
   
@@ -16655,22 +17062,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ProductID_set(void * j
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcProductField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -17005,7 +17412,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcProductField_MortgageFundUseRange_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ExchangeProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
   char *arg2 ;
   
@@ -17013,22 +17420,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ExchangeProductID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeProductID, (const char *)arg2, 31-1);
-      arg1->ExchangeProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeProductID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_ExchangeProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcProductField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeProductID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -17056,6 +17463,64 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcProductField_UnderlyingMultiple_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcProductField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcProductField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductField_ExchangeProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcProductField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeProductID, (const char *)arg2, 81-1);
+      arg1->ExchangeProductID[81-1] = 0;
+    } else {
+      arg1->ExchangeProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductField_ExchangeProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcProductField *arg1 = (CThostFtdcProductField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcProductField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcProductField() {
   void * jresult ;
   CThostFtdcProductField *result = 0 ;
@@ -17074,7 +17539,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcProductField(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *arg2 ;
   
@@ -17082,22 +17547,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -17161,7 +17626,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentName_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *arg2 ;
   
@@ -17169,28 +17634,28 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ExchangeInstID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *arg2 ;
   
@@ -17198,22 +17663,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ProductID_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 31-1);
+      arg1->reserve3[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -17716,7 +18181,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInstrumentField_MaxMarginSideAlgori
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_UnderlyingInstrID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve4_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *arg2 ;
   
@@ -17724,22 +18189,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_UnderlyingInstrID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->UnderlyingInstrID, (const char *)arg2, 31-1);
-      arg1->UnderlyingInstrID[31-1] = 0;
+      strncpy((char*)arg1->reserve4, (const char *)arg2, 31-1);
+      arg1->reserve4[31-1] = 0;
     } else {
-      arg1->UnderlyingInstrID[0] = 0;
+      arg1->reserve4[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_UnderlyingInstrID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_reserve4_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentField *)jarg1; 
-  result = (char *) ((arg1)->UnderlyingInstrID);
+  result = (char *) ((arg1)->reserve4);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -17829,6 +18294,122 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInstrumentField_CombinationType_get
   arg1 = (CThostFtdcInstrumentField *)jarg1; 
   result = (TThostFtdcCombinationTypeType) ((arg1)->CombinationType);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentField_UnderlyingInstrID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->UnderlyingInstrID, (const char *)arg2, 81-1);
+      arg1->UnderlyingInstrID[81-1] = 0;
+    } else {
+      arg1->UnderlyingInstrID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentField_UnderlyingInstrID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentField *arg1 = (CThostFtdcInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->UnderlyingInstrID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -20354,7 +20935,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcTradingAccountField(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
   char *arg2 ;
   
@@ -20362,22 +20943,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -21430,6 +22011,79 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_PositionCos
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_TasPosition_set(void * jarg1, int jarg2) {
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  TThostFtdcVolumeType arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  arg2 = (TThostFtdcVolumeType)jarg2; 
+  if (arg1) (arg1)->TasPosition = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_TasPosition_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  TThostFtdcVolumeType result;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  result = (TThostFtdcVolumeType) ((arg1)->TasPosition);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_TasPositionCost_set(void * jarg1, double jarg2) {
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  TThostFtdcMoneyType arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  arg2 = (TThostFtdcMoneyType)jarg2; 
+  if (arg1) (arg1)->TasPositionCost = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_TasPositionCost_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  TThostFtdcMoneyType result;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  result = (TThostFtdcMoneyType) ((arg1)->TasPositionCost);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorPositionField *arg1 = (CThostFtdcInvestorPositionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorPositionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInvestorPositionField() {
   void * jresult ;
   CThostFtdcInvestorPositionField *result = 0 ;
@@ -21448,7 +22102,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcInvestorPositionField(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentMarginRateField *arg1 = (CThostFtdcInstrumentMarginRateField *) 0 ;
   char *arg2 ;
   
@@ -21456,22 +22110,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentMarginRateField *arg1 = (CThostFtdcInstrumentMarginRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentMarginRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -21747,6 +22401,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_InvestU
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentMarginRateField *arg1 = (CThostFtdcInstrumentMarginRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentMarginRateField *arg1 = (CThostFtdcInstrumentMarginRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentMarginRateField() {
   void * jresult ;
   CThostFtdcInstrumentMarginRateField *result = 0 ;
@@ -21765,7 +22448,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcInstrumentMarginRateField(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentCommissionRateField *arg1 = (CThostFtdcInstrumentCommissionRateField *) 0 ;
   char *arg2 ;
   
@@ -21773,22 +22456,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_Instr
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentCommissionRateField *arg1 = (CThostFtdcInstrumentCommissionRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentCommissionRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -22086,6 +22769,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_Inv
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentCommissionRateField *arg1 = (CThostFtdcInstrumentCommissionRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentCommissionRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentCommissionRateField *arg1 = (CThostFtdcInstrumentCommissionRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentCommissionRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentCommissionRateField() {
   void * jresult ;
   CThostFtdcInstrumentCommissionRateField *result = 0 ;
@@ -22133,7 +22845,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_TradingDay_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
   char *arg2 ;
   
@@ -22141,22 +22853,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -22191,7 +22903,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
   char *arg2 ;
   
@@ -22199,22 +22911,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -23114,6 +23826,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ActionDay_ge
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcDepthMarketDataField *arg1 = (CThostFtdcDepthMarketDataField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcDepthMarketDataField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcDepthMarketDataField() {
   void * jresult ;
   CThostFtdcDepthMarketDataField *result = 0 ;
@@ -23132,7 +23902,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcDepthMarketDataField(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentTradingRightField *arg1 = (CThostFtdcInstrumentTradingRightField *) 0 ;
   char *arg2 ;
   
@@ -23140,22 +23910,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_Instrum
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentTradingRightField *arg1 = (CThostFtdcInstrumentTradingRightField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentTradingRightField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -23259,6 +24029,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_Trading
   arg1 = (CThostFtdcInstrumentTradingRightField *)jarg1; 
   result = (TThostFtdcTradingRightType) ((arg1)->TradingRight);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentTradingRightField *arg1 = (CThostFtdcInstrumentTradingRightField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentTradingRightField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentTradingRightField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentTradingRightField *arg1 = (CThostFtdcInstrumentTradingRightField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentTradingRightField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -24584,7 +25383,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSettlementInfoField(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentMarginRateAdjustField *arg1 = (CThostFtdcInstrumentMarginRateAdjustField *) 0 ;
   char *arg2 ;
   
@@ -24592,22 +25391,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_Ins
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentMarginRateAdjustField *arg1 = (CThostFtdcInstrumentMarginRateAdjustField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentMarginRateAdjustField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -24825,6 +25624,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_IsRe
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentMarginRateAdjustField *arg1 = (CThostFtdcInstrumentMarginRateAdjustField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateAdjustField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentMarginRateAdjustField *arg1 = (CThostFtdcInstrumentMarginRateAdjustField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateAdjustField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentMarginRateAdjustField() {
   void * jresult ;
   CThostFtdcInstrumentMarginRateAdjustField *result = 0 ;
@@ -24872,7 +25700,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_BrokerID_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeMarginRateField *arg1 = (CThostFtdcExchangeMarginRateField *) 0 ;
   char *arg2 ;
   
@@ -24880,22 +25708,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeMarginRateField *arg1 = (CThostFtdcExchangeMarginRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeMarginRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -25040,6 +25868,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_ExchangeI
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeMarginRateField *arg1 = (CThostFtdcExchangeMarginRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeMarginRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeMarginRateField *arg1 = (CThostFtdcExchangeMarginRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeMarginRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcExchangeMarginRateField() {
   void * jresult ;
   CThostFtdcExchangeMarginRateField *result = 0 ;
@@ -25087,7 +25944,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_Bro
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeMarginRateAdjustField *arg1 = (CThostFtdcExchangeMarginRateAdjustField *) 0 ;
   char *arg2 ;
   
@@ -25095,22 +25952,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_Instr
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeMarginRateAdjustField *arg1 = (CThostFtdcExchangeMarginRateAdjustField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeMarginRateAdjustField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -25398,6 +26255,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_NoS
   arg1 = (CThostFtdcExchangeMarginRateAdjustField *)jarg1; 
   result = (TThostFtdcMoneyType) ((arg1)->NoShortMarginRatioByVolume);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeMarginRateAdjustField *arg1 = (CThostFtdcExchangeMarginRateAdjustField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeMarginRateAdjustField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeMarginRateAdjustField *arg1 = (CThostFtdcExchangeMarginRateAdjustField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeMarginRateAdjustField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -26023,7 +26909,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_LoginTime_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcLoginInfoField *arg1 = (CThostFtdcLoginInfoField *) 0 ;
   char *arg2 ;
   
@@ -26031,22 +26917,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_IPAddress_set(void *
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcLoginInfoField *arg1 = (CThostFtdcLoginInfoField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcLoginInfoField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -26509,6 +27395,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_Password_get(void 
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcLoginInfoField *arg1 = (CThostFtdcLoginInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcLoginInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginInfoField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcLoginInfoField *arg1 = (CThostFtdcLoginInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcLoginInfoField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcLoginInfoField() {
   void * jresult ;
   CThostFtdcLoginInfoField *result = 0 ;
@@ -26930,7 +27845,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InvestorID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
   char *arg2 ;
   
@@ -26938,22 +27853,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -27586,7 +28501,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_ClientID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
   char *arg2 ;
   
@@ -27594,22 +28509,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_IPAddress_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -27639,6 +28554,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_MacAddress_get(vo
   
   arg1 = (CThostFtdcInputOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOrderField *arg1 = (CThostFtdcInputOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -27720,7 +28693,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_InvestorID_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *arg2 ;
   
@@ -27728,22 +28701,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_InstrumentID_set(void * 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -28303,7 +29276,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_ClientID_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *arg2 ;
   
@@ -28311,22 +29284,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_ExchangeInstID_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -29235,7 +30208,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_CurrencyID_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *arg2 ;
   
@@ -29243,22 +30216,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_IPAddress_set(void * jar
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -29288,6 +30261,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_MacAddress_get(void * 
   
   arg1 = (CThostFtdcOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOrderField *arg1 = (CThostFtdcOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -29807,7 +30867,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ClientID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
   char *arg2 ;
   
@@ -29815,22 +30875,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ExchangeInstID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -30404,7 +31464,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_BranchID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
   char *arg2 ;
   
@@ -30412,22 +31472,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_IPAddress_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -30457,6 +31517,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_MacAddress_get
   
   arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOrderField *arg1 = (CThostFtdcExchangeOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31015,7 +32133,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_UserID_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -31023,22 +32141,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31073,7 +32191,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InvestUnitI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -31081,22 +32199,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_IPAddress_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31126,6 +32244,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_MacAddress_
   
   arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOrderActionField *arg1 = (CThostFtdcInputOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31782,7 +32958,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_StatusMsg_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -31790,22 +32966,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31869,7 +33045,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InvestUnitID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -31877,22 +33053,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_IPAddress_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -31922,6 +33098,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_MacAddress_get(v
   
   arg1 = (CThostFtdcOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOrderActionField *arg1 = (CThostFtdcOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -32403,7 +33637,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_BranchID
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOrderActionField *arg1 = (CThostFtdcExchangeOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -32411,22 +33645,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_IPAddress_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOrderActionField *arg1 = (CThostFtdcExchangeOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -32456,6 +33690,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_MacAddre
   
   arg1 = (CThostFtdcExchangeOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOrderActionField *arg1 = (CThostFtdcExchangeOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOrderActionField *arg1 = (CThostFtdcExchangeOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -32904,7 +34167,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_TradingRole_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeTradeField *arg1 = (CThostFtdcExchangeTradeField *) 0 ;
   char *arg2 ;
   
@@ -32912,22 +34175,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_ExchangeInstID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeTradeField *arg1 = (CThostFtdcExchangeTradeField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeTradeField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -33283,6 +34546,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_TradeSource_get(
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeTradeField *arg1 = (CThostFtdcExchangeTradeField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeTradeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeTradeField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeTradeField *arg1 = (CThostFtdcExchangeTradeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeTradeField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcExchangeTradeField() {
   void * jresult ;
   CThostFtdcExchangeTradeField *result = 0 ;
@@ -33359,7 +34651,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_InvestorID_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
   char *arg2 ;
   
@@ -33367,22 +34659,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_InstrumentID_set(void * 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcTradeField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -33635,7 +34927,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcTradeField_TradingRole_get(void * j
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
   char *arg2 ;
   
@@ -33643,22 +34935,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_ExchangeInstID_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcTradeField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -34116,6 +35408,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_InvestUnitID_get(void 
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcTradeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcTradeField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcTradeField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcTradeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcTradeField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcTradeField *arg1 = (CThostFtdcTradeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcTradeField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcTradeField() {
   void * jresult ;
   CThostFtdcTradeField *result = 0 ;
@@ -34294,7 +35644,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSessionField_LoginTime_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSessionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSessionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcUserSessionField *arg1 = (CThostFtdcUserSessionField *) 0 ;
   char *arg2 ;
   
@@ -34302,22 +35652,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSessionField_IPAddress_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSessionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSessionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcUserSessionField *arg1 = (CThostFtdcUserSessionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcUserSessionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -34468,6 +35818,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSessionField_LoginRemark_get(
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSessionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSessionField *arg1 = (CThostFtdcUserSessionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSessionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSessionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSessionField *arg1 = (CThostFtdcUserSessionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSessionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcUserSessionField() {
   void * jresult ;
   CThostFtdcUserSessionField *result = 0 ;
@@ -34486,11 +35865,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcUserSessionField(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_BrokerID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -34503,23 +35882,23 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_BrokerID_s
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_BrokerID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_BrokerID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (char *) ((arg1)->BrokerID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestorID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InvestorID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -34532,140 +35911,140 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestorID
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestorID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InvestorID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (char *) ((arg1)->InvestorID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InstrumentID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_reserve1_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_Direction_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_Direction_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcDirectionType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (TThostFtdcDirectionType)jarg2; 
   if (arg1) (arg1)->Direction = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_Direction_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_Direction_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcDirectionType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (TThostFtdcDirectionType) ((arg1)->Direction);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_OffsetFlag_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcOffsetFlagType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (TThostFtdcOffsetFlagType)jarg2; 
   if (arg1) (arg1)->OffsetFlag = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_OffsetFlag_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcOffsetFlagType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (TThostFtdcOffsetFlagType) ((arg1)->OffsetFlag);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_HedgeFlag_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcHedgeFlagType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (TThostFtdcHedgeFlagType)jarg2; 
   if (arg1) (arg1)->HedgeFlag = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_HedgeFlag_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcHedgeFlagType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (TThostFtdcHedgeFlagType) ((arg1)->HedgeFlag);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_MaxVolume_set(void * jarg1, int jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_MaxVolume_set(void * jarg1, int jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcVolumeType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (TThostFtdcVolumeType)jarg2; 
   if (arg1) (arg1)->MaxVolume = arg2;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_MaxVolume_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_MaxVolume_get(void * jarg1) {
   int jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   TThostFtdcVolumeType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (TThostFtdcVolumeType) ((arg1)->MaxVolume);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_ExchangeID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_ExchangeID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -34678,23 +36057,23 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_ExchangeID
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_ExchangeID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_ExchangeID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InvestUnitID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -34707,32 +36086,61 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestUnit
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InvestUnitID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQueryMaxOrderVolumeField() {
-  void * jresult ;
-  CThostFtdcQueryMaxOrderVolumeField *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
+  char *arg2 ;
   
-  result = (CThostFtdcQueryMaxOrderVolumeField *)new CThostFtdcQueryMaxOrderVolumeField();
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryMaxOrderVolumeField() {
+  void * jresult ;
+  CThostFtdcQryMaxOrderVolumeField *result = 0 ;
+  
+  result = (CThostFtdcQryMaxOrderVolumeField *)new CThostFtdcQryMaxOrderVolumeField();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQueryMaxOrderVolumeField(void * jarg1) {
-  CThostFtdcQueryMaxOrderVolumeField *arg1 = (CThostFtdcQueryMaxOrderVolumeField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryMaxOrderVolumeField(void * jarg1) {
+  CThostFtdcQryMaxOrderVolumeField *arg1 = (CThostFtdcQryMaxOrderVolumeField *) 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeField *)jarg1; 
   delete arg1;
 }
 
@@ -37127,7 +38535,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSyncingTradingAccountField(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
   char *arg2 ;
   
@@ -37135,22 +38543,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -38203,6 +39611,79 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_Posi
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_TasPosition_set(void * jarg1, int jarg2) {
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  TThostFtdcVolumeType arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  arg2 = (TThostFtdcVolumeType)jarg2; 
+  if (arg1) (arg1)->TasPosition = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_TasPosition_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  TThostFtdcVolumeType result;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  result = (TThostFtdcVolumeType) ((arg1)->TasPosition);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_TasPositionCost_set(void * jarg1, double jarg2) {
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  TThostFtdcMoneyType arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  arg2 = (TThostFtdcMoneyType)jarg2; 
+  if (arg1) (arg1)->TasPositionCost = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_TasPositionCost_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  TThostFtdcMoneyType result;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  result = (TThostFtdcMoneyType) ((arg1)->TasPositionCost);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInvestorPositionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncingInvestorPositionField *arg1 = (CThostFtdcSyncingInvestorPositionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncingInvestorPositionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcSyncingInvestorPositionField() {
   void * jresult ;
   CThostFtdcSyncingInvestorPositionField *result = 0 ;
@@ -38221,7 +39702,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSyncingInvestorPositionField
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcSyncingInstrumentMarginRateField *arg1 = (CThostFtdcSyncingInstrumentMarginRateField *) 0 ;
   char *arg2 ;
   
@@ -38229,22 +39710,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_In
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcSyncingInstrumentMarginRateField *arg1 = (CThostFtdcSyncingInstrumentMarginRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcSyncingInstrumentMarginRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -38462,6 +39943,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_IsR
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncingInstrumentMarginRateField *arg1 = (CThostFtdcSyncingInstrumentMarginRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentMarginRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncingInstrumentMarginRateField *arg1 = (CThostFtdcSyncingInstrumentMarginRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentMarginRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcSyncingInstrumentMarginRateField() {
   void * jresult ;
   CThostFtdcSyncingInstrumentMarginRateField *result = 0 ;
@@ -38480,7 +39990,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSyncingInstrumentMarginRateF
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcSyncingInstrumentCommissionRateField *arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *) 0 ;
   char *arg2 ;
   
@@ -38488,22 +39998,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateFiel
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcSyncingInstrumentCommissionRateField *arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -38721,6 +40231,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateFi
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncingInstrumentCommissionRateField *arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncingInstrumentCommissionRateField *arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentCommissionRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcSyncingInstrumentCommissionRateField() {
   void * jresult ;
   CThostFtdcSyncingInstrumentCommissionRateField *result = 0 ;
@@ -38739,7 +40278,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSyncingInstrumentCommissionR
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcSyncingInstrumentTradingRightField *arg1 = (CThostFtdcSyncingInstrumentTradingRightField *) 0 ;
   char *arg2 ;
   
@@ -38747,22 +40286,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcSyncingInstrumentTradingRightField *arg1 = (CThostFtdcSyncingInstrumentTradingRightField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcSyncingInstrumentTradingRightField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -38870,6 +40409,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncingInstrumentTradingRightField *arg1 = (CThostFtdcSyncingInstrumentTradingRightField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentTradingRightField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncingInstrumentTradingRightField *arg1 = (CThostFtdcSyncingInstrumentTradingRightField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncingInstrumentTradingRightField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcSyncingInstrumentTradingRightField() {
   void * jresult ;
   CThostFtdcSyncingInstrumentTradingRightField *result = 0 ;
@@ -38946,7 +40514,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InvestorID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryOrderField *arg1 = (CThostFtdcQryOrderField *) 0 ;
   char *arg2 ;
   
@@ -38954,22 +40522,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InstrumentID_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryOrderField *arg1 = (CThostFtdcQryOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -39120,6 +40688,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InvestUnitID_get(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryOrderField *arg1 = (CThostFtdcQryOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryOrderField *arg1 = (CThostFtdcQryOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryOrderField() {
   void * jresult ;
   CThostFtdcQryOrderField *result = 0 ;
@@ -39196,7 +40793,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InvestorID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryTradeField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryTradeField *arg1 = (CThostFtdcQryTradeField *) 0 ;
   char *arg2 ;
   
@@ -39204,22 +40801,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InstrumentID_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryTradeField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryTradeField *arg1 = (CThostFtdcQryTradeField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryTradeField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -39370,6 +40967,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InvestUnitID_get(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryTradeField *arg1 = (CThostFtdcQryTradeField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryTradeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryTradeField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryTradeField *arg1 = (CThostFtdcQryTradeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryTradeField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryTradeField() {
   void * jresult ;
   CThostFtdcQryTradeField *result = 0 ;
@@ -39446,7 +41072,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_Investor
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInvestorPositionField *arg1 = (CThostFtdcQryInvestorPositionField *) 0 ;
   char *arg2 ;
   
@@ -39454,22 +41080,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_Instrument
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInvestorPositionField *arg1 = (CThostFtdcQryInvestorPositionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInvestorPositionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -39528,6 +41154,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_InvestUn
   
   arg1 = (CThostFtdcQryInvestorPositionField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInvestorPositionField *arg1 = (CThostFtdcQryInvestorPositionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInvestorPositionField *arg1 = (CThostFtdcQryInvestorPositionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -40073,7 +41728,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_Inve
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentMarginRateField *arg1 = (CThostFtdcQryInstrumentMarginRateField *) 0 ;
   char *arg2 ;
   
@@ -40081,22 +41736,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInstrumentMarginRateField *arg1 = (CThostFtdcQryInstrumentMarginRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInstrumentMarginRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -40182,6 +41837,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_Inve
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentMarginRateField *arg1 = (CThostFtdcQryInstrumentMarginRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentMarginRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentMarginRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentMarginRateField *arg1 = (CThostFtdcQryInstrumentMarginRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentMarginRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryInstrumentMarginRateField() {
   void * jresult ;
   CThostFtdcQryInstrumentMarginRateField *result = 0 ;
@@ -40258,7 +41942,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentCommissionRateField *arg1 = (CThostFtdcQryInstrumentCommissionRateField *) 0 ;
   char *arg2 ;
   
@@ -40266,22 +41950,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_In
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInstrumentCommissionRateField *arg1 = (CThostFtdcQryInstrumentCommissionRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInstrumentCommissionRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -40340,6 +42024,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_
   
   arg1 = (CThostFtdcQryInstrumentCommissionRateField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentCommissionRateField *arg1 = (CThostFtdcQryInstrumentCommissionRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentCommissionRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentCommissionRateField *arg1 = (CThostFtdcQryInstrumentCommissionRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentCommissionRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -40421,6 +42134,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentTradingRightField_In
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentTradingRightField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentTradingRightField *arg1 = (CThostFtdcQryInstrumentTradingRightField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentTradingRightField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentTradingRightField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentTradingRightField *arg1 = (CThostFtdcQryInstrumentTradingRightField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentTradingRightField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentTradingRightField *arg1 = (CThostFtdcQryInstrumentTradingRightField *) 0 ;
   char *arg2 ;
@@ -40429,8 +42171,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentTradingRightField_Inst
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -40990,7 +42732,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ClientID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeOrderField *arg1 = (CThostFtdcQryExchangeOrderField *) 0 ;
   char *arg2 ;
   
@@ -40998,22 +42740,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ExchangeInstI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeOrderField *arg1 = (CThostFtdcQryExchangeOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -41072,6 +42814,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_TraderID_ge
   
   arg1 = (CThostFtdcQryExchangeOrderField *)jarg1; 
   result = (char *) ((arg1)->TraderID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeOrderField *arg1 = (CThostFtdcQryExchangeOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeOrderField *arg1 = (CThostFtdcQryExchangeOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -41428,7 +43199,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryExchangeField(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryProductField *arg1 = (CThostFtdcQryProductField *) 0 ;
   char *arg2 ;
   
@@ -41436,22 +43207,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductField_ProductID_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryProductField *arg1 = (CThostFtdcQryProductField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryProductField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -41508,6 +43279,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductField_ExchangeID_get(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryProductField *arg1 = (CThostFtdcQryProductField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryProductField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryProductField *arg1 = (CThostFtdcQryProductField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryProductField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryProductField() {
   void * jresult ;
   CThostFtdcQryProductField *result = 0 ;
@@ -41526,7 +43326,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryProductField(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
   char *arg2 ;
   
@@ -41534,22 +43334,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_InstrumentID_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -41584,6 +43384,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_ExchangeID_get
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve2_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
+    } else {
+      arg1->reserve2[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve2_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->reserve2);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve3_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 31-1);
+      arg1->reserve3[31-1] = 0;
+    } else {
+      arg1->reserve3[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_reserve3_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->reserve3);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_ExchangeInstID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentField *arg1 = (CThostFtdcQryInstrumentField *) 0 ;
   char *arg2 ;
@@ -41592,8 +43479,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_ExchangeInstID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
     } else {
       arg1->ExchangeInstID[0] = 0;
     }
@@ -41621,8 +43508,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentField_ProductID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
     } else {
       arg1->ProductID[0] = 0;
     }
@@ -41660,7 +43547,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryInstrumentField(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryDepthMarketDataField *arg1 = (CThostFtdcQryDepthMarketDataField *) 0 ;
   char *arg2 ;
   
@@ -41668,22 +43555,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryDepthMarketDataField *arg1 = (CThostFtdcQryDepthMarketDataField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryDepthMarketDataField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -41713,6 +43600,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_ExchangeI
   
   arg1 = (CThostFtdcQryDepthMarketDataField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryDepthMarketDataField *arg1 = (CThostFtdcQryDepthMarketDataField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryDepthMarketDataField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryDepthMarketDataField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryDepthMarketDataField *arg1 = (CThostFtdcQryDepthMarketDataField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryDepthMarketDataField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -42261,7 +44177,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_Broker
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeMarginRateField *arg1 = (CThostFtdcQryExchangeMarginRateField *) 0 ;
   char *arg2 ;
   
@@ -42269,22 +44185,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeMarginRateField *arg1 = (CThostFtdcQryExchangeMarginRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeMarginRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -42341,6 +44257,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_Exchan
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeMarginRateField *arg1 = (CThostFtdcQryExchangeMarginRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeMarginRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeMarginRateField *arg1 = (CThostFtdcQryExchangeMarginRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeMarginRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryExchangeMarginRateField() {
   void * jresult ;
   CThostFtdcQryExchangeMarginRateField *result = 0 ;
@@ -42388,7 +44333,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeMarginRateAdjustField *arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *) 0 ;
   char *arg2 ;
   
@@ -42396,22 +44341,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_In
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeMarginRateAdjustField *arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -42435,6 +44380,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_He
   arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *)jarg1; 
   result = (TThostFtdcHedgeFlagType) ((arg1)->HedgeFlag);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeMarginRateAdjustField *arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeMarginRateAdjustField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeMarginRateAdjustField *arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeMarginRateAdjustField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -42696,7 +44670,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InvestorID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryHisOrderField *arg1 = (CThostFtdcQryHisOrderField *) 0 ;
   char *arg2 ;
   
@@ -42704,22 +44678,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryHisOrderField *arg1 = (CThostFtdcQryHisOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryHisOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -42892,6 +44866,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_SettlementID_get(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryHisOrderField *arg1 = (CThostFtdcQryHisOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryHisOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryHisOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryHisOrderField *arg1 = (CThostFtdcQryHisOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryHisOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryHisOrderField() {
   void * jresult ;
   CThostFtdcQryHisOrderField *result = 0 ;
@@ -42910,7 +44913,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryHisOrderField(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrMiniMarginField *arg1 = (CThostFtdcOptionInstrMiniMarginField *) 0 ;
   char *arg2 ;
   
@@ -42918,22 +44921,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrMiniMarginField *arg1 = (CThostFtdcOptionInstrMiniMarginField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrMiniMarginField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -43085,6 +45088,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_IsRelativ
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrMiniMarginField *arg1 = (CThostFtdcOptionInstrMiniMarginField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrMiniMarginField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMiniMarginField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrMiniMarginField *arg1 = (CThostFtdcOptionInstrMiniMarginField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrMiniMarginField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrMiniMarginField() {
   void * jresult ;
   CThostFtdcOptionInstrMiniMarginField *result = 0 ;
@@ -43103,7 +45135,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcOptionInstrMiniMarginField(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrMarginAdjustField *arg1 = (CThostFtdcOptionInstrMarginAdjustField *) 0 ;
   char *arg2 ;
   
@@ -43111,22 +45143,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrMarginAdjustField *arg1 = (CThostFtdcOptionInstrMarginAdjustField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrMarginAdjustField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -43410,6 +45442,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_MSho
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrMarginAdjustField *arg1 = (CThostFtdcOptionInstrMarginAdjustField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrMarginAdjustField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrMarginAdjustField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrMarginAdjustField *arg1 = (CThostFtdcOptionInstrMarginAdjustField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrMarginAdjustField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrMarginAdjustField() {
   void * jresult ;
   CThostFtdcOptionInstrMarginAdjustField *result = 0 ;
@@ -43428,7 +45489,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcOptionInstrMarginAdjustField
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrCommRateField *arg1 = (CThostFtdcOptionInstrCommRateField *) 0 ;
   char *arg2 ;
   
@@ -43436,22 +45497,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_Instrument
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrCommRateField *arg1 = (CThostFtdcOptionInstrCommRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrCommRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -43771,6 +45832,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_InvestUn
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrCommRateField *arg1 = (CThostFtdcOptionInstrCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrCommRateField *arg1 = (CThostFtdcOptionInstrCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrCommRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrCommRateField() {
   void * jresult ;
   CThostFtdcOptionInstrCommRateField *result = 0 ;
@@ -43847,7 +45937,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_Investo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrTradeCostField *arg1 = (CThostFtdcOptionInstrTradeCostField *) 0 ;
   char *arg2 ;
   
@@ -43855,22 +45945,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrTradeCostField *arg1 = (CThostFtdcOptionInstrTradeCostField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrTradeCostField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -44066,6 +46156,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_InvestU
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrTradeCostField *arg1 = (CThostFtdcOptionInstrTradeCostField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrTradeCostField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradeCostField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrTradeCostField *arg1 = (CThostFtdcOptionInstrTradeCostField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrTradeCostField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrTradeCostField() {
   void * jresult ;
   CThostFtdcOptionInstrTradeCostField *result = 0 ;
@@ -44142,7 +46261,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_Inve
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryOptionInstrTradeCostField *arg1 = (CThostFtdcQryOptionInstrTradeCostField *) 0 ;
   char *arg2 ;
   
@@ -44150,22 +46269,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryOptionInstrTradeCostField *arg1 = (CThostFtdcQryOptionInstrTradeCostField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryOptionInstrTradeCostField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -44295,6 +46414,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_Inve
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryOptionInstrTradeCostField *arg1 = (CThostFtdcQryOptionInstrTradeCostField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrTradeCostField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradeCostField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryOptionInstrTradeCostField *arg1 = (CThostFtdcQryOptionInstrTradeCostField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrTradeCostField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryOptionInstrTradeCostField() {
   void * jresult ;
   CThostFtdcQryOptionInstrTradeCostField *result = 0 ;
@@ -44371,7 +46519,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_Inves
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryOptionInstrCommRateField *arg1 = (CThostFtdcQryOptionInstrCommRateField *) 0 ;
   char *arg2 ;
   
@@ -44379,22 +46527,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_Instrum
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryOptionInstrCommRateField *arg1 = (CThostFtdcQryOptionInstrCommRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryOptionInstrCommRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -44458,6 +46606,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_Inves
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryOptionInstrCommRateField *arg1 = (CThostFtdcQryOptionInstrCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryOptionInstrCommRateField *arg1 = (CThostFtdcQryOptionInstrCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrCommRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryOptionInstrCommRateField() {
   void * jresult ;
   CThostFtdcQryOptionInstrCommRateField *result = 0 ;
@@ -44505,7 +46682,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_BrokerID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcIndexPriceField *arg1 = (CThostFtdcIndexPriceField *) 0 ;
   char *arg2 ;
   
@@ -44513,22 +46690,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcIndexPriceField *arg1 = (CThostFtdcIndexPriceField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcIndexPriceField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -44552,6 +46729,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_ClosePrice_get(vo
   arg1 = (CThostFtdcIndexPriceField *)jarg1; 
   result = (TThostFtdcPriceType) ((arg1)->ClosePrice);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcIndexPriceField *arg1 = (CThostFtdcIndexPriceField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcIndexPriceField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIndexPriceField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcIndexPriceField *arg1 = (CThostFtdcIndexPriceField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcIndexPriceField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -44632,7 +46838,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InvestorID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -44640,22 +46846,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InstrumentID_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45069,7 +47275,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_ClientID_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -45077,22 +47283,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_IPAddress_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45122,6 +47328,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_MacAddress_ge
   
   arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputExecOrderField *arg1 = (CThostFtdcInputExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45429,7 +47693,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_UserID_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -45437,22 +47701,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45487,7 +47751,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_InvestU
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -45495,22 +47759,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_IPAddress
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45540,6 +47804,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_MacAddr
   
   arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputExecOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputExecOrderActionField *arg1 = (CThostFtdcInputExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -45621,7 +47943,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InvestorID_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -45629,22 +47951,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InstrumentID_set(voi
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -46029,7 +48351,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ClientID_get(void 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -46037,22 +48359,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ExchangeInstID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -46662,7 +48984,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_CurrencyID_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -46670,22 +48992,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_IPAddress_set(void *
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -46715,6 +49037,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_MacAddress_get(voi
   
   arg1 = (CThostFtdcExecOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExecOrderField *arg1 = (CThostFtdcExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -47349,7 +49758,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_StatusMsg_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -47357,22 +49766,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -47436,7 +49845,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InvestUnitID
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -47444,22 +49853,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_IPAddress_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -47489,6 +49898,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_MacAddress_g
   
   arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExecOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExecOrderActionField *arg1 = (CThostFtdcExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -47570,7 +50037,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InvestorID_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExecOrderField *arg1 = (CThostFtdcQryExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -47578,22 +50045,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InstrumentID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExecOrderField *arg1 = (CThostFtdcQryExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -47710,6 +50177,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InsertTimeEnd_g
   
   arg1 = (CThostFtdcQryExecOrderField *)jarg1; 
   result = (char *) ((arg1)->InsertTimeEnd);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExecOrderField *arg1 = (CThostFtdcQryExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExecOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExecOrderField *arg1 = (CThostFtdcQryExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -48054,7 +50550,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ClientID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -48062,22 +50558,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ExchangeInst
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -48447,7 +50943,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_BranchID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -48455,22 +50951,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_IPAddress_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -48500,6 +50996,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_MacAddress
   
   arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeExecOrderField *arg1 = (CThostFtdcExchangeExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -48581,7 +51135,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ClientI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeExecOrderField *arg1 = (CThostFtdcQryExchangeExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -48589,22 +51143,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ExchangeI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeExecOrderField *arg1 = (CThostFtdcQryExchangeExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -48663,6 +51217,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_TraderI
   
   arg1 = (CThostFtdcQryExchangeExecOrderField *)jarg1; 
   result = (char *) ((arg1)->TraderID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeExecOrderField *arg1 = (CThostFtdcQryExchangeExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeExecOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeExecOrderField *arg1 = (CThostFtdcQryExchangeExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -49227,7 +51810,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_Bran
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -49235,22 +51818,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_IPAddr
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -49285,7 +51868,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_MacA
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -49293,22 +51876,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_Exchan
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -49332,6 +51915,64 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_Volume_
   arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
   result = (TThostFtdcVolumeType) ((arg1)->Volume);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeExecOrderActionField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeExecOrderActionField *arg1 = (CThostFtdcExchangeExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -49546,7 +52187,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InvestorID_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -49554,22 +52195,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InstrumentID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -49983,7 +52624,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_ClientID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
   char *arg2 ;
   
@@ -49991,22 +52632,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_IPAddress_set(voi
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50087,6 +52728,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_ErrorMsg_get(vo
   
   arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
   result = (char *) ((arg1)->ErrorMsg);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrExecOrderField *arg1 = (CThostFtdcErrExecOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrExecOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50470,7 +53169,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_UserID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -50478,22 +53177,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50528,7 +53227,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InvestUni
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -50536,22 +53235,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_IPAddress_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50632,6 +53331,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_ErrorMsg_
   
   arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
   result = (char *) ((arg1)->ErrorMsg);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrExecOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrExecOrderActionField *arg1 = (CThostFtdcErrExecOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrExecOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50731,7 +53488,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryErrExecOrderActionField(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrTradingRightField *arg1 = (CThostFtdcOptionInstrTradingRightField *) 0 ;
   char *arg2 ;
   
@@ -50739,22 +53496,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrTradingRightField *arg1 = (CThostFtdcOptionInstrTradingRightField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrTradingRightField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -50884,6 +53641,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_Tradin
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrTradingRightField *arg1 = (CThostFtdcOptionInstrTradingRightField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrTradingRightField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrTradingRightField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrTradingRightField *arg1 = (CThostFtdcOptionInstrTradingRightField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrTradingRightField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrTradingRightField() {
   void * jresult ;
   CThostFtdcOptionInstrTradingRightField *result = 0 ;
@@ -50960,7 +53746,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_I
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryOptionInstrTradingRightField *arg1 = (CThostFtdcQryOptionInstrTradingRightField *) 0 ;
   char *arg2 ;
   
@@ -50968,22 +53754,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_Ins
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryOptionInstrTradingRightField *arg1 = (CThostFtdcQryOptionInstrTradingRightField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryOptionInstrTradingRightField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51007,6 +53793,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_Dir
   arg1 = (CThostFtdcQryOptionInstrTradingRightField *)jarg1; 
   result = (TThostFtdcDirectionType) ((arg1)->Direction);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryOptionInstrTradingRightField *arg1 = (CThostFtdcQryOptionInstrTradingRightField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrTradingRightField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionInstrTradingRightField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryOptionInstrTradingRightField *arg1 = (CThostFtdcQryOptionInstrTradingRightField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryOptionInstrTradingRightField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -51087,7 +53902,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InvestorID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -51095,22 +53910,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InstrumentID_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51232,7 +54047,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InvestUnitID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -51240,22 +54055,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_IPAddress_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51285,6 +54100,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_MacAddress_get
   
   arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputForQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputForQuoteField *arg1 = (CThostFtdcInputForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51366,7 +54239,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InvestorID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -51374,22 +54247,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InstrumentID_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51569,7 +54442,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ClientID_get(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -51577,22 +54450,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ExchangeInstID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51882,7 +54755,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InvestUnitID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -51890,22 +54763,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_IPAddress_set(void * 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -51935,6 +54808,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_MacAddress_get(void
   
   arg1 = (CThostFtdcForQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcForQuoteField *arg1 = (CThostFtdcForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52016,7 +54976,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InvestorID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryForQuoteField *arg1 = (CThostFtdcQryForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -52024,22 +54984,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryForQuoteField *arg1 = (CThostFtdcQryForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52156,6 +55116,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InvestUnitID_get
   
   arg1 = (CThostFtdcQryForQuoteField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryForQuoteField *arg1 = (CThostFtdcQryForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryForQuoteField *arg1 = (CThostFtdcQryForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52295,7 +55284,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ClientID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -52303,22 +55292,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ExchangeInstI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52455,7 +55444,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ForQuoteStatu
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -52463,22 +55452,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_IPAddress_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52508,6 +55497,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_MacAddress_
   
   arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeForQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeForQuoteField *arg1 = (CThostFtdcExchangeForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52589,7 +55636,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ClientID
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeForQuoteField *arg1 = (CThostFtdcQryExchangeForQuoteField *) 0 ;
   char *arg2 ;
   
@@ -52597,22 +55644,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ExchangeIn
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeForQuoteField *arg1 = (CThostFtdcQryExchangeForQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeForQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52671,6 +55718,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_TraderID
   
   arg1 = (CThostFtdcQryExchangeForQuoteField *)jarg1; 
   result = (char *) ((arg1)->TraderID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeForQuoteField *arg1 = (CThostFtdcQryExchangeForQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeForQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeForQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeForQuoteField *arg1 = (CThostFtdcQryExchangeForQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeForQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -52752,7 +55828,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InvestorID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
   char *arg2 ;
   
@@ -52760,22 +55836,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53240,7 +56316,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_ClientID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
   char *arg2 ;
   
@@ -53248,22 +56324,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_IPAddress_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53293,6 +56369,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_MacAddress_get(vo
   
   arg1 = (CThostFtdcInputQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputQuoteField *arg1 = (CThostFtdcInputQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53600,7 +56734,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_UserID_get(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
   char *arg2 ;
   
@@ -53608,22 +56742,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53687,7 +56821,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_ClientID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
   char *arg2 ;
   
@@ -53695,22 +56829,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_IPAddress_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53740,6 +56874,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_MacAddress_
   
   arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputQuoteActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputQuoteActionField *arg1 = (CThostFtdcInputQuoteActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputQuoteActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -53821,7 +57013,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_InvestorID_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *arg2 ;
   
@@ -53829,22 +57021,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_InstrumentID_set(void * 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -54251,7 +57443,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_ClientID_get(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *arg2 ;
   
@@ -54259,22 +57451,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_ExchangeInstID_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55029,7 +58221,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_CurrencyID_get(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *arg2 ;
   
@@ -55037,22 +58229,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_IPAddress_set(void * jar
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55082,6 +58274,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_MacAddress_get(void * 
   
   arg1 = (CThostFtdcQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQuoteField *arg1 = (CThostFtdcQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55694,7 +58973,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_StatusMsg_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
   char *arg2 ;
   
@@ -55702,22 +58981,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQuoteActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55781,7 +59060,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InvestUnitID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
   char *arg2 ;
   
@@ -55789,22 +59068,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_IPAddress_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQuoteActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55834,6 +59113,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_MacAddress_get(v
   
   arg1 = (CThostFtdcQuoteActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQuoteActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQuoteActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQuoteActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQuoteActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQuoteActionField *arg1 = (CThostFtdcQuoteActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQuoteActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -55915,7 +59252,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InvestorID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryQuoteField *arg1 = (CThostFtdcQryQuoteField *) 0 ;
   char *arg2 ;
   
@@ -55923,22 +59260,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InstrumentID_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryQuoteField *arg1 = (CThostFtdcQryQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryQuoteField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -56084,6 +59421,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InvestUnitID_get(vo
   
   arg1 = (CThostFtdcQryQuoteField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryQuoteField *arg1 = (CThostFtdcQryQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryQuoteField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryQuoteField *arg1 = (CThostFtdcQryQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryQuoteField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -56450,7 +59816,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ClientID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
   char *arg2 ;
   
@@ -56458,22 +59824,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ExchangeInstID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -56930,7 +60296,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_BranchID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
   char *arg2 ;
   
@@ -56938,22 +60304,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_IPAddress_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -56983,6 +60349,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_MacAddress_get
   
   arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeQuoteField *arg1 = (CThostFtdcExchangeQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -57064,7 +60488,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ClientID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeQuoteField *arg1 = (CThostFtdcQryExchangeQuoteField *) 0 ;
   char *arg2 ;
   
@@ -57072,22 +60496,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ExchangeInstI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeQuoteField *arg1 = (CThostFtdcQryExchangeQuoteField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeQuoteField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -57146,6 +60570,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_TraderID_ge
   
   arg1 = (CThostFtdcQryExchangeQuoteField *)jarg1; 
   result = (char *) ((arg1)->TraderID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeQuoteField *arg1 = (CThostFtdcQryExchangeQuoteField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeQuoteField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeQuoteField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeQuoteField *arg1 = (CThostFtdcQryExchangeQuoteField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeQuoteField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -57659,7 +61112,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_UserID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeQuoteActionField *arg1 = (CThostFtdcExchangeQuoteActionField *) 0 ;
   char *arg2 ;
   
@@ -57667,22 +61120,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_IPAddress_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeQuoteActionField *arg1 = (CThostFtdcExchangeQuoteActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeQuoteActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -57712,6 +61165,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_MacAddre
   
   arg1 = (CThostFtdcExchangeQuoteActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeQuoteActionField *arg1 = (CThostFtdcExchangeQuoteActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeQuoteActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeQuoteActionField *arg1 = (CThostFtdcExchangeQuoteActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeQuoteActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -57869,7 +61351,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryExchangeQuoteActionField(
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionInstrDeltaField *arg1 = (CThostFtdcOptionInstrDeltaField *) 0 ;
   char *arg2 ;
   
@@ -57877,22 +61359,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionInstrDeltaField *arg1 = (CThostFtdcOptionInstrDeltaField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionInstrDeltaField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -58000,6 +61482,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_Delta_get(v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionInstrDeltaField *arg1 = (CThostFtdcOptionInstrDeltaField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionInstrDeltaField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionInstrDeltaField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionInstrDeltaField *arg1 = (CThostFtdcOptionInstrDeltaField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionInstrDeltaField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcOptionInstrDeltaField() {
   void * jresult ;
   CThostFtdcOptionInstrDeltaField *result = 0 ;
@@ -58047,7 +61558,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_TradingDay_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcForQuoteRspField *arg1 = (CThostFtdcForQuoteRspField *) 0 ;
   char *arg2 ;
   
@@ -58055,22 +61566,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcForQuoteRspField *arg1 = (CThostFtdcForQuoteRspField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcForQuoteRspField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -58192,6 +61703,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_ExchangeID_get(v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcForQuoteRspField *arg1 = (CThostFtdcForQuoteRspField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcForQuoteRspField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteRspField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcForQuoteRspField *arg1 = (CThostFtdcForQuoteRspField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcForQuoteRspField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcForQuoteRspField() {
   void * jresult ;
   CThostFtdcForQuoteRspField *result = 0 ;
@@ -58210,7 +61750,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcForQuoteRspField(void * jarg
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcStrikeOffsetField *arg1 = (CThostFtdcStrikeOffsetField *) 0 ;
   char *arg2 ;
   
@@ -58218,22 +61758,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_InstrumentID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcStrikeOffsetField *arg1 = (CThostFtdcStrikeOffsetField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcStrikeOffsetField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -58363,6 +61903,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_OffsetType_get(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcStrikeOffsetField *arg1 = (CThostFtdcStrikeOffsetField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcStrikeOffsetField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcStrikeOffsetField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcStrikeOffsetField *arg1 = (CThostFtdcStrikeOffsetField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcStrikeOffsetField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcStrikeOffsetField() {
   void * jresult ;
   CThostFtdcStrikeOffsetField *result = 0 ;
@@ -58439,6 +62008,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryStrikeOffsetField_InvestorID_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryStrikeOffsetField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryStrikeOffsetField *arg1 = (CThostFtdcQryStrikeOffsetField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryStrikeOffsetField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryStrikeOffsetField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryStrikeOffsetField *arg1 = (CThostFtdcQryStrikeOffsetField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryStrikeOffsetField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryStrikeOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryStrikeOffsetField *arg1 = (CThostFtdcQryStrikeOffsetField *) 0 ;
   char *arg2 ;
@@ -58447,8 +62045,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryStrikeOffsetField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -58719,7 +62317,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_Invest
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputBatchOrderActionField *arg1 = (CThostFtdcInputBatchOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -58727,22 +62325,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_IPAddres
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputBatchOrderActionField *arg1 = (CThostFtdcInputBatchOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputBatchOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -58772,6 +62370,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_MacAdd
   
   arg1 = (CThostFtdcInputBatchOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputBatchOrderActionField *arg1 = (CThostFtdcInputBatchOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputBatchOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputBatchOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputBatchOrderActionField *arg1 = (CThostFtdcInputBatchOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputBatchOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59304,7 +62931,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_InvestUnitI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcBatchOrderActionField *arg1 = (CThostFtdcBatchOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -59312,22 +62939,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_IPAddress_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcBatchOrderActionField *arg1 = (CThostFtdcBatchOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcBatchOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59357,6 +62984,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_MacAddress_
   
   arg1 = (CThostFtdcBatchOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcBatchOrderActionField *arg1 = (CThostFtdcBatchOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcBatchOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBatchOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcBatchOrderActionField *arg1 = (CThostFtdcBatchOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcBatchOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59685,7 +63341,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_Use
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeBatchOrderActionField *arg1 = (CThostFtdcExchangeBatchOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -59693,22 +63349,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_IPAdd
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeBatchOrderActionField *arg1 = (CThostFtdcExchangeBatchOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeBatchOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59738,6 +63394,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_Mac
   
   arg1 = (CThostFtdcExchangeBatchOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeBatchOrderActionField *arg1 = (CThostFtdcExchangeBatchOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeBatchOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeBatchOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeBatchOrderActionField *arg1 = (CThostFtdcExchangeBatchOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeBatchOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59895,7 +63580,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_BrokerID
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcCombInstrumentGuardField *arg1 = (CThostFtdcCombInstrumentGuardField *) 0 ;
   char *arg2 ;
   
@@ -59903,22 +63588,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_Instrument
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombInstrumentGuardField *arg1 = (CThostFtdcCombInstrumentGuardField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombInstrumentGuardField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -59975,6 +63660,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_Exchange
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombInstrumentGuardField *arg1 = (CThostFtdcCombInstrumentGuardField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombInstrumentGuardField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombInstrumentGuardField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombInstrumentGuardField *arg1 = (CThostFtdcCombInstrumentGuardField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombInstrumentGuardField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcCombInstrumentGuardField() {
   void * jresult ;
   CThostFtdcCombInstrumentGuardField *result = 0 ;
@@ -60022,7 +63736,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_Broke
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryCombInstrumentGuardField *arg1 = (CThostFtdcQryCombInstrumentGuardField *) 0 ;
   char *arg2 ;
   
@@ -60030,22 +63744,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_Instrum
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryCombInstrumentGuardField *arg1 = (CThostFtdcQryCombInstrumentGuardField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryCombInstrumentGuardField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60075,6 +63789,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_Excha
   
   arg1 = (CThostFtdcQryCombInstrumentGuardField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombInstrumentGuardField *arg1 = (CThostFtdcQryCombInstrumentGuardField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombInstrumentGuardField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombInstrumentGuardField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombInstrumentGuardField *arg1 = (CThostFtdcQryCombInstrumentGuardField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombInstrumentGuardField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60156,7 +63899,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InvestorID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
   char *arg2 ;
   
@@ -60164,22 +63907,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputCombActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60360,7 +64103,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_ExchangeID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
   char *arg2 ;
   
@@ -60368,22 +64111,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_IPAddress_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputCombActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60442,6 +64185,108 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InvestUnitID
   
   arg1 = (CThostFtdcInputCombActionField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_FrontID_set(void * jarg1, int jarg2) {
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  TThostFtdcFrontIDType arg2 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  arg2 = (TThostFtdcFrontIDType)jarg2; 
+  if (arg1) (arg1)->FrontID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_FrontID_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  TThostFtdcFrontIDType result;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  result = (TThostFtdcFrontIDType) ((arg1)->FrontID);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_SessionID_set(void * jarg1, int jarg2) {
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  TThostFtdcSessionIDType arg2 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  arg2 = (TThostFtdcSessionIDType)jarg2; 
+  if (arg1) (arg1)->SessionID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_SessionID_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  TThostFtdcSessionIDType result;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  result = (TThostFtdcSessionIDType) ((arg1)->SessionID);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputCombActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputCombActionField *arg1 = (CThostFtdcInputCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputCombActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60523,7 +64368,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_InvestorID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *arg2 ;
   
@@ -60531,22 +64376,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -60814,7 +64659,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_ClientID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *arg2 ;
   
@@ -60822,22 +64667,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_ExchangeInstID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombActionField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61113,7 +64958,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_StatusMsg_get(voi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *arg2 ;
   
@@ -61121,22 +64966,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_IPAddress_set(void 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61258,6 +65103,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_InvestUnitID_get(
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombActionField *arg1 = (CThostFtdcCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcCombActionField() {
   void * jresult ;
   CThostFtdcCombActionField *result = 0 ;
@@ -61334,7 +65266,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InvestorID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryCombActionField *arg1 = (CThostFtdcQryCombActionField *) 0 ;
   char *arg2 ;
   
@@ -61342,22 +65274,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InstrumentID_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryCombActionField *arg1 = (CThostFtdcQryCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryCombActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61416,6 +65348,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InvestUnitID_g
   
   arg1 = (CThostFtdcQryCombActionField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombActionField *arg1 = (CThostFtdcQryCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombActionField *arg1 = (CThostFtdcQryCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61643,7 +65604,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ClientID_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
   char *arg2 ;
   
@@ -61651,22 +65612,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ExchangeIns
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61840,7 +65801,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_SequenceNo_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
   char *arg2 ;
   
@@ -61848,22 +65809,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_IPAddress_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -61956,6 +65917,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_BranchID_
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeCombActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeCombActionField *arg1 = (CThostFtdcExchangeCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeCombActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcExchangeCombActionField() {
   void * jresult ;
   CThostFtdcExchangeCombActionField *result = 0 ;
@@ -62032,7 +66051,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_Client
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryExchangeCombActionField *arg1 = (CThostFtdcQryExchangeCombActionField *) 0 ;
   char *arg2 ;
   
@@ -62040,22 +66059,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_Exchange
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryExchangeCombActionField *arg1 = (CThostFtdcQryExchangeCombActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryExchangeCombActionField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62119,6 +66138,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_Trader
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryExchangeCombActionField *arg1 = (CThostFtdcQryExchangeCombActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryExchangeCombActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryExchangeCombActionField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryExchangeCombActionField *arg1 = (CThostFtdcQryExchangeCombActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryExchangeCombActionField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryExchangeCombActionField() {
   void * jresult ;
   CThostFtdcQryExchangeCombActionField *result = 0 ;
@@ -62137,7 +66185,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryExchangeCombActionField(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcProductExchRateField *arg1 = (CThostFtdcProductExchRateField *) 0 ;
   char *arg2 ;
   
@@ -62145,22 +66193,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ProductID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcProductExchRateField *arg1 = (CThostFtdcProductExchRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcProductExchRateField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62246,6 +66294,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ExchangeID_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcProductExchRateField *arg1 = (CThostFtdcProductExchRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcProductExchRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductExchRateField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcProductExchRateField *arg1 = (CThostFtdcProductExchRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcProductExchRateField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcProductExchRateField() {
   void * jresult ;
   CThostFtdcProductExchRateField *result = 0 ;
@@ -62264,7 +66341,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcProductExchRateField(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryProductExchRateField *arg1 = (CThostFtdcQryProductExchRateField *) 0 ;
   char *arg2 ;
   
@@ -62272,22 +66349,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ProductID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryProductExchRateField *arg1 = (CThostFtdcQryProductExchRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryProductExchRateField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62317,6 +66394,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ExchangeI
   
   arg1 = (CThostFtdcQryProductExchRateField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryProductExchRateField *arg1 = (CThostFtdcQryProductExchRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryProductExchRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductExchRateField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryProductExchRateField *arg1 = (CThostFtdcQryProductExchRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryProductExchRateField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62369,7 +66475,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_BrokerID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryForQuoteParamField *arg1 = (CThostFtdcQryForQuoteParamField *) 0 ;
   char *arg2 ;
   
@@ -62377,22 +66483,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryForQuoteParamField *arg1 = (CThostFtdcQryForQuoteParamField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryForQuoteParamField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62422,6 +66528,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_ExchangeID_
   
   arg1 = (CThostFtdcQryForQuoteParamField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryForQuoteParamField *arg1 = (CThostFtdcQryForQuoteParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryForQuoteParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryForQuoteParamField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryForQuoteParamField *arg1 = (CThostFtdcQryForQuoteParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryForQuoteParamField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62474,7 +66609,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_BrokerID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcForQuoteParamField *arg1 = (CThostFtdcForQuoteParamField *) 0 ;
   char *arg2 ;
   
@@ -62482,22 +66617,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_InstrumentID_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcForQuoteParamField *arg1 = (CThostFtdcForQuoteParamField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcForQuoteParamField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62576,6 +66711,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_PriceInterval_
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcForQuoteParamField *arg1 = (CThostFtdcForQuoteParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcForQuoteParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcForQuoteParamField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcForQuoteParamField *arg1 = (CThostFtdcForQuoteParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcForQuoteParamField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcForQuoteParamField() {
   void * jresult ;
   CThostFtdcForQuoteParamField *result = 0 ;
@@ -62594,7 +66758,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcForQuoteParamField(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcMMOptionInstrCommRateField *arg1 = (CThostFtdcMMOptionInstrCommRateField *) 0 ;
   char *arg2 ;
   
@@ -62602,22 +66766,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcMMOptionInstrCommRateField *arg1 = (CThostFtdcMMOptionInstrCommRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcMMOptionInstrCommRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -62879,6 +67043,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_Strike
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMMOptionInstrCommRateField *arg1 = (CThostFtdcMMOptionInstrCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMMOptionInstrCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMOptionInstrCommRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMMOptionInstrCommRateField *arg1 = (CThostFtdcMMOptionInstrCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMMOptionInstrCommRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcMMOptionInstrCommRateField() {
   void * jresult ;
   CThostFtdcMMOptionInstrCommRateField *result = 0 ;
@@ -62955,6 +67148,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMMOptionInstrCommRateField_Inv
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMOptionInstrCommRateField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMMOptionInstrCommRateField *arg1 = (CThostFtdcQryMMOptionInstrCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryMMOptionInstrCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMMOptionInstrCommRateField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMMOptionInstrCommRateField *arg1 = (CThostFtdcQryMMOptionInstrCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMMOptionInstrCommRateField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryMMOptionInstrCommRateField *arg1 = (CThostFtdcQryMMOptionInstrCommRateField *) 0 ;
   char *arg2 ;
@@ -62963,8 +67185,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMOptionInstrCommRateField_Instr
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -63002,7 +67224,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryMMOptionInstrCommRateFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcMMInstrumentCommissionRateField *arg1 = (CThostFtdcMMInstrumentCommissionRateField *) 0 ;
   char *arg2 ;
   
@@ -63010,22 +67232,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_Ins
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcMMInstrumentCommissionRateField *arg1 = (CThostFtdcMMInstrumentCommissionRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcMMInstrumentCommissionRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -63243,6 +67465,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_C
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMMInstrumentCommissionRateField *arg1 = (CThostFtdcMMInstrumentCommissionRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMMInstrumentCommissionRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMMInstrumentCommissionRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMMInstrumentCommissionRateField *arg1 = (CThostFtdcMMInstrumentCommissionRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMMInstrumentCommissionRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcMMInstrumentCommissionRateField() {
   void * jresult ;
   CThostFtdcMMInstrumentCommissionRateField *result = 0 ;
@@ -63319,6 +67570,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMMInstrumentCommissionRateFiel
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMInstrumentCommissionRateField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMMInstrumentCommissionRateField *arg1 = (CThostFtdcQryMMInstrumentCommissionRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryMMInstrumentCommissionRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMMInstrumentCommissionRateField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMMInstrumentCommissionRateField *arg1 = (CThostFtdcQryMMInstrumentCommissionRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMMInstrumentCommissionRateField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMInstrumentCommissionRateField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryMMInstrumentCommissionRateField *arg1 = (CThostFtdcQryMMInstrumentCommissionRateField *) 0 ;
   char *arg2 ;
@@ -63327,8 +67607,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMMInstrumentCommissionRateField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -63366,7 +67646,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryMMInstrumentCommissionRat
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentOrderCommRateField *arg1 = (CThostFtdcInstrumentOrderCommRateField *) 0 ;
   char *arg2 ;
   
@@ -63374,22 +67654,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_Instru
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentOrderCommRateField *arg1 = (CThostFtdcInstrumentOrderCommRateField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentOrderCommRateField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -63599,6 +67879,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_Inve
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentOrderCommRateField *arg1 = (CThostFtdcInstrumentOrderCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentOrderCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentOrderCommRateField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentOrderCommRateField *arg1 = (CThostFtdcInstrumentOrderCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentOrderCommRateField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentOrderCommRateField() {
   void * jresult ;
   CThostFtdcInstrumentOrderCommRateField *result = 0 ;
@@ -63675,6 +67984,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentOrderCommRateField_I
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentOrderCommRateField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentOrderCommRateField *arg1 = (CThostFtdcQryInstrumentOrderCommRateField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentOrderCommRateField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentOrderCommRateField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentOrderCommRateField *arg1 = (CThostFtdcQryInstrumentOrderCommRateField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentOrderCommRateField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentOrderCommRateField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentOrderCommRateField *arg1 = (CThostFtdcQryInstrumentOrderCommRateField *) 0 ;
   char *arg2 ;
@@ -63683,8 +68021,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentOrderCommRateField_Ins
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -63849,7 +68187,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcTradeParamField(void * jarg1
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentMarginRateULField *arg1 = (CThostFtdcInstrumentMarginRateULField *) 0 ;
   char *arg2 ;
   
@@ -63857,22 +68195,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_Instrum
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentMarginRateULField *arg1 = (CThostFtdcInstrumentMarginRateULField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentMarginRateULField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -64068,6 +68406,35 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_Short
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentMarginRateULField *arg1 = (CThostFtdcInstrumentMarginRateULField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateULField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentMarginRateULField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentMarginRateULField *arg1 = (CThostFtdcInstrumentMarginRateULField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentMarginRateULField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentMarginRateULField() {
   void * jresult ;
   CThostFtdcInstrumentMarginRateULField *result = 0 ;
@@ -64166,7 +68533,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_Investo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcFutureLimitPosiParamField *arg1 = (CThostFtdcFutureLimitPosiParamField *) 0 ;
   char *arg2 ;
   
@@ -64174,22 +68541,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_ProductID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcFutureLimitPosiParamField *arg1 = (CThostFtdcFutureLimitPosiParamField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcFutureLimitPosiParamField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -64261,6 +68628,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_OpenVolume
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcFutureLimitPosiParamField *arg1 = (CThostFtdcFutureLimitPosiParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcFutureLimitPosiParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcFutureLimitPosiParamField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcFutureLimitPosiParamField *arg1 = (CThostFtdcFutureLimitPosiParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcFutureLimitPosiParamField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcFutureLimitPosiParamField() {
   void * jresult ;
   CThostFtdcFutureLimitPosiParamField *result = 0 ;
@@ -64279,6 +68675,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcFutureLimitPosiParamField(vo
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenIPField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcLoginForbiddenIPField *arg1 = (CThostFtdcLoginForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcLoginForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenIPField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcLoginForbiddenIPField *arg1 = (CThostFtdcLoginForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcLoginForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenIPField_IPAddress_set(void * jarg1, char * jarg2) {
   CThostFtdcLoginForbiddenIPField *arg1 = (CThostFtdcLoginForbiddenIPField *) 0 ;
   char *arg2 ;
@@ -64287,8 +68712,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenIPField_IPAddress_set
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
     } else {
       arg1->IPAddress[0] = 0;
     }
@@ -64326,7 +68751,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcLoginForbiddenIPField(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIPListField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIPListField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcIPListField *arg1 = (CThostFtdcIPListField *) 0 ;
   char *arg2 ;
   
@@ -64334,22 +68759,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIPListField_IPAddress_set(void * ja
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIPListField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIPListField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcIPListField *arg1 = (CThostFtdcIPListField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcIPListField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -64373,6 +68798,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcIPListField_IsWhite_get(void * jarg1
   arg1 = (CThostFtdcIPListField *)jarg1; 
   result = (TThostFtdcBoolType) ((arg1)->IsWhite);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcIPListField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcIPListField *arg1 = (CThostFtdcIPListField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcIPListField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcIPListField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcIPListField *arg1 = (CThostFtdcIPListField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcIPListField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -64453,7 +68907,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_Investo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -64461,22 +68915,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -64802,7 +69256,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_ClientI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -64810,22 +69264,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_IPAddress
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -64855,6 +69309,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_MacAddr
   
   arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOptionSelfCloseField *arg1 = (CThostFtdcInputOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -65162,7 +69674,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_U
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -65170,22 +69682,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_Ins
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -65220,7 +69732,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_I
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -65228,22 +69740,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_IPA
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -65273,6 +69785,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_M
   
   arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInputOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInputOptionSelfCloseActionField *arg1 = (CThostFtdcInputOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInputOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -65354,7 +69924,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InvestorID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -65362,22 +69932,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -65674,7 +70244,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ClientID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -65682,22 +70252,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ExchangeInstID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -66307,7 +70877,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_CurrencyID_g
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -66315,22 +70885,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_IPAddress_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -66360,6 +70930,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_MacAddress_g
   
   arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionSelfCloseField *arg1 = (CThostFtdcOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -66972,7 +71629,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_Status
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -66980,22 +71637,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67059,7 +71716,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_Invest
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -67067,22 +71724,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_IPAddres
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67112,6 +71769,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_MacAdd
   
   arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcOptionSelfCloseActionField *arg1 = (CThostFtdcOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67193,7 +71908,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InvestorI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryOptionSelfCloseField *arg1 = (CThostFtdcQryOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -67201,22 +71916,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryOptionSelfCloseField *arg1 = (CThostFtdcQryOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67333,6 +72048,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InsertTim
   
   arg1 = (CThostFtdcQryOptionSelfCloseField *)jarg1; 
   result = (char *) ((arg1)->InsertTimeEnd);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryOptionSelfCloseField *arg1 = (CThostFtdcQryOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryOptionSelfCloseField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryOptionSelfCloseField *arg1 = (CThostFtdcQryOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67589,7 +72333,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_Clie
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -67597,22 +72341,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_Exchan
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -67982,7 +72726,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_Bran
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
   char *arg2 ;
   
@@ -67990,22 +72734,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_IPAddr
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -68035,6 +72779,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_MacA
   
   arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOptionSelfCloseField *arg1 = (CThostFtdcExchangeOptionSelfCloseField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -68577,7 +73379,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -68585,22 +73387,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -68635,7 +73437,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
   char *arg2 ;
   
@@ -68643,22 +73445,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -68682,6 +73484,64 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_
   arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
   result = (TThostFtdcOptSelfCloseFlagType) ((arg1)->OptSelfCloseFlag);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcExchangeOptionSelfCloseActionField *arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcExchangeOptionSelfCloseActionField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -68932,6 +73792,50 @@ SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapField_ToAmount_get(v
   
   arg1 = (CThostFtdcSyncDelaySwapField *)jarg1; 
   result = (TThostFtdcMoneyType) ((arg1)->ToAmount);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapField_IsManualSwap_set(void * jarg1, int jarg2) {
+  CThostFtdcSyncDelaySwapField *arg1 = (CThostFtdcSyncDelaySwapField *) 0 ;
+  TThostFtdcBoolType arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapField *)jarg1; 
+  arg2 = (TThostFtdcBoolType)jarg2; 
+  if (arg1) (arg1)->IsManualSwap = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapField_IsManualSwap_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcSyncDelaySwapField *arg1 = (CThostFtdcSyncDelaySwapField *) 0 ;
+  TThostFtdcBoolType result;
+  
+  arg1 = (CThostFtdcSyncDelaySwapField *)jarg1; 
+  result = (TThostFtdcBoolType) ((arg1)->IsManualSwap);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapField_IsAllRemainSetZero_set(void * jarg1, int jarg2) {
+  CThostFtdcSyncDelaySwapField *arg1 = (CThostFtdcSyncDelaySwapField *) 0 ;
+  TThostFtdcBoolType arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapField *)jarg1; 
+  arg2 = (TThostFtdcBoolType)jarg2; 
+  if (arg1) (arg1)->IsAllRemainSetZero = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapField_IsAllRemainSetZero_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcSyncDelaySwapField *arg1 = (CThostFtdcSyncDelaySwapField *) 0 ;
+  TThostFtdcBoolType result;
+  
+  arg1 = (CThostFtdcSyncDelaySwapField *)jarg1; 
+  result = (TThostFtdcBoolType) ((arg1)->IsAllRemainSetZero);
   jresult = result; 
   return jresult;
 }
@@ -69734,7 +74638,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_TradingDay_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
   char *arg2 ;
   
@@ -69742,22 +74646,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_InstrumentID_set(vo
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcMarketDataField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -69792,7 +74696,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeID_get(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
   char *arg2 ;
   
@@ -69800,22 +74704,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeInstID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcMarketDataField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -70248,6 +75152,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ActionDay_get(voi
   
   arg1 = (CThostFtdcMarketDataField *)jarg1; 
   result = (char *) ((arg1)->ActionDay);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMarketDataField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMarketDataField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMarketDataField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMarketDataField *arg1 = (CThostFtdcMarketDataField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMarketDataField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -71236,7 +76198,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcMarketDataAsk45Field(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcMarketDataUpdateTimeField *arg1 = (CThostFtdcMarketDataUpdateTimeField *) 0 ;
   char *arg2 ;
   
@@ -71244,22 +76206,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcMarketDataUpdateTimeField *arg1 = (CThostFtdcMarketDataUpdateTimeField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcMarketDataUpdateTimeField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -71345,6 +76307,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_ActionD
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMarketDataUpdateTimeField *arg1 = (CThostFtdcMarketDataUpdateTimeField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMarketDataUpdateTimeField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMarketDataUpdateTimeField *arg1 = (CThostFtdcMarketDataUpdateTimeField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMarketDataUpdateTimeField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcMarketDataUpdateTimeField() {
   void * jresult ;
   CThostFtdcMarketDataUpdateTimeField *result = 0 ;
@@ -71410,6 +76401,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcMarketDataExchangeField(void
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSpecificInstrumentField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcSpecificInstrumentField *arg1 = (CThostFtdcSpecificInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSpecificInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSpecificInstrumentField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSpecificInstrumentField *arg1 = (CThostFtdcSpecificInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSpecificInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSpecificInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcSpecificInstrumentField *arg1 = (CThostFtdcSpecificInstrumentField *) 0 ;
   char *arg2 ;
@@ -71418,8 +76438,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSpecificInstrumentField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -71486,7 +76506,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeID_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
   char *arg2 ;
   
@@ -71494,22 +76514,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeInstI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -71544,7 +76564,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_SettlementG
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
   char *arg2 ;
   
@@ -71552,22 +76572,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_InstrumentID_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -71668,6 +76688,64 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_EnterReason_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInstrumentStatusField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInstrumentStatusField *arg1 = (CThostFtdcInstrumentStatusField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInstrumentStatusField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInstrumentStatusField() {
   void * jresult ;
   CThostFtdcInstrumentStatusField *result = 0 ;
@@ -71715,6 +76793,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentStatusField_Exchange
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentStatusField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInstrumentStatusField *arg1 = (CThostFtdcQryInstrumentStatusField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInstrumentStatusField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInstrumentStatusField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInstrumentStatusField *arg1 = (CThostFtdcQryInstrumentStatusField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInstrumentStatusField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentStatusField_ExchangeInstID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInstrumentStatusField *arg1 = (CThostFtdcQryInstrumentStatusField *) 0 ;
   char *arg2 ;
@@ -71723,8 +76830,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInstrumentStatusField_ExchangeIn
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
     } else {
       arg1->ExchangeInstID[0] = 0;
     }
@@ -72433,7 +77540,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_In
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInvestorPositionDetailField *arg1 = (CThostFtdcQryInvestorPositionDetailField *) 0 ;
   char *arg2 ;
   
@@ -72441,22 +77548,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_Inst
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInvestorPositionDetailField *arg1 = (CThostFtdcQryInvestorPositionDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInvestorPositionDetailField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -72520,6 +77627,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_In
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInvestorPositionDetailField *arg1 = (CThostFtdcQryInvestorPositionDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionDetailField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInvestorPositionDetailField *arg1 = (CThostFtdcQryInvestorPositionDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionDetailField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryInvestorPositionDetailField() {
   void * jresult ;
   CThostFtdcQryInvestorPositionDetailField *result = 0 ;
@@ -72538,7 +77674,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryInvestorPositionDetailFie
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
   char *arg2 ;
   
@@ -72546,22 +77682,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_Instrum
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -72844,7 +77980,7 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_TradeTy
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
   char *arg2 ;
   
@@ -72852,22 +77988,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_CombIns
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 31-1);
-      arg1->CombInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->CombInstrumentID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_CombInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
-  result = (char *) ((arg1)->CombInstrumentID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -73212,6 +78348,86 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_Inves
   
   arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_SpecPosiType_set(void * jarg1, char jarg2) {
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  TThostFtdcSpecPosiTypeType arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  arg2 = (TThostFtdcSpecPosiTypeType)jarg2; 
+  if (arg1) (arg1)->SpecPosiType = arg2;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_SpecPosiType_get(void * jarg1) {
+  char jresult ;
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  TThostFtdcSpecPosiTypeType result;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  result = (TThostFtdcSpecPosiTypeType) ((arg1)->SpecPosiType);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 81-1);
+      arg1->CombInstrumentID[81-1] = 0;
+    } else {
+      arg1->CombInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionDetailField_CombInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorPositionDetailField *arg1 = (CThostFtdcInvestorPositionDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorPositionDetailField *)jarg1; 
+  result = (char *) ((arg1)->CombInstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -75031,7 +80247,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcTradingAccountPasswordUpdate
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
   char *arg2 ;
   
@@ -75039,22 +80255,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_CombInstrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 31-1);
-      arg1->CombInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->CombInstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_CombInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryCombinationLegField *)jarg1; 
-  result = (char *) ((arg1)->CombInstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -75082,6 +80298,64 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_LegID_get(voi
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_reserve2_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombinationLegField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
+    } else {
+      arg1->reserve2[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_reserve2_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombinationLegField *)jarg1; 
+  result = (char *) ((arg1)->reserve2);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombinationLegField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 81-1);
+      arg1->CombInstrumentID[81-1] = 0;
+    } else {
+      arg1->CombInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_CombInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombinationLegField *)jarg1; 
+  result = (char *) ((arg1)->CombInstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_LegInstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryCombinationLegField *arg1 = (CThostFtdcQryCombinationLegField *) 0 ;
   char *arg2 ;
@@ -75090,8 +80364,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombinationLegField_LegInstrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->LegInstrumentID, (const char *)arg2, 31-1);
-      arg1->LegInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->LegInstrumentID, (const char *)arg2, 81-1);
+      arg1->LegInstrumentID[81-1] = 0;
     } else {
       arg1->LegInstrumentID[0] = 0;
     }
@@ -75176,7 +80450,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQrySyncStatusField(void * ja
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
   char *arg2 ;
   
@@ -75184,22 +80458,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_CombInstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 31-1);
-      arg1->CombInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->CombInstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_CombInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombinationLegField *)jarg1; 
-  result = (char *) ((arg1)->CombInstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -75227,7 +80501,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegID_get(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
   char *arg2 ;
   
@@ -75235,22 +80509,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegInstrumentID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->LegInstrumentID, (const char *)arg2, 31-1);
-      arg1->LegInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->LegInstrumentID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcCombinationLegField *)jarg1; 
-  result = (char *) ((arg1)->LegInstrumentID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -75318,6 +80592,64 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_ImplyLevel_get(v
   arg1 = (CThostFtdcCombinationLegField *)jarg1; 
   result = (TThostFtdcImplyLevelType) ((arg1)->ImplyLevel);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombinationLegField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 81-1);
+      arg1->CombInstrumentID[81-1] = 0;
+    } else {
+      arg1->CombInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_CombInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombinationLegField *)jarg1; 
+  result = (char *) ((arg1)->CombInstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombinationLegField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->LegInstrumentID, (const char *)arg2, 81-1);
+      arg1->LegInstrumentID[81-1] = 0;
+    } else {
+      arg1->LegInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombinationLegField_LegInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombinationLegField *arg1 = (CThostFtdcCombinationLegField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombinationLegField *)jarg1; 
+  result = (char *) ((arg1)->LegInstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -76146,6 +81478,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerUserEventField_InvestorID_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerUserEventField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcBrokerUserEventField *arg1 = (CThostFtdcBrokerUserEventField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcBrokerUserEventField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerUserEventField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcBrokerUserEventField *arg1 = (CThostFtdcBrokerUserEventField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcBrokerUserEventField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerUserEventField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcBrokerUserEventField *arg1 = (CThostFtdcBrokerUserEventField *) 0 ;
   char *arg2 ;
@@ -76154,8 +81515,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerUserEventField_InstrumentID_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -76657,7 +82018,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
   char *arg2 ;
   
@@ -76665,22 +82026,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -76884,7 +82245,7 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_L
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
   char *arg2 ;
   
@@ -76892,22 +82253,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 31-1);
-      arg1->CombInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->CombInstrumentID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
-  result = (char *) ((arg1)->CombInstrumentID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -76959,6 +82320,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailFiel
   
   arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 81-1);
+      arg1->CombInstrumentID[81-1] = 0;
+    } else {
+      arg1->CombInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorPositionCombineDetailField *arg1 = (CThostFtdcInvestorPositionCombineDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorPositionCombineDetailField *)jarg1; 
+  result = (char *) ((arg1)->CombInstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -77040,7 +82459,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InvestorID_get(v
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
   char *arg2 ;
   
@@ -77048,22 +82467,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InstrumentID_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcParkedOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -77820,7 +83239,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InvestUnitID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
   char *arg2 ;
   
@@ -77828,22 +83247,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_IPAddress_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcParkedOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -77873,6 +83292,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_MacAddress_get(v
   
   arg1 = (CThostFtdcParkedOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcParkedOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcParkedOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcParkedOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcParkedOrderField *arg1 = (CThostFtdcParkedOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcParkedOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78224,7 +83701,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_UserID_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -78232,22 +83709,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InstrumentID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78406,7 +83883,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InvestUnit
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -78414,22 +83891,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_IPAddress_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78459,6 +83936,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_MacAddress
   
   arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcParkedOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcParkedOrderActionField *arg1 = (CThostFtdcParkedOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcParkedOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78540,7 +84075,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InvestorID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryParkedOrderField *arg1 = (CThostFtdcQryParkedOrderField *) 0 ;
   char *arg2 ;
   
@@ -78548,22 +84083,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InstrumentID_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryParkedOrderField *arg1 = (CThostFtdcQryParkedOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryParkedOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78622,6 +84157,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InvestUnitID_
   
   arg1 = (CThostFtdcQryParkedOrderField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryParkedOrderField *arg1 = (CThostFtdcQryParkedOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryParkedOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryParkedOrderField *arg1 = (CThostFtdcQryParkedOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryParkedOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78703,7 +84267,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_Investo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryParkedOrderActionField *arg1 = (CThostFtdcQryParkedOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -78711,22 +84275,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_Instrumen
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryParkedOrderActionField *arg1 = (CThostFtdcQryParkedOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryParkedOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -78785,6 +84349,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_InvestU
   
   arg1 = (CThostFtdcQryParkedOrderActionField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryParkedOrderActionField *arg1 = (CThostFtdcQryParkedOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryParkedOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryParkedOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryParkedOrderActionField *arg1 = (CThostFtdcQryParkedOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryParkedOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -79305,7 +84898,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailF
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInvestorPositionCombineDetailField *arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *) 0 ;
   char *arg2 ;
   
@@ -79313,22 +84906,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailFie
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 31-1);
-      arg1->CombInstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->CombInstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_CombInstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInvestorPositionCombineDetailField *arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *)jarg1; 
-  result = (char *) ((arg1)->CombInstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -79387,6 +84980,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailF
   
   arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_CombInstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInvestorPositionCombineDetailField *arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombInstrumentID, (const char *)arg2, 81-1);
+      arg1->CombInstrumentID[81-1] = 0;
+    } else {
+      arg1->CombInstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorPositionCombineDetailField_CombInstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInvestorPositionCombineDetailField *arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInvestorPositionCombineDetailField *)jarg1; 
+  result = (char *) ((arg1)->CombInstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -79613,7 +85235,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_UserID_get(void * jar
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
   char *arg2 ;
   
@@ -79621,28 +85243,28 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPAddress_set(void * ja
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcUserIPField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPMask_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
   char *arg2 ;
   
@@ -79650,22 +85272,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPMask_set(void * jarg1
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPMask, (const char *)arg2, 16-1);
-      arg1->IPMask[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPMask[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPMask_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcUserIPField *)jarg1; 
-  result = (char *) ((arg1)->IPMask);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -79695,6 +85317,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_MacAddress_get(void *
   
   arg1 = (CThostFtdcUserIPField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserIPField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPMask_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPMask, (const char *)arg2, 33-1);
+      arg1->IPMask[33-1] = 0;
+    } else {
+      arg1->IPMask[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserIPField_IPMask_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserIPField *arg1 = (CThostFtdcUserIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserIPField *)jarg1; 
+  result = (char *) ((arg1)->IPMask);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -80422,7 +86102,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InvestorID_get(void
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
   char *arg2 ;
   
@@ -80430,22 +86110,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InstrumentID_set(void
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -81129,7 +86809,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_ClientID_get(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
   char *arg2 ;
   
@@ -81137,22 +86817,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_IPAddress_set(void * 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -81182,6 +86862,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_MacAddress_get(void
   
   arg1 = (CThostFtdcErrOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrOrderField *arg1 = (CThostFtdcErrOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -81263,7 +87001,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_Invest
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *arg2 ;
   
@@ -81271,22 +87009,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -81846,7 +87584,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_Client
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *arg2 ;
   
@@ -81854,22 +87592,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_Exchange
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 31-1);
-      arg1->ExchangeInstID[31-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
     } else {
-      arg1->ExchangeInstID[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_ExchangeInstID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
-  result = (char *) ((arg1)->ExchangeInstID);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -82829,7 +88567,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_Curren
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve3_set(void * jarg1, char * jarg2) {
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *arg2 ;
   
@@ -82837,22 +88575,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_IPAddres
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve3, (const char *)arg2, 16-1);
+      arg1->reserve3[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve3[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_reserve3_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve3);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -82882,6 +88620,93 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_MacAdd
   
   arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
   result = (char *) ((arg1)->MacAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrorConditionalOrderField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrorConditionalOrderField *arg1 = (CThostFtdcErrorConditionalOrderField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrorConditionalOrderField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -83614,7 +89439,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_StatusMsg_get
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -83622,22 +89447,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InstrumentID_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -83701,7 +89526,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InvestUnitID_
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_reserve2_set(void * jarg1, char * jarg2) {
   CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
   char *arg2 ;
   
@@ -83709,22 +89534,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_IPAddress_set(v
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 16-1);
+      arg1->reserve2[16-1] = 0;
     } else {
-      arg1->IPAddress[0] = 0;
+      arg1->reserve2[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_IPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_reserve2_get(void * jarg1) {
   char * jresult ;
   CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
-  result = (char *) ((arg1)->IPAddress);
+  result = (char *) ((arg1)->reserve2);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -83805,6 +89630,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_ErrorMsg_get(
   
   arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
   result = (char *) ((arg1)->ErrorMsg);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcErrOrderActionField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcErrOrderActionField *arg1 = (CThostFtdcErrOrderActionField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcErrOrderActionField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -83966,11 +89849,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcExchangeSequenceField(void *
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_BrokerID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -83983,23 +89866,23 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_B
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_BrokerID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_BrokerID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (char *) ((arg1)->BrokerID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InvestorID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InvestorID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -84012,162 +89895,162 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_I
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InvestorID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InvestorID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (char *) ((arg1)->InvestorID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InstrumentID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_reserve1_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_Direction_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_Direction_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcDirectionType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (TThostFtdcDirectionType)jarg2; 
   if (arg1) (arg1)->Direction = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_Direction_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_Direction_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcDirectionType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (TThostFtdcDirectionType) ((arg1)->Direction);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_OffsetFlag_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_OffsetFlag_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcOffsetFlagType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (TThostFtdcOffsetFlagType)jarg2; 
   if (arg1) (arg1)->OffsetFlag = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_OffsetFlag_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_OffsetFlag_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcOffsetFlagType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (TThostFtdcOffsetFlagType) ((arg1)->OffsetFlag);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_HedgeFlag_set(void * jarg1, char jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_HedgeFlag_set(void * jarg1, char jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcHedgeFlagType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (TThostFtdcHedgeFlagType)jarg2; 
   if (arg1) (arg1)->HedgeFlag = arg2;
 }
 
 
-SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_HedgeFlag_get(void * jarg1) {
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_HedgeFlag_get(void * jarg1) {
   char jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcHedgeFlagType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (TThostFtdcHedgeFlagType) ((arg1)->HedgeFlag);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_MaxVolume_set(void * jarg1, int jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_MaxVolume_set(void * jarg1, int jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcVolumeType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (TThostFtdcVolumeType)jarg2; 
   if (arg1) (arg1)->MaxVolume = arg2;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_MaxVolume_get(void * jarg1) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_MaxVolume_get(void * jarg1) {
   int jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcVolumeType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (TThostFtdcVolumeType) ((arg1)->MaxVolume);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_Price_set(void * jarg1, double jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_Price_set(void * jarg1, double jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcPriceType arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (TThostFtdcPriceType)jarg2; 
   if (arg1) (arg1)->Price = arg2;
 }
 
 
-SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_Price_get(void * jarg1) {
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_Price_get(void * jarg1) {
   double jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   TThostFtdcPriceType result;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (TThostFtdcPriceType) ((arg1)->Price);
   jresult = result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_ExchangeID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_ExchangeID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -84180,23 +90063,23 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_E
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_ExchangeID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_ExchangeID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (char *) ((arg1)->ExchangeID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InvestUnitID_set(void * jarg1, char * jarg2) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InvestUnitID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *arg2 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
@@ -84209,32 +90092,61 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_I
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQueryMaxOrderVolumeWithPriceField_InvestUnitID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InvestUnitID_get(void * jarg1) {
   char * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   char *result = 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
 
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQueryMaxOrderVolumeWithPriceField() {
-  void * jresult ;
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *result = 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
+  char *arg2 ;
   
-  result = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)new CThostFtdcQueryMaxOrderVolumeWithPriceField();
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMaxOrderVolumeWithPriceField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryMaxOrderVolumeWithPriceField() {
+  void * jresult ;
+  CThostFtdcQryMaxOrderVolumeWithPriceField *result = 0 ;
+  
+  result = (CThostFtdcQryMaxOrderVolumeWithPriceField *)new CThostFtdcQryMaxOrderVolumeWithPriceField();
   jresult = (void *)result; 
   return jresult;
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQueryMaxOrderVolumeWithPriceField(void * jarg1) {
-  CThostFtdcQueryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *) 0 ;
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryMaxOrderVolumeWithPriceField(void * jarg1) {
+  CThostFtdcQryMaxOrderVolumeWithPriceField *arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *) 0 ;
   
-  arg1 = (CThostFtdcQueryMaxOrderVolumeWithPriceField *)jarg1; 
+  arg1 = (CThostFtdcQryMaxOrderVolumeWithPriceField *)jarg1; 
   delete arg1;
 }
 
@@ -84653,6 +90565,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryBrokerTradingAlgosField_Exchan
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryBrokerTradingAlgosField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryBrokerTradingAlgosField *arg1 = (CThostFtdcQryBrokerTradingAlgosField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryBrokerTradingAlgosField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryBrokerTradingAlgosField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryBrokerTradingAlgosField *arg1 = (CThostFtdcQryBrokerTradingAlgosField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryBrokerTradingAlgosField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryBrokerTradingAlgosField_InstrumentID_set(void * jarg1, char * jarg2) {
   CThostFtdcQryBrokerTradingAlgosField *arg1 = (CThostFtdcQryBrokerTradingAlgosField *) 0 ;
   char *arg2 ;
@@ -84661,8 +90602,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryBrokerTradingAlgosField_Instrume
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
     } else {
       arg1->InstrumentID[0] = 0;
     }
@@ -84758,7 +90699,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_ExchangeI
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcBrokerTradingAlgosField *arg1 = (CThostFtdcBrokerTradingAlgosField *) 0 ;
   char *arg2 ;
   
@@ -84766,22 +90707,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_InstrumentI
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcBrokerTradingAlgosField *arg1 = (CThostFtdcBrokerTradingAlgosField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcBrokerTradingAlgosField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -84849,6 +90790,35 @@ SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_HandleTradi
   arg1 = (CThostFtdcBrokerTradingAlgosField *)jarg1; 
   result = (TThostFtdcHandleTradingAccountAlgoIDType) ((arg1)->HandleTradingAccountAlgoID);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcBrokerTradingAlgosField *arg1 = (CThostFtdcBrokerTradingAlgosField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcBrokerTradingAlgosField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcBrokerTradingAlgosField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcBrokerTradingAlgosField *arg1 = (CThostFtdcBrokerTradingAlgosField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcBrokerTradingAlgosField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -86628,7 +92598,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_ExchangeID_ge
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcEWarrantOffsetField *arg1 = (CThostFtdcEWarrantOffsetField *) 0 ;
   char *arg2 ;
   
@@ -86636,22 +92606,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InstrumentID_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcEWarrantOffsetField *arg1 = (CThostFtdcEWarrantOffsetField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcEWarrantOffsetField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -86747,6 +92717,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InvestUnitID_
   
   arg1 = (CThostFtdcEWarrantOffsetField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcEWarrantOffsetField *arg1 = (CThostFtdcEWarrantOffsetField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcEWarrantOffsetField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcEWarrantOffsetField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcEWarrantOffsetField *arg1 = (CThostFtdcEWarrantOffsetField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcEWarrantOffsetField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -86857,7 +92856,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_ExchangeID
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryEWarrantOffsetField *arg1 = (CThostFtdcQryEWarrantOffsetField *) 0 ;
   char *arg2 ;
   
@@ -86865,22 +92864,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InstrumentID
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 31-1);
-      arg1->InstrumentID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->InstrumentID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InstrumentID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryEWarrantOffsetField *arg1 = (CThostFtdcQryEWarrantOffsetField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryEWarrantOffsetField *)jarg1; 
-  result = (char *) ((arg1)->InstrumentID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -86910,6 +92909,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InvestUnit
   
   arg1 = (CThostFtdcQryEWarrantOffsetField *)jarg1; 
   result = (char *) ((arg1)->InvestUnitID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryEWarrantOffsetField *arg1 = (CThostFtdcQryEWarrantOffsetField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryEWarrantOffsetField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryEWarrantOffsetField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryEWarrantOffsetField *arg1 = (CThostFtdcQryEWarrantOffsetField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryEWarrantOffsetField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -86991,7 +93019,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryInvestorProductGroupMarginField *arg1 = (CThostFtdcQryInvestorProductGroupMarginField *) 0 ;
   char *arg2 ;
   
@@ -86999,22 +93027,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 31-1);
-      arg1->ProductGroupID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductGroupID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryInvestorProductGroupMarginField *arg1 = (CThostFtdcQryInvestorProductGroupMarginField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryInvestorProductGroupMarginField *)jarg1; 
-  result = (char *) ((arg1)->ProductGroupID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -87100,6 +93128,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginFiel
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryInvestorProductGroupMarginField *arg1 = (CThostFtdcQryInvestorProductGroupMarginField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryInvestorProductGroupMarginField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 81-1);
+      arg1->ProductGroupID[81-1] = 0;
+    } else {
+      arg1->ProductGroupID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryInvestorProductGroupMarginField *arg1 = (CThostFtdcQryInvestorProductGroupMarginField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryInvestorProductGroupMarginField *)jarg1; 
+  result = (char *) ((arg1)->ProductGroupID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryInvestorProductGroupMarginField() {
   void * jresult ;
   CThostFtdcQryInvestorProductGroupMarginField *result = 0 ;
@@ -87118,7 +93175,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryInvestorProductGroupMargi
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcInvestorProductGroupMarginField *arg1 = (CThostFtdcInvestorProductGroupMarginField *) 0 ;
   char *arg2 ;
   
@@ -87126,22 +93183,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_Pro
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 31-1);
-      arg1->ProductGroupID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductGroupID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcInvestorProductGroupMarginField *arg1 = (CThostFtdcInvestorProductGroupMarginField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcInvestorProductGroupMarginField *)jarg1; 
-  result = (char *) ((arg1)->ProductGroupID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -87798,6 +93855,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_I
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(void * jarg1, char * jarg2) {
+  CThostFtdcInvestorProductGroupMarginField *arg1 = (CThostFtdcInvestorProductGroupMarginField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcInvestorProductGroupMarginField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 81-1);
+      arg1->ProductGroupID[81-1] = 0;
+    } else {
+      arg1->ProductGroupID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcInvestorProductGroupMarginField *arg1 = (CThostFtdcInvestorProductGroupMarginField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcInvestorProductGroupMarginField *)jarg1; 
+  result = (char *) ((arg1)->ProductGroupID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcInvestorProductGroupMarginField() {
   void * jresult ;
   CThostFtdcInvestorProductGroupMarginField *result = 0 ;
@@ -88077,7 +94163,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcCFMMCTradingAccountTokenFiel
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcQryProductGroupField *arg1 = (CThostFtdcQryProductGroupField *) 0 ;
   char *arg2 ;
   
@@ -88085,22 +94171,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ProductID_set(
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcQryProductGroupField *arg1 = (CThostFtdcQryProductGroupField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcQryProductGroupField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -88135,6 +94221,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ExchangeID_g
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryProductGroupField *arg1 = (CThostFtdcQryProductGroupField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryProductGroupField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryProductGroupField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryProductGroupField *arg1 = (CThostFtdcQryProductGroupField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryProductGroupField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryProductGroupField() {
   void * jresult ;
   CThostFtdcQryProductGroupField *result = 0 ;
@@ -88153,7 +94268,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryProductGroupField(void * 
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductID_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
   char *arg2 ;
   
@@ -88161,22 +94276,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductID_set(voi
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductID, (const char *)arg2, 31-1);
-      arg1->ProductID[31-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
     } else {
-      arg1->ProductID[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductID_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductGroupField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcProductGroupField *)jarg1; 
-  result = (char *) ((arg1)->ProductID);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -88211,6 +94326,64 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ExchangeID_get(
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_reserve2_set(void * jarg1, char * jarg2) {
+  CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcProductGroupField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve2, (const char *)arg2, 31-1);
+      arg1->reserve2[31-1] = 0;
+    } else {
+      arg1->reserve2[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductGroupField_reserve2_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcProductGroupField *)jarg1; 
+  result = (char *) ((arg1)->reserve2);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcProductGroupField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcProductGroupField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductGroupID_set(void * jarg1, char * jarg2) {
   CThostFtdcProductGroupField *arg1 = (CThostFtdcProductGroupField *) 0 ;
   char *arg2 ;
@@ -88219,8 +94392,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcProductGroupField_ProductGroupID_se
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 31-1);
-      arg1->ProductGroupID[31-1] = 0;
+      strncpy((char*)arg1->ProductGroupID, (const char *)arg2, 81-1);
+      arg1->ProductGroupID[81-1] = 0;
     } else {
       arg1->ProductGroupID[0] = 0;
     }
@@ -88741,6 +94914,388 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryBulletinField(void * jarg
   CThostFtdcQryBulletinField *arg1 = (CThostFtdcQryBulletinField *) 0 ;
   
   arg1 = (CThostFtdcQryBulletinField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_TopicID_set(void * jarg1, int jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcInstallIDType)jarg2; 
+  if (arg1) (arg1)->TopicID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_TopicID_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType result;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcInstallIDType) ((arg1)->TopicID);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_InstrumentNo_set(void * jarg1, int jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcInstallIDType)jarg2; 
+  if (arg1) (arg1)->InstrumentNo = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_InstrumentNo_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType result;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcInstallIDType) ((arg1)->InstrumentNo);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_CodePrice_set(void * jarg1, double jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcPriceType arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcPriceType)jarg2; 
+  if (arg1) (arg1)->CodePrice = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_CodePrice_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcPriceType result;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcPriceType) ((arg1)->CodePrice);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_VolumeMultiple_set(void * jarg1, int jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcVolumeMultipleType arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcVolumeMultipleType)jarg2; 
+  if (arg1) (arg1)->VolumeMultiple = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_VolumeMultiple_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcVolumeMultipleType result;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcVolumeMultipleType) ((arg1)->VolumeMultiple);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_PriceTick_set(void * jarg1, double jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcPriceType arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcPriceType)jarg2; 
+  if (arg1) (arg1)->PriceTick = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_PriceTick_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  TThostFtdcPriceType result;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcPriceType) ((arg1)->PriceTick);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMulticastInstrumentField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcMulticastInstrumentField() {
+  void * jresult ;
+  CThostFtdcMulticastInstrumentField *result = 0 ;
+  
+  result = (CThostFtdcMulticastInstrumentField *)new CThostFtdcMulticastInstrumentField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcMulticastInstrumentField(void * jarg1) {
+  CThostFtdcMulticastInstrumentField *arg1 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  
+  arg1 = (CThostFtdcMulticastInstrumentField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_TopicID_set(void * jarg1, int jarg2) {
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType arg2 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcInstallIDType)jarg2; 
+  if (arg1) (arg1)->TopicID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_TopicID_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  TThostFtdcInstallIDType result;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  result = (TThostFtdcInstallIDType) ((arg1)->TopicID);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 31-1);
+      arg1->reserve1[31-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryMulticastInstrumentField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryMulticastInstrumentField() {
+  void * jresult ;
+  CThostFtdcQryMulticastInstrumentField *result = 0 ;
+  
+  result = (CThostFtdcQryMulticastInstrumentField *)new CThostFtdcQryMulticastInstrumentField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryMulticastInstrumentField(void * jarg1) {
+  CThostFtdcQryMulticastInstrumentField *arg1 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  
+  arg1 = (CThostFtdcQryMulticastInstrumentField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
+      arg1->BrokerID[11-1] = 0;
+    } else {
+      arg1->BrokerID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_BrokerID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  result = (char *) ((arg1)->BrokerID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_AppID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->AppID, (const char *)arg2, 33-1);
+      arg1->AppID[33-1] = 0;
+    } else {
+      arg1->AppID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_AppID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  result = (char *) ((arg1)->AppID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_DRIdentityID_set(void * jarg1, int jarg2) {
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  TThostFtdcDRIdentityIDType arg2 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  arg2 = (TThostFtdcDRIdentityIDType)jarg2; 
+  if (arg1) (arg1)->DRIdentityID = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcAppIDAuthAssignField_DRIdentityID_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  TThostFtdcDRIdentityIDType result;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
+  result = (TThostFtdcDRIdentityIDType) ((arg1)->DRIdentityID);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcAppIDAuthAssignField() {
+  void * jresult ;
+  CThostFtdcAppIDAuthAssignField *result = 0 ;
+  
+  result = (CThostFtdcAppIDAuthAssignField *)new CThostFtdcAppIDAuthAssignField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcAppIDAuthAssignField(void * jarg1) {
+  CThostFtdcAppIDAuthAssignField *arg1 = (CThostFtdcAppIDAuthAssignField *) 0 ;
+  
+  arg1 = (CThostFtdcAppIDAuthAssignField *)jarg1; 
   delete arg1;
 }
 
@@ -115183,6 +121738,35 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenUserField_UserID_ge
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenUserField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcLoginForbiddenUserField *arg1 = (CThostFtdcLoginForbiddenUserField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcLoginForbiddenUserField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenUserField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcLoginForbiddenUserField *arg1 = (CThostFtdcLoginForbiddenUserField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcLoginForbiddenUserField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenUserField_IPAddress_set(void * jarg1, char * jarg2) {
   CThostFtdcLoginForbiddenUserField *arg1 = (CThostFtdcLoginForbiddenUserField *) 0 ;
   char *arg2 ;
@@ -115191,8 +121775,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcLoginForbiddenUserField_IPAddress_s
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
     } else {
       arg1->IPAddress[0] = 0;
     }
@@ -115302,104 +121886,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryLoginForbiddenUserField(v
   CThostFtdcQryLoginForbiddenUserField *arg1 = (CThostFtdcQryLoginForbiddenUserField *) 0 ;
   
   arg1 = (CThostFtdcQryLoginForbiddenUserField *)jarg1; 
-  delete arg1;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_GroupIP_set(void * jarg1, char * jarg2) {
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->GroupIP, (const char *)arg2, 16-1);
-      arg1->GroupIP[16-1] = 0;
-    } else {
-      arg1->GroupIP[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_GroupIP_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  result = (char *) ((arg1)->GroupIP);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_GroupPort_set(void * jarg1, int jarg2) {
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  TThostFtdcIPPortType arg2 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  arg2 = (TThostFtdcIPPortType)jarg2; 
-  if (arg1) (arg1)->GroupPort = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_GroupPort_get(void * jarg1) {
-  int jresult ;
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  TThostFtdcIPPortType result;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  result = (TThostFtdcIPPortType) ((arg1)->GroupPort);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_SourceIP_set(void * jarg1, char * jarg2) {
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->SourceIP, (const char *)arg2, 16-1);
-      arg1->SourceIP[16-1] = 0;
-    } else {
-      arg1->SourceIP[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcMulticastGroupInfoField_SourceIP_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
-  result = (char *) ((arg1)->SourceIP);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcMulticastGroupInfoField() {
-  void * jresult ;
-  CThostFtdcMulticastGroupInfoField *result = 0 ;
-  
-  result = (CThostFtdcMulticastGroupInfoField *)new CThostFtdcMulticastGroupInfoField();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcMulticastGroupInfoField(void * jarg1) {
-  CThostFtdcMulticastGroupInfoField *arg1 = (CThostFtdcMulticastGroupInfoField *) 0 ;
-  
-  arg1 = (CThostFtdcMulticastGroupInfoField *)jarg1; 
   delete arg1;
 }
 
@@ -115531,6 +122017,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcTradingAccountReserveField(v
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryLoginForbiddenIPField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryLoginForbiddenIPField *arg1 = (CThostFtdcQryLoginForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryLoginForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryLoginForbiddenIPField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryLoginForbiddenIPField *arg1 = (CThostFtdcQryLoginForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryLoginForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryLoginForbiddenIPField_IPAddress_set(void * jarg1, char * jarg2) {
   CThostFtdcQryLoginForbiddenIPField *arg1 = (CThostFtdcQryLoginForbiddenIPField *) 0 ;
   char *arg2 ;
@@ -115539,8 +122054,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryLoginForbiddenIPField_IPAddress_
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
     } else {
       arg1->IPAddress[0] = 0;
     }
@@ -115578,6 +122093,35 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryLoginForbiddenIPField(voi
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryIPListField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryIPListField *arg1 = (CThostFtdcQryIPListField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryIPListField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryIPListField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryIPListField *arg1 = (CThostFtdcQryIPListField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryIPListField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryIPListField_IPAddress_set(void * jarg1, char * jarg2) {
   CThostFtdcQryIPListField *arg1 = (CThostFtdcQryIPListField *) 0 ;
   char *arg2 ;
@@ -115586,8 +122130,8 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryIPListField_IPAddress_set(void *
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->IPAddress, (const char *)arg2, 16-1);
-      arg1->IPAddress[16-1] = 0;
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
     } else {
       arg1->IPAddress[0] = 0;
     }
@@ -118466,242 +125010,6 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQrySecAgentTradeInfoField(vo
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_BrokerID_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
-      arg1->BrokerID[11-1] = 0;
-    } else {
-      arg1->BrokerID[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_BrokerID_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->BrokerID);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_UserID_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->UserID, (const char *)arg2, 16-1);
-      arg1->UserID[16-1] = 0;
-    } else {
-      arg1->UserID[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_UserID_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->UserID);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfoLen_set(void * jarg1, int jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  TThostFtdcSystemInfoLenType arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (TThostFtdcSystemInfoLenType)jarg2; 
-  if (arg1) (arg1)->ClientSystemInfoLen = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfoLen_get(void * jarg1) {
-  int jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  TThostFtdcSystemInfoLenType result;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (TThostFtdcSystemInfoLenType) ((arg1)->ClientSystemInfoLen);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfo_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->ClientSystemInfo, (const char *)arg2, 273-1);
-      arg1->ClientSystemInfo[273-1] = 0;
-    } else {
-      arg1->ClientSystemInfo[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfo_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->ClientSystemInfo);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientPublicIP_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->ClientPublicIP, (const char *)arg2, 16-1);
-      arg1->ClientPublicIP[16-1] = 0;
-    } else {
-      arg1->ClientPublicIP[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientPublicIP_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->ClientPublicIP);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientIPPort_set(void * jarg1, int jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  TThostFtdcIPPortType arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (TThostFtdcIPPortType)jarg2; 
-  if (arg1) (arg1)->ClientIPPort = arg2;
-}
-
-
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientIPPort_get(void * jarg1) {
-  int jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  TThostFtdcIPPortType result;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
-  jresult = result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientLoginTime_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->ClientLoginTime, (const char *)arg2, 9-1);
-      arg1->ClientLoginTime[9-1] = 0;
-    } else {
-      arg1->ClientLoginTime[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientLoginTime_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->ClientLoginTime);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientAppID_set(void * jarg1, char * jarg2) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *arg2 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  arg2 = (char *)jarg2; 
-  {
-    if(arg2) {
-      strncpy((char*)arg1->ClientAppID, (const char *)arg2, 33-1);
-      arg1->ClientAppID[33-1] = 0;
-    } else {
-      arg1->ClientAppID[0] = 0;
-    }
-  }
-}
-
-
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientAppID_get(void * jarg1) {
-  char * jresult ;
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  char *result = 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  result = (char *) ((arg1)->ClientAppID);
-  jresult = SWIG_csharp_string_callback((const char *)result); 
-  return jresult;
-}
-
-
-SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcUserSystemInfoField() {
-  void * jresult ;
-  CThostFtdcUserSystemInfoField *result = 0 ;
-  
-  result = (CThostFtdcUserSystemInfoField *)new CThostFtdcUserSystemInfoField();
-  jresult = (void *)result; 
-  return jresult;
-}
-
-
-SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcUserSystemInfoField(void * jarg1) {
-  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
-  
-  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
-  delete arg1;
-}
-
-
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserAuthMethodField_TradingDay_set(void * jarg1, char * jarg2) {
   CThostFtdcReqUserAuthMethodField *arg1 = (CThostFtdcReqUserAuthMethodField *) 0 ;
   char *arg2 ;
@@ -119456,7 +125764,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_MacA
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcReqUserLoginWithCaptchaField *arg1 = (CThostFtdcReqUserLoginWithCaptchaField *) 0 ;
   char *arg2 ;
   
@@ -119464,22 +125772,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_Client
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 16-1);
-      arg1->ClientIPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->ClientIPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcReqUserLoginWithCaptchaField *arg1 = (CThostFtdcReqUserLoginWithCaptchaField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcReqUserLoginWithCaptchaField *)jarg1; 
-  result = (char *) ((arg1)->ClientIPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -119561,6 +125869,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_ClientI
   arg1 = (CThostFtdcReqUserLoginWithCaptchaField *)jarg1; 
   result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcReqUserLoginWithCaptchaField *arg1 = (CThostFtdcReqUserLoginWithCaptchaField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithCaptchaField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 33-1);
+      arg1->ClientIPAddress[33-1] = 0;
+    } else {
+      arg1->ClientIPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcReqUserLoginWithCaptchaField *arg1 = (CThostFtdcReqUserLoginWithCaptchaField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithCaptchaField *)jarg1; 
+  result = (char *) ((arg1)->ClientIPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -119815,7 +126152,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_MacAddr
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcReqUserLoginWithTextField *arg1 = (CThostFtdcReqUserLoginWithTextField *) 0 ;
   char *arg2 ;
   
@@ -119823,22 +126160,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPA
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 16-1);
-      arg1->ClientIPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->ClientIPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcReqUserLoginWithTextField *arg1 = (CThostFtdcReqUserLoginWithTextField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcReqUserLoginWithTextField *)jarg1; 
-  result = (char *) ((arg1)->ClientIPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -119920,6 +126257,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPPo
   arg1 = (CThostFtdcReqUserLoginWithTextField *)jarg1; 
   result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcReqUserLoginWithTextField *arg1 = (CThostFtdcReqUserLoginWithTextField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithTextField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 33-1);
+      arg1->ClientIPAddress[33-1] = 0;
+    } else {
+      arg1->ClientIPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithTextField_ClientIPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcReqUserLoginWithTextField *arg1 = (CThostFtdcReqUserLoginWithTextField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithTextField *)jarg1; 
+  result = (char *) ((arg1)->ClientIPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -120174,7 +126540,7 @@ SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_MacAddre
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_reserve1_set(void * jarg1, char * jarg2) {
   CThostFtdcReqUserLoginWithOTPField *arg1 = (CThostFtdcReqUserLoginWithOTPField *) 0 ;
   char *arg2 ;
   
@@ -120182,22 +126548,22 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPAd
   arg2 = (char *)jarg2; 
   {
     if(arg2) {
-      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 16-1);
-      arg1->ClientIPAddress[16-1] = 0;
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
     } else {
-      arg1->ClientIPAddress[0] = 0;
+      arg1->reserve1[0] = 0;
     }
   }
 }
 
 
-SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPAddress_get(void * jarg1) {
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_reserve1_get(void * jarg1) {
   char * jresult ;
   CThostFtdcReqUserLoginWithOTPField *arg1 = (CThostFtdcReqUserLoginWithOTPField *) 0 ;
   char *result = 0 ;
   
   arg1 = (CThostFtdcReqUserLoginWithOTPField *)jarg1; 
-  result = (char *) ((arg1)->ClientIPAddress);
+  result = (char *) ((arg1)->reserve1);
   jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
@@ -120279,6 +126645,35 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPPor
   arg1 = (CThostFtdcReqUserLoginWithOTPField *)jarg1; 
   result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
   jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcReqUserLoginWithOTPField *arg1 = (CThostFtdcReqUserLoginWithOTPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithOTPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientIPAddress, (const char *)arg2, 33-1);
+      arg1->ClientIPAddress[33-1] = 0;
+    } else {
+      arg1->ClientIPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcReqUserLoginWithOTPField_ClientIPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcReqUserLoginWithOTPField *arg1 = (CThostFtdcReqUserLoginWithOTPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcReqUserLoginWithOTPField *)jarg1; 
+  result = (char *) ((arg1)->ClientIPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
   return jresult;
 }
 
@@ -120675,6 +127070,1214 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQueryFreqField(void * jarg1)
 }
 
 
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthForbiddenIPField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthForbiddenIPField *arg1 = (CThostFtdcAuthForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthForbiddenIPField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthForbiddenIPField *arg1 = (CThostFtdcAuthForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthForbiddenIPField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthForbiddenIPField *arg1 = (CThostFtdcAuthForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthForbiddenIPField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthForbiddenIPField *arg1 = (CThostFtdcAuthForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcAuthForbiddenIPField() {
+  void * jresult ;
+  CThostFtdcAuthForbiddenIPField *result = 0 ;
+  
+  result = (CThostFtdcAuthForbiddenIPField *)new CThostFtdcAuthForbiddenIPField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcAuthForbiddenIPField(void * jarg1) {
+  CThostFtdcAuthForbiddenIPField *arg1 = (CThostFtdcAuthForbiddenIPField *) 0 ;
+  
+  arg1 = (CThostFtdcAuthForbiddenIPField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryAuthForbiddenIPField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryAuthForbiddenIPField *arg1 = (CThostFtdcQryAuthForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryAuthForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryAuthForbiddenIPField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryAuthForbiddenIPField *arg1 = (CThostFtdcQryAuthForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryAuthForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryAuthForbiddenIPField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryAuthForbiddenIPField *arg1 = (CThostFtdcQryAuthForbiddenIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryAuthForbiddenIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryAuthForbiddenIPField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryAuthForbiddenIPField *arg1 = (CThostFtdcQryAuthForbiddenIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryAuthForbiddenIPField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryAuthForbiddenIPField() {
+  void * jresult ;
+  CThostFtdcQryAuthForbiddenIPField *result = 0 ;
+  
+  result = (CThostFtdcQryAuthForbiddenIPField *)new CThostFtdcQryAuthForbiddenIPField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryAuthForbiddenIPField(void * jarg1) {
+  CThostFtdcQryAuthForbiddenIPField *arg1 = (CThostFtdcQryAuthForbiddenIPField *) 0 ;
+  
+  arg1 = (CThostFtdcQryAuthForbiddenIPField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_DelaySwapSeqNo_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->DelaySwapSeqNo, (const char *)arg2, 15-1);
+      arg1->DelaySwapSeqNo[15-1] = 0;
+    } else {
+      arg1->DelaySwapSeqNo[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_DelaySwapSeqNo_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (char *) ((arg1)->DelaySwapSeqNo);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
+      arg1->BrokerID[11-1] = 0;
+    } else {
+      arg1->BrokerID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_BrokerID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (char *) ((arg1)->BrokerID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_InvestorID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InvestorID, (const char *)arg2, 13-1);
+      arg1->InvestorID[13-1] = 0;
+    } else {
+      arg1->InvestorID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_InvestorID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (char *) ((arg1)->InvestorID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_FromCurrencyID_set(void * jarg1, char * jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->FromCurrencyID, (const char *)arg2, 4-1);
+      arg1->FromCurrencyID[4-1] = 0;
+    } else {
+      arg1->FromCurrencyID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_FromCurrencyID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (char *) ((arg1)->FromCurrencyID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_FromRemainSwap_set(void * jarg1, double jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  TThostFtdcMoneyType arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (TThostFtdcMoneyType)jarg2; 
+  if (arg1) (arg1)->FromRemainSwap = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_FromRemainSwap_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  TThostFtdcMoneyType result;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (TThostFtdcMoneyType) ((arg1)->FromRemainSwap);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_IsManualSwap_set(void * jarg1, int jarg2) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  TThostFtdcBoolType arg2 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  arg2 = (TThostFtdcBoolType)jarg2; 
+  if (arg1) (arg1)->IsManualSwap = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcSyncDelaySwapFrozenField_IsManualSwap_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  TThostFtdcBoolType result;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  result = (TThostFtdcBoolType) ((arg1)->IsManualSwap);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcSyncDelaySwapFrozenField() {
+  void * jresult ;
+  CThostFtdcSyncDelaySwapFrozenField *result = 0 ;
+  
+  result = (CThostFtdcSyncDelaySwapFrozenField *)new CThostFtdcSyncDelaySwapFrozenField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcSyncDelaySwapFrozenField(void * jarg1) {
+  CThostFtdcSyncDelaySwapFrozenField *arg1 = (CThostFtdcSyncDelaySwapFrozenField *) 0 ;
+  
+  arg1 = (CThostFtdcSyncDelaySwapFrozenField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
+      arg1->BrokerID[11-1] = 0;
+    } else {
+      arg1->BrokerID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_BrokerID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->BrokerID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_UserID_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->UserID, (const char *)arg2, 16-1);
+      arg1->UserID[16-1] = 0;
+    } else {
+      arg1->UserID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_UserID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->UserID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfoLen_set(void * jarg1, int jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  TThostFtdcSystemInfoLenType arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (TThostFtdcSystemInfoLenType)jarg2; 
+  if (arg1) (arg1)->ClientSystemInfoLen = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfoLen_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  TThostFtdcSystemInfoLenType result;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (TThostFtdcSystemInfoLenType) ((arg1)->ClientSystemInfoLen);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfo_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientSystemInfo, (const char *)arg2, 273-1);
+      arg1->ClientSystemInfo[273-1] = 0;
+    } else {
+      arg1->ClientSystemInfo[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientSystemInfo_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->ClientSystemInfo);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_reserve1_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->reserve1, (const char *)arg2, 16-1);
+      arg1->reserve1[16-1] = 0;
+    } else {
+      arg1->reserve1[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_reserve1_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->reserve1);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientIPPort_set(void * jarg1, int jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  TThostFtdcIPPortType arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (TThostFtdcIPPortType)jarg2; 
+  if (arg1) (arg1)->ClientIPPort = arg2;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientIPPort_get(void * jarg1) {
+  int jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  TThostFtdcIPPortType result;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (TThostFtdcIPPortType) ((arg1)->ClientIPPort);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientLoginTime_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientLoginTime, (const char *)arg2, 9-1);
+      arg1->ClientLoginTime[9-1] = 0;
+    } else {
+      arg1->ClientLoginTime[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientLoginTime_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->ClientLoginTime);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientAppID_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientAppID, (const char *)arg2, 33-1);
+      arg1->ClientAppID[33-1] = 0;
+    } else {
+      arg1->ClientAppID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientAppID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->ClientAppID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientPublicIP_set(void * jarg1, char * jarg2) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ClientPublicIP, (const char *)arg2, 33-1);
+      arg1->ClientPublicIP[33-1] = 0;
+    } else {
+      arg1->ClientPublicIP[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcUserSystemInfoField_ClientPublicIP_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  result = (char *) ((arg1)->ClientPublicIP);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcUserSystemInfoField() {
+  void * jresult ;
+  CThostFtdcUserSystemInfoField *result = 0 ;
+  
+  result = (CThostFtdcUserSystemInfoField *)new CThostFtdcUserSystemInfoField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcUserSystemInfoField(void * jarg1) {
+  CThostFtdcUserSystemInfoField *arg1 = (CThostFtdcUserSystemInfoField *) 0 ;
+  
+  arg1 = (CThostFtdcUserSystemInfoField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
+      arg1->BrokerID[11-1] = 0;
+    } else {
+      arg1->BrokerID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_BrokerID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  result = (char *) ((arg1)->BrokerID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_AppID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->AppID, (const char *)arg2, 33-1);
+      arg1->AppID[33-1] = 0;
+    } else {
+      arg1->AppID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_AppID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  result = (char *) ((arg1)->AppID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_UserID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->UserID, (const char *)arg2, 16-1);
+      arg1->UserID[16-1] = 0;
+    } else {
+      arg1->UserID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_UserID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  result = (char *) ((arg1)->UserID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_AuthType_set(void * jarg1, char jarg2) {
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  TThostFtdcAuthTypeType arg2 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  arg2 = (TThostFtdcAuthTypeType)jarg2; 
+  if (arg1) (arg1)->AuthType = arg2;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcAuthUserIDField_AuthType_get(void * jarg1) {
+  char jresult ;
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  TThostFtdcAuthTypeType result;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  result = (TThostFtdcAuthTypeType) ((arg1)->AuthType);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcAuthUserIDField() {
+  void * jresult ;
+  CThostFtdcAuthUserIDField *result = 0 ;
+  
+  result = (CThostFtdcAuthUserIDField *)new CThostFtdcAuthUserIDField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcAuthUserIDField(void * jarg1) {
+  CThostFtdcAuthUserIDField *arg1 = (CThostFtdcAuthUserIDField *) 0 ;
+  
+  arg1 = (CThostFtdcAuthUserIDField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthIPField_BrokerID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->BrokerID, (const char *)arg2, 11-1);
+      arg1->BrokerID[11-1] = 0;
+    } else {
+      arg1->BrokerID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthIPField_BrokerID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  result = (char *) ((arg1)->BrokerID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthIPField_AppID_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->AppID, (const char *)arg2, 33-1);
+      arg1->AppID[33-1] = 0;
+    } else {
+      arg1->AppID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthIPField_AppID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  result = (char *) ((arg1)->AppID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcAuthIPField_IPAddress_set(void * jarg1, char * jarg2) {
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->IPAddress, (const char *)arg2, 33-1);
+      arg1->IPAddress[33-1] = 0;
+    } else {
+      arg1->IPAddress[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcAuthIPField_IPAddress_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  result = (char *) ((arg1)->IPAddress);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcAuthIPField() {
+  void * jresult ;
+  CThostFtdcAuthIPField *result = 0 ;
+  
+  result = (CThostFtdcAuthIPField *)new CThostFtdcAuthIPField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcAuthIPField(void * jarg1) {
+  CThostFtdcAuthIPField *arg1 = (CThostFtdcAuthIPField *) 0 ;
+  
+  arg1 = (CThostFtdcAuthIPField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ExchangeID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeID, (const char *)arg2, 9-1);
+      arg1->ExchangeID[9-1] = 0;
+    } else {
+      arg1->ExchangeID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ExchangeID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ExchangeInstID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeInstID, (const char *)arg2, 81-1);
+      arg1->ExchangeInstID[81-1] = 0;
+    } else {
+      arg1->ExchangeInstID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ExchangeInstID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeInstID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ProductID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ProductID, (const char *)arg2, 81-1);
+      arg1->ProductID[81-1] = 0;
+    } else {
+      arg1->ProductID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ProductID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (char *) ((arg1)->ProductID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_TradingType_set(void * jarg1, char jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  TThostFtdcTradingTypeType arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcTradingTypeType)jarg2; 
+  if (arg1) (arg1)->TradingType = arg2;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_TradingType_get(void * jarg1) {
+  char jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  TThostFtdcTradingTypeType result;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (TThostFtdcTradingTypeType) ((arg1)->TradingType);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ClassType_set(void * jarg1, char jarg2) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  TThostFtdcClassTypeType arg2 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  arg2 = (TThostFtdcClassTypeType)jarg2; 
+  if (arg1) (arg1)->ClassType = arg2;
+}
+
+
+SWIGEXPORT char SWIGSTDCALL CSharp_CThostFtdcQryClassifiedInstrumentField_ClassType_get(void * jarg1) {
+  char jresult ;
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  TThostFtdcClassTypeType result;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  result = (TThostFtdcClassTypeType) ((arg1)->ClassType);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryClassifiedInstrumentField() {
+  void * jresult ;
+  CThostFtdcQryClassifiedInstrumentField *result = 0 ;
+  
+  result = (CThostFtdcQryClassifiedInstrumentField *)new CThostFtdcQryClassifiedInstrumentField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryClassifiedInstrumentField(void * jarg1) {
+  CThostFtdcQryClassifiedInstrumentField *arg1 = (CThostFtdcQryClassifiedInstrumentField *) 0 ;
+  
+  arg1 = (CThostFtdcQryClassifiedInstrumentField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombPromotionParamField_ExchangeID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombPromotionParamField *arg1 = (CThostFtdcQryCombPromotionParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombPromotionParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeID, (const char *)arg2, 9-1);
+      arg1->ExchangeID[9-1] = 0;
+    } else {
+      arg1->ExchangeID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombPromotionParamField_ExchangeID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombPromotionParamField *arg1 = (CThostFtdcQryCombPromotionParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombPromotionParamField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcQryCombPromotionParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcQryCombPromotionParamField *arg1 = (CThostFtdcQryCombPromotionParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcQryCombPromotionParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcQryCombPromotionParamField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcQryCombPromotionParamField *arg1 = (CThostFtdcQryCombPromotionParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcQryCombPromotionParamField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcQryCombPromotionParamField() {
+  void * jresult ;
+  CThostFtdcQryCombPromotionParamField *result = 0 ;
+  
+  result = (CThostFtdcQryCombPromotionParamField *)new CThostFtdcQryCombPromotionParamField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcQryCombPromotionParamField(void * jarg1) {
+  CThostFtdcQryCombPromotionParamField *arg1 = (CThostFtdcQryCombPromotionParamField *) 0 ;
+  
+  arg1 = (CThostFtdcQryCombPromotionParamField *)jarg1; 
+  delete arg1;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_ExchangeID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->ExchangeID, (const char *)arg2, 9-1);
+      arg1->ExchangeID[9-1] = 0;
+    } else {
+      arg1->ExchangeID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_ExchangeID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  result = (char *) ((arg1)->ExchangeID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_InstrumentID_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->InstrumentID, (const char *)arg2, 81-1);
+      arg1->InstrumentID[81-1] = 0;
+    } else {
+      arg1->InstrumentID[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_InstrumentID_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  result = (char *) ((arg1)->InstrumentID);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_CombHedgeFlag_set(void * jarg1, char * jarg2) {
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *arg2 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  arg2 = (char *)jarg2; 
+  {
+    if(arg2) {
+      strncpy((char*)arg1->CombHedgeFlag, (const char *)arg2, 5-1);
+      arg1->CombHedgeFlag[5-1] = 0;
+    } else {
+      arg1->CombHedgeFlag[0] = 0;
+    }
+  }
+}
+
+
+SWIGEXPORT char * SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_CombHedgeFlag_get(void * jarg1) {
+  char * jresult ;
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  char *result = 0 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  result = (char *) ((arg1)->CombHedgeFlag);
+  jresult = SWIG_csharp_string_callback((const char *)result); 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_Xparameter_set(void * jarg1, double jarg2) {
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  TThostFtdcDiscountRatioType arg2 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  arg2 = (TThostFtdcDiscountRatioType)jarg2; 
+  if (arg1) (arg1)->Xparameter = arg2;
+}
+
+
+SWIGEXPORT double SWIGSTDCALL CSharp_CThostFtdcCombPromotionParamField_Xparameter_get(void * jarg1) {
+  double jresult ;
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  TThostFtdcDiscountRatioType result;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  result = (TThostFtdcDiscountRatioType) ((arg1)->Xparameter);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void * SWIGSTDCALL CSharp_new_CThostFtdcCombPromotionParamField() {
+  void * jresult ;
+  CThostFtdcCombPromotionParamField *result = 0 ;
+  
+  result = (CThostFtdcCombPromotionParamField *)new CThostFtdcCombPromotionParamField();
+  jresult = (void *)result; 
+  return jresult;
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcCombPromotionParamField(void * jarg1) {
+  CThostFtdcCombPromotionParamField *arg1 = (CThostFtdcCombPromotionParamField *) 0 ;
+  
+  arg1 = (CThostFtdcCombPromotionParamField *)jarg1; 
+  delete arg1;
+}
+
+
 SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_OnFrontConnected(void * jarg1) {
   CThostFtdcMdSpi *arg1 = (CThostFtdcMdSpi *) 0 ;
   
@@ -120792,6 +128395,38 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_OnRspUserLogoutSwigExplicitCT
   arg4 = (int)jarg4; 
   arg5 = jarg5 ? true : false; 
   (arg1)->CThostFtdcMdSpi::OnRspUserLogout(arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_OnRspQryMulticastInstrument(void * jarg1, void * jarg2, void * jarg3, int jarg4, unsigned int jarg5) {
+  CThostFtdcMdSpi *arg1 = (CThostFtdcMdSpi *) 0 ;
+  CThostFtdcMulticastInstrumentField *arg2 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  CThostFtdcRspInfoField *arg3 = (CThostFtdcRspInfoField *) 0 ;
+  int arg4 ;
+  bool arg5 ;
+  
+  arg1 = (CThostFtdcMdSpi *)jarg1; 
+  arg2 = (CThostFtdcMulticastInstrumentField *)jarg2; 
+  arg3 = (CThostFtdcRspInfoField *)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = jarg5 ? true : false; 
+  (arg1)->OnRspQryMulticastInstrument(arg2,arg3,arg4,arg5);
+}
+
+
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_OnRspQryMulticastInstrumentSwigExplicitCThostFtdcMdSpi(void * jarg1, void * jarg2, void * jarg3, int jarg4, unsigned int jarg5) {
+  CThostFtdcMdSpi *arg1 = (CThostFtdcMdSpi *) 0 ;
+  CThostFtdcMulticastInstrumentField *arg2 = (CThostFtdcMulticastInstrumentField *) 0 ;
+  CThostFtdcRspInfoField *arg3 = (CThostFtdcRspInfoField *) 0 ;
+  int arg4 ;
+  bool arg5 ;
+  
+  arg1 = (CThostFtdcMdSpi *)jarg1; 
+  arg2 = (CThostFtdcMulticastInstrumentField *)jarg2; 
+  arg3 = (CThostFtdcRspInfoField *)jarg3; 
+  arg4 = (int)jarg4; 
+  arg5 = jarg5 ? true : false; 
+  (arg1)->CThostFtdcMdSpi::OnRspQryMulticastInstrument(arg2,arg3,arg4,arg5);
 }
 
 
@@ -121009,11 +128644,11 @@ SWIGEXPORT void SWIGSTDCALL CSharp_delete_CThostFtdcMdSpi(void * jarg1) {
 }
 
 
-SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_director_connect(void *objarg, SwigDirector_CThostFtdcMdSpi::SWIG_Callback0_t callback0, SwigDirector_CThostFtdcMdSpi::SWIG_Callback1_t callback1, SwigDirector_CThostFtdcMdSpi::SWIG_Callback2_t callback2, SwigDirector_CThostFtdcMdSpi::SWIG_Callback3_t callback3, SwigDirector_CThostFtdcMdSpi::SWIG_Callback4_t callback4, SwigDirector_CThostFtdcMdSpi::SWIG_Callback5_t callback5, SwigDirector_CThostFtdcMdSpi::SWIG_Callback6_t callback6, SwigDirector_CThostFtdcMdSpi::SWIG_Callback7_t callback7, SwigDirector_CThostFtdcMdSpi::SWIG_Callback8_t callback8, SwigDirector_CThostFtdcMdSpi::SWIG_Callback9_t callback9, SwigDirector_CThostFtdcMdSpi::SWIG_Callback10_t callback10, SwigDirector_CThostFtdcMdSpi::SWIG_Callback11_t callback11) {
+SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdSpi_director_connect(void *objarg, SwigDirector_CThostFtdcMdSpi::SWIG_Callback0_t callback0, SwigDirector_CThostFtdcMdSpi::SWIG_Callback1_t callback1, SwigDirector_CThostFtdcMdSpi::SWIG_Callback2_t callback2, SwigDirector_CThostFtdcMdSpi::SWIG_Callback3_t callback3, SwigDirector_CThostFtdcMdSpi::SWIG_Callback4_t callback4, SwigDirector_CThostFtdcMdSpi::SWIG_Callback5_t callback5, SwigDirector_CThostFtdcMdSpi::SWIG_Callback6_t callback6, SwigDirector_CThostFtdcMdSpi::SWIG_Callback7_t callback7, SwigDirector_CThostFtdcMdSpi::SWIG_Callback8_t callback8, SwigDirector_CThostFtdcMdSpi::SWIG_Callback9_t callback9, SwigDirector_CThostFtdcMdSpi::SWIG_Callback10_t callback10, SwigDirector_CThostFtdcMdSpi::SWIG_Callback11_t callback11, SwigDirector_CThostFtdcMdSpi::SWIG_Callback12_t callback12) {
   CThostFtdcMdSpi *obj = (CThostFtdcMdSpi *)objarg;
   SwigDirector_CThostFtdcMdSpi *director = dynamic_cast<SwigDirector_CThostFtdcMdSpi *>(obj);
   if (director) {
-    director->swig_connect_director(callback0, callback1, callback2, callback3, callback4, callback5, callback6, callback7, callback8, callback9, callback10, callback11);
+    director->swig_connect_director(callback0, callback1, callback2, callback3, callback4, callback5, callback6, callback7, callback8, callback9, callback10, callback11, callback12);
   }
 }
 
@@ -121160,7 +128795,7 @@ SWIGEXPORT void SWIGSTDCALL CSharp_CThostFtdcMdApi_RegisterSpi(void * jarg1, voi
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeMarketData(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeMarketData(void * jarg1, char ** jarg2, int jarg3) {
   int jresult ;
   CThostFtdcMdApi *arg1 = (CThostFtdcMdApi *) 0 ;
   char **arg2 ;
@@ -121168,15 +128803,17 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeMarketData(void * jar
   int result;
   
   arg1 = (CThostFtdcMdApi *)jarg1; 
-  arg2 = (char **)jarg2; 
+  arg2 = jarg2;
   arg3 = (int)jarg3; 
   result = (int)(arg1)->SubscribeMarketData(arg2,arg3);
   jresult = result; 
+  
+  
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeMarketData(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeMarketData(void * jarg1, char ** jarg2, int jarg3) {
   int jresult ;
   CThostFtdcMdApi *arg1 = (CThostFtdcMdApi *) 0 ;
   char **arg2 ;
@@ -121184,15 +128821,17 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeMarketData(void * j
   int result;
   
   arg1 = (CThostFtdcMdApi *)jarg1; 
-  arg2 = (char **)jarg2; 
+  arg2 = jarg2;
   arg3 = (int)jarg3; 
   result = (int)(arg1)->UnSubscribeMarketData(arg2,arg3);
   jresult = result; 
+  
+  
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeForQuoteRsp(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeForQuoteRsp(void * jarg1, char ** jarg2, int jarg3) {
   int jresult ;
   CThostFtdcMdApi *arg1 = (CThostFtdcMdApi *) 0 ;
   char **arg2 ;
@@ -121200,15 +128839,17 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_SubscribeForQuoteRsp(void * ja
   int result;
   
   arg1 = (CThostFtdcMdApi *)jarg1; 
-  arg2 = (char **)jarg2; 
+  arg2 = jarg2;
   arg3 = (int)jarg3; 
   result = (int)(arg1)->SubscribeForQuoteRsp(arg2,arg3);
   jresult = result; 
+  
+  
   return jresult;
 }
 
 
-SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeForQuoteRsp(void * jarg1, void * jarg2, int jarg3) {
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeForQuoteRsp(void * jarg1, char ** jarg2, int jarg3) {
   int jresult ;
   CThostFtdcMdApi *arg1 = (CThostFtdcMdApi *) 0 ;
   char **arg2 ;
@@ -121216,10 +128857,12 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_UnSubscribeForQuoteRsp(void * 
   int result;
   
   arg1 = (CThostFtdcMdApi *)jarg1; 
-  arg2 = (char **)jarg2; 
+  arg2 = jarg2;
   arg3 = (int)jarg3; 
   result = (int)(arg1)->UnSubscribeForQuoteRsp(arg2,arg3);
   jresult = result; 
+  
+  
   return jresult;
 }
 
@@ -121251,6 +128894,22 @@ SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_ReqUserLogout(void * jarg1, vo
   arg2 = (CThostFtdcUserLogoutField *)jarg2; 
   arg3 = (int)jarg3; 
   result = (int)(arg1)->ReqUserLogout(arg2,arg3);
+  jresult = result; 
+  return jresult;
+}
+
+
+SWIGEXPORT int SWIGSTDCALL CSharp_CThostFtdcMdApi_ReqQryMulticastInstrument(void * jarg1, void * jarg2, int jarg3) {
+  int jresult ;
+  CThostFtdcMdApi *arg1 = (CThostFtdcMdApi *) 0 ;
+  CThostFtdcQryMulticastInstrumentField *arg2 = (CThostFtdcQryMulticastInstrumentField *) 0 ;
+  int arg3 ;
+  int result;
+  
+  arg1 = (CThostFtdcMdApi *)jarg1; 
+  arg2 = (CThostFtdcQryMulticastInstrumentField *)jarg2; 
+  arg3 = (int)jarg3; 
+  result = (int)(arg1)->ReqQryMulticastInstrument(arg2,arg3);
   jresult = result; 
   return jresult;
 }

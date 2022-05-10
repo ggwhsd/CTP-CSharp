@@ -31,7 +31,7 @@ public class CThostFtdcQrySecAgentCheckModeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQrySecAgentCheckModeField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQrySecAgentCheckModeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQrySecAgentCheckModeField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentCheckModeField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySecAgentCheckModeField() : this(thostmdapiPINVOKE.new_CThostFtdcQrySecAgentCheckModeField(), true) {
+  public CThostFtdcQrySecAgentCheckModeField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQrySecAgentCheckModeField(), true) {
   }
 
 }

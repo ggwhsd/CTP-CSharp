@@ -31,7 +31,7 @@ public class CThostFtdcDisseminationField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcDisseminationField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcDisseminationField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcDisseminationField : global::System.IDisposable {
 
   public short SequenceSeries {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceSeries_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceSeries_set(swigCPtr, value);
     } 
     get {
-      short ret = thosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceSeries_get(swigCPtr);
+      short ret = ctpthosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceSeries_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceNo_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcDisseminationField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDisseminationField() : this(thosttradeapiPINVOKE.new_CThostFtdcDisseminationField(), true) {
+  public CThostFtdcDisseminationField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcDisseminationField(), true) {
   }
 
 }

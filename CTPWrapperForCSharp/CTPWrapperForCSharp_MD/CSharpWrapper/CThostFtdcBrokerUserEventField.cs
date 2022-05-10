@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserEventField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerUserEventField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerUserEventField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,95 +41,105 @@ public class CThostFtdcBrokerUserEventField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserEventType {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventType_get(swigCPtr);
       return ret;
     } 
   }
 
   public int EventSequenceNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventSequenceNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventSequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventSequenceNo_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventSequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string EventDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string EventTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_EventTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserEventInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_UserEventInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InvestorID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve1 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserEventField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerUserEventField(), true) {
+  public CThostFtdcBrokerUserEventField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerUserEventField(), true) {
   }
 
 }

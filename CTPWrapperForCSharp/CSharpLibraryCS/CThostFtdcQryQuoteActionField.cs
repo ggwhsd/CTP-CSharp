@@ -31,7 +31,7 @@ public class CThostFtdcQryQuoteActionField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryQuoteActionField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryQuoteActionField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryQuoteActionField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryQuoteActionField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryQuoteActionField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryQuoteActionField(), true) {
+  public CThostFtdcQryQuoteActionField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryQuoteActionField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcInvestorProductGroupMarginField : global::System.IDisposa
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcInvestorProductGroupMarginField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcInvestorProductGroupMarginField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,295 +41,295 @@ public class CThostFtdcInvestorProductGroupMarginField : global::System.IDisposa
 
   public string ProductGroupID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SettlementID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_SettlementID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_SettlementID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_SettlementID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_SettlementID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongFrozenMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongFrozenMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongFrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongFrozenMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongFrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortFrozenMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortFrozenMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortFrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortFrozenMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortFrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double UseMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_UseMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_UseMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_UseMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_UseMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongUseMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongUseMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongUseMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongUseMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongUseMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortUseMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortUseMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortUseMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortUseMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortUseMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongExchMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortExchMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseProfit {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CloseProfit_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CloseProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CloseProfit_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CloseProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenCommission {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCommission_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCommission_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCommission_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCommission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Commission {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_Commission_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_Commission_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_Commission_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_Commission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenCash {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCash_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCash_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCash_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_FrozenCash_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CashIn {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CashIn_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CashIn_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CashIn_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_CashIn_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PositionProfit {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_PositionProfit_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_PositionProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_PositionProfit_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_PositionProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_OffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_OffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_OffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_OffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongOffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongOffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongOffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongOffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongOffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortOffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortOffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortOffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortOffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortOffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchOffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchOffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchOffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchOffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchOffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongExchOffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchOffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchOffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchOffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_LongExchOffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortExchOffsetAmount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchOffsetAmount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchOffsetAmount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchOffsetAmount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ShortExchOffsetAmount_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_HedgeFlag_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInvestorProductGroupMarginField() : this(thosttradeapiPINVOKE.new_CThostFtdcInvestorProductGroupMarginField(), true) {
+  public CThostFtdcInvestorProductGroupMarginField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcInvestorProductGroupMarginField(), true) {
   }
 
 }

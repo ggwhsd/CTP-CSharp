@@ -31,7 +31,7 @@ public class CThostFtdcVerifyInvestorPasswordField : global::System.IDisposable 
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcVerifyInvestorPasswordField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcVerifyInvestorPasswordField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcVerifyInvestorPasswordField : global::System.IDisposable 
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_Password_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_Password_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyInvestorPasswordField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcVerifyInvestorPasswordField() : this(thostmdapiPINVOKE.new_CThostFtdcVerifyInvestorPasswordField(), true) {
+  public CThostFtdcVerifyInvestorPasswordField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcVerifyInvestorPasswordField(), true) {
   }
 
 }

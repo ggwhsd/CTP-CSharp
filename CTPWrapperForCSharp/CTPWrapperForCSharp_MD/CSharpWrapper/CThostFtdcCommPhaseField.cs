@@ -31,7 +31,7 @@ public class CThostFtdcCommPhaseField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcCommPhaseField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcCommPhaseField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcCommPhaseField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public short CommPhaseNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_set(swigCPtr, value);
     } 
     get {
-      short ret = thostmdapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_get(swigCPtr);
+      short ret = ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SystemID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommPhaseField_SystemID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_SystemID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCommPhaseField_SystemID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCommPhaseField_SystemID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCommPhaseField() : this(thostmdapiPINVOKE.new_CThostFtdcCommPhaseField(), true) {
+  public CThostFtdcCommPhaseField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcCommPhaseField(), true) {
   }
 
 }

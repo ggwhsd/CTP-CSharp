@@ -31,7 +31,7 @@ public class CThostFtdcVerifyCustInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcVerifyCustInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcVerifyCustInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcVerifyCustInfoField : global::System.IDisposable {
 
   public string CustomerName {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustomerName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustomerName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustomerName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustomerName_get(swigCPtr);
       return ret;
     } 
   }
 
   public char IdCardType {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdCardType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdCardType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdCardType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdCardType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IdentifiedCardNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdentifiedCardNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdentifiedCardNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdentifiedCardNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_IdentifiedCardNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CustType {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_CustType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LongCustomerName {
     set {
-      thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_LongCustomerName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_LongCustomerName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_LongCustomerName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcVerifyCustInfoField_LongCustomerName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcVerifyCustInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcVerifyCustInfoField(), true) {
+  public CThostFtdcVerifyCustInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcVerifyCustInfoField(), true) {
   }
 
 }

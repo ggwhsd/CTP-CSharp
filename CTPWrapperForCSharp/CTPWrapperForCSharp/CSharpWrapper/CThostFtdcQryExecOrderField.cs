@@ -31,7 +31,7 @@ public class CThostFtdcQryExecOrderField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryExecOrderField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryExecOrderField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcQryExecOrderField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExecOrderSysID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExecOrderSysID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExecOrderSysID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExecOrderSysID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_ExecOrderSysID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeStart {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeStart_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeStart_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeStart_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeStart_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeEnd {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeEnd_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeEnd_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeEnd_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryExecOrderField_InsertTimeEnd_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryExecOrderField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryExecOrderField(), true) {
+  public CThostFtdcQryExecOrderField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryExecOrderField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcPositionProfitAlgorithmField : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcPositionProfitAlgorithmField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcPositionProfitAlgorithmField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcPositionProfitAlgorithmField : global::System.IDisposable
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_AccountID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_AccountID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char Algorithm {
     set {
-      thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Algorithm_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Algorithm_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Algorithm_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Algorithm_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Memo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Memo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Memo_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Memo_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_Memo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_CurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_CurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcPositionProfitAlgorithmField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcPositionProfitAlgorithmField() : this(thosttradeapiPINVOKE.new_CThostFtdcPositionProfitAlgorithmField(), true) {
+  public CThostFtdcPositionProfitAlgorithmField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcPositionProfitAlgorithmField(), true) {
   }
 
 }

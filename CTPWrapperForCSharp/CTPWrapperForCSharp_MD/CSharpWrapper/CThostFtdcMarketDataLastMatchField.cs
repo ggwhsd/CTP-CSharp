@@ -31,7 +31,7 @@ public class CThostFtdcMarketDataLastMatchField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMarketDataLastMatchField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcMarketDataLastMatchField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcMarketDataLastMatchField : global::System.IDisposable {
 
   public double LastPrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_LastPrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_LastPrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_LastPrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_LastPrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Volume {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Volume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Volume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Volume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Volume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Turnover {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Turnover_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Turnover_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Turnover_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_Turnover_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OpenInterest {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_OpenInterest_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_OpenInterest_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_OpenInterest_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataLastMatchField_OpenInterest_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarketDataLastMatchField() : this(thostmdapiPINVOKE.new_CThostFtdcMarketDataLastMatchField(), true) {
+  public CThostFtdcMarketDataLastMatchField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcMarketDataLastMatchField(), true) {
   }
 
 }

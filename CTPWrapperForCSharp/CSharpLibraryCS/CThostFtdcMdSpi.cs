@@ -31,7 +31,7 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMdSpi(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcMdSpi(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -40,54 +40,58 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
   }
 
   public virtual void OnFrontConnected() {
-    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontConnectedSwigExplicitCThostFtdcMdSpi(swigCPtr); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontConnected(swigCPtr);
+    if (SwigDerivedClassHasMethod("OnFrontConnected", swigMethodTypes0)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontConnectedSwigExplicitCThostFtdcMdSpi(swigCPtr); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontConnected(swigCPtr);
   }
 
   public virtual void OnFrontDisconnected(int nReason) {
-    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontDisconnectedSwigExplicitCThostFtdcMdSpi(swigCPtr, nReason); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontDisconnected(swigCPtr, nReason);
+    if (SwigDerivedClassHasMethod("OnFrontDisconnected", swigMethodTypes1)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontDisconnectedSwigExplicitCThostFtdcMdSpi(swigCPtr, nReason); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnFrontDisconnected(swigCPtr, nReason);
   }
 
   public virtual void OnHeartBeatWarning(int nTimeLapse) {
-    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnHeartBeatWarningSwigExplicitCThostFtdcMdSpi(swigCPtr, nTimeLapse); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnHeartBeatWarning(swigCPtr, nTimeLapse);
+    if (SwigDerivedClassHasMethod("OnHeartBeatWarning", swigMethodTypes2)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnHeartBeatWarningSwigExplicitCThostFtdcMdSpi(swigCPtr, nTimeLapse); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnHeartBeatWarning(swigCPtr, nTimeLapse);
   }
 
   public virtual void OnRspUserLogin(CThostFtdcRspUserLoginField pRspUserLogin, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes3)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLoginSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcRspUserLoginField.getCPtr(pRspUserLogin), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogin(swigCPtr, CThostFtdcRspUserLoginField.getCPtr(pRspUserLogin), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspUserLogin", swigMethodTypes3)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLoginSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcRspUserLoginField.getCPtr(pRspUserLogin), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogin(swigCPtr, CThostFtdcRspUserLoginField.getCPtr(pRspUserLogin), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspUserLogout(CThostFtdcUserLogoutField pUserLogout, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes4)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogoutSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes4)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogoutSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+  }
+
+  public virtual void OnRspQryMulticastInstrument(CThostFtdcMulticastInstrumentField pMulticastInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
+    if (SwigDerivedClassHasMethod("OnRspQryMulticastInstrument", swigMethodTypes5)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspQryMulticastInstrumentSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcMulticastInstrumentField.getCPtr(pMulticastInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspQryMulticastInstrument(swigCPtr, CThostFtdcMulticastInstrumentField.getCPtr(pMulticastInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspError(CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspError", swigMethodTypes5)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspErrorSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspError(swigCPtr, CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspError", swigMethodTypes6)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspErrorSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspError(swigCPtr, CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspSubMarketData(CThostFtdcSpecificInstrumentField pSpecificInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspSubMarketData", swigMethodTypes6)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubMarketData(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspSubMarketData", swigMethodTypes7)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubMarketData(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspUnSubMarketData(CThostFtdcSpecificInstrumentField pSpecificInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUnSubMarketData", swigMethodTypes7)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubMarketData(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspUnSubMarketData", swigMethodTypes8)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubMarketData(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspSubForQuoteRsp(CThostFtdcSpecificInstrumentField pSpecificInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspSubForQuoteRsp", swigMethodTypes8)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubForQuoteRsp(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspSubForQuoteRsp", swigMethodTypes9)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspSubForQuoteRsp(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRspUnSubForQuoteRsp(CThostFtdcSpecificInstrumentField pSpecificInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast) {
-    if (SwigDerivedClassHasMethod("OnRspUnSubForQuoteRsp", swigMethodTypes9)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubForQuoteRsp(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
+    if (SwigDerivedClassHasMethod("OnRspUnSubForQuoteRsp", swigMethodTypes10)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRspUnSubForQuoteRsp(swigCPtr, CThostFtdcSpecificInstrumentField.getCPtr(pSpecificInstrument), CThostFtdcRspInfoField.getCPtr(pRspInfo), nRequestID, bIsLast);
   }
 
   public virtual void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField pDepthMarketData) {
-    if (SwigDerivedClassHasMethod("OnRtnDepthMarketData", swigMethodTypes10)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnDepthMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcDepthMarketDataField.getCPtr(pDepthMarketData)); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnDepthMarketData(swigCPtr, CThostFtdcDepthMarketDataField.getCPtr(pDepthMarketData));
+    if (SwigDerivedClassHasMethod("OnRtnDepthMarketData", swigMethodTypes11)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnDepthMarketDataSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcDepthMarketDataField.getCPtr(pDepthMarketData)); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnDepthMarketData(swigCPtr, CThostFtdcDepthMarketDataField.getCPtr(pDepthMarketData));
   }
 
   public virtual void OnRtnForQuoteRsp(CThostFtdcForQuoteRspField pForQuoteRsp) {
-    if (SwigDerivedClassHasMethod("OnRtnForQuoteRsp", swigMethodTypes11)) thostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcForQuoteRspField.getCPtr(pForQuoteRsp)); else thostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnForQuoteRsp(swigCPtr, CThostFtdcForQuoteRspField.getCPtr(pForQuoteRsp));
+    if (SwigDerivedClassHasMethod("OnRtnForQuoteRsp", swigMethodTypes12)) ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnForQuoteRspSwigExplicitCThostFtdcMdSpi(swigCPtr, CThostFtdcForQuoteRspField.getCPtr(pForQuoteRsp)); else ctpthostmdapiPINVOKE.CThostFtdcMdSpi_OnRtnForQuoteRsp(swigCPtr, CThostFtdcForQuoteRspField.getCPtr(pForQuoteRsp));
   }
 
-  public CThostFtdcMdSpi() : this(thostmdapiPINVOKE.new_CThostFtdcMdSpi(), true) {
+  public CThostFtdcMdSpi() : this(ctpthostmdapiPINVOKE.new_CThostFtdcMdSpi(), true) {
     SwigDirectorConnect();
   }
 
@@ -102,21 +106,23 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
       swigDelegate3 = new SwigDelegateCThostFtdcMdSpi_3(SwigDirectorOnRspUserLogin);
     if (SwigDerivedClassHasMethod("OnRspUserLogout", swigMethodTypes4))
       swigDelegate4 = new SwigDelegateCThostFtdcMdSpi_4(SwigDirectorOnRspUserLogout);
-    if (SwigDerivedClassHasMethod("OnRspError", swigMethodTypes5))
-      swigDelegate5 = new SwigDelegateCThostFtdcMdSpi_5(SwigDirectorOnRspError);
-    if (SwigDerivedClassHasMethod("OnRspSubMarketData", swigMethodTypes6))
-      swigDelegate6 = new SwigDelegateCThostFtdcMdSpi_6(SwigDirectorOnRspSubMarketData);
-    if (SwigDerivedClassHasMethod("OnRspUnSubMarketData", swigMethodTypes7))
-      swigDelegate7 = new SwigDelegateCThostFtdcMdSpi_7(SwigDirectorOnRspUnSubMarketData);
-    if (SwigDerivedClassHasMethod("OnRspSubForQuoteRsp", swigMethodTypes8))
-      swigDelegate8 = new SwigDelegateCThostFtdcMdSpi_8(SwigDirectorOnRspSubForQuoteRsp);
-    if (SwigDerivedClassHasMethod("OnRspUnSubForQuoteRsp", swigMethodTypes9))
-      swigDelegate9 = new SwigDelegateCThostFtdcMdSpi_9(SwigDirectorOnRspUnSubForQuoteRsp);
-    if (SwigDerivedClassHasMethod("OnRtnDepthMarketData", swigMethodTypes10))
-      swigDelegate10 = new SwigDelegateCThostFtdcMdSpi_10(SwigDirectorOnRtnDepthMarketData);
-    if (SwigDerivedClassHasMethod("OnRtnForQuoteRsp", swigMethodTypes11))
-      swigDelegate11 = new SwigDelegateCThostFtdcMdSpi_11(SwigDirectorOnRtnForQuoteRsp);
-    thostmdapiPINVOKE.CThostFtdcMdSpi_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11);
+    if (SwigDerivedClassHasMethod("OnRspQryMulticastInstrument", swigMethodTypes5))
+      swigDelegate5 = new SwigDelegateCThostFtdcMdSpi_5(SwigDirectorOnRspQryMulticastInstrument);
+    if (SwigDerivedClassHasMethod("OnRspError", swigMethodTypes6))
+      swigDelegate6 = new SwigDelegateCThostFtdcMdSpi_6(SwigDirectorOnRspError);
+    if (SwigDerivedClassHasMethod("OnRspSubMarketData", swigMethodTypes7))
+      swigDelegate7 = new SwigDelegateCThostFtdcMdSpi_7(SwigDirectorOnRspSubMarketData);
+    if (SwigDerivedClassHasMethod("OnRspUnSubMarketData", swigMethodTypes8))
+      swigDelegate8 = new SwigDelegateCThostFtdcMdSpi_8(SwigDirectorOnRspUnSubMarketData);
+    if (SwigDerivedClassHasMethod("OnRspSubForQuoteRsp", swigMethodTypes9))
+      swigDelegate9 = new SwigDelegateCThostFtdcMdSpi_9(SwigDirectorOnRspSubForQuoteRsp);
+    if (SwigDerivedClassHasMethod("OnRspUnSubForQuoteRsp", swigMethodTypes10))
+      swigDelegate10 = new SwigDelegateCThostFtdcMdSpi_10(SwigDirectorOnRspUnSubForQuoteRsp);
+    if (SwigDerivedClassHasMethod("OnRtnDepthMarketData", swigMethodTypes11))
+      swigDelegate11 = new SwigDelegateCThostFtdcMdSpi_11(SwigDirectorOnRtnDepthMarketData);
+    if (SwigDerivedClassHasMethod("OnRtnForQuoteRsp", swigMethodTypes12))
+      swigDelegate12 = new SwigDelegateCThostFtdcMdSpi_12(SwigDirectorOnRtnForQuoteRsp);
+    ctpthostmdapiPINVOKE.CThostFtdcMdSpi_director_connect(swigCPtr, swigDelegate0, swigDelegate1, swigDelegate2, swigDelegate3, swigDelegate4, swigDelegate5, swigDelegate6, swigDelegate7, swigDelegate8, swigDelegate9, swigDelegate10, swigDelegate11, swigDelegate12);
   }
 
   private bool SwigDerivedClassHasMethod(string methodName, global::System.Type[] methodTypes) {
@@ -143,6 +149,10 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
 
   private void SwigDirectorOnRspUserLogout(global::System.IntPtr pUserLogout, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast) {
     OnRspUserLogout((pUserLogout == global::System.IntPtr.Zero) ? null : new CThostFtdcUserLogoutField(pUserLogout, false), (pRspInfo == global::System.IntPtr.Zero) ? null : new CThostFtdcRspInfoField(pRspInfo, false), nRequestID, bIsLast);
+  }
+
+  private void SwigDirectorOnRspQryMulticastInstrument(global::System.IntPtr pMulticastInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast) {
+    OnRspQryMulticastInstrument((pMulticastInstrument == global::System.IntPtr.Zero) ? null : new CThostFtdcMulticastInstrumentField(pMulticastInstrument, false), (pRspInfo == global::System.IntPtr.Zero) ? null : new CThostFtdcRspInfoField(pRspInfo, false), nRequestID, bIsLast);
   }
 
   private void SwigDirectorOnRspError(global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast) {
@@ -178,13 +188,14 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
   public delegate void SwigDelegateCThostFtdcMdSpi_2(int nTimeLapse);
   public delegate void SwigDelegateCThostFtdcMdSpi_3(global::System.IntPtr pRspUserLogin, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
   public delegate void SwigDelegateCThostFtdcMdSpi_4(global::System.IntPtr pUserLogout, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
-  public delegate void SwigDelegateCThostFtdcMdSpi_5(global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
-  public delegate void SwigDelegateCThostFtdcMdSpi_6(global::System.IntPtr pSpecificInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
+  public delegate void SwigDelegateCThostFtdcMdSpi_5(global::System.IntPtr pMulticastInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
+  public delegate void SwigDelegateCThostFtdcMdSpi_6(global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
   public delegate void SwigDelegateCThostFtdcMdSpi_7(global::System.IntPtr pSpecificInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
   public delegate void SwigDelegateCThostFtdcMdSpi_8(global::System.IntPtr pSpecificInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
   public delegate void SwigDelegateCThostFtdcMdSpi_9(global::System.IntPtr pSpecificInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
-  public delegate void SwigDelegateCThostFtdcMdSpi_10(global::System.IntPtr pDepthMarketData);
-  public delegate void SwigDelegateCThostFtdcMdSpi_11(global::System.IntPtr pForQuoteRsp);
+  public delegate void SwigDelegateCThostFtdcMdSpi_10(global::System.IntPtr pSpecificInstrument, global::System.IntPtr pRspInfo, int nRequestID, bool bIsLast);
+  public delegate void SwigDelegateCThostFtdcMdSpi_11(global::System.IntPtr pDepthMarketData);
+  public delegate void SwigDelegateCThostFtdcMdSpi_12(global::System.IntPtr pForQuoteRsp);
 
   private SwigDelegateCThostFtdcMdSpi_0 swigDelegate0;
   private SwigDelegateCThostFtdcMdSpi_1 swigDelegate1;
@@ -198,17 +209,19 @@ public class CThostFtdcMdSpi : global::System.IDisposable {
   private SwigDelegateCThostFtdcMdSpi_9 swigDelegate9;
   private SwigDelegateCThostFtdcMdSpi_10 swigDelegate10;
   private SwigDelegateCThostFtdcMdSpi_11 swigDelegate11;
+  private SwigDelegateCThostFtdcMdSpi_12 swigDelegate12;
 
   private static global::System.Type[] swigMethodTypes0 = new global::System.Type[] {  };
   private static global::System.Type[] swigMethodTypes1 = new global::System.Type[] { typeof(int) };
   private static global::System.Type[] swigMethodTypes2 = new global::System.Type[] { typeof(int) };
   private static global::System.Type[] swigMethodTypes3 = new global::System.Type[] { typeof(CThostFtdcRspUserLoginField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
   private static global::System.Type[] swigMethodTypes4 = new global::System.Type[] { typeof(CThostFtdcUserLogoutField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(CThostFtdcSpecificInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
+  private static global::System.Type[] swigMethodTypes5 = new global::System.Type[] { typeof(CThostFtdcMulticastInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
+  private static global::System.Type[] swigMethodTypes6 = new global::System.Type[] { typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
   private static global::System.Type[] swigMethodTypes7 = new global::System.Type[] { typeof(CThostFtdcSpecificInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
   private static global::System.Type[] swigMethodTypes8 = new global::System.Type[] { typeof(CThostFtdcSpecificInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
   private static global::System.Type[] swigMethodTypes9 = new global::System.Type[] { typeof(CThostFtdcSpecificInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
-  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] { typeof(CThostFtdcDepthMarketDataField) };
-  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] { typeof(CThostFtdcForQuoteRspField) };
+  private static global::System.Type[] swigMethodTypes10 = new global::System.Type[] { typeof(CThostFtdcSpecificInstrumentField), typeof(CThostFtdcRspInfoField), typeof(int), typeof(bool) };
+  private static global::System.Type[] swigMethodTypes11 = new global::System.Type[] { typeof(CThostFtdcDepthMarketDataField) };
+  private static global::System.Type[] swigMethodTypes12 = new global::System.Type[] { typeof(CThostFtdcForQuoteRspField) };
 }

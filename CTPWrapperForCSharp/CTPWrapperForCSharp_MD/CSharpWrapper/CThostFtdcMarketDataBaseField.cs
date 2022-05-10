@@ -31,7 +31,7 @@ public class CThostFtdcMarketDataBaseField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMarketDataBaseField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcMarketDataBaseField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcMarketDataBaseField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreSettlementPrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreSettlementPrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreSettlementPrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreSettlementPrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreSettlementPrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreClosePrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreClosePrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreClosePrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreClosePrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreClosePrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreOpenInterest {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreOpenInterest_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreOpenInterest_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreOpenInterest_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreOpenInterest_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreDelta {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreDelta_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreDelta_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreDelta_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBaseField_PreDelta_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarketDataBaseField() : this(thostmdapiPINVOKE.new_CThostFtdcMarketDataBaseField(), true) {
+  public CThostFtdcMarketDataBaseField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcMarketDataBaseField(), true) {
   }
 
 }

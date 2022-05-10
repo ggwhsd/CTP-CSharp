@@ -31,7 +31,7 @@ public class CThostFtdcDepartmentUserField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcDepartmentUserField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcDepartmentUserField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcDepartmentUserField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepartmentUserField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepartmentUserField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepartmentUserField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepartmentUserField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorRange_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorRange_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepartmentUserField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDepartmentUserField() : this(thostmdapiPINVOKE.new_CThostFtdcDepartmentUserField(), true) {
+  public CThostFtdcDepartmentUserField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcDepartmentUserField(), true) {
   }
 
 }

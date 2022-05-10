@@ -31,7 +31,7 @@ public class CThostFtdcSuperUserField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSuperUserField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSuperUserField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcSuperUserField : global::System.IDisposable {
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSuperUserField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSuperUserField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserName {
     set {
-      thostmdapiPINVOKE.CThostFtdcSuperUserField_UserName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_UserName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSuperUserField_UserName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_UserName_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thostmdapiPINVOKE.CThostFtdcSuperUserField_Password_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSuperUserField_Password_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsActive {
     set {
-      thostmdapiPINVOKE.CThostFtdcSuperUserField_IsActive_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_IsActive_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSuperUserField_IsActive_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSuperUserField_IsActive_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSuperUserField() : this(thostmdapiPINVOKE.new_CThostFtdcSuperUserField(), true) {
+  public CThostFtdcSuperUserField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSuperUserField(), true) {
   }
 
 }

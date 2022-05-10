@@ -31,7 +31,7 @@ public class CThostFtdcQryInstrumentStatusField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryInstrumentStatusField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryInstrumentStatusField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,35 @@ public class CThostFtdcQryInstrumentStatusField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve1 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeInstID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryInstrumentStatusField() : this(thostmdapiPINVOKE.new_CThostFtdcQryInstrumentStatusField(), true) {
+  public CThostFtdcQryInstrumentStatusField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryInstrumentStatusField(), true) {
   }
 
 }

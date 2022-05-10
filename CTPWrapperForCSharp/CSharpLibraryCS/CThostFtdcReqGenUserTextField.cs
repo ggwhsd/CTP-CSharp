@@ -31,7 +31,7 @@ public class CThostFtdcReqGenUserTextField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcReqGenUserTextField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcReqGenUserTextField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcReqGenUserTextField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqGenUserTextField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqGenUserTextField() : this(thosttradeapiPINVOKE.new_CThostFtdcReqGenUserTextField(), true) {
+  public CThostFtdcReqGenUserTextField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcReqGenUserTextField(), true) {
   }
 
 }

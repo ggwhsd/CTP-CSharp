@@ -31,7 +31,7 @@ public class CThostFtdcMulticastGroupInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcMulticastGroupInfoField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcMulticastGroupInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcMulticastGroupInfoField : global::System.IDisposable {
 
   public string GroupIP {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_get(swigCPtr);
       return ret;
     } 
   }
 
   public int GroupPort {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SourceIP {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMulticastGroupInfoField() : this(thosttradeapiPINVOKE.new_CThostFtdcMulticastGroupInfoField(), true) {
+  public CThostFtdcMulticastGroupInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcMulticastGroupInfoField(), true) {
   }
 
 }

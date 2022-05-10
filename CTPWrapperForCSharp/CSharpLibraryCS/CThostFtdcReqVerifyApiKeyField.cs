@@ -31,7 +31,7 @@ public class CThostFtdcReqVerifyApiKeyField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcReqVerifyApiKeyField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcReqVerifyApiKeyField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcReqVerifyApiKeyField : global::System.IDisposable {
 
   public int ApiHandshakeDataLen {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeDataLen_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeDataLen_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeDataLen_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeDataLen_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ApiHandshakeData {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeData_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeData_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeData_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqVerifyApiKeyField_ApiHandshakeData_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqVerifyApiKeyField() : this(thosttradeapiPINVOKE.new_CThostFtdcReqVerifyApiKeyField(), true) {
+  public CThostFtdcReqVerifyApiKeyField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcReqVerifyApiKeyField(), true) {
   }
 
 }

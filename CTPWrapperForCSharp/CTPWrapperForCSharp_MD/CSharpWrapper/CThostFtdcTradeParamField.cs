@@ -31,7 +31,7 @@ public class CThostFtdcTradeParamField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcTradeParamField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcTradeParamField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcTradeParamField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradeParamField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradeParamField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char TradeParamID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamID_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamID_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeParamValue {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamValue_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamValue_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamValue_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_TradeParamValue_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Memo {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradeParamField_Memo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_Memo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradeParamField_Memo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradeParamField_Memo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTradeParamField() : this(thostmdapiPINVOKE.new_CThostFtdcTradeParamField(), true) {
+  public CThostFtdcTradeParamField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcTradeParamField(), true) {
   }
 
 }

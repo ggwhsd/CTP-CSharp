@@ -31,7 +31,7 @@ public class CThostFtdcReqUserAuthMethodField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcReqUserAuthMethodField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcReqUserAuthMethodField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcReqUserAuthMethodField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqUserAuthMethodField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqUserAuthMethodField() : this(thosttradeapiPINVOKE.new_CThostFtdcReqUserAuthMethodField(), true) {
+  public CThostFtdcReqUserAuthMethodField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcReqUserAuthMethodField(), true) {
   }
 
 }

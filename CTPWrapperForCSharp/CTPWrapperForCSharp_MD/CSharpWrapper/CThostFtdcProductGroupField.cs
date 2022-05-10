@@ -31,7 +31,7 @@ public class CThostFtdcProductGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcProductGroupField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcProductGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,37 +39,57 @@ public class CThostFtdcProductGroupField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductGroupField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductGroupField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve2 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_reserve2_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_reserve2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ProductID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProductGroupID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcProductGroupField() : this(thostmdapiPINVOKE.new_CThostFtdcProductGroupField(), true) {
+  public CThostFtdcProductGroupField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcProductGroupField(), true) {
   }
 
 }

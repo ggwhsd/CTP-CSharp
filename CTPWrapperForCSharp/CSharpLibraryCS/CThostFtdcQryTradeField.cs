@@ -31,7 +31,7 @@ public class CThostFtdcQryTradeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryTradeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryTradeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,85 +41,85 @@ public class CThostFtdcQryTradeField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeTimeStart {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeStart_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeStart_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeStart_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeStart_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeTimeEnd {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeEnd_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeEnd_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeEnd_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_TradeTimeEnd_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTradeField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryTradeField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryTradeField(), true) {
+  public CThostFtdcQryTradeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryTradeField(), true) {
   }
 
 }

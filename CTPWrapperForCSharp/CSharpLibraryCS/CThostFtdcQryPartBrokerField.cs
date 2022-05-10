@@ -31,7 +31,7 @@ public class CThostFtdcQryPartBrokerField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryPartBrokerField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryPartBrokerField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryPartBrokerField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryPartBrokerField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryPartBrokerField(), true) {
+  public CThostFtdcQryPartBrokerField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryPartBrokerField(), true) {
   }
 
 }

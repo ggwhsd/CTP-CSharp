@@ -36,481 +36,481 @@ public class CThostFtdcTraderApi : global::System.IDisposable {
   }
 
   public static CThostFtdcTraderApi CreateFtdcTraderApi(string pszFlowPath) {
-    global::System.IntPtr cPtr = thosttradeapiPINVOKE.CThostFtdcTraderApi_CreateFtdcTraderApi__SWIG_0(pszFlowPath);
+    global::System.IntPtr cPtr = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_CreateFtdcTraderApi__SWIG_0(pszFlowPath);
     CThostFtdcTraderApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcTraderApi(cPtr, false);
     return ret;
   }
 
   public static CThostFtdcTraderApi CreateFtdcTraderApi() {
-    global::System.IntPtr cPtr = thosttradeapiPINVOKE.CThostFtdcTraderApi_CreateFtdcTraderApi__SWIG_1();
+    global::System.IntPtr cPtr = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_CreateFtdcTraderApi__SWIG_1();
     CThostFtdcTraderApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcTraderApi(cPtr, false);
     return ret;
   }
 
   public static string GetApiVersion() {
-    string ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_GetApiVersion();
+    string ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_GetApiVersion();
     return ret;
   }
 
   public virtual void Release() {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_Release(swigCPtr);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_Release(swigCPtr);
   }
 
   public virtual void Init() {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_Init(swigCPtr);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_Init(swigCPtr);
   }
 
   public virtual int Join() {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_Join(swigCPtr);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_Join(swigCPtr);
     return ret;
   }
 
   public virtual string GetTradingDay() {
-    string ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_GetTradingDay(swigCPtr);
+    string ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_GetTradingDay(swigCPtr);
     return ret;
   }
 
   public virtual void RegisterFront(string pszFrontAddress) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterFront(swigCPtr, pszFrontAddress);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterFront(swigCPtr, pszFrontAddress);
   }
 
   public virtual void RegisterNameServer(string pszNsAddress) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterNameServer(swigCPtr, pszNsAddress);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterNameServer(swigCPtr, pszNsAddress);
   }
 
   public virtual void RegisterFensUserInfo(CThostFtdcFensUserInfoField pFensUserInfo) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterFensUserInfo(swigCPtr, CThostFtdcFensUserInfoField.getCPtr(pFensUserInfo));
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterFensUserInfo(swigCPtr, CThostFtdcFensUserInfoField.getCPtr(pFensUserInfo));
   }
 
   public virtual void RegisterSpi(CThostFtdcTraderSpi pSpi) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterSpi(swigCPtr, CThostFtdcTraderSpi.getCPtr(pSpi));
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterSpi(swigCPtr, CThostFtdcTraderSpi.getCPtr(pSpi));
   }
 
   public virtual void SubscribePrivateTopic(THOST_TE_RESUME_TYPE nResumeType) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_SubscribePrivateTopic(swigCPtr, (int)nResumeType);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_SubscribePrivateTopic(swigCPtr, (int)nResumeType);
   }
 
   public virtual void SubscribePublicTopic(THOST_TE_RESUME_TYPE nResumeType) {
-    thosttradeapiPINVOKE.CThostFtdcTraderApi_SubscribePublicTopic(swigCPtr, (int)nResumeType);
+    ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_SubscribePublicTopic(swigCPtr, (int)nResumeType);
   }
 
   public virtual int ReqAuthenticate(CThostFtdcReqAuthenticateField pReqAuthenticateField, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqAuthenticate(swigCPtr, CThostFtdcReqAuthenticateField.getCPtr(pReqAuthenticateField), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqAuthenticate(swigCPtr, CThostFtdcReqAuthenticateField.getCPtr(pReqAuthenticateField), nRequestID);
     return ret;
   }
 
   public virtual int RegisterUserSystemInfo(CThostFtdcUserSystemInfoField pUserSystemInfo) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterUserSystemInfo(swigCPtr, CThostFtdcUserSystemInfoField.getCPtr(pUserSystemInfo));
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_RegisterUserSystemInfo(swigCPtr, CThostFtdcUserSystemInfoField.getCPtr(pUserSystemInfo));
     return ret;
   }
 
   public virtual int SubmitUserSystemInfo(CThostFtdcUserSystemInfoField pUserSystemInfo) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_SubmitUserSystemInfo(swigCPtr, CThostFtdcUserSystemInfoField.getCPtr(pUserSystemInfo));
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_SubmitUserSystemInfo(swigCPtr, CThostFtdcUserSystemInfoField.getCPtr(pUserSystemInfo));
     return ret;
   }
 
   public virtual int ReqUserLogin(CThostFtdcReqUserLoginField pReqUserLoginField, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLogin(swigCPtr, CThostFtdcReqUserLoginField.getCPtr(pReqUserLoginField), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLogin(swigCPtr, CThostFtdcReqUserLoginField.getCPtr(pReqUserLoginField), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserLogout(CThostFtdcUserLogoutField pUserLogout, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserPasswordUpdate(CThostFtdcUserPasswordUpdateField pUserPasswordUpdate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserPasswordUpdate(swigCPtr, CThostFtdcUserPasswordUpdateField.getCPtr(pUserPasswordUpdate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserPasswordUpdate(swigCPtr, CThostFtdcUserPasswordUpdateField.getCPtr(pUserPasswordUpdate), nRequestID);
     return ret;
   }
 
   public virtual int ReqTradingAccountPasswordUpdate(CThostFtdcTradingAccountPasswordUpdateField pTradingAccountPasswordUpdate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqTradingAccountPasswordUpdate(swigCPtr, CThostFtdcTradingAccountPasswordUpdateField.getCPtr(pTradingAccountPasswordUpdate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqTradingAccountPasswordUpdate(swigCPtr, CThostFtdcTradingAccountPasswordUpdateField.getCPtr(pTradingAccountPasswordUpdate), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserAuthMethod(CThostFtdcReqUserAuthMethodField pReqUserAuthMethod, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserAuthMethod(swigCPtr, CThostFtdcReqUserAuthMethodField.getCPtr(pReqUserAuthMethod), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserAuthMethod(swigCPtr, CThostFtdcReqUserAuthMethodField.getCPtr(pReqUserAuthMethod), nRequestID);
     return ret;
   }
 
   public virtual int ReqGenUserCaptcha(CThostFtdcReqGenUserCaptchaField pReqGenUserCaptcha, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqGenUserCaptcha(swigCPtr, CThostFtdcReqGenUserCaptchaField.getCPtr(pReqGenUserCaptcha), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqGenUserCaptcha(swigCPtr, CThostFtdcReqGenUserCaptchaField.getCPtr(pReqGenUserCaptcha), nRequestID);
     return ret;
   }
 
   public virtual int ReqGenUserText(CThostFtdcReqGenUserTextField pReqGenUserText, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqGenUserText(swigCPtr, CThostFtdcReqGenUserTextField.getCPtr(pReqGenUserText), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqGenUserText(swigCPtr, CThostFtdcReqGenUserTextField.getCPtr(pReqGenUserText), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserLoginWithCaptcha(CThostFtdcReqUserLoginWithCaptchaField pReqUserLoginWithCaptcha, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithCaptcha(swigCPtr, CThostFtdcReqUserLoginWithCaptchaField.getCPtr(pReqUserLoginWithCaptcha), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithCaptcha(swigCPtr, CThostFtdcReqUserLoginWithCaptchaField.getCPtr(pReqUserLoginWithCaptcha), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserLoginWithText(CThostFtdcReqUserLoginWithTextField pReqUserLoginWithText, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithText(swigCPtr, CThostFtdcReqUserLoginWithTextField.getCPtr(pReqUserLoginWithText), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithText(swigCPtr, CThostFtdcReqUserLoginWithTextField.getCPtr(pReqUserLoginWithText), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserLoginWithOTP(CThostFtdcReqUserLoginWithOTPField pReqUserLoginWithOTP, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithOTP(swigCPtr, CThostFtdcReqUserLoginWithOTPField.getCPtr(pReqUserLoginWithOTP), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqUserLoginWithOTP(swigCPtr, CThostFtdcReqUserLoginWithOTPField.getCPtr(pReqUserLoginWithOTP), nRequestID);
     return ret;
   }
 
   public virtual int ReqOrderInsert(CThostFtdcInputOrderField pInputOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOrderInsert(swigCPtr, CThostFtdcInputOrderField.getCPtr(pInputOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOrderInsert(swigCPtr, CThostFtdcInputOrderField.getCPtr(pInputOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqParkedOrderInsert(CThostFtdcParkedOrderField pParkedOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqParkedOrderInsert(swigCPtr, CThostFtdcParkedOrderField.getCPtr(pParkedOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqParkedOrderInsert(swigCPtr, CThostFtdcParkedOrderField.getCPtr(pParkedOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqParkedOrderAction(CThostFtdcParkedOrderActionField pParkedOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqParkedOrderAction(swigCPtr, CThostFtdcParkedOrderActionField.getCPtr(pParkedOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqParkedOrderAction(swigCPtr, CThostFtdcParkedOrderActionField.getCPtr(pParkedOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqOrderAction(CThostFtdcInputOrderActionField pInputOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOrderAction(swigCPtr, CThostFtdcInputOrderActionField.getCPtr(pInputOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOrderAction(swigCPtr, CThostFtdcInputOrderActionField.getCPtr(pInputOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqQueryMaxOrderVolume(CThostFtdcQueryMaxOrderVolumeField pQueryMaxOrderVolume, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryMaxOrderVolume(swigCPtr, CThostFtdcQueryMaxOrderVolumeField.getCPtr(pQueryMaxOrderVolume), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryMaxOrderVolume(swigCPtr, CThostFtdcQueryMaxOrderVolumeField.getCPtr(pQueryMaxOrderVolume), nRequestID);
     return ret;
   }
 
   public virtual int ReqSettlementInfoConfirm(CThostFtdcSettlementInfoConfirmField pSettlementInfoConfirm, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqSettlementInfoConfirm(swigCPtr, CThostFtdcSettlementInfoConfirmField.getCPtr(pSettlementInfoConfirm), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqSettlementInfoConfirm(swigCPtr, CThostFtdcSettlementInfoConfirmField.getCPtr(pSettlementInfoConfirm), nRequestID);
     return ret;
   }
 
   public virtual int ReqRemoveParkedOrder(CThostFtdcRemoveParkedOrderField pRemoveParkedOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqRemoveParkedOrder(swigCPtr, CThostFtdcRemoveParkedOrderField.getCPtr(pRemoveParkedOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqRemoveParkedOrder(swigCPtr, CThostFtdcRemoveParkedOrderField.getCPtr(pRemoveParkedOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqRemoveParkedOrderAction(CThostFtdcRemoveParkedOrderActionField pRemoveParkedOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqRemoveParkedOrderAction(swigCPtr, CThostFtdcRemoveParkedOrderActionField.getCPtr(pRemoveParkedOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqRemoveParkedOrderAction(swigCPtr, CThostFtdcRemoveParkedOrderActionField.getCPtr(pRemoveParkedOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqExecOrderInsert(CThostFtdcInputExecOrderField pInputExecOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqExecOrderInsert(swigCPtr, CThostFtdcInputExecOrderField.getCPtr(pInputExecOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqExecOrderInsert(swigCPtr, CThostFtdcInputExecOrderField.getCPtr(pInputExecOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqExecOrderAction(CThostFtdcInputExecOrderActionField pInputExecOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqExecOrderAction(swigCPtr, CThostFtdcInputExecOrderActionField.getCPtr(pInputExecOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqExecOrderAction(swigCPtr, CThostFtdcInputExecOrderActionField.getCPtr(pInputExecOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqForQuoteInsert(CThostFtdcInputForQuoteField pInputForQuote, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqForQuoteInsert(swigCPtr, CThostFtdcInputForQuoteField.getCPtr(pInputForQuote), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqForQuoteInsert(swigCPtr, CThostFtdcInputForQuoteField.getCPtr(pInputForQuote), nRequestID);
     return ret;
   }
 
   public virtual int ReqQuoteInsert(CThostFtdcInputQuoteField pInputQuote, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQuoteInsert(swigCPtr, CThostFtdcInputQuoteField.getCPtr(pInputQuote), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQuoteInsert(swigCPtr, CThostFtdcInputQuoteField.getCPtr(pInputQuote), nRequestID);
     return ret;
   }
 
   public virtual int ReqQuoteAction(CThostFtdcInputQuoteActionField pInputQuoteAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQuoteAction(swigCPtr, CThostFtdcInputQuoteActionField.getCPtr(pInputQuoteAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQuoteAction(swigCPtr, CThostFtdcInputQuoteActionField.getCPtr(pInputQuoteAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqBatchOrderAction(CThostFtdcInputBatchOrderActionField pInputBatchOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqBatchOrderAction(swigCPtr, CThostFtdcInputBatchOrderActionField.getCPtr(pInputBatchOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqBatchOrderAction(swigCPtr, CThostFtdcInputBatchOrderActionField.getCPtr(pInputBatchOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqOptionSelfCloseInsert(CThostFtdcInputOptionSelfCloseField pInputOptionSelfClose, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOptionSelfCloseInsert(swigCPtr, CThostFtdcInputOptionSelfCloseField.getCPtr(pInputOptionSelfClose), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOptionSelfCloseInsert(swigCPtr, CThostFtdcInputOptionSelfCloseField.getCPtr(pInputOptionSelfClose), nRequestID);
     return ret;
   }
 
   public virtual int ReqOptionSelfCloseAction(CThostFtdcInputOptionSelfCloseActionField pInputOptionSelfCloseAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOptionSelfCloseAction(swigCPtr, CThostFtdcInputOptionSelfCloseActionField.getCPtr(pInputOptionSelfCloseAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqOptionSelfCloseAction(swigCPtr, CThostFtdcInputOptionSelfCloseActionField.getCPtr(pInputOptionSelfCloseAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqCombActionInsert(CThostFtdcInputCombActionField pInputCombAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqCombActionInsert(swigCPtr, CThostFtdcInputCombActionField.getCPtr(pInputCombAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqCombActionInsert(swigCPtr, CThostFtdcInputCombActionField.getCPtr(pInputCombAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryOrder(CThostFtdcQryOrderField pQryOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOrder(swigCPtr, CThostFtdcQryOrderField.getCPtr(pQryOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOrder(swigCPtr, CThostFtdcQryOrderField.getCPtr(pQryOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTrade(CThostFtdcQryTradeField pQryTrade, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTrade(swigCPtr, CThostFtdcQryTradeField.getCPtr(pQryTrade), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTrade(swigCPtr, CThostFtdcQryTradeField.getCPtr(pQryTrade), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestorPosition(CThostFtdcQryInvestorPositionField pQryInvestorPosition, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPosition(swigCPtr, CThostFtdcQryInvestorPositionField.getCPtr(pQryInvestorPosition), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPosition(swigCPtr, CThostFtdcQryInvestorPositionField.getCPtr(pQryInvestorPosition), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTradingAccount(CThostFtdcQryTradingAccountField pQryTradingAccount, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingAccount(swigCPtr, CThostFtdcQryTradingAccountField.getCPtr(pQryTradingAccount), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingAccount(swigCPtr, CThostFtdcQryTradingAccountField.getCPtr(pQryTradingAccount), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestor(CThostFtdcQryInvestorField pQryInvestor, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestor(swigCPtr, CThostFtdcQryInvestorField.getCPtr(pQryInvestor), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestor(swigCPtr, CThostFtdcQryInvestorField.getCPtr(pQryInvestor), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTradingCode(CThostFtdcQryTradingCodeField pQryTradingCode, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingCode(swigCPtr, CThostFtdcQryTradingCodeField.getCPtr(pQryTradingCode), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingCode(swigCPtr, CThostFtdcQryTradingCodeField.getCPtr(pQryTradingCode), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInstrumentMarginRate(CThostFtdcQryInstrumentMarginRateField pQryInstrumentMarginRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentMarginRate(swigCPtr, CThostFtdcQryInstrumentMarginRateField.getCPtr(pQryInstrumentMarginRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentMarginRate(swigCPtr, CThostFtdcQryInstrumentMarginRateField.getCPtr(pQryInstrumentMarginRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInstrumentCommissionRate(CThostFtdcQryInstrumentCommissionRateField pQryInstrumentCommissionRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentCommissionRate(swigCPtr, CThostFtdcQryInstrumentCommissionRateField.getCPtr(pQryInstrumentCommissionRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentCommissionRate(swigCPtr, CThostFtdcQryInstrumentCommissionRateField.getCPtr(pQryInstrumentCommissionRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryExchange(CThostFtdcQryExchangeField pQryExchange, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchange(swigCPtr, CThostFtdcQryExchangeField.getCPtr(pQryExchange), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchange(swigCPtr, CThostFtdcQryExchangeField.getCPtr(pQryExchange), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryProduct(CThostFtdcQryProductField pQryProduct, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProduct(swigCPtr, CThostFtdcQryProductField.getCPtr(pQryProduct), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProduct(swigCPtr, CThostFtdcQryProductField.getCPtr(pQryProduct), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInstrument(CThostFtdcQryInstrumentField pQryInstrument, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrument(swigCPtr, CThostFtdcQryInstrumentField.getCPtr(pQryInstrument), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrument(swigCPtr, CThostFtdcQryInstrumentField.getCPtr(pQryInstrument), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryDepthMarketData(CThostFtdcQryDepthMarketDataField pQryDepthMarketData, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryDepthMarketData(swigCPtr, CThostFtdcQryDepthMarketDataField.getCPtr(pQryDepthMarketData), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryDepthMarketData(swigCPtr, CThostFtdcQryDepthMarketDataField.getCPtr(pQryDepthMarketData), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySettlementInfo(CThostFtdcQrySettlementInfoField pQrySettlementInfo, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySettlementInfo(swigCPtr, CThostFtdcQrySettlementInfoField.getCPtr(pQrySettlementInfo), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySettlementInfo(swigCPtr, CThostFtdcQrySettlementInfoField.getCPtr(pQrySettlementInfo), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTransferBank(CThostFtdcQryTransferBankField pQryTransferBank, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTransferBank(swigCPtr, CThostFtdcQryTransferBankField.getCPtr(pQryTransferBank), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTransferBank(swigCPtr, CThostFtdcQryTransferBankField.getCPtr(pQryTransferBank), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestorPositionDetail(CThostFtdcQryInvestorPositionDetailField pQryInvestorPositionDetail, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPositionDetail(swigCPtr, CThostFtdcQryInvestorPositionDetailField.getCPtr(pQryInvestorPositionDetail), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPositionDetail(swigCPtr, CThostFtdcQryInvestorPositionDetailField.getCPtr(pQryInvestorPositionDetail), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryNotice(CThostFtdcQryNoticeField pQryNotice, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryNotice(swigCPtr, CThostFtdcQryNoticeField.getCPtr(pQryNotice), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryNotice(swigCPtr, CThostFtdcQryNoticeField.getCPtr(pQryNotice), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySettlementInfoConfirm(CThostFtdcQrySettlementInfoConfirmField pQrySettlementInfoConfirm, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySettlementInfoConfirm(swigCPtr, CThostFtdcQrySettlementInfoConfirmField.getCPtr(pQrySettlementInfoConfirm), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySettlementInfoConfirm(swigCPtr, CThostFtdcQrySettlementInfoConfirmField.getCPtr(pQrySettlementInfoConfirm), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestorPositionCombineDetail(CThostFtdcQryInvestorPositionCombineDetailField pQryInvestorPositionCombineDetail, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPositionCombineDetail(swigCPtr, CThostFtdcQryInvestorPositionCombineDetailField.getCPtr(pQryInvestorPositionCombineDetail), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorPositionCombineDetail(swigCPtr, CThostFtdcQryInvestorPositionCombineDetailField.getCPtr(pQryInvestorPositionCombineDetail), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryCFMMCTradingAccountKey(CThostFtdcQryCFMMCTradingAccountKeyField pQryCFMMCTradingAccountKey, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCFMMCTradingAccountKey(swigCPtr, CThostFtdcQryCFMMCTradingAccountKeyField.getCPtr(pQryCFMMCTradingAccountKey), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCFMMCTradingAccountKey(swigCPtr, CThostFtdcQryCFMMCTradingAccountKeyField.getCPtr(pQryCFMMCTradingAccountKey), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryEWarrantOffset(CThostFtdcQryEWarrantOffsetField pQryEWarrantOffset, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryEWarrantOffset(swigCPtr, CThostFtdcQryEWarrantOffsetField.getCPtr(pQryEWarrantOffset), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryEWarrantOffset(swigCPtr, CThostFtdcQryEWarrantOffsetField.getCPtr(pQryEWarrantOffset), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestorProductGroupMargin(CThostFtdcQryInvestorProductGroupMarginField pQryInvestorProductGroupMargin, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorProductGroupMargin(swigCPtr, CThostFtdcQryInvestorProductGroupMarginField.getCPtr(pQryInvestorProductGroupMargin), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestorProductGroupMargin(swigCPtr, CThostFtdcQryInvestorProductGroupMarginField.getCPtr(pQryInvestorProductGroupMargin), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryExchangeMarginRate(CThostFtdcQryExchangeMarginRateField pQryExchangeMarginRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeMarginRate(swigCPtr, CThostFtdcQryExchangeMarginRateField.getCPtr(pQryExchangeMarginRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeMarginRate(swigCPtr, CThostFtdcQryExchangeMarginRateField.getCPtr(pQryExchangeMarginRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryExchangeMarginRateAdjust(CThostFtdcQryExchangeMarginRateAdjustField pQryExchangeMarginRateAdjust, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeMarginRateAdjust(swigCPtr, CThostFtdcQryExchangeMarginRateAdjustField.getCPtr(pQryExchangeMarginRateAdjust), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeMarginRateAdjust(swigCPtr, CThostFtdcQryExchangeMarginRateAdjustField.getCPtr(pQryExchangeMarginRateAdjust), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryExchangeRate(CThostFtdcQryExchangeRateField pQryExchangeRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeRate(swigCPtr, CThostFtdcQryExchangeRateField.getCPtr(pQryExchangeRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExchangeRate(swigCPtr, CThostFtdcQryExchangeRateField.getCPtr(pQryExchangeRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySecAgentACIDMap(CThostFtdcQrySecAgentACIDMapField pQrySecAgentACIDMap, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentACIDMap(swigCPtr, CThostFtdcQrySecAgentACIDMapField.getCPtr(pQrySecAgentACIDMap), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentACIDMap(swigCPtr, CThostFtdcQrySecAgentACIDMapField.getCPtr(pQrySecAgentACIDMap), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryProductExchRate(CThostFtdcQryProductExchRateField pQryProductExchRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProductExchRate(swigCPtr, CThostFtdcQryProductExchRateField.getCPtr(pQryProductExchRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProductExchRate(swigCPtr, CThostFtdcQryProductExchRateField.getCPtr(pQryProductExchRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryProductGroup(CThostFtdcQryProductGroupField pQryProductGroup, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProductGroup(swigCPtr, CThostFtdcQryProductGroupField.getCPtr(pQryProductGroup), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryProductGroup(swigCPtr, CThostFtdcQryProductGroupField.getCPtr(pQryProductGroup), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryMMInstrumentCommissionRate(CThostFtdcQryMMInstrumentCommissionRateField pQryMMInstrumentCommissionRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryMMInstrumentCommissionRate(swigCPtr, CThostFtdcQryMMInstrumentCommissionRateField.getCPtr(pQryMMInstrumentCommissionRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryMMInstrumentCommissionRate(swigCPtr, CThostFtdcQryMMInstrumentCommissionRateField.getCPtr(pQryMMInstrumentCommissionRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryMMOptionInstrCommRate(CThostFtdcQryMMOptionInstrCommRateField pQryMMOptionInstrCommRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryMMOptionInstrCommRate(swigCPtr, CThostFtdcQryMMOptionInstrCommRateField.getCPtr(pQryMMOptionInstrCommRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryMMOptionInstrCommRate(swigCPtr, CThostFtdcQryMMOptionInstrCommRateField.getCPtr(pQryMMOptionInstrCommRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInstrumentOrderCommRate(CThostFtdcQryInstrumentOrderCommRateField pQryInstrumentOrderCommRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentOrderCommRate(swigCPtr, CThostFtdcQryInstrumentOrderCommRateField.getCPtr(pQryInstrumentOrderCommRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInstrumentOrderCommRate(swigCPtr, CThostFtdcQryInstrumentOrderCommRateField.getCPtr(pQryInstrumentOrderCommRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySecAgentTradingAccount(CThostFtdcQryTradingAccountField pQryTradingAccount, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentTradingAccount(swigCPtr, CThostFtdcQryTradingAccountField.getCPtr(pQryTradingAccount), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentTradingAccount(swigCPtr, CThostFtdcQryTradingAccountField.getCPtr(pQryTradingAccount), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySecAgentCheckMode(CThostFtdcQrySecAgentCheckModeField pQrySecAgentCheckMode, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentCheckMode(swigCPtr, CThostFtdcQrySecAgentCheckModeField.getCPtr(pQrySecAgentCheckMode), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentCheckMode(swigCPtr, CThostFtdcQrySecAgentCheckModeField.getCPtr(pQrySecAgentCheckMode), nRequestID);
     return ret;
   }
 
   public virtual int ReqQrySecAgentTradeInfo(CThostFtdcQrySecAgentTradeInfoField pQrySecAgentTradeInfo, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentTradeInfo(swigCPtr, CThostFtdcQrySecAgentTradeInfoField.getCPtr(pQrySecAgentTradeInfo), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQrySecAgentTradeInfo(swigCPtr, CThostFtdcQrySecAgentTradeInfoField.getCPtr(pQrySecAgentTradeInfo), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryOptionInstrTradeCost(CThostFtdcQryOptionInstrTradeCostField pQryOptionInstrTradeCost, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionInstrTradeCost(swigCPtr, CThostFtdcQryOptionInstrTradeCostField.getCPtr(pQryOptionInstrTradeCost), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionInstrTradeCost(swigCPtr, CThostFtdcQryOptionInstrTradeCostField.getCPtr(pQryOptionInstrTradeCost), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryOptionInstrCommRate(CThostFtdcQryOptionInstrCommRateField pQryOptionInstrCommRate, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionInstrCommRate(swigCPtr, CThostFtdcQryOptionInstrCommRateField.getCPtr(pQryOptionInstrCommRate), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionInstrCommRate(swigCPtr, CThostFtdcQryOptionInstrCommRateField.getCPtr(pQryOptionInstrCommRate), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryExecOrder(CThostFtdcQryExecOrderField pQryExecOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExecOrder(swigCPtr, CThostFtdcQryExecOrderField.getCPtr(pQryExecOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryExecOrder(swigCPtr, CThostFtdcQryExecOrderField.getCPtr(pQryExecOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryForQuote(CThostFtdcQryForQuoteField pQryForQuote, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryForQuote(swigCPtr, CThostFtdcQryForQuoteField.getCPtr(pQryForQuote), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryForQuote(swigCPtr, CThostFtdcQryForQuoteField.getCPtr(pQryForQuote), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryQuote(CThostFtdcQryQuoteField pQryQuote, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryQuote(swigCPtr, CThostFtdcQryQuoteField.getCPtr(pQryQuote), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryQuote(swigCPtr, CThostFtdcQryQuoteField.getCPtr(pQryQuote), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryOptionSelfClose(CThostFtdcQryOptionSelfCloseField pQryOptionSelfClose, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionSelfClose(swigCPtr, CThostFtdcQryOptionSelfCloseField.getCPtr(pQryOptionSelfClose), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryOptionSelfClose(swigCPtr, CThostFtdcQryOptionSelfCloseField.getCPtr(pQryOptionSelfClose), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryInvestUnit(CThostFtdcQryInvestUnitField pQryInvestUnit, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestUnit(swigCPtr, CThostFtdcQryInvestUnitField.getCPtr(pQryInvestUnit), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryInvestUnit(swigCPtr, CThostFtdcQryInvestUnitField.getCPtr(pQryInvestUnit), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryCombInstrumentGuard(CThostFtdcQryCombInstrumentGuardField pQryCombInstrumentGuard, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCombInstrumentGuard(swigCPtr, CThostFtdcQryCombInstrumentGuardField.getCPtr(pQryCombInstrumentGuard), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCombInstrumentGuard(swigCPtr, CThostFtdcQryCombInstrumentGuardField.getCPtr(pQryCombInstrumentGuard), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryCombAction(CThostFtdcQryCombActionField pQryCombAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCombAction(swigCPtr, CThostFtdcQryCombActionField.getCPtr(pQryCombAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryCombAction(swigCPtr, CThostFtdcQryCombActionField.getCPtr(pQryCombAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTransferSerial(CThostFtdcQryTransferSerialField pQryTransferSerial, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTransferSerial(swigCPtr, CThostFtdcQryTransferSerialField.getCPtr(pQryTransferSerial), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTransferSerial(swigCPtr, CThostFtdcQryTransferSerialField.getCPtr(pQryTransferSerial), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryAccountregister(CThostFtdcQryAccountregisterField pQryAccountregister, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryAccountregister(swigCPtr, CThostFtdcQryAccountregisterField.getCPtr(pQryAccountregister), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryAccountregister(swigCPtr, CThostFtdcQryAccountregisterField.getCPtr(pQryAccountregister), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryContractBank(CThostFtdcQryContractBankField pQryContractBank, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryContractBank(swigCPtr, CThostFtdcQryContractBankField.getCPtr(pQryContractBank), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryContractBank(swigCPtr, CThostFtdcQryContractBankField.getCPtr(pQryContractBank), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryParkedOrder(CThostFtdcQryParkedOrderField pQryParkedOrder, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryParkedOrder(swigCPtr, CThostFtdcQryParkedOrderField.getCPtr(pQryParkedOrder), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryParkedOrder(swigCPtr, CThostFtdcQryParkedOrderField.getCPtr(pQryParkedOrder), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryParkedOrderAction(CThostFtdcQryParkedOrderActionField pQryParkedOrderAction, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryParkedOrderAction(swigCPtr, CThostFtdcQryParkedOrderActionField.getCPtr(pQryParkedOrderAction), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryParkedOrderAction(swigCPtr, CThostFtdcQryParkedOrderActionField.getCPtr(pQryParkedOrderAction), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryTradingNotice(CThostFtdcQryTradingNoticeField pQryTradingNotice, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingNotice(swigCPtr, CThostFtdcQryTradingNoticeField.getCPtr(pQryTradingNotice), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryTradingNotice(swigCPtr, CThostFtdcQryTradingNoticeField.getCPtr(pQryTradingNotice), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryBrokerTradingParams(CThostFtdcQryBrokerTradingParamsField pQryBrokerTradingParams, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryBrokerTradingParams(swigCPtr, CThostFtdcQryBrokerTradingParamsField.getCPtr(pQryBrokerTradingParams), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryBrokerTradingParams(swigCPtr, CThostFtdcQryBrokerTradingParamsField.getCPtr(pQryBrokerTradingParams), nRequestID);
     return ret;
   }
 
   public virtual int ReqQryBrokerTradingAlgos(CThostFtdcQryBrokerTradingAlgosField pQryBrokerTradingAlgos, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryBrokerTradingAlgos(swigCPtr, CThostFtdcQryBrokerTradingAlgosField.getCPtr(pQryBrokerTradingAlgos), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQryBrokerTradingAlgos(swigCPtr, CThostFtdcQryBrokerTradingAlgosField.getCPtr(pQryBrokerTradingAlgos), nRequestID);
     return ret;
   }
 
   public virtual int ReqQueryCFMMCTradingAccountToken(CThostFtdcQueryCFMMCTradingAccountTokenField pQueryCFMMCTradingAccountToken, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryCFMMCTradingAccountToken(swigCPtr, CThostFtdcQueryCFMMCTradingAccountTokenField.getCPtr(pQueryCFMMCTradingAccountToken), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryCFMMCTradingAccountToken(swigCPtr, CThostFtdcQueryCFMMCTradingAccountTokenField.getCPtr(pQueryCFMMCTradingAccountToken), nRequestID);
     return ret;
   }
 
   public virtual int ReqFromBankToFutureByFuture(CThostFtdcReqTransferField pReqTransfer, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqFromBankToFutureByFuture(swigCPtr, CThostFtdcReqTransferField.getCPtr(pReqTransfer), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqFromBankToFutureByFuture(swigCPtr, CThostFtdcReqTransferField.getCPtr(pReqTransfer), nRequestID);
     return ret;
   }
 
   public virtual int ReqFromFutureToBankByFuture(CThostFtdcReqTransferField pReqTransfer, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqFromFutureToBankByFuture(swigCPtr, CThostFtdcReqTransferField.getCPtr(pReqTransfer), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqFromFutureToBankByFuture(swigCPtr, CThostFtdcReqTransferField.getCPtr(pReqTransfer), nRequestID);
     return ret;
   }
 
   public virtual int ReqQueryBankAccountMoneyByFuture(CThostFtdcReqQueryAccountField pReqQueryAccount, int nRequestID) {
-    int ret = thosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryBankAccountMoneyByFuture(swigCPtr, CThostFtdcReqQueryAccountField.getCPtr(pReqQueryAccount), nRequestID);
+    int ret = ctpthosttradeapiPINVOKE.CThostFtdcTraderApi_ReqQueryBankAccountMoneyByFuture(swigCPtr, CThostFtdcReqQueryAccountField.getCPtr(pReqQueryAccount), nRequestID);
     return ret;
   }
 

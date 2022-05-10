@@ -31,7 +31,7 @@ public class CThostFtdcQryBrokerTradingAlgosField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryBrokerTradingAlgosField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryBrokerTradingAlgosField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryBrokerTradingAlgosField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryBrokerTradingAlgosField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryBrokerTradingAlgosField(), true) {
+  public CThostFtdcQryBrokerTradingAlgosField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryBrokerTradingAlgosField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcDepositResultInformField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcDepositResultInformField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcDepositResultInformField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcDepositResultInformField : global::System.IDisposable {
 
   public string DepositSeqNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Deposit {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public int RequestID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ReturnCode {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DescrInfoForReturnCode {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDepositResultInformField() : this(thosttradeapiPINVOKE.new_CThostFtdcDepositResultInformField(), true) {
+  public CThostFtdcDepositResultInformField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcDepositResultInformField(), true) {
   }
 
 }

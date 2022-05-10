@@ -31,7 +31,7 @@ public class CThostFtdcQryExchangeMarginRateField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryExchangeMarginRateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryExchangeMarginRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,55 @@ public class CThostFtdcQryExchangeMarginRateField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_HedgeFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryExchangeMarginRateField() : this(thostmdapiPINVOKE.new_CThostFtdcQryExchangeMarginRateField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryExchangeMarginRateField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryExchangeMarginRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryExchangeMarginRateField(), true) {
   }
 
 }

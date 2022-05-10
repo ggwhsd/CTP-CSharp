@@ -31,7 +31,7 @@ public class CThostFtdcProductGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcProductGroupField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcProductGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcProductGroupField : global::System.IDisposable {
 
   public string ProductID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProductGroupID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductGroupField_ProductGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcProductGroupField() : this(thosttradeapiPINVOKE.new_CThostFtdcProductGroupField(), true) {
+  public CThostFtdcProductGroupField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcProductGroupField(), true) {
   }
 
 }

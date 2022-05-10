@@ -31,7 +31,7 @@ public class CThostFtdcErrExecOrderField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcErrExecOrderField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcErrExecOrderField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,235 +41,255 @@ public class CThostFtdcErrExecOrderField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExecOrderRef {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExecOrderRef_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExecOrderRef_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExecOrderRef_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExecOrderRef_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Volume {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_Volume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_Volume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_Volume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_Volume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int RequestID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_RequestID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_RequestID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_RequestID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_RequestID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BusinessUnit {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_BusinessUnit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_BusinessUnit_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_BusinessUnit_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_BusinessUnit_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OffsetFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_OffsetFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_OffsetFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_OffsetFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_OffsetFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_HedgeFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ActionType {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ActionType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ActionType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ActionType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ActionType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PosiDirection {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_PosiDirection_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_PosiDirection_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_PosiDirection_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_PosiDirection_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ReservePositionFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ReservePositionFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ReservePositionFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ReservePositionFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ReservePositionFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CloseFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_CloseFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_CloseFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_CloseFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_CloseFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestUnitID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClientID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ClientID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ClientID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ClientID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ClientID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_MacAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_MacAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ErrorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ErrorMsg {
     set {
-      thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorMsg_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorMsg_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorMsg_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_ErrorMsg_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcErrExecOrderField() : this(thostmdapiPINVOKE.new_CThostFtdcErrExecOrderField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcErrExecOrderField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcErrExecOrderField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcErrExecOrderField(), true) {
   }
 
 }

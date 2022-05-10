@@ -31,7 +31,7 @@ public class CThostFtdcReqUserLoginWithCaptchaField : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcReqUserLoginWithCaptchaField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcReqUserLoginWithCaptchaField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,125 +41,135 @@ public class CThostFtdcReqUserLoginWithCaptchaField : global::System.IDisposable
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Password_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Password_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_UserProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InterfaceProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_InterfaceProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_InterfaceProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_InterfaceProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_InterfaceProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProtocolInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ProtocolInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ProtocolInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ProtocolInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ProtocolInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_MacAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_MacAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ClientIPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginRemark {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_LoginRemark_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_LoginRemark_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_LoginRemark_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_LoginRemark_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Captcha {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Captcha_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Captcha_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Captcha_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_Captcha_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ClientIPPort {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPPort_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPPort_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPPort_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPPort_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqUserLoginWithCaptchaField() : this(thostmdapiPINVOKE.new_CThostFtdcReqUserLoginWithCaptchaField(), true) {
+  public string ClientIPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginWithCaptchaField_ClientIPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcReqUserLoginWithCaptchaField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcReqUserLoginWithCaptchaField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcMarketDataUpdateTimeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcMarketDataUpdateTimeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcMarketDataUpdateTimeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcMarketDataUpdateTimeField : global::System.IDisposable {
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UpdateTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public int UpdateMillisec {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateMillisec_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateMillisec_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateMillisec_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_UpdateMillisec_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ActionDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_ActionDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_ActionDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_ActionDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_ActionDay_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarketDataUpdateTimeField() : this(thosttradeapiPINVOKE.new_CThostFtdcMarketDataUpdateTimeField(), true) {
+  public CThostFtdcMarketDataUpdateTimeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcMarketDataUpdateTimeField(), true) {
   }
 
 }

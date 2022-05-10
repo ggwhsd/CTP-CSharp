@@ -1,4 +1,4 @@
-%module(directors = "1") thosttradeapi
+%module(directors = "1") ctpthosttradeapi
 %{
 #include "ThostFtdcTraderApi.h"
 %}

@@ -31,7 +31,7 @@ public class CThostFtdcLoginForbiddenUserField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcLoginForbiddenUserField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcLoginForbiddenUserField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcLoginForbiddenUserField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IPAddress {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcLoginForbiddenUserField() : this(thosttradeapiPINVOKE.new_CThostFtdcLoginForbiddenUserField(), true) {
+  public CThostFtdcLoginForbiddenUserField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcLoginForbiddenUserField(), true) {
   }
 
 }

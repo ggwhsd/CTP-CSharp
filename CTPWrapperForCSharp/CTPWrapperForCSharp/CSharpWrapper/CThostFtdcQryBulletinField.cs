@@ -31,7 +31,7 @@ public class CThostFtdcQryBulletinField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryBulletinField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryBulletinField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcQryBulletinField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBulletinField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBulletinField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int BulletinID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBulletinField_BulletinID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_BulletinID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcQryBulletinField_BulletinID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_BulletinID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBulletinField_SequenceNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcQryBulletinField_SequenceNo_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string NewsType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsType_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsType_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char NewsUrgency {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsUrgency_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsUrgency_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsUrgency_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBulletinField_NewsUrgency_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryBulletinField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryBulletinField(), true) {
+  public CThostFtdcQryBulletinField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryBulletinField(), true) {
   }
 
 }

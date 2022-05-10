@@ -31,7 +31,7 @@ public class CThostFtdcQryInvestorProductGroupMarginField : global::System.IDisp
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryInvestorProductGroupMarginField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryInvestorProductGroupMarginField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,65 +41,75 @@ public class CThostFtdcQryInvestorProductGroupMarginField : global::System.IDisp
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ProductGroupID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_HedgeFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestUnitID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryInvestorProductGroupMarginField() : this(thostmdapiPINVOKE.new_CThostFtdcQryInvestorProductGroupMarginField(), true) {
+  public string ProductGroupID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryInvestorProductGroupMarginField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryInvestorProductGroupMarginField(), true) {
   }
 
 }

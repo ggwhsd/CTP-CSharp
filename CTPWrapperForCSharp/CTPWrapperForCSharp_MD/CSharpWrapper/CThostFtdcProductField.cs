@@ -31,7 +31,7 @@ public class CThostFtdcProductField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcProductField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcProductField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,177 +39,197 @@ public class CThostFtdcProductField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProductName {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_ProductName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductField_ProductName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductName_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ProductClass {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_ProductClass_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductClass_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcProductField_ProductClass_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductClass_get(swigCPtr);
       return ret;
     } 
   }
 
   public int VolumeMultiple {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_VolumeMultiple_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_VolumeMultiple_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcProductField_VolumeMultiple_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_VolumeMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PriceTick {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_PriceTick_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_PriceTick_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcProductField_PriceTick_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_PriceTick_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxMarketOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_MaxMarketOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_MaxMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcProductField_MaxMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_MaxMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinMarketOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_MinMarketOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_MinMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcProductField_MinMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_MinMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxLimitOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_MaxLimitOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_MaxLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcProductField_MaxLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_MaxLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinLimitOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_MinLimitOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_MinLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcProductField_MinLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_MinLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionType {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_PositionType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_PositionType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcProductField_PositionType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_PositionType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionDateType {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_PositionDateType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_PositionDateType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcProductField_PositionDateType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_PositionDateType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CloseDealType {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_CloseDealType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_CloseDealType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcProductField_CloseDealType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_CloseDealType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeCurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_TradeCurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_TradeCurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductField_TradeCurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_TradeCurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char MortgageFundUseRange {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_MortgageFundUseRange_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_MortgageFundUseRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcProductField_MortgageFundUseRange_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_MortgageFundUseRange_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ExchangeProductID {
+  public string reserve2 {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_ExchangeProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductField_ExchangeProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
 
   public double UnderlyingMultiple {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductField_UnderlyingMultiple_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_UnderlyingMultiple_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcProductField_UnderlyingMultiple_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_UnderlyingMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcProductField() : this(thostmdapiPINVOKE.new_CThostFtdcProductField(), true) {
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_ExchangeProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_ExchangeProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcProductField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcProductField(), true) {
   }
 
 }

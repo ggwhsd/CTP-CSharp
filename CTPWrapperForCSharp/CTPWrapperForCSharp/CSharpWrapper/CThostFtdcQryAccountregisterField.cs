@@ -31,7 +31,7 @@ public class CThostFtdcQryAccountregisterField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryAccountregisterField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryAccountregisterField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcQryAccountregisterField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_AccountID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_AccountID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBranchID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankBranchID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankBranchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankBranchID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_BankBranchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_CurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_CurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryAccountregisterField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryAccountregisterField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryAccountregisterField(), true) {
+  public CThostFtdcQryAccountregisterField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryAccountregisterField(), true) {
   }
 
 }

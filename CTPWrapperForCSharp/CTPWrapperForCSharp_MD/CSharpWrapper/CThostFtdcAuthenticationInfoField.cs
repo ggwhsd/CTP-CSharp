@@ -31,7 +31,7 @@ public class CThostFtdcAuthenticationInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcAuthenticationInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcAuthenticationInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,95 @@ public class CThostFtdcAuthenticationInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_UserProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AuthInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AuthInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AuthInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AuthInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AuthInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsResult {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_IsResult_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_IsResult_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_IsResult_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_IsResult_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AppID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char AppType {
     set {
-      thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_AppType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcAuthenticationInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcAuthenticationInfoField(), true) {
+  public string reserve1 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ClientIPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_ClientIPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAuthenticationInfoField_ClientIPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcAuthenticationInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcAuthenticationInfoField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcQryOptionSelfCloseField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryOptionSelfCloseField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryOptionSelfCloseField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcQryOptionSelfCloseField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OptionSelfCloseSysID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_OptionSelfCloseSysID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_OptionSelfCloseSysID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_OptionSelfCloseSysID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_OptionSelfCloseSysID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeStart {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeStart_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeStart_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeStart_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeStart_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTimeEnd {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeEnd_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeEnd_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeEnd_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeEnd_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryOptionSelfCloseField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryOptionSelfCloseField(), true) {
+  public CThostFtdcQryOptionSelfCloseField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryOptionSelfCloseField(), true) {
   }
 
 }

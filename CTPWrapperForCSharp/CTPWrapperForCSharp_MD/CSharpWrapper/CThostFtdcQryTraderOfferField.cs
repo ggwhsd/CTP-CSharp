@@ -31,7 +31,7 @@ public class CThostFtdcQryTraderOfferField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryTraderOfferField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryTraderOfferField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryTraderOfferField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ParticipantID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ParticipantID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TraderID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_TraderID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_TraderID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryTraderOfferField_TraderID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryTraderOfferField_TraderID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryTraderOfferField() : this(thostmdapiPINVOKE.new_CThostFtdcQryTraderOfferField(), true) {
+  public CThostFtdcQryTraderOfferField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryTraderOfferField(), true) {
   }
 
 }

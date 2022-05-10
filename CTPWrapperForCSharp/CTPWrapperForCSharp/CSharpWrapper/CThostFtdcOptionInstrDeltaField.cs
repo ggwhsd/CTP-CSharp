@@ -31,7 +31,7 @@ public class CThostFtdcOptionInstrDeltaField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcOptionInstrDeltaField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcOptionInstrDeltaField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcOptionInstrDeltaField : global::System.IDisposable {
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Delta {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_Delta_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_Delta_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_Delta_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrDeltaField_Delta_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcOptionInstrDeltaField() : this(thosttradeapiPINVOKE.new_CThostFtdcOptionInstrDeltaField(), true) {
+  public CThostFtdcOptionInstrDeltaField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcOptionInstrDeltaField(), true) {
   }
 
 }

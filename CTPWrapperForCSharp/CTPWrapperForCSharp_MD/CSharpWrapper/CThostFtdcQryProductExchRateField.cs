@@ -31,7 +31,7 @@ public class CThostFtdcQryProductExchRateField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryProductExchRateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryProductExchRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,27 +39,37 @@ public class CThostFtdcQryProductExchRateField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryProductExchRateField() : this(thostmdapiPINVOKE.new_CThostFtdcQryProductExchRateField(), true) {
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryProductExchRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryProductExchRateField(), true) {
   }
 
 }

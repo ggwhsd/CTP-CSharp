@@ -31,7 +31,7 @@ public class CThostFtdcTradingAccountField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcTradingAccountField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcTradingAccountField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,495 +41,495 @@ public class CThostFtdcTradingAccountField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreMortgage {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMortgage_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMortgage_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMortgage_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMortgage_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreCredit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreCredit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreCredit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreCredit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreCredit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreDeposit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreDeposit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreDeposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreDeposit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreDeposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreBalance {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreBalance_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreBalance_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreBalance_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreBalance_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double InterestBase {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_InterestBase_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_InterestBase_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_InterestBase_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_InterestBase_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Interest {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Interest_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Interest_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Interest_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Interest_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Deposit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Deposit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Deposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Deposit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Deposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Withdraw {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Withdraw_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Withdraw_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Withdraw_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Withdraw_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenCash {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCash_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCash_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCash_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCash_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenCommission {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCommission_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCommission_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCommission_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenCommission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CurrMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CashIn {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_CashIn_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CashIn_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_CashIn_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CashIn_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Commission {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Commission_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Commission_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Commission_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Commission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseProfit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_CloseProfit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CloseProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_CloseProfit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CloseProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PositionProfit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PositionProfit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PositionProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PositionProfit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PositionProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Balance {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Balance_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Balance_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Balance_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Balance_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Available {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Available_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Available_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Available_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Available_get(swigCPtr);
       return ret;
     } 
   }
 
   public double WithdrawQuota {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_WithdrawQuota_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_WithdrawQuota_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_WithdrawQuota_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_WithdrawQuota_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Reserve {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Reserve_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Reserve_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Reserve_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Reserve_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SettlementID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SettlementID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SettlementID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SettlementID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SettlementID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Credit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Credit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Credit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Credit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Credit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Mortgage {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_Mortgage_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Mortgage_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_Mortgage_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_Mortgage_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchangeMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double DeliveryMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_DeliveryMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_DeliveryMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_DeliveryMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_DeliveryMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchangeDeliveryMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeDeliveryMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeDeliveryMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeDeliveryMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ExchangeDeliveryMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ReserveBalance {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_ReserveBalance_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ReserveBalance_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_ReserveBalance_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_ReserveBalance_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreFundMortgageIn {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageIn_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageIn_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageIn_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageIn_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreFundMortgageOut {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageOut_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageOut_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageOut_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_PreFundMortgageOut_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FundMortgageIn {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageIn_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageIn_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageIn_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageIn_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FundMortgageOut {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageOut_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageOut_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageOut_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageOut_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FundMortgageAvailable {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageAvailable_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageAvailable_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageAvailable_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FundMortgageAvailable_get(swigCPtr);
       return ret;
     } 
   }
 
   public double MortgageableFund {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_MortgageableFund_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_MortgageableFund_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_MortgageableFund_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_MortgageableFund_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductFrozenMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductCommission {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCommission_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCommission_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCommission_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCommission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductFrozenCommission {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenCommission_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenCommission_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenCommission_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductFrozenCommission_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductPositionProfit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductCloseProfit {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCloseProfit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCloseProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCloseProfit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductCloseProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductPositionProfitByAlg {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfitByAlg_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfitByAlg_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfitByAlg_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductPositionProfitByAlg_get(swigCPtr);
       return ret;
     } 
   }
 
   public double SpecProductExchangeMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductExchangeMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductExchangeMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductExchangeMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_SpecProductExchangeMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public char BizType {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_BizType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_BizType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_BizType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_BizType_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenSwap {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenSwap_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenSwap_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenSwap_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_FrozenSwap_get(swigCPtr);
       return ret;
     } 
   }
 
   public double RemainSwap {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountField_RemainSwap_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_RemainSwap_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcTradingAccountField_RemainSwap_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountField_RemainSwap_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTradingAccountField() : this(thostmdapiPINVOKE.new_CThostFtdcTradingAccountField(), true) {
+  public CThostFtdcTradingAccountField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcTradingAccountField(), true) {
   }
 
 }

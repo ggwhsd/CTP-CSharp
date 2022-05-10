@@ -31,7 +31,7 @@ public class CThostFtdcQrySecAgentACIDMapField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQrySecAgentACIDMapField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQrySecAgentACIDMapField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcQrySecAgentACIDMapField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQrySecAgentACIDMapField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySecAgentACIDMapField() : this(thostmdapiPINVOKE.new_CThostFtdcQrySecAgentACIDMapField(), true) {
+  public CThostFtdcQrySecAgentACIDMapField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQrySecAgentACIDMapField(), true) {
   }
 
 }

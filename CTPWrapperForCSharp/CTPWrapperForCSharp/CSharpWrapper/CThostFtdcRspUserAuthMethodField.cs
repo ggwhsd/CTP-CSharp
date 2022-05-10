@@ -31,7 +31,7 @@ public class CThostFtdcRspUserAuthMethodField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcRspUserAuthMethodField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcRspUserAuthMethodField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcRspUserAuthMethodField : global::System.IDisposable {
 
   public int UsableAuthMethod {
     set {
-      thosttradeapiPINVOKE.CThostFtdcRspUserAuthMethodField_UsableAuthMethod_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcRspUserAuthMethodField_UsableAuthMethod_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcRspUserAuthMethodField_UsableAuthMethod_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcRspUserAuthMethodField_UsableAuthMethod_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspUserAuthMethodField() : this(thosttradeapiPINVOKE.new_CThostFtdcRspUserAuthMethodField(), true) {
+  public CThostFtdcRspUserAuthMethodField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcRspUserAuthMethodField(), true) {
   }
 
 }

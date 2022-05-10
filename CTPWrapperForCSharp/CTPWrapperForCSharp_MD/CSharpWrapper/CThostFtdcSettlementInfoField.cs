@@ -31,7 +31,7 @@ public class CThostFtdcSettlementInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSettlementInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSettlementInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,85 +41,85 @@ public class CThostFtdcSettlementInfoField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SettlementID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_SettlementID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_SettlementID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_SettlementID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_SettlementID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_SequenceNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_SequenceNo_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Content {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_Content_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_Content_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_Content_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_Content_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSettlementInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcSettlementInfoField(), true) {
+  public CThostFtdcSettlementInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSettlementInfoField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcDepositResultInformField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcDepositResultInformField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcDepositResultInformField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcDepositResultInformField : global::System.IDisposable {
 
   public string DepositSeqNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_DepositSeqNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Deposit {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_Deposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public int RequestID {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_RequestID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ReturnCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_ReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DescrInfoForReturnCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcDepositResultInformField_DescrInfoForReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDepositResultInformField() : this(thostmdapiPINVOKE.new_CThostFtdcDepositResultInformField(), true) {
+  public CThostFtdcDepositResultInformField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcDepositResultInformField(), true) {
   }
 
 }

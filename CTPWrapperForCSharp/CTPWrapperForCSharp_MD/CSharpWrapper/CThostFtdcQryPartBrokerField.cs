@@ -31,7 +31,7 @@ public class CThostFtdcQryPartBrokerField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryPartBrokerField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryPartBrokerField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryPartBrokerField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryPartBrokerField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryPartBrokerField() : this(thostmdapiPINVOKE.new_CThostFtdcQryPartBrokerField(), true) {
+  public CThostFtdcQryPartBrokerField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryPartBrokerField(), true) {
   }
 
 }

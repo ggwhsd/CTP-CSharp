@@ -31,7 +31,7 @@ public class CThostFtdcQryProductExchRateField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryProductExchRateField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryProductExchRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryProductExchRateField : global::System.IDisposable {
 
   public string ProductID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ProductID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryProductExchRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryProductExchRateField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryProductExchRateField(), true) {
+  public CThostFtdcQryProductExchRateField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryProductExchRateField(), true) {
   }
 
 }

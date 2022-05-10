@@ -31,7 +31,7 @@ public class CThostFtdcInstrumentCommissionRateField : global::System.IDisposabl
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcInstrumentCommissionRateField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcInstrumentCommissionRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,135 +41,135 @@ public class CThostFtdcInstrumentCommissionRateField : global::System.IDisposabl
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OpenRatioByMoney {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByMoney_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByMoney_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OpenRatioByVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByVolume_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_OpenRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseRatioByMoney {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByMoney_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByMoney_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseRatioByVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByVolume_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseTodayRatioByMoney {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByMoney_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByMoney_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseTodayRatioByVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByVolume_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_CloseTodayRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char BizType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BizType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BizType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BizType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_BizType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentCommissionRateField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInstrumentCommissionRateField() : this(thosttradeapiPINVOKE.new_CThostFtdcInstrumentCommissionRateField(), true) {
+  public CThostFtdcInstrumentCommissionRateField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcInstrumentCommissionRateField(), true) {
   }
 
 }

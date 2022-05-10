@@ -36,95 +36,100 @@ public class CThostFtdcMdApi : global::System.IDisposable {
   }
 
   public static CThostFtdcMdApi CreateFtdcMdApi(string pszFlowPath, bool bIsUsingUdp, bool bIsMulticast) {
-    global::System.IntPtr cPtr = thostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_0(pszFlowPath, bIsUsingUdp, bIsMulticast);
+    global::System.IntPtr cPtr = ctpthostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_0(pszFlowPath, bIsUsingUdp, bIsMulticast);
     CThostFtdcMdApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcMdApi(cPtr, false);
     return ret;
   }
 
   public static CThostFtdcMdApi CreateFtdcMdApi(string pszFlowPath, bool bIsUsingUdp) {
-    global::System.IntPtr cPtr = thostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_1(pszFlowPath, bIsUsingUdp);
+    global::System.IntPtr cPtr = ctpthostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_1(pszFlowPath, bIsUsingUdp);
     CThostFtdcMdApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcMdApi(cPtr, false);
     return ret;
   }
 
   public static CThostFtdcMdApi CreateFtdcMdApi(string pszFlowPath) {
-    global::System.IntPtr cPtr = thostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_2(pszFlowPath);
+    global::System.IntPtr cPtr = ctpthostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_2(pszFlowPath);
     CThostFtdcMdApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcMdApi(cPtr, false);
     return ret;
   }
 
   public static CThostFtdcMdApi CreateFtdcMdApi() {
-    global::System.IntPtr cPtr = thostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_3();
+    global::System.IntPtr cPtr = ctpthostmdapiPINVOKE.CThostFtdcMdApi_CreateFtdcMdApi__SWIG_3();
     CThostFtdcMdApi ret = (cPtr == global::System.IntPtr.Zero) ? null : new CThostFtdcMdApi(cPtr, false);
     return ret;
   }
 
   public static string GetApiVersion() {
-    string ret = thostmdapiPINVOKE.CThostFtdcMdApi_GetApiVersion();
+    string ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_GetApiVersion();
     return ret;
   }
 
   public virtual void Release() {
-    thostmdapiPINVOKE.CThostFtdcMdApi_Release(swigCPtr);
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_Release(swigCPtr);
   }
 
   public virtual void Init() {
-    thostmdapiPINVOKE.CThostFtdcMdApi_Init(swigCPtr);
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_Init(swigCPtr);
   }
 
   public virtual int Join() {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_Join(swigCPtr);
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_Join(swigCPtr);
     return ret;
   }
 
   public virtual string GetTradingDay() {
-    string ret = thostmdapiPINVOKE.CThostFtdcMdApi_GetTradingDay(swigCPtr);
+    string ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_GetTradingDay(swigCPtr);
     return ret;
   }
 
   public virtual void RegisterFront(string pszFrontAddress) {
-    thostmdapiPINVOKE.CThostFtdcMdApi_RegisterFront(swigCPtr, pszFrontAddress);
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_RegisterFront(swigCPtr, pszFrontAddress);
   }
 
   public virtual void RegisterNameServer(string pszNsAddress) {
-    thostmdapiPINVOKE.CThostFtdcMdApi_RegisterNameServer(swigCPtr, pszNsAddress);
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_RegisterNameServer(swigCPtr, pszNsAddress);
   }
 
   public virtual void RegisterFensUserInfo(CThostFtdcFensUserInfoField pFensUserInfo) {
-    thostmdapiPINVOKE.CThostFtdcMdApi_RegisterFensUserInfo(swigCPtr, CThostFtdcFensUserInfoField.getCPtr(pFensUserInfo));
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_RegisterFensUserInfo(swigCPtr, CThostFtdcFensUserInfoField.getCPtr(pFensUserInfo));
   }
 
   public virtual void RegisterSpi(CThostFtdcMdSpi pSpi) {
-    thostmdapiPINVOKE.CThostFtdcMdApi_RegisterSpi(swigCPtr, CThostFtdcMdSpi.getCPtr(pSpi));
+    ctpthostmdapiPINVOKE.CThostFtdcMdApi_RegisterSpi(swigCPtr, CThostFtdcMdSpi.getCPtr(pSpi));
   }
 
-  public virtual int SubscribeMarketData(SWIGTYPE_p_p_char ppInstrumentID, int nCount) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_SubscribeMarketData(swigCPtr, SWIGTYPE_p_p_char.getCPtr(ppInstrumentID), nCount);
+  public virtual int SubscribeMarketData(string[] ppInstrumentID, int nCount) {
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_SubscribeMarketData(swigCPtr, ppInstrumentID, nCount);
     return ret;
   }
 
-  public virtual int UnSubscribeMarketData(SWIGTYPE_p_p_char ppInstrumentID, int nCount) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_UnSubscribeMarketData(swigCPtr, SWIGTYPE_p_p_char.getCPtr(ppInstrumentID), nCount);
+  public virtual int UnSubscribeMarketData(string[] ppInstrumentID, int nCount) {
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_UnSubscribeMarketData(swigCPtr, ppInstrumentID, nCount);
     return ret;
   }
 
-  public virtual int SubscribeForQuoteRsp(SWIGTYPE_p_p_char ppInstrumentID, int nCount) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_SubscribeForQuoteRsp(swigCPtr, SWIGTYPE_p_p_char.getCPtr(ppInstrumentID), nCount);
+  public virtual int SubscribeForQuoteRsp(string[] ppInstrumentID, int nCount) {
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_SubscribeForQuoteRsp(swigCPtr, ppInstrumentID, nCount);
     return ret;
   }
 
-  public virtual int UnSubscribeForQuoteRsp(SWIGTYPE_p_p_char ppInstrumentID, int nCount) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_UnSubscribeForQuoteRsp(swigCPtr, SWIGTYPE_p_p_char.getCPtr(ppInstrumentID), nCount);
+  public virtual int UnSubscribeForQuoteRsp(string[] ppInstrumentID, int nCount) {
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_UnSubscribeForQuoteRsp(swigCPtr, ppInstrumentID, nCount);
     return ret;
   }
 
   public virtual int ReqUserLogin(CThostFtdcReqUserLoginField pReqUserLoginField, int nRequestID) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_ReqUserLogin(swigCPtr, CThostFtdcReqUserLoginField.getCPtr(pReqUserLoginField), nRequestID);
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_ReqUserLogin(swigCPtr, CThostFtdcReqUserLoginField.getCPtr(pReqUserLoginField), nRequestID);
     return ret;
   }
 
   public virtual int ReqUserLogout(CThostFtdcUserLogoutField pUserLogout, int nRequestID) {
-    int ret = thostmdapiPINVOKE.CThostFtdcMdApi_ReqUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), nRequestID);
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_ReqUserLogout(swigCPtr, CThostFtdcUserLogoutField.getCPtr(pUserLogout), nRequestID);
+    return ret;
+  }
+
+  public virtual int ReqQryMulticastInstrument(CThostFtdcQryMulticastInstrumentField pQryMulticastInstrument, int nRequestID) {
+    int ret = ctpthostmdapiPINVOKE.CThostFtdcMdApi_ReqQryMulticastInstrument(swigCPtr, CThostFtdcQryMulticastInstrumentField.getCPtr(pQryMulticastInstrument), nRequestID);
     return ret;
   }
 

@@ -31,7 +31,7 @@ public class CThostFtdcBrokerTradingAlgosField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerTradingAlgosField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerTradingAlgosField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,65 +41,75 @@ public class CThostFtdcBrokerTradingAlgosField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HandlePositionAlgoID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandlePositionAlgoID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandlePositionAlgoID_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandlePositionAlgoID_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandlePositionAlgoID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char FindMarginRateAlgoID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_FindMarginRateAlgoID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_FindMarginRateAlgoID_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_FindMarginRateAlgoID_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_FindMarginRateAlgoID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HandleTradingAccountAlgoID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandleTradingAccountAlgoID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandleTradingAccountAlgoID_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandleTradingAccountAlgoID_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandleTradingAccountAlgoID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerTradingAlgosField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerTradingAlgosField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcBrokerTradingAlgosField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerTradingAlgosField(), true) {
   }
 
 }

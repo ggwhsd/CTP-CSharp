@@ -31,7 +31,7 @@ public class CThostFtdcRspInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcRspInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcRspInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcRspInfoField : global::System.IDisposable {
 
   public int ErrorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ErrorMsg {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcRspInfoField(), true) {
+  public CThostFtdcRspInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcRspInfoField(), true) {
   }
 
 }

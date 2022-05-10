@@ -31,7 +31,7 @@ public class CThostFtdcAccountregisterField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcAccountregisterField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcAccountregisterField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,185 +41,185 @@ public class CThostFtdcAccountregisterField : global::System.IDisposable {
 
   public string TradeDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_TradeDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_TradeDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_TradeDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_TradeDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBranchID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankBranchID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankBranchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankBranchID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankBranchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankAccount {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccount_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccount_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccount_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccount_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerBranchID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerBranchID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerBranchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerBranchID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BrokerBranchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char IdCardType {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_IdCardType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_IdCardType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_IdCardType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_IdCardType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IdentifiedCardNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_IdentifiedCardNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_IdentifiedCardNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_IdentifiedCardNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_IdentifiedCardNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CustomerName {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_CustomerName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CustomerName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_CustomerName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CustomerName_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OpenOrDestroy {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_OpenOrDestroy_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_OpenOrDestroy_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_OpenOrDestroy_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_OpenOrDestroy_get(swigCPtr);
       return ret;
     } 
   }
 
   public string RegDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_RegDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_RegDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_RegDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_RegDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OutDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_OutDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_OutDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_OutDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_OutDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public int TID {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_TID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_TID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_TID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_TID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CustType {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_CustType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CustType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_CustType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_CustType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char BankAccType {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_BankAccType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LongCustomerName {
     set {
-      thostmdapiPINVOKE.CThostFtdcAccountregisterField_LongCustomerName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_LongCustomerName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcAccountregisterField_LongCustomerName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAccountregisterField_LongCustomerName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcAccountregisterField() : this(thostmdapiPINVOKE.new_CThostFtdcAccountregisterField(), true) {
+  public CThostFtdcAccountregisterField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcAccountregisterField(), true) {
   }
 
 }

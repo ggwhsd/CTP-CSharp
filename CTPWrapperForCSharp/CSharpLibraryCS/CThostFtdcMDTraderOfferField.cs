@@ -31,7 +31,7 @@ public class CThostFtdcMDTraderOfferField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcMDTraderOfferField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcMDTraderOfferField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,195 +41,195 @@ public class CThostFtdcMDTraderOfferField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TraderID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ParticipantID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ParticipantID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_Password_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_Password_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
   public int InstallID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_InstallID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_InstallID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_InstallID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_InstallID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OrderLocalID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderLocalID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderLocalID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderLocalID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderLocalID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char TraderConnectStatus {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderConnectStatus_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderConnectStatus_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderConnectStatus_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TraderConnectStatus_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConnectRequestDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConnectRequestTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectRequestTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LastReportDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LastReportTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_LastReportTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConnectDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConnectTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_ConnectTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string StartDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string StartTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_StartTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MaxTradeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxTradeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxTradeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxTradeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxTradeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MaxOrderMessageReference {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxOrderMessageReference_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxOrderMessageReference_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxOrderMessageReference_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_MaxOrderMessageReference_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMDTraderOfferField() : this(thosttradeapiPINVOKE.new_CThostFtdcMDTraderOfferField(), true) {
+  public CThostFtdcMDTraderOfferField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcMDTraderOfferField(), true) {
   }
 
 }

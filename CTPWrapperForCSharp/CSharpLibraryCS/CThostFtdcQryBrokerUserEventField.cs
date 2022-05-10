@@ -31,7 +31,7 @@ public class CThostFtdcQryBrokerUserEventField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryBrokerUserEventField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryBrokerUserEventField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryBrokerUserEventField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserEventType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryBrokerUserEventField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryBrokerUserEventField(), true) {
+  public CThostFtdcQryBrokerUserEventField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryBrokerUserEventField(), true) {
   }
 
 }

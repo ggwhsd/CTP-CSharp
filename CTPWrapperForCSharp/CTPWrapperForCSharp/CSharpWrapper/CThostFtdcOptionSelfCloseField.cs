@@ -31,7 +31,7 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcOptionSelfCloseField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcOptionSelfCloseField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,405 +41,405 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OptionSelfCloseRef {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseRef_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseRef_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseRef_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseRef_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Volume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_Volume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_Volume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_Volume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_Volume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int RequestID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_RequestID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_RequestID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_RequestID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_RequestID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BusinessUnit {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BusinessUnit_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BusinessUnit_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BusinessUnit_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BusinessUnit_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_HedgeFlag_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OptSelfCloseFlag {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptSelfCloseFlag_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptSelfCloseFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptSelfCloseFlag_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptSelfCloseFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OptionSelfCloseLocalID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseLocalID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseLocalID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseLocalID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseLocalID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ParticipantID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ParticipantID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClientID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClientID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClientID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClientID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClientID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeInstID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TraderID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TraderID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TraderID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TraderID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TraderID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int InstallID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstallID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstallID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstallID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstallID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OrderSubmitStatus {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OrderSubmitStatus_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OrderSubmitStatus_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OrderSubmitStatus_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OrderSubmitStatus_get(swigCPtr);
       return ret;
     } 
   }
 
   public int NotifySequence {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_NotifySequence_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_NotifySequence_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_NotifySequence_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_NotifySequence_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SettlementID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SettlementID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SettlementID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SettlementID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SettlementID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OptionSelfCloseSysID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseSysID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseSysID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseSysID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_OptionSelfCloseSysID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InsertTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InsertTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CancelTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CancelTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CancelTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CancelTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CancelTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ExecResult {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExecResult_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExecResult_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExecResult_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExecResult_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClearingPartID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClearingPartID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClearingPartID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClearingPartID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ClearingPartID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SequenceNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SequenceNo_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public int FrontID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_FrontID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_FrontID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SessionID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SessionID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserProductInfo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserProductInfo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserProductInfo_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_UserProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string StatusMsg {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_StatusMsg_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_StatusMsg_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_StatusMsg_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_StatusMsg_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ActiveUserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ActiveUserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ActiveUserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ActiveUserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ActiveUserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int BrokerOptionSelfCloseSeq {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerOptionSelfCloseSeq_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerOptionSelfCloseSeq_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerOptionSelfCloseSeq_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BrokerOptionSelfCloseSeq_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BranchID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BranchID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BranchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BranchID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_BranchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_AccountID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_AccountID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IPAddress {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_MacAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_MacAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcOptionSelfCloseField() : this(thosttradeapiPINVOKE.new_CThostFtdcOptionSelfCloseField(), true) {
+  public CThostFtdcOptionSelfCloseField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcOptionSelfCloseField(), true) {
   }
 
 }

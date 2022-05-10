@@ -31,7 +31,7 @@ public class CThostFtdcUserIPField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcUserIPField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcUserIPField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,75 @@ public class CThostFtdcUserIPField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserIPField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserIPField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserIPField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserIPField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserIPField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserIPField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string IPMask {
+  public string reserve2 {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserIPField_IPMask_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserIPField_IPMask_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserIPField_MacAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserIPField_MacAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserIPField() : this(thostmdapiPINVOKE.new_CThostFtdcUserIPField(), true) {
+  public string IPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPMask {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcUserIPField_IPMask_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserIPField_IPMask_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcUserIPField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserIPField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcBrokerDepositField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerDepositField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerDepositField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,135 +41,135 @@ public class CThostFtdcBrokerDepositField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_ParticipantID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_ParticipantID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PreBalance {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_PreBalance_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_PreBalance_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_PreBalance_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_PreBalance_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CurrMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_CurrMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_CurrMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_CurrMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_CurrMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public double CloseProfit {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_CloseProfit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_CloseProfit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_CloseProfit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_CloseProfit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Balance {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Balance_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Balance_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Balance_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Balance_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Deposit {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Deposit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Deposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Deposit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Deposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Withdraw {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Withdraw_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Withdraw_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Withdraw_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Withdraw_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Available {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Available_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Available_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Available_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Available_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Reserve {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Reserve_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Reserve_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_Reserve_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_Reserve_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FrozenMargin {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerDepositField_FrozenMargin_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_FrozenMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcBrokerDepositField_FrozenMargin_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerDepositField_FrozenMargin_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerDepositField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerDepositField(), true) {
+  public CThostFtdcBrokerDepositField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerDepositField(), true) {
   }
 
 }

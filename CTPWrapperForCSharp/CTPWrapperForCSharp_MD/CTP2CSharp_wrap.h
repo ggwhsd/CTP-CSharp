@@ -8,8 +8,8 @@
  * interface file instead.
  * ----------------------------------------------------------------------------- */
 
-#ifndef SWIG_thostmdapi_WRAP_H_
-#define SWIG_thostmdapi_WRAP_H_
+#ifndef SWIG_ctpthostmdapi_WRAP_H_
+#define SWIG_ctpthostmdapi_WRAP_H_
 
 class SwigDirector_CThostFtdcMdSpi : public CThostFtdcMdSpi, public Swig::Director {
 
@@ -20,6 +20,7 @@ public:
     virtual void OnHeartBeatWarning(int nTimeLapse);
     virtual void OnRspUserLogin(CThostFtdcRspUserLoginField *pRspUserLogin, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
     virtual void OnRspUserLogout(CThostFtdcUserLogoutField *pUserLogout, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
+    virtual void OnRspQryMulticastInstrument(CThostFtdcMulticastInstrumentField *pMulticastInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
     virtual void OnRspError(CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
     virtual void OnRspSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
     virtual void OnRspUnSubMarketData(CThostFtdcSpecificInstrumentField *pSpecificInstrument, CThostFtdcRspInfoField *pRspInfo, int nRequestID, bool bIsLast);
@@ -33,14 +34,15 @@ public:
     typedef void (SWIGSTDCALL* SWIG_Callback2_t)(int);
     typedef void (SWIGSTDCALL* SWIG_Callback3_t)(void *, void *, int, unsigned int);
     typedef void (SWIGSTDCALL* SWIG_Callback4_t)(void *, void *, int, unsigned int);
-    typedef void (SWIGSTDCALL* SWIG_Callback5_t)(void *, int, unsigned int);
-    typedef void (SWIGSTDCALL* SWIG_Callback6_t)(void *, void *, int, unsigned int);
+    typedef void (SWIGSTDCALL* SWIG_Callback5_t)(void *, void *, int, unsigned int);
+    typedef void (SWIGSTDCALL* SWIG_Callback6_t)(void *, int, unsigned int);
     typedef void (SWIGSTDCALL* SWIG_Callback7_t)(void *, void *, int, unsigned int);
     typedef void (SWIGSTDCALL* SWIG_Callback8_t)(void *, void *, int, unsigned int);
     typedef void (SWIGSTDCALL* SWIG_Callback9_t)(void *, void *, int, unsigned int);
-    typedef void (SWIGSTDCALL* SWIG_Callback10_t)(void *);
+    typedef void (SWIGSTDCALL* SWIG_Callback10_t)(void *, void *, int, unsigned int);
     typedef void (SWIGSTDCALL* SWIG_Callback11_t)(void *);
-    void swig_connect_director(SWIG_Callback0_t callbackOnFrontConnected, SWIG_Callback1_t callbackOnFrontDisconnected, SWIG_Callback2_t callbackOnHeartBeatWarning, SWIG_Callback3_t callbackOnRspUserLogin, SWIG_Callback4_t callbackOnRspUserLogout, SWIG_Callback5_t callbackOnRspError, SWIG_Callback6_t callbackOnRspSubMarketData, SWIG_Callback7_t callbackOnRspUnSubMarketData, SWIG_Callback8_t callbackOnRspSubForQuoteRsp, SWIG_Callback9_t callbackOnRspUnSubForQuoteRsp, SWIG_Callback10_t callbackOnRtnDepthMarketData, SWIG_Callback11_t callbackOnRtnForQuoteRsp);
+    typedef void (SWIGSTDCALL* SWIG_Callback12_t)(void *);
+    void swig_connect_director(SWIG_Callback0_t callbackOnFrontConnected, SWIG_Callback1_t callbackOnFrontDisconnected, SWIG_Callback2_t callbackOnHeartBeatWarning, SWIG_Callback3_t callbackOnRspUserLogin, SWIG_Callback4_t callbackOnRspUserLogout, SWIG_Callback5_t callbackOnRspQryMulticastInstrument, SWIG_Callback6_t callbackOnRspError, SWIG_Callback7_t callbackOnRspSubMarketData, SWIG_Callback8_t callbackOnRspUnSubMarketData, SWIG_Callback9_t callbackOnRspSubForQuoteRsp, SWIG_Callback10_t callbackOnRspUnSubForQuoteRsp, SWIG_Callback11_t callbackOnRtnDepthMarketData, SWIG_Callback12_t callbackOnRtnForQuoteRsp);
 
 private:
     SWIG_Callback0_t swig_callbackOnFrontConnected;
@@ -48,13 +50,14 @@ private:
     SWIG_Callback2_t swig_callbackOnHeartBeatWarning;
     SWIG_Callback3_t swig_callbackOnRspUserLogin;
     SWIG_Callback4_t swig_callbackOnRspUserLogout;
-    SWIG_Callback5_t swig_callbackOnRspError;
-    SWIG_Callback6_t swig_callbackOnRspSubMarketData;
-    SWIG_Callback7_t swig_callbackOnRspUnSubMarketData;
-    SWIG_Callback8_t swig_callbackOnRspSubForQuoteRsp;
-    SWIG_Callback9_t swig_callbackOnRspUnSubForQuoteRsp;
-    SWIG_Callback10_t swig_callbackOnRtnDepthMarketData;
-    SWIG_Callback11_t swig_callbackOnRtnForQuoteRsp;
+    SWIG_Callback5_t swig_callbackOnRspQryMulticastInstrument;
+    SWIG_Callback6_t swig_callbackOnRspError;
+    SWIG_Callback7_t swig_callbackOnRspSubMarketData;
+    SWIG_Callback8_t swig_callbackOnRspUnSubMarketData;
+    SWIG_Callback9_t swig_callbackOnRspSubForQuoteRsp;
+    SWIG_Callback10_t swig_callbackOnRspUnSubForQuoteRsp;
+    SWIG_Callback11_t swig_callbackOnRtnDepthMarketData;
+    SWIG_Callback12_t swig_callbackOnRtnForQuoteRsp;
     void swig_init_callbacks();
 };
 

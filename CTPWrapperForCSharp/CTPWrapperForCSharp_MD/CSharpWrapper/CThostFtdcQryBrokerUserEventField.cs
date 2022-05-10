@@ -31,7 +31,7 @@ public class CThostFtdcQryBrokerUserEventField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryBrokerUserEventField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryBrokerUserEventField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryBrokerUserEventField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserEventType {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQryBrokerUserEventField_UserEventType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryBrokerUserEventField() : this(thostmdapiPINVOKE.new_CThostFtdcQryBrokerUserEventField(), true) {
+  public CThostFtdcQryBrokerUserEventField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryBrokerUserEventField(), true) {
   }
 
 }

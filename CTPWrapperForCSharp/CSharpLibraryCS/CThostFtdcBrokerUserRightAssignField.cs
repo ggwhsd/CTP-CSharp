@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserRightAssignField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcBrokerUserRightAssignField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcBrokerUserRightAssignField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcBrokerUserRightAssignField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DRIdentityID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Tradeable {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserRightAssignField() : this(thosttradeapiPINVOKE.new_CThostFtdcBrokerUserRightAssignField(), true) {
+  public CThostFtdcBrokerUserRightAssignField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcBrokerUserRightAssignField(), true) {
   }
 
 }

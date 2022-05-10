@@ -31,7 +31,7 @@ public class CThostFtdcDiscountField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcDiscountField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcDiscountField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcDiscountField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDiscountField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDiscountField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Discount {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDiscountField_Discount_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_Discount_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcDiscountField_Discount_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcDiscountField_Discount_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDiscountField() : this(thosttradeapiPINVOKE.new_CThostFtdcDiscountField(), true) {
+  public CThostFtdcDiscountField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcDiscountField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcForceUserLogoutField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcForceUserLogoutField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcForceUserLogoutField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcForceUserLogoutField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForceUserLogoutField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcForceUserLogoutField() : this(thosttradeapiPINVOKE.new_CThostFtdcForceUserLogoutField(), true) {
+  public CThostFtdcForceUserLogoutField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcForceUserLogoutField(), true) {
   }
 
 }

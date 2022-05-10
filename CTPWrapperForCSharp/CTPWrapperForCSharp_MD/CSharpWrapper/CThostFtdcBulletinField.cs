@@ -31,7 +31,7 @@ public class CThostFtdcBulletinField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBulletinField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBulletinField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,125 +41,125 @@ public class CThostFtdcBulletinField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public int BulletinID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_BulletinID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_BulletinID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBulletinField_BulletinID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_BulletinID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_SequenceNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBulletinField_SequenceNo_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string NewsType {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_NewsType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_NewsType_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_NewsType_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_NewsType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char NewsUrgency {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_NewsUrgency_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_NewsUrgency_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBulletinField_NewsUrgency_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_NewsUrgency_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SendTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_SendTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_SendTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_SendTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_SendTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Abstract {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_Abstract_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_Abstract_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_Abstract_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_Abstract_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ComeFrom {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_ComeFrom_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_ComeFrom_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_ComeFrom_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_ComeFrom_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Content {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_Content_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_Content_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_Content_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_Content_get(swigCPtr);
       return ret;
     } 
   }
 
   public string URLLink {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_URLLink_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_URLLink_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_URLLink_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_URLLink_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MarketID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBulletinField_MarketID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBulletinField_MarketID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBulletinField_MarketID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBulletinField_MarketID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBulletinField() : this(thostmdapiPINVOKE.new_CThostFtdcBulletinField(), true) {
+  public CThostFtdcBulletinField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBulletinField(), true) {
   }
 
 }

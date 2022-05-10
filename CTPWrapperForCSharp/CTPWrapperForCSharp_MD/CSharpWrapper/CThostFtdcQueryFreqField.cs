@@ -31,7 +31,7 @@ public class CThostFtdcQueryFreqField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQueryFreqField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQueryFreqField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQueryFreqField : global::System.IDisposable {
 
   public int QueryFreq {
     set {
-      thostmdapiPINVOKE.CThostFtdcQueryFreqField_QueryFreq_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQueryFreqField_QueryFreq_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcQueryFreqField_QueryFreq_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcQueryFreqField_QueryFreq_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQueryFreqField() : this(thostmdapiPINVOKE.new_CThostFtdcQueryFreqField(), true) {
+  public CThostFtdcQueryFreqField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQueryFreqField(), true) {
   }
 
 }

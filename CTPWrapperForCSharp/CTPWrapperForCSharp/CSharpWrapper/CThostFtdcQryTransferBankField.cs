@@ -31,7 +31,7 @@ public class CThostFtdcQryTransferBankField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryTransferBankField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryTransferBankField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryTransferBankField : global::System.IDisposable {
 
   public string BankID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBrchID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankBrchID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankBrchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankBrchID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryTransferBankField_BankBrchID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryTransferBankField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryTransferBankField(), true) {
+  public CThostFtdcQryTransferBankField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryTransferBankField(), true) {
   }
 
 }

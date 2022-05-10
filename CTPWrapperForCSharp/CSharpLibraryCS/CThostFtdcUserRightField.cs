@@ -31,7 +31,7 @@ public class CThostFtdcUserRightField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcUserRightField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcUserRightField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcUserRightField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcUserRightField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcUserRightField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserRightType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightField_UserRightType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_UserRightType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcUserRightField_UserRightType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_UserRightType_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsForbidden {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightField_IsForbidden_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_IsForbidden_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcUserRightField_IsForbidden_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightField_IsForbidden_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserRightField() : this(thosttradeapiPINVOKE.new_CThostFtdcUserRightField(), true) {
+  public CThostFtdcUserRightField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcUserRightField(), true) {
   }
 
 }

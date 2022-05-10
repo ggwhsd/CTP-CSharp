@@ -31,7 +31,7 @@ public class CThostFtdcQrySyncDelaySwapField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQrySyncDelaySwapField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQrySyncDelaySwapField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQrySyncDelaySwapField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DelaySwapSeqNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_DelaySwapSeqNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_DelaySwapSeqNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_DelaySwapSeqNo_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySyncDelaySwapField_DelaySwapSeqNo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySyncDelaySwapField() : this(thosttradeapiPINVOKE.new_CThostFtdcQrySyncDelaySwapField(), true) {
+  public CThostFtdcQrySyncDelaySwapField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQrySyncDelaySwapField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcIPListField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcIPListField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcIPListField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,27 +39,37 @@ public class CThostFtdcIPListField : global::System.IDisposable {
     }
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcIPListField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcIPListField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcIPListField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcIPListField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsWhite {
     set {
-      thostmdapiPINVOKE.CThostFtdcIPListField_IsWhite_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcIPListField_IsWhite_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcIPListField_IsWhite_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcIPListField_IsWhite_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcIPListField() : this(thostmdapiPINVOKE.new_CThostFtdcIPListField(), true) {
+  public string IPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcIPListField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcIPListField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcIPListField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcIPListField(), true) {
   }
 
 }

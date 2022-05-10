@@ -31,7 +31,7 @@ public class CThostFtdcContractBankField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcContractBankField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcContractBankField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcContractBankField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcContractBankField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcContractBankField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankID {
     set {
-      thostmdapiPINVOKE.CThostFtdcContractBankField_BankID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcContractBankField_BankID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBrchID {
     set {
-      thostmdapiPINVOKE.CThostFtdcContractBankField_BankBrchID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankBrchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcContractBankField_BankBrchID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankBrchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankName {
     set {
-      thostmdapiPINVOKE.CThostFtdcContractBankField_BankName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcContractBankField_BankName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcContractBankField_BankName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcContractBankField() : this(thostmdapiPINVOKE.new_CThostFtdcContractBankField(), true) {
+  public CThostFtdcContractBankField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcContractBankField(), true) {
   }
 
 }

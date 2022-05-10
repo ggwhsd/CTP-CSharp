@@ -31,7 +31,7 @@ public class CThostFtdcMarginModelField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMarginModelField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcMarginModelField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcMarginModelField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarginModelField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMarginModelField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MarginModelID {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MarginModelName {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcMarginModelField_MarginModelName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarginModelField() : this(thostmdapiPINVOKE.new_CThostFtdcMarginModelField(), true) {
+  public CThostFtdcMarginModelField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcMarginModelField(), true) {
   }
 
 }

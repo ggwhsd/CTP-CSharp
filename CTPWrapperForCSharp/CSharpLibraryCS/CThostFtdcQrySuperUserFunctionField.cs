@@ -31,7 +31,7 @@ public class CThostFtdcQrySuperUserFunctionField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQrySuperUserFunctionField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQrySuperUserFunctionField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQrySuperUserFunctionField : global::System.IDisposable {
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySuperUserFunctionField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySuperUserFunctionField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySuperUserFunctionField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySuperUserFunctionField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySuperUserFunctionField() : this(thosttradeapiPINVOKE.new_CThostFtdcQrySuperUserFunctionField(), true) {
+  public CThostFtdcQrySuperUserFunctionField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQrySuperUserFunctionField(), true) {
   }
 
 }

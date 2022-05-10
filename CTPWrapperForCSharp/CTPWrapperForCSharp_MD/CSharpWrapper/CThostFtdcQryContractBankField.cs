@@ -31,7 +31,7 @@ public class CThostFtdcQryContractBankField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryContractBankField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryContractBankField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryContractBankField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryContractBankField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryContractBankField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryContractBankField_BankID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryContractBankField_BankID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBrchID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryContractBankField_BankBrchID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BankBrchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryContractBankField_BankBrchID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryContractBankField_BankBrchID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryContractBankField() : this(thostmdapiPINVOKE.new_CThostFtdcQryContractBankField(), true) {
+  public CThostFtdcQryContractBankField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryContractBankField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcForQuoteParamField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcForQuoteParamField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcForQuoteParamField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,65 @@ public class CThostFtdcForQuoteParamField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcForQuoteParamField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcForQuoteParamField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcForQuoteParamField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcForQuoteParamField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcForQuoteParamField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcForQuoteParamField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LastPrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcForQuoteParamField_LastPrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_LastPrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcForQuoteParamField_LastPrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_LastPrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PriceInterval {
     set {
-      thostmdapiPINVOKE.CThostFtdcForQuoteParamField_PriceInterval_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_PriceInterval_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcForQuoteParamField_PriceInterval_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_PriceInterval_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcForQuoteParamField() : this(thostmdapiPINVOKE.new_CThostFtdcForQuoteParamField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcForQuoteParamField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcForQuoteParamField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcForQuoteParamField(), true) {
   }
 
 }

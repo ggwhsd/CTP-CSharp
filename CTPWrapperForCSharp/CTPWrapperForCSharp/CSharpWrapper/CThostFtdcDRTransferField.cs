@@ -31,7 +31,7 @@ public class CThostFtdcDRTransferField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcDRTransferField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcDRTransferField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcDRTransferField : global::System.IDisposable {
 
   public int OrigDRIdentityID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigDRIdentityID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigDRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigDRIdentityID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigDRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DestDRIdentityID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDRTransferField_DestDRIdentityID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_DestDRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcDRTransferField_DestDRIdentityID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_DestDRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OrigBrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigBrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigBrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigBrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_OrigBrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DestBrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcDRTransferField_DestBrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_DestBrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcDRTransferField_DestBrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDRTransferField_DestBrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcDRTransferField() : this(thosttradeapiPINVOKE.new_CThostFtdcDRTransferField(), true) {
+  public CThostFtdcDRTransferField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcDRTransferField(), true) {
   }
 
 }

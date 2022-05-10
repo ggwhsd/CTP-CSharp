@@ -31,7 +31,7 @@ public class CThostFtdcCurrentTimeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcCurrentTimeField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcCurrentTimeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcCurrentTimeField : global::System.IDisposable {
 
   public string CurrDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public int CurrMillisec {
     set {
-      thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrMillisec_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrMillisec_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrMillisec_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_CurrMillisec_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ActionDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcCurrentTimeField_ActionDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_ActionDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCurrentTimeField_ActionDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCurrentTimeField_ActionDay_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCurrentTimeField() : this(thostmdapiPINVOKE.new_CThostFtdcCurrentTimeField(), true) {
+  public CThostFtdcCurrentTimeField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcCurrentTimeField(), true) {
   }
 
 }

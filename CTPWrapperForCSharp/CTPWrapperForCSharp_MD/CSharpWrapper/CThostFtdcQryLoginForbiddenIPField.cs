@@ -31,7 +31,7 @@ public class CThostFtdcQryLoginForbiddenIPField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryLoginForbiddenIPField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryLoginForbiddenIPField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,17 +39,27 @@ public class CThostFtdcQryLoginForbiddenIPField : global::System.IDisposable {
     }
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryLoginForbiddenIPField() : this(thostmdapiPINVOKE.new_CThostFtdcQryLoginForbiddenIPField(), true) {
+  public string IPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryLoginForbiddenIPField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryLoginForbiddenIPField(), true) {
   }
 
 }

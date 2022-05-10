@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserOTPParamField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerUserOTPParamField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerUserOTPParamField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,85 +41,85 @@ public class CThostFtdcBrokerUserOTPParamField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OTPVendorsID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPVendorsID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPVendorsID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPVendorsID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPVendorsID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SerialNumber {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_SerialNumber_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_SerialNumber_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_SerialNumber_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_SerialNumber_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AuthKey {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_AuthKey_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_AuthKey_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_AuthKey_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_AuthKey_get(swigCPtr);
       return ret;
     } 
   }
 
   public int LastDrift {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastDrift_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastDrift_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastDrift_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastDrift_get(swigCPtr);
       return ret;
     } 
   }
 
   public int LastSuccess {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastSuccess_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastSuccess_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastSuccess_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_LastSuccess_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OTPType {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserOTPParamField_OTPType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserOTPParamField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerUserOTPParamField(), true) {
+  public CThostFtdcBrokerUserOTPParamField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerUserOTPParamField(), true) {
   }
 
 }

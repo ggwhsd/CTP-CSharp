@@ -31,7 +31,7 @@ public class CThostFtdcFutureLimitPosiParamField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcFutureLimitPosiParamField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcFutureLimitPosiParamField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcFutureLimitPosiParamField : global::System.IDisposable {
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProductID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ProductID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ProductID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SpecOpenVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_SpecOpenVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_SpecOpenVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_SpecOpenVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_SpecOpenVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ArbiOpenVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ArbiOpenVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ArbiOpenVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ArbiOpenVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_ArbiOpenVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int OpenVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_OpenVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_OpenVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_OpenVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcFutureLimitPosiParamField_OpenVolume_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcFutureLimitPosiParamField() : this(thosttradeapiPINVOKE.new_CThostFtdcFutureLimitPosiParamField(), true) {
+  public CThostFtdcFutureLimitPosiParamField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcFutureLimitPosiParamField(), true) {
   }
 
 }

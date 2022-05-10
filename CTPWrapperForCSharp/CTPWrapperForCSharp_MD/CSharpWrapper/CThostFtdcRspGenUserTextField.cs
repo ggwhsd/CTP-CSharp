@@ -31,7 +31,7 @@ public class CThostFtdcRspGenUserTextField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcRspGenUserTextField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcRspGenUserTextField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcRspGenUserTextField : global::System.IDisposable {
 
   public int UserTextSeq {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspGenUserTextField_UserTextSeq_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspGenUserTextField_UserTextSeq_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspGenUserTextField_UserTextSeq_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspGenUserTextField_UserTextSeq_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspGenUserTextField() : this(thostmdapiPINVOKE.new_CThostFtdcRspGenUserTextField(), true) {
+  public CThostFtdcRspGenUserTextField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcRspGenUserTextField(), true) {
   }
 
 }

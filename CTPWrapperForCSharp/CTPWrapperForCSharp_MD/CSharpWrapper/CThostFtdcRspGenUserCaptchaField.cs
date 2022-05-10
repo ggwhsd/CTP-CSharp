@@ -31,7 +31,7 @@ public class CThostFtdcRspGenUserCaptchaField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcRspGenUserCaptchaField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcRspGenUserCaptchaField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcRspGenUserCaptchaField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int CaptchaInfoLen {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfoLen_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfoLen_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfoLen_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfoLen_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CaptchaInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspGenUserCaptchaField_CaptchaInfo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspGenUserCaptchaField() : this(thostmdapiPINVOKE.new_CThostFtdcRspGenUserCaptchaField(), true) {
+  public CThostFtdcRspGenUserCaptchaField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcRspGenUserCaptchaField(), true) {
   }
 
 }

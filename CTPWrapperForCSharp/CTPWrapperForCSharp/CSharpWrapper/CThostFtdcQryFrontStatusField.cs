@@ -31,7 +31,7 @@ public class CThostFtdcQryFrontStatusField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryFrontStatusField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryFrontStatusField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQryFrontStatusField : global::System.IDisposable {
 
   public int FrontID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryFrontStatusField_FrontID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryFrontStatusField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcQryFrontStatusField_FrontID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryFrontStatusField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryFrontStatusField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryFrontStatusField(), true) {
+  public CThostFtdcQryFrontStatusField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryFrontStatusField(), true) {
   }
 
 }

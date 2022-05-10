@@ -31,7 +31,7 @@ public class CThostFtdcExchangeMarginRateAdjustField : global::System.IDisposabl
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcExchangeMarginRateAdjustField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcExchangeMarginRateAdjustField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,155 +41,165 @@ public class CThostFtdcExchangeMarginRateAdjustField : global::System.IDisposabl
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_HedgeFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_LongMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ShortMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchLongMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchLongMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchLongMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchShortMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchShortMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_ExchShortMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double NoLongMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double NoLongMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoLongMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double NoShortMarginRatioByMoney {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByMoney_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByMoney_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByMoney_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByMoney_get(swigCPtr);
       return ret;
     } 
   }
 
   public double NoShortMarginRatioByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_NoShortMarginRatioByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcExchangeMarginRateAdjustField() : this(thostmdapiPINVOKE.new_CThostFtdcExchangeMarginRateAdjustField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeMarginRateAdjustField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcExchangeMarginRateAdjustField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcExchangeMarginRateAdjustField(), true) {
   }
 
 }

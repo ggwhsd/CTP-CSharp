@@ -31,7 +31,7 @@ public class CThostFtdcCommRateModelField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcCommRateModelField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcCommRateModelField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcCommRateModelField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCommRateModelField() : this(thosttradeapiPINVOKE.new_CThostFtdcCommRateModelField(), true) {
+  public CThostFtdcCommRateModelField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcCommRateModelField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcTradingAccountReserveField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcTradingAccountReserveField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcTradingAccountReserveField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcTradingAccountReserveField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_AccountID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_AccountID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Reserve {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_Reserve_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_Reserve_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_Reserve_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_Reserve_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_CurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_CurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingAccountReserveField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTradingAccountReserveField() : this(thosttradeapiPINVOKE.new_CThostFtdcTradingAccountReserveField(), true) {
+  public CThostFtdcTradingAccountReserveField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcTradingAccountReserveField(), true) {
   }
 
 }

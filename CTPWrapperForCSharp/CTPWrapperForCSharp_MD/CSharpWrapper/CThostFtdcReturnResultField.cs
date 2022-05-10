@@ -31,7 +31,7 @@ public class CThostFtdcReturnResultField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcReturnResultField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcReturnResultField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcReturnResultField : global::System.IDisposable {
 
   public string ReturnCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcReturnResultField_ReturnCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReturnResultField_ReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReturnResultField_ReturnCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReturnResultField_ReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DescrInfoForReturnCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcReturnResultField_DescrInfoForReturnCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReturnResultField_DescrInfoForReturnCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReturnResultField_DescrInfoForReturnCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReturnResultField_DescrInfoForReturnCode_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReturnResultField() : this(thostmdapiPINVOKE.new_CThostFtdcReturnResultField(), true) {
+  public CThostFtdcReturnResultField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcReturnResultField(), true) {
   }
 
 }

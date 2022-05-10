@@ -31,7 +31,7 @@ public class CThostFtdcQryProductField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryProductField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryProductField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,37 +39,47 @@ public class CThostFtdcQryProductField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ProductClass {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductField_ProductClass_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ProductClass_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcQryProductField_ProductClass_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ProductClass_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryProductField() : this(thostmdapiPINVOKE.new_CThostFtdcQryProductField(), true) {
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryProductField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryProductField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcUserRightsAssignField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcUserRightsAssignField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcUserRightsAssignField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcUserRightsAssignField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DRIdentityID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserRightsAssignField() : this(thosttradeapiPINVOKE.new_CThostFtdcUserRightsAssignField(), true) {
+  public CThostFtdcUserRightsAssignField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcUserRightsAssignField(), true) {
   }
 
 }

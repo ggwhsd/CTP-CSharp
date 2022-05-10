@@ -31,7 +31,7 @@ public class CThostFtdcCFMMCTradingAccountKeyField : global::System.IDisposable 
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcCFMMCTradingAccountKeyField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcCFMMCTradingAccountKeyField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcCFMMCTradingAccountKeyField : global::System.IDisposable 
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_ParticipantID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_ParticipantID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int KeyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_KeyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_KeyID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_KeyID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_KeyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrentKey {
     set {
-      thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_CurrentKey_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_CurrentKey_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_CurrentKey_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCFMMCTradingAccountKeyField_CurrentKey_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCFMMCTradingAccountKeyField() : this(thostmdapiPINVOKE.new_CThostFtdcCFMMCTradingAccountKeyField(), true) {
+  public CThostFtdcCFMMCTradingAccountKeyField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcCFMMCTradingAccountKeyField(), true) {
   }
 
 }

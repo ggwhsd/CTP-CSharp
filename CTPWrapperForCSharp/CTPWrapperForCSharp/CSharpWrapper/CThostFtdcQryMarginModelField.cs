@@ -31,7 +31,7 @@ public class CThostFtdcQryMarginModelField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryMarginModelField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryMarginModelField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryMarginModelField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryMarginModelField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryMarginModelField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryMarginModelField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryMarginModelField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MarginModelID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryMarginModelField_MarginModelID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryMarginModelField_MarginModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryMarginModelField_MarginModelID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryMarginModelField_MarginModelID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryMarginModelField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryMarginModelField(), true) {
+  public CThostFtdcQryMarginModelField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryMarginModelField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserPasswordField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcBrokerUserPasswordField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcBrokerUserPasswordField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcBrokerUserPasswordField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_Password_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_Password_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LastUpdateTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastUpdateTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastUpdateTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastUpdateTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastUpdateTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LastLoginTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastLoginTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastLoginTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastLoginTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_LastLoginTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExpireDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_ExpireDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_ExpireDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_ExpireDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_ExpireDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string WeakExpireDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_WeakExpireDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_WeakExpireDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_WeakExpireDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerUserPasswordField_WeakExpireDate_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserPasswordField() : this(thosttradeapiPINVOKE.new_CThostFtdcBrokerUserPasswordField(), true) {
+  public CThostFtdcBrokerUserPasswordField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcBrokerUserPasswordField(), true) {
   }
 
 }

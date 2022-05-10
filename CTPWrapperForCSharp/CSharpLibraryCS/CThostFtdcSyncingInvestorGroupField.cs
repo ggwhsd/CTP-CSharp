@@ -31,7 +31,7 @@ public class CThostFtdcSyncingInvestorGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcSyncingInvestorGroupField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcSyncingInvestorGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcSyncingInvestorGroupField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorGroupID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorGroupName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInvestorGroupField_InvestorGroupName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSyncingInvestorGroupField() : this(thosttradeapiPINVOKE.new_CThostFtdcSyncingInvestorGroupField(), true) {
+  public CThostFtdcSyncingInvestorGroupField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcSyncingInvestorGroupField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcReqUserLoginField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcReqUserLoginField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcReqUserLoginField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,125 +41,135 @@ public class CThostFtdcReqUserLoginField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Password {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_Password_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_Password_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_Password_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_Password_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_UserProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InterfaceProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_InterfaceProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_InterfaceProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_InterfaceProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_InterfaceProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProtocolInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ProtocolInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ProtocolInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ProtocolInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ProtocolInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_MacAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_MacAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OneTimePassword {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_OneTimePassword_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_OneTimePassword_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_OneTimePassword_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_OneTimePassword_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ClientIPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginRemark {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_LoginRemark_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_LoginRemark_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_LoginRemark_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_LoginRemark_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ClientIPPort {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPPort_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPPort_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPPort_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPPort_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqUserLoginField() : this(thostmdapiPINVOKE.new_CThostFtdcReqUserLoginField(), true) {
+  public string ClientIPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqUserLoginField_ClientIPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcReqUserLoginField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcReqUserLoginField(), true) {
   }
 
 }

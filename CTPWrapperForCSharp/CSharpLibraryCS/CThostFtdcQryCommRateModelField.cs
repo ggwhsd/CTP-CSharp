@@ -31,7 +31,7 @@ public class CThostFtdcQryCommRateModelField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryCommRateModelField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryCommRateModelField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryCommRateModelField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_CommModelID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_CommModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_CommModelID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCommRateModelField_CommModelID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryCommRateModelField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryCommRateModelField(), true) {
+  public CThostFtdcQryCommRateModelField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryCommRateModelField(), true) {
   }
 
 }

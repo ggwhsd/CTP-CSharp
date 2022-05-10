@@ -31,7 +31,7 @@ public class CThostFtdcReqGenUserCaptchaField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcReqGenUserCaptchaField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcReqGenUserCaptchaField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcReqGenUserCaptchaField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcReqGenUserCaptchaField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqGenUserCaptchaField() : this(thostmdapiPINVOKE.new_CThostFtdcReqGenUserCaptchaField(), true) {
+  public CThostFtdcReqGenUserCaptchaField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcReqGenUserCaptchaField(), true) {
   }
 
 }

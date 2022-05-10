@@ -31,7 +31,7 @@ public class CThostFtdcMarketDataExchangeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcMarketDataExchangeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcMarketDataExchangeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcMarketDataExchangeField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcMarketDataExchangeField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataExchangeField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcMarketDataExchangeField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataExchangeField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarketDataExchangeField() : this(thosttradeapiPINVOKE.new_CThostFtdcMarketDataExchangeField(), true) {
+  public CThostFtdcMarketDataExchangeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcMarketDataExchangeField(), true) {
   }
 
 }

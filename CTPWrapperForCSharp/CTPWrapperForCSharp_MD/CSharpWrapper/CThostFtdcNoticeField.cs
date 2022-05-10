@@ -31,7 +31,7 @@ public class CThostFtdcNoticeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcNoticeField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcNoticeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcNoticeField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcNoticeField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcNoticeField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcNoticeField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcNoticeField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Content {
     set {
-      thostmdapiPINVOKE.CThostFtdcNoticeField_Content_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcNoticeField_Content_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcNoticeField_Content_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcNoticeField_Content_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SequenceLabel {
     set {
-      thostmdapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcNoticeField_SequenceLabel_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcNoticeField() : this(thostmdapiPINVOKE.new_CThostFtdcNoticeField(), true) {
+  public CThostFtdcNoticeField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcNoticeField(), true) {
   }
 
 }

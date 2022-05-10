@@ -31,7 +31,7 @@ public class CThostFtdcUserSessionField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcUserSessionField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcUserSessionField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,125 +41,135 @@ public class CThostFtdcUserSessionField : global::System.IDisposable {
 
   public int FrontID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_FrontID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_FrontID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_SessionID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_SessionID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginTime_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_UserProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_UserProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_UserProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_UserProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InterfaceProductInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_InterfaceProductInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_InterfaceProductInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_InterfaceProductInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_InterfaceProductInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProtocolInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_ProtocolInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_ProtocolInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_ProtocolInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_ProtocolInfo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MacAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_MacAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_MacAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_MacAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginRemark {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginRemark_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginRemark_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSessionField_LoginRemark_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_LoginRemark_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserSessionField() : this(thostmdapiPINVOKE.new_CThostFtdcUserSessionField(), true) {
+  public string IPAddress {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSessionField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcUserSessionField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserSessionField(), true) {
   }
 
 }

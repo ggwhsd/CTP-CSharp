@@ -31,7 +31,7 @@ public class CThostFtdcCFMMCBrokerKeyField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcCFMMCBrokerKeyField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcCFMMCBrokerKeyField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcCFMMCBrokerKeyField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ParticipantID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_ParticipantID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_ParticipantID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_ParticipantID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_ParticipantID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CreateDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CreateTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CreateTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public int KeyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrentKey {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CurrentKey_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CurrentKey_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CurrentKey_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_CurrentKey_get(swigCPtr);
       return ret;
     } 
   }
 
   public char KeyKind {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyKind_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyKind_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyKind_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcCFMMCBrokerKeyField_KeyKind_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCFMMCBrokerKeyField() : this(thosttradeapiPINVOKE.new_CThostFtdcCFMMCBrokerKeyField(), true) {
+  public CThostFtdcCFMMCBrokerKeyField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcCFMMCBrokerKeyField(), true) {
   }
 
 }

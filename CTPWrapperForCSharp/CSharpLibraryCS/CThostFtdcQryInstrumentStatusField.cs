@@ -31,7 +31,7 @@ public class CThostFtdcQryInstrumentStatusField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryInstrumentStatusField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryInstrumentStatusField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQryInstrumentStatusField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeInstID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryInstrumentStatusField_ExchangeInstID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryInstrumentStatusField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryInstrumentStatusField(), true) {
+  public CThostFtdcQryInstrumentStatusField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryInstrumentStatusField(), true) {
   }
 
 }

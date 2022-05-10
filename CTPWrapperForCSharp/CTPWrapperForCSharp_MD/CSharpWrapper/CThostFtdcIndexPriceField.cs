@@ -31,7 +31,7 @@ public class CThostFtdcIndexPriceField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcIndexPriceField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcIndexPriceField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,45 @@ public class CThostFtdcIndexPriceField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ClosePrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcIndexPriceField() : this(thostmdapiPINVOKE.new_CThostFtdcIndexPriceField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcIndexPriceField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcIndexPriceField(), true) {
   }
 
 }

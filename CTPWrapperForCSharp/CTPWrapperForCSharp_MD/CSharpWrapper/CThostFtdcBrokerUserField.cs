@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerUserField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerUserField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcBrokerUserField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserName {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserName_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserType {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_UserType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_UserType_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsActive {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsActive_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsActive_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsActive_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsActive_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsUsingOTP {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsUsingOTP_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsUsingOTP_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsUsingOTP_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsUsingOTP_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsAuthForce {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsAuthForce_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsAuthForce_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserField_IsAuthForce_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserField_IsAuthForce_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerUserField(), true) {
+  public CThostFtdcBrokerUserField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerUserField(), true) {
   }
 
 }

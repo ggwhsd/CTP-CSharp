@@ -31,7 +31,7 @@ public class CThostFtdcUserRightField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcUserRightField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcUserRightField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcUserRightField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserRightField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserRightField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char UserRightType {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightField_UserRightType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightField_UserRightType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcUserRightField_UserRightType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightField_UserRightType_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsForbidden {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightField_IsForbidden_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightField_IsForbidden_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserRightField_IsForbidden_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightField_IsForbidden_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserRightField() : this(thostmdapiPINVOKE.new_CThostFtdcUserRightField(), true) {
+  public CThostFtdcUserRightField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserRightField(), true) {
   }
 
 }

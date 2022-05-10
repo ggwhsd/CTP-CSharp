@@ -31,7 +31,7 @@ public class CThostFtdcSecAgentTradeInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcSecAgentTradeInfoField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcSecAgentTradeInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcSecAgentTradeInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerSecAgentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerSecAgentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerSecAgentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerSecAgentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_BrokerSecAgentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LongCustomerName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_LongCustomerName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_LongCustomerName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_LongCustomerName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSecAgentTradeInfoField_LongCustomerName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSecAgentTradeInfoField() : this(thosttradeapiPINVOKE.new_CThostFtdcSecAgentTradeInfoField(), true) {
+  public CThostFtdcSecAgentTradeInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcSecAgentTradeInfoField(), true) {
   }
 
 }

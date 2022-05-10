@@ -31,7 +31,7 @@ public class CThostFtdcFensUserInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcFensUserInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcFensUserInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcFensUserInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcFensUserInfoField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcFensUserInfoField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char LoginMode {
     set {
-      thostmdapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcFensUserInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcFensUserInfoField(), true) {
+  public CThostFtdcFensUserInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcFensUserInfoField(), true) {
   }
 
 }

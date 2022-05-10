@@ -31,7 +31,7 @@ public class CThostFtdcCombInstrumentGuardField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcCombInstrumentGuardField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcCombInstrumentGuardField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcCombInstrumentGuardField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double GuarantRatio {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_GuarantRatio_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_GuarantRatio_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_GuarantRatio_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_GuarantRatio_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombInstrumentGuardField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCombInstrumentGuardField() : this(thosttradeapiPINVOKE.new_CThostFtdcCombInstrumentGuardField(), true) {
+  public CThostFtdcCombInstrumentGuardField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcCombInstrumentGuardField(), true) {
   }
 
 }

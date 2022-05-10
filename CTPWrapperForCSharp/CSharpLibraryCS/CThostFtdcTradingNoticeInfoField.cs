@@ -31,7 +31,7 @@ public class CThostFtdcTradingNoticeInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcTradingNoticeInfoField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcTradingNoticeInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcTradingNoticeInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SendTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SendTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SendTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SendTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SendTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string FieldContent {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_FieldContent_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_FieldContent_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_FieldContent_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_FieldContent_get(swigCPtr);
       return ret;
     } 
   }
 
   public short SequenceSeries {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceSeries_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceSeries_set(swigCPtr, value);
     } 
     get {
-      short ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceSeries_get(swigCPtr);
+      short ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceSeries_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceNo_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcTradingNoticeInfoField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTradingNoticeInfoField() : this(thosttradeapiPINVOKE.new_CThostFtdcTradingNoticeInfoField(), true) {
+  public CThostFtdcTradingNoticeInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcTradingNoticeInfoField(), true) {
   }
 
 }

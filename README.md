@@ -1,27 +1,33 @@
 # CSharp的CTP使用方法：
 
-Release文件夹中有Release版本的CTP接口，命名空间是CTPWrapper。
+Release中的文件并非由最终由工程编译生成，这些工程只是给个转换的过程，用于学习，并不是一直更新的。
+Release文件夹中有Release版本的CTP接口。
 所有接口名称都和C++的CTP api版本文档描述中的一致。
 
 2020-12-31 更新了CTP 6.5.1 Api版本。.NET FrameWork 4.6.2 平台测试。
 
 2022-1-14  更新了Release目录，新增.NET 5环境下的x86平台的CTP 6.5.1 Api版本。
 
+2022-5-10  更新了工程的转换配置，解决行情接口无法调用订阅函数的问题。
+
 # 项目构建描述
 
-如果不想看可以忽略。
+如果不想看可以忽略。CSharpLibraryCS目录下包含了所有转换为C#的代码。
 
-* CTPWrapperForCSharp_MD负责封装行情DLL
+在CTPWrapperForCSharp_MD和CTPWrapperForCSharp目录下，执行以下命令，转换c++为封装的c#代码文件，这个是第一步。
+```swig.exe -c++ -csharp CTP2CSharp.idl```
 
-* CTPWrapperForCSharp负责封装交易DLL
+* CTPWrapperForCSharp_MD负责封装行情DLL。
+
+* CTPWrapperForCSharp负责封装交易DLL。
 
 * 先建立一个C#的工程名为CSharpCTP
 
 * 将debug目录下的Dll文件都拷贝到CSharpCTP的工程目录下。
 
-* 将CTPWrapperForCSharp.dll改名为thosttradeapi.dll 
+* 将CTPWrapperForCSharp.dll改名为ctpthosttradeapi.dll 
 
-* 将CTPWrapperForCSharp_MD.dll改名为thostmdapi.dll
+* 将CTPWrapperForCSharp_MD.dll改名为ctpthosttradeapi.dll
 
 * 将thostmduserapi_se.dll和thosttraderapi_se.dll拷贝到CSharpCTP工程的debug目录下
 
@@ -32,8 +38,6 @@ Release文件夹中有Release版本的CTP接口，命名空间是CTPWrapper。
 * 接下来，就可以使用如下代码来调用CTP的类和方法，如下是创建行情回调类示例
 
 ```
-using CTPWrapper;
-
 class CustomMD : CThostFtdcMdSpi
     {
         public CustomMD()

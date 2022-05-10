@@ -31,7 +31,7 @@ public class CThostFtdcQryProductGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryProductGroupField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryProductGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,27 +39,37 @@ public class CThostFtdcQryProductGroupField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductGroupField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductGroupField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryProductGroupField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryProductGroupField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryProductGroupField() : this(thostmdapiPINVOKE.new_CThostFtdcQryProductGroupField(), true) {
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryProductGroupField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcQryProductGroupField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryProductGroupField(), true) {
   }
 
 }

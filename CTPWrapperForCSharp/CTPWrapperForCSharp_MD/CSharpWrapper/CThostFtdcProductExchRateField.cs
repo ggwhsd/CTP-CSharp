@@ -31,7 +31,7 @@ public class CThostFtdcProductExchRateField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcProductExchRateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcProductExchRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,47 +39,57 @@ public class CThostFtdcProductExchRateField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductExchRateField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductExchRateField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string QuoteCurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductExchRateField_QuoteCurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_QuoteCurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductExchRateField_QuoteCurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_QuoteCurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchangeRate {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeRate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeRate_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeRate_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeRate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcProductExchRateField() : this(thostmdapiPINVOKE.new_CThostFtdcProductExchRateField(), true) {
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcProductExchRateField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcProductExchRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcProductExchRateField(), true) {
   }
 
 }

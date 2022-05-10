@@ -31,7 +31,7 @@ public class CThostFtdcLogoutAllField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcLogoutAllField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcLogoutAllField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcLogoutAllField : global::System.IDisposable {
 
   public int FrontID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLogoutAllField_FrontID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcLogoutAllField_FrontID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLogoutAllField_SessionID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcLogoutAllField_SessionID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SystemName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcLogoutAllField_SystemName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_SystemName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcLogoutAllField_SystemName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLogoutAllField_SystemName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcLogoutAllField() : this(thosttradeapiPINVOKE.new_CThostFtdcLogoutAllField(), true) {
+  public CThostFtdcLogoutAllField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcLogoutAllField(), true) {
   }
 
 }

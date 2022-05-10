@@ -31,7 +31,7 @@ public class CThostFtdcInstrumentOrderCommRateField : global::System.IDisposable
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcInstrumentOrderCommRateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcInstrumentOrderCommRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,97 +39,107 @@ public class CThostFtdcInstrumentOrderCommRateField : global::System.IDisposable
     }
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorRange_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorRange_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_HedgeFlag_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OrderCommByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public double OrderActionCommByVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByVolume_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByVolume_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestUnitID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInstrumentOrderCommRateField() : this(thostmdapiPINVOKE.new_CThostFtdcInstrumentOrderCommRateField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcInstrumentOrderCommRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcInstrumentOrderCommRateField(), true) {
   }
 
 }

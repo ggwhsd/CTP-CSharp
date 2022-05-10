@@ -31,7 +31,7 @@ public class CThostFtdcSyncingInvestorField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSyncingInvestorField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSyncingInvestorField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,135 +41,135 @@ public class CThostFtdcSyncingInvestorField : global::System.IDisposable {
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorGroupID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorGroupID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorGroupID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorName {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_InvestorName_get(swigCPtr);
       return ret;
     } 
   }
 
   public char IdentifiedCardType {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IdentifiedCardNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IdentifiedCardNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsActive {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsActive_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsActive_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsActive_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsActive_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Telephone {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Telephone_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Telephone_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Telephone_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Telephone_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Address {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Address_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Address_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Address_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Address_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OpenDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_OpenDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_OpenDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_OpenDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_OpenDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Mobile {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Mobile_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Mobile_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Mobile_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_Mobile_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_CommModelID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_CommModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_CommModelID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_CommModelID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MarginModelID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_MarginModelID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_MarginModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncingInvestorField_MarginModelID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_MarginModelID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSyncingInvestorField() : this(thostmdapiPINVOKE.new_CThostFtdcSyncingInvestorField(), true) {
+  public CThostFtdcSyncingInvestorField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSyncingInvestorField(), true) {
   }
 
 }

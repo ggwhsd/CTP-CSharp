@@ -31,7 +31,7 @@ public class CThostFtdcSyncDepositField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSyncDepositField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSyncDepositField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,65 +41,65 @@ public class CThostFtdcSyncDepositField : global::System.IDisposable {
 
   public string DepositSeqNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_DepositSeqNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_DepositSeqNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_DepositSeqNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_DepositSeqNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double Deposit {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_Deposit_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_Deposit_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_Deposit_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_Deposit_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsForce {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_IsForce_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_IsForce_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_IsForce_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_IsForce_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncDepositField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncDepositField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncDepositField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSyncDepositField() : this(thostmdapiPINVOKE.new_CThostFtdcSyncDepositField(), true) {
+  public CThostFtdcSyncDepositField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSyncDepositField(), true) {
   }
 
 }

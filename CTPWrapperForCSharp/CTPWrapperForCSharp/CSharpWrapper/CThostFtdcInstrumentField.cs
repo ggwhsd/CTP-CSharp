@@ -31,7 +31,7 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcInstrumentField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcInstrumentField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,315 +41,315 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentName {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeInstID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ProductID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ProductClass {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductClass_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductClass_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductClass_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductClass_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DeliveryYear {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DeliveryMonth {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxMarketOrderVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinMarketOrderVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxLimitOrderVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinLimitOrderVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int VolumeMultiple {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PriceTick {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_PriceTick_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PriceTick_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_PriceTick_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PriceTick_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CreateDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_CreateDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_CreateDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_CreateDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_CreateDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OpenDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_OpenDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_OpenDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_OpenDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_OpenDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExpireDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string StartDelivDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string EndDelivDate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InstLifePhase {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsTrading {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_IsTrading_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_IsTrading_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_IsTrading_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_IsTrading_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionDateType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongMarginRatio {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortMarginRatio {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_get(swigCPtr);
       return ret;
     } 
   }
 
   public char MaxMarginSideAlgorithm {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UnderlyingInstrID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double StrikePrice {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OptionsType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_OptionsType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_OptionsType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_OptionsType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_OptionsType_get(swigCPtr);
       return ret;
     } 
   }
 
   public double UnderlyingMultiple {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CombinationType {
     set {
-      thosttradeapiPINVOKE.CThostFtdcInstrumentField_CombinationType_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_CombinationType_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcInstrumentField_CombinationType_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_CombinationType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInstrumentField() : this(thosttradeapiPINVOKE.new_CThostFtdcInstrumentField(), true) {
+  public CThostFtdcInstrumentField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcInstrumentField(), true) {
   }
 
 }

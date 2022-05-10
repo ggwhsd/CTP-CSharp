@@ -31,7 +31,7 @@ public class CThostFtdcCommRateModelField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcCommRateModelField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcCommRateModelField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcCommRateModelField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelID {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CommModelName {
     set {
-      thostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcCommRateModelField_CommModelName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCommRateModelField() : this(thostmdapiPINVOKE.new_CThostFtdcCommRateModelField(), true) {
+  public CThostFtdcCommRateModelField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcCommRateModelField(), true) {
   }
 
 }

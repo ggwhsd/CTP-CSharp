@@ -31,7 +31,7 @@ public class CThostFtdcQrySyncFundMortgageField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQrySyncFundMortgageField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQrySyncFundMortgageField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcQrySyncFundMortgageField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MortgageSeqNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_MortgageSeqNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_MortgageSeqNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_MortgageSeqNo_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySyncFundMortgageField_MortgageSeqNo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySyncFundMortgageField() : this(thosttradeapiPINVOKE.new_CThostFtdcQrySyncFundMortgageField(), true) {
+  public CThostFtdcQrySyncFundMortgageField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQrySyncFundMortgageField(), true) {
   }
 
 }

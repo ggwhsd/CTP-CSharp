@@ -31,7 +31,7 @@ public class CThostFtdcIndexPriceField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcIndexPriceField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcIndexPriceField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcIndexPriceField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ClosePrice {
     set {
-      thosttradeapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcIndexPriceField_ClosePrice_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcIndexPriceField() : this(thosttradeapiPINVOKE.new_CThostFtdcIndexPriceField(), true) {
+  public CThostFtdcIndexPriceField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcIndexPriceField(), true) {
   }
 
 }

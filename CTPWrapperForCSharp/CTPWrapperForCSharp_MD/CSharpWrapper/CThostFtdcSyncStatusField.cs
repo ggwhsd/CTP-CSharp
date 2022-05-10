@@ -31,7 +31,7 @@ public class CThostFtdcSyncStatusField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSyncStatusField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSyncStatusField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcSyncStatusField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncStatusField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncStatusField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSyncStatusField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSyncStatusField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public char DataSyncStatus {
     set {
-      thostmdapiPINVOKE.CThostFtdcSyncStatusField_DataSyncStatus_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSyncStatusField_DataSyncStatus_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcSyncStatusField_DataSyncStatus_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcSyncStatusField_DataSyncStatus_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSyncStatusField() : this(thostmdapiPINVOKE.new_CThostFtdcSyncStatusField(), true) {
+  public CThostFtdcSyncStatusField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSyncStatusField(), true) {
   }
 
 }

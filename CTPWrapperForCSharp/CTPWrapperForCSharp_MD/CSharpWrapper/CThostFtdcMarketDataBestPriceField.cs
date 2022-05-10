@@ -31,7 +31,7 @@ public class CThostFtdcMarketDataBestPriceField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMarketDataBestPriceField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcMarketDataBestPriceField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcMarketDataBestPriceField : global::System.IDisposable {
 
   public double BidPrice1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidPrice1_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidPrice1_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidPrice1_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidPrice1_get(swigCPtr);
       return ret;
     } 
   }
 
   public int BidVolume1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidVolume1_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidVolume1_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidVolume1_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_BidVolume1_get(swigCPtr);
       return ret;
     } 
   }
 
   public double AskPrice1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskPrice1_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskPrice1_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskPrice1_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskPrice1_get(swigCPtr);
       return ret;
     } 
   }
 
   public int AskVolume1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskVolume1_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskVolume1_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskVolume1_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcMarketDataBestPriceField_AskVolume1_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMarketDataBestPriceField() : this(thostmdapiPINVOKE.new_CThostFtdcMarketDataBestPriceField(), true) {
+  public CThostFtdcMarketDataBestPriceField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcMarketDataBestPriceField(), true) {
   }
 
 }

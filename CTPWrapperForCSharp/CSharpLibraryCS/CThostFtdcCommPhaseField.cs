@@ -31,7 +31,7 @@ public class CThostFtdcCommPhaseField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcCommPhaseField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcCommPhaseField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcCommPhaseField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public short CommPhaseNo {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_set(swigCPtr, value);
     } 
     get {
-      short ret = thosttradeapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_get(swigCPtr);
+      short ret = ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_CommPhaseNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SystemID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcCommPhaseField_SystemID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_SystemID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcCommPhaseField_SystemID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCommPhaseField_SystemID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcCommPhaseField() : this(thosttradeapiPINVOKE.new_CThostFtdcCommPhaseField(), true) {
+  public CThostFtdcCommPhaseField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcCommPhaseField(), true) {
   }
 
 }

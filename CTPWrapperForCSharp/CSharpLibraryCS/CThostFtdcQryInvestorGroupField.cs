@@ -31,7 +31,7 @@ public class CThostFtdcQryInvestorGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryInvestorGroupField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryInvestorGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQryInvestorGroupField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryInvestorGroupField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryInvestorGroupField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryInvestorGroupField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryInvestorGroupField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryInvestorGroupField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryInvestorGroupField(), true) {
+  public CThostFtdcQryInvestorGroupField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryInvestorGroupField(), true) {
   }
 
 }

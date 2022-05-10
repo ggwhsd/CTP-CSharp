@@ -31,7 +31,7 @@ public class CThostFtdcInvestorGroupField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcInvestorGroupField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcInvestorGroupField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcInvestorGroupField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInvestorGroupField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInvestorGroupField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorGroupID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorGroupName {
     set {
-      thostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInvestorGroupField_InvestorGroupName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInvestorGroupField() : this(thostmdapiPINVOKE.new_CThostFtdcInvestorGroupField(), true) {
+  public CThostFtdcInvestorGroupField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcInvestorGroupField(), true) {
   }
 
 }

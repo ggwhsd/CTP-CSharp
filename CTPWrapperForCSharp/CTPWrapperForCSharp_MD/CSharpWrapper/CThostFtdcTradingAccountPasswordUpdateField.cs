@@ -31,7 +31,7 @@ public class CThostFtdcTradingAccountPasswordUpdateField : global::System.IDispo
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcTradingAccountPasswordUpdateField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcTradingAccountPasswordUpdateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcTradingAccountPasswordUpdateField : global::System.IDispo
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OldPassword {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_OldPassword_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_OldPassword_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_OldPassword_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_OldPassword_get(swigCPtr);
       return ret;
     } 
   }
 
   public string NewPassword {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_NewPassword_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_NewPassword_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_NewPassword_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_NewPassword_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTradingAccountPasswordUpdateField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTradingAccountPasswordUpdateField() : this(thostmdapiPINVOKE.new_CThostFtdcTradingAccountPasswordUpdateField(), true) {
+  public CThostFtdcTradingAccountPasswordUpdateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcTradingAccountPasswordUpdateField(), true) {
   }
 
 }

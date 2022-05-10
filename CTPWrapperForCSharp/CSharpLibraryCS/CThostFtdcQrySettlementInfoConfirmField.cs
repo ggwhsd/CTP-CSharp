@@ -31,7 +31,7 @@ public class CThostFtdcQrySettlementInfoConfirmField : global::System.IDisposabl
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQrySettlementInfoConfirmField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQrySettlementInfoConfirmField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,45 +41,45 @@ public class CThostFtdcQrySettlementInfoConfirmField : global::System.IDisposabl
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_AccountID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_AccountID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_CurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_CurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQrySettlementInfoConfirmField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQrySettlementInfoConfirmField() : this(thosttradeapiPINVOKE.new_CThostFtdcQrySettlementInfoConfirmField(), true) {
+  public CThostFtdcQrySettlementInfoConfirmField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQrySettlementInfoConfirmField(), true) {
   }
 
 }

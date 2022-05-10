@@ -1,4 +1,5 @@
-%module(directors = "1") thostmdapi
+%module(directors = "1") ctpthostmdapi
+%include "various.i"
 %{
 #include "ThostFtdcMdApi.h"
 %}

@@ -31,7 +31,7 @@ public class CThostFtdcRspInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcRspInfoField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcRspInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,25 +41,25 @@ public class CThostFtdcRspInfoField : global::System.IDisposable {
 
   public int ErrorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ErrorMsg {
     set {
-      thosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcRspInfoField_ErrorMsg_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspInfoField() : this(thosttradeapiPINVOKE.new_CThostFtdcRspInfoField(), true) {
+  public CThostFtdcRspInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcRspInfoField(), true) {
   }
 
 }

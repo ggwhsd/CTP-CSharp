@@ -31,7 +31,7 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryCombinationLegField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryCombinationLegField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
 
   public string CombInstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int LegID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LegInstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryCombinationLegField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryCombinationLegField(), true) {
+  public CThostFtdcQryCombinationLegField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryCombinationLegField(), true) {
   }
 
 }

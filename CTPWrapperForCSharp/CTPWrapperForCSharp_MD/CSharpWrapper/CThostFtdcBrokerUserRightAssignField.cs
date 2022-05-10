@@ -31,7 +31,7 @@ public class CThostFtdcBrokerUserRightAssignField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcBrokerUserRightAssignField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcBrokerUserRightAssignField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcBrokerUserRightAssignField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DRIdentityID {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Tradeable {
     set {
-      thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserRightAssignField_Tradeable_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcBrokerUserRightAssignField() : this(thostmdapiPINVOKE.new_CThostFtdcBrokerUserRightAssignField(), true) {
+  public CThostFtdcBrokerUserRightAssignField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerUserRightAssignField(), true) {
   }
 
 }

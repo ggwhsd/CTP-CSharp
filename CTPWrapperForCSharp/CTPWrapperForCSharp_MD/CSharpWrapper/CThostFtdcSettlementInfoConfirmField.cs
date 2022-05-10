@@ -31,7 +31,7 @@ public class CThostFtdcSettlementInfoConfirmField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcSettlementInfoConfirmField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcSettlementInfoConfirmField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcSettlementInfoConfirmField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConfirmDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ConfirmTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_ConfirmTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SettlementID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_SettlementID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_SettlementID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_SettlementID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_SettlementID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string AccountID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_AccountID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_AccountID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_AccountID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_AccountID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CurrencyID {
     set {
-      thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_CurrencyID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_CurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_CurrencyID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcSettlementInfoConfirmField_CurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSettlementInfoConfirmField() : this(thostmdapiPINVOKE.new_CThostFtdcSettlementInfoConfirmField(), true) {
+  public CThostFtdcSettlementInfoConfirmField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSettlementInfoConfirmField(), true) {
   }
 
 }

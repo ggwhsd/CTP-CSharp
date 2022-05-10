@@ -31,7 +31,7 @@ public class CThostFtdcExchangeRateField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcExchangeRateField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcExchangeRateField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcExchangeRateField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeRateField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcExchangeRateField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string FromCurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double FromCurrencyUnit {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyUnit_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyUnit_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyUnit_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_FromCurrencyUnit_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ToCurrencyID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeRateField_ToCurrencyID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_ToCurrencyID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcExchangeRateField_ToCurrencyID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_ToCurrencyID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ExchangeRate {
     set {
-      thosttradeapiPINVOKE.CThostFtdcExchangeRateField_ExchangeRate_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_ExchangeRate_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcExchangeRateField_ExchangeRate_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeRateField_ExchangeRate_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcExchangeRateField() : this(thosttradeapiPINVOKE.new_CThostFtdcExchangeRateField(), true) {
+  public CThostFtdcExchangeRateField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcExchangeRateField(), true) {
   }
 
 }

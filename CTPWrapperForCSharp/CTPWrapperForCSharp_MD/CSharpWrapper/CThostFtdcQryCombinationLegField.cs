@@ -31,7 +31,7 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryCombinationLegField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryCombinationLegField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,37 +39,57 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
     }
   }
 
-  public string CombInstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public int LegID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve2 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_reserve2_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_reserve2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string CombInstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LegInstrumentID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQryCombinationLegField_LegInstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryCombinationLegField() : this(thostmdapiPINVOKE.new_CThostFtdcQryCombinationLegField(), true) {
+  public CThostFtdcQryCombinationLegField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryCombinationLegField(), true) {
   }
 
 }

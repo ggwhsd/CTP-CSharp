@@ -31,7 +31,7 @@ public class CThostFtdcOptionInstrMiniMarginField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcOptionInstrMiniMarginField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcOptionInstrMiniMarginField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,75 +41,75 @@ public class CThostFtdcOptionInstrMiniMarginField : global::System.IDisposable {
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public double MinMargin {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_MinMargin_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_MinMargin_set(swigCPtr, value);
     } 
     get {
-      double ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_MinMargin_get(swigCPtr);
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_MinMargin_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ValueMethod {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_ValueMethod_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_ValueMethod_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_ValueMethod_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_ValueMethod_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsRelative {
     set {
-      thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_IsRelative_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_IsRelative_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_IsRelative_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionInstrMiniMarginField_IsRelative_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcOptionInstrMiniMarginField() : this(thosttradeapiPINVOKE.new_CThostFtdcOptionInstrMiniMarginField(), true) {
+  public CThostFtdcOptionInstrMiniMarginField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcOptionInstrMiniMarginField(), true) {
   }
 
 }

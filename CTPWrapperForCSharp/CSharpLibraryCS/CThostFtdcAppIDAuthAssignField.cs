@@ -9,20 +9,20 @@
 //------------------------------------------------------------------------------
 
 
-public class CThostFtdcMulticastGroupInfoField : global::System.IDisposable {
+public class CThostFtdcAppIDAuthAssignField : global::System.IDisposable {
   private global::System.Runtime.InteropServices.HandleRef swigCPtr;
   protected bool swigCMemOwn;
 
-  internal CThostFtdcMulticastGroupInfoField(global::System.IntPtr cPtr, bool cMemoryOwn) {
+  internal CThostFtdcAppIDAuthAssignField(global::System.IntPtr cPtr, bool cMemoryOwn) {
     swigCMemOwn = cMemoryOwn;
     swigCPtr = new global::System.Runtime.InteropServices.HandleRef(this, cPtr);
   }
 
-  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CThostFtdcMulticastGroupInfoField obj) {
+  internal static global::System.Runtime.InteropServices.HandleRef getCPtr(CThostFtdcAppIDAuthAssignField obj) {
     return (obj == null) ? new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero) : obj.swigCPtr;
   }
 
-  ~CThostFtdcMulticastGroupInfoField() {
+  ~CThostFtdcAppIDAuthAssignField() {
     Dispose();
   }
 
@@ -31,7 +31,7 @@ public class CThostFtdcMulticastGroupInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcMulticastGroupInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcAppIDAuthAssignField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,37 +39,37 @@ public class CThostFtdcMulticastGroupInfoField : global::System.IDisposable {
     }
   }
 
-  public string GroupIP {
+  public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupIP_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public int GroupPort {
+  public string AppID {
     set {
-      thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_AppID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_GroupPort_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_AppID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string SourceIP {
+  public int DRIdentityID {
     set {
-      thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcMulticastGroupInfoField_SourceIP_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcAppIDAuthAssignField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcMulticastGroupInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcMulticastGroupInfoField(), true) {
+  public CThostFtdcAppIDAuthAssignField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcAppIDAuthAssignField(), true) {
   }
 
 }

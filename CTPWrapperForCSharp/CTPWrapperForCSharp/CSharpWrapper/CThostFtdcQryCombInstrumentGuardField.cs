@@ -31,7 +31,7 @@ public class CThostFtdcQryCombInstrumentGuardField : global::System.IDisposable 
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryCombInstrumentGuardField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryCombInstrumentGuardField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcQryCombInstrumentGuardField : global::System.IDisposable 
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombInstrumentGuardField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryCombInstrumentGuardField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryCombInstrumentGuardField(), true) {
+  public CThostFtdcQryCombInstrumentGuardField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryCombInstrumentGuardField(), true) {
   }
 
 }

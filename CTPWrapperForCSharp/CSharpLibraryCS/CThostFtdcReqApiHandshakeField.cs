@@ -31,7 +31,7 @@ public class CThostFtdcReqApiHandshakeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcReqApiHandshakeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcReqApiHandshakeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcReqApiHandshakeField : global::System.IDisposable {
 
   public string CryptoKeyVersion {
     set {
-      thosttradeapiPINVOKE.CThostFtdcReqApiHandshakeField_CryptoKeyVersion_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcReqApiHandshakeField_CryptoKeyVersion_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcReqApiHandshakeField_CryptoKeyVersion_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcReqApiHandshakeField_CryptoKeyVersion_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcReqApiHandshakeField() : this(thosttradeapiPINVOKE.new_CThostFtdcReqApiHandshakeField(), true) {
+  public CThostFtdcReqApiHandshakeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcReqApiHandshakeField(), true) {
   }
 
 }

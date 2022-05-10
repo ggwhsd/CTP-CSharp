@@ -31,7 +31,7 @@ public class CThostFtdcLinkManField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcLinkManField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcLinkManField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,125 +41,125 @@ public class CThostFtdcLinkManField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_InvestorID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_InvestorID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PersonType {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_PersonType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcLinkManField_PersonType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char IdentifiedCardType {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardType_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IdentifiedCardNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_IdentifiedCardNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string PersonName {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_PersonName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_PersonName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonName_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Telephone {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_Telephone_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Telephone_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_Telephone_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Telephone_get(swigCPtr);
       return ret;
     } 
   }
 
   public string Address {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_Address_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Address_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_Address_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Address_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ZipCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_ZipCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_ZipCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_ZipCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_ZipCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public int Priority {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_Priority_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Priority_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcLinkManField_Priority_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_Priority_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UOAZipCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_UOAZipCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_UOAZipCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_UOAZipCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_UOAZipCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string PersonFullName {
     set {
-      thostmdapiPINVOKE.CThostFtdcLinkManField_PersonFullName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonFullName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLinkManField_PersonFullName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLinkManField_PersonFullName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcLinkManField() : this(thostmdapiPINVOKE.new_CThostFtdcLinkManField(), true) {
+  public CThostFtdcLinkManField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcLinkManField(), true) {
   }
 
 }

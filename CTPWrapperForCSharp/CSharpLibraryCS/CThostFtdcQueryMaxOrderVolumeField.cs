@@ -31,7 +31,7 @@ public class CThostFtdcQueryMaxOrderVolumeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQueryMaxOrderVolumeField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQueryMaxOrderVolumeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,95 +41,95 @@ public class CThostFtdcQueryMaxOrderVolumeField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char Direction {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_Direction_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_Direction_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_Direction_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_Direction_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OffsetFlag {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_OffsetFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public char HedgeFlag {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_HedgeFlag_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxVolume {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_MaxVolume_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_MaxVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_MaxVolume_get(swigCPtr);
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_MaxVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestUnitID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryMaxOrderVolumeField_InvestUnitID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQueryMaxOrderVolumeField() : this(thosttradeapiPINVOKE.new_CThostFtdcQueryMaxOrderVolumeField(), true) {
+  public CThostFtdcQueryMaxOrderVolumeField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQueryMaxOrderVolumeField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcUserSystemInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcUserSystemInfoField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcUserSystemInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,85 +41,95 @@ public class CThostFtdcUserSystemInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ClientSystemInfoLen {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfoLen_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfoLen_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfoLen_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfoLen_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClientSystemInfo {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientSystemInfo_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ClientPublicIP {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public int ClientIPPort {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientIPPort_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientIPPort_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientIPPort_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientIPPort_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClientLoginTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ClientAppID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientAppID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientAppID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientAppID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientAppID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserSystemInfoField() : this(thostmdapiPINVOKE.new_CThostFtdcUserSystemInfoField(), true) {
+  public string ClientPublicIP {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcUserSystemInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserSystemInfoField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcUserRightsAssignField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcUserRightsAssignField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcUserRightsAssignField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcUserRightsAssignField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DRIdentityID {
     set {
-      thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcUserRightsAssignField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcUserRightsAssignField() : this(thostmdapiPINVOKE.new_CThostFtdcUserRightsAssignField(), true) {
+  public CThostFtdcUserRightsAssignField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserRightsAssignField(), true) {
   }
 
 }

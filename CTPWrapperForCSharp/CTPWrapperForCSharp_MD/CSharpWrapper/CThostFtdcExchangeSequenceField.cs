@@ -31,7 +31,7 @@ public class CThostFtdcExchangeSequenceField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcExchangeSequenceField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcExchangeSequenceField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcExchangeSequenceField : global::System.IDisposable {
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SequenceNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_SequenceNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_SequenceNo_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_SequenceNo_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_SequenceNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public char MarketStatus {
     set {
-      thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_MarketStatus_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_MarketStatus_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcExchangeSequenceField_MarketStatus_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeSequenceField_MarketStatus_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcExchangeSequenceField() : this(thostmdapiPINVOKE.new_CThostFtdcExchangeSequenceField(), true) {
+  public CThostFtdcExchangeSequenceField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcExchangeSequenceField(), true) {
   }
 
 }

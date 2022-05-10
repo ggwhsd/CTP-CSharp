@@ -31,7 +31,7 @@ public class CThostFtdcTransferHeaderField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcTransferHeaderField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcTransferHeaderField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,135 +41,135 @@ public class CThostFtdcTransferHeaderField : global::System.IDisposable {
 
   public string Version {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_Version_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_Version_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_Version_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_Version_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeCode {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeCode_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeCode_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeCode_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeCode_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string TradeSerial {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeSerial_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeSerial_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeSerial_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_TradeSerial_get(swigCPtr);
       return ret;
     } 
   }
 
   public string FutureID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_FutureID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_FutureID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_FutureID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_FutureID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BankBrchID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankBrchID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankBrchID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankBrchID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_BankBrchID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OperNo {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_OperNo_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_OperNo_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_OperNo_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_OperNo_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DeviceID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_DeviceID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_DeviceID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_DeviceID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_DeviceID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string RecordNum {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_RecordNum_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_RecordNum_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_RecordNum_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_RecordNum_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_SessionID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_SessionID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int RequestID {
     set {
-      thostmdapiPINVOKE.CThostFtdcTransferHeaderField_RequestID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_RequestID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcTransferHeaderField_RequestID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcTransferHeaderField_RequestID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcTransferHeaderField() : this(thostmdapiPINVOKE.new_CThostFtdcTransferHeaderField(), true) {
+  public CThostFtdcTransferHeaderField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcTransferHeaderField(), true) {
   }
 
 }

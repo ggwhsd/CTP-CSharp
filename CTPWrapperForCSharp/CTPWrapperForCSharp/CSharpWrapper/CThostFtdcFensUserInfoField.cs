@@ -31,7 +31,7 @@ public class CThostFtdcFensUserInfoField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcFensUserInfoField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcFensUserInfoField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcFensUserInfoField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_UserID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_UserID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char LoginMode {
     set {
-      thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcFensUserInfoField_LoginMode_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcFensUserInfoField() : this(thosttradeapiPINVOKE.new_CThostFtdcFensUserInfoField(), true) {
+  public CThostFtdcFensUserInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcFensUserInfoField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcInstrumentField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcInstrumentField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -39,317 +39,357 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
     }
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentName {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ProductID {
+  public string reserve3 {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve3_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve3_get(swigCPtr);
       return ret;
     } 
   }
 
   public char ProductClass {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ProductClass_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ProductClass_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ProductClass_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ProductClass_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DeliveryYear {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryYear_get(swigCPtr);
       return ret;
     } 
   }
 
   public int DeliveryMonth {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_DeliveryMonth_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxMarketOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinMarketOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MinMarketOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MaxLimitOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int MinLimitOrderVolume {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MinLimitOrderVolume_get(swigCPtr);
       return ret;
     } 
   }
 
   public int VolumeMultiple {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_VolumeMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
   public double PriceTick {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_PriceTick_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PriceTick_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_PriceTick_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PriceTick_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CreateDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_CreateDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_CreateDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_CreateDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_CreateDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string OpenDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_OpenDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_OpenDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_OpenDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_OpenDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExpireDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExpireDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string StartDelivDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_StartDelivDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public string EndDelivDate {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_EndDelivDate_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InstLifePhase {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstLifePhase_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsTrading {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_IsTrading_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_IsTrading_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_IsTrading_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_IsTrading_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionType {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_PositionType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PositionType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_PositionType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PositionType_get(swigCPtr);
       return ret;
     } 
   }
 
   public char PositionDateType {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_PositionDateType_get(swigCPtr);
       return ret;
     } 
   }
 
   public double LongMarginRatio {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_LongMarginRatio_get(swigCPtr);
       return ret;
     } 
   }
 
   public double ShortMarginRatio {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ShortMarginRatio_get(swigCPtr);
       return ret;
     } 
   }
 
   public char MaxMarginSideAlgorithm {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_MaxMarginSideAlgorithm_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string UnderlyingInstrID {
+  public string reserve4 {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve4_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_reserve4_get(swigCPtr);
       return ret;
     } 
   }
 
   public double StrikePrice {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_StrikePrice_get(swigCPtr);
       return ret;
     } 
   }
 
   public char OptionsType {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_OptionsType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_OptionsType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_OptionsType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_OptionsType_get(swigCPtr);
       return ret;
     } 
   }
 
   public double UnderlyingMultiple {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_set(swigCPtr, value);
     } 
     get {
-      double ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_get(swigCPtr);
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingMultiple_get(swigCPtr);
       return ret;
     } 
   }
 
   public char CombinationType {
     set {
-      thostmdapiPINVOKE.CThostFtdcInstrumentField_CombinationType_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_CombinationType_set(swigCPtr, value);
     } 
     get {
-      char ret = thostmdapiPINVOKE.CThostFtdcInstrumentField_CombinationType_get(swigCPtr);
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_CombinationType_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcInstrumentField() : this(thostmdapiPINVOKE.new_CThostFtdcInstrumentField(), true) {
+  public string InstrumentID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ProductID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string UnderlyingInstrID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public CThostFtdcInstrumentField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcInstrumentField(), true) {
   }
 
 }

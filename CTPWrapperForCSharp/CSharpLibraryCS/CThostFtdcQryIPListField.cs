@@ -31,7 +31,7 @@ public class CThostFtdcQryIPListField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcQryIPListField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcQryIPListField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQryIPListField : global::System.IDisposable {
 
   public string IPAddress {
     set {
-      thosttradeapiPINVOKE.CThostFtdcQryIPListField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryIPListField_IPAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcQryIPListField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryIPListField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryIPListField() : this(thosttradeapiPINVOKE.new_CThostFtdcQryIPListField(), true) {
+  public CThostFtdcQryIPListField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQryIPListField(), true) {
   }
 
 }

@@ -31,7 +31,7 @@ public class CThostFtdcRspUserLoginField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcRspUserLoginField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcRspUserLoginField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,135 +41,135 @@ public class CThostFtdcRspUserLoginField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_TradingDay_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_TradingDay_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string LoginTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_LoginTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_LoginTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_LoginTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_LoginTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_UserID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SystemName {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SystemName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SystemName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SystemName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SystemName_get(swigCPtr);
       return ret;
     } 
   }
 
   public int FrontID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_FrontID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_FrontID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SessionID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SessionID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string MaxOrderRef {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_MaxOrderRef_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_MaxOrderRef_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_MaxOrderRef_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_MaxOrderRef_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SHFETime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SHFETime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SHFETime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_SHFETime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_SHFETime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string DCETime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_DCETime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_DCETime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_DCETime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_DCETime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string CZCETime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_CZCETime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_CZCETime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_CZCETime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_CZCETime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string FFEXTime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_FFEXTime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_FFEXTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_FFEXTime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_FFEXTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string INETime {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspUserLoginField_INETime_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_INETime_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspUserLoginField_INETime_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspUserLoginField_INETime_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspUserLoginField() : this(thostmdapiPINVOKE.new_CThostFtdcRspUserLoginField(), true) {
+  public CThostFtdcRspUserLoginField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcRspUserLoginField(), true) {
   }
 
 }

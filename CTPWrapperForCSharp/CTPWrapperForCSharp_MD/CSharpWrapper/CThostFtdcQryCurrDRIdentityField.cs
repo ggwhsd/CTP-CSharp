@@ -31,7 +31,7 @@ public class CThostFtdcQryCurrDRIdentityField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcQryCurrDRIdentityField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcQryCurrDRIdentityField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,15 +41,15 @@ public class CThostFtdcQryCurrDRIdentityField : global::System.IDisposable {
 
   public int DRIdentityID {
     set {
-      thostmdapiPINVOKE.CThostFtdcQryCurrDRIdentityField_DRIdentityID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcQryCurrDRIdentityField_DRIdentityID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcQryCurrDRIdentityField_DRIdentityID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcQryCurrDRIdentityField_DRIdentityID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcQryCurrDRIdentityField() : this(thostmdapiPINVOKE.new_CThostFtdcQryCurrDRIdentityField(), true) {
+  public CThostFtdcQryCurrDRIdentityField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryCurrDRIdentityField(), true) {
   }
 
 }

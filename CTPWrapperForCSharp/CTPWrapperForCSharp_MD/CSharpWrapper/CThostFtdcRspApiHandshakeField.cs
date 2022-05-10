@@ -31,7 +31,7 @@ public class CThostFtdcRspApiHandshakeField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcRspApiHandshakeField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcRspApiHandshakeField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcRspApiHandshakeField : global::System.IDisposable {
 
   public int FrontHandshakeDataLen {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeDataLen_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeDataLen_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeDataLen_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeDataLen_get(swigCPtr);
       return ret;
     } 
   }
 
   public string FrontHandshakeData {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeData_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeData_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeData_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_FrontHandshakeData_get(swigCPtr);
       return ret;
     } 
   }
 
   public int IsApiAuthEnabled {
     set {
-      thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_IsApiAuthEnabled_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_IsApiAuthEnabled_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_IsApiAuthEnabled_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcRspApiHandshakeField_IsApiAuthEnabled_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcRspApiHandshakeField() : this(thostmdapiPINVOKE.new_CThostFtdcRspApiHandshakeField(), true) {
+  public CThostFtdcRspApiHandshakeField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcRspApiHandshakeField(), true) {
   }
 
 }

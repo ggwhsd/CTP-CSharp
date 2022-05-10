@@ -31,7 +31,7 @@ public class CThostFtdcSyncingInstrumentTradingRightField : global::System.IDisp
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcSyncingInstrumentTradingRightField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcSyncingInstrumentTradingRightField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,55 +41,55 @@ public class CThostFtdcSyncingInstrumentTradingRightField : global::System.IDisp
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char InvestorRange {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorRange_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorRange_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorRange_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorRange_get(swigCPtr);
       return ret;
     } 
   }
 
   public string BrokerID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_BrokerID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_BrokerID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InvestorID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_InvestorID_get(swigCPtr);
       return ret;
     } 
   }
 
   public char TradingRight {
     set {
-      thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_TradingRight_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_TradingRight_set(swigCPtr, value);
     } 
     get {
-      char ret = thosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_TradingRight_get(swigCPtr);
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncingInstrumentTradingRightField_TradingRight_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcSyncingInstrumentTradingRightField() : this(thosttradeapiPINVOKE.new_CThostFtdcSyncingInstrumentTradingRightField(), true) {
+  public CThostFtdcSyncingInstrumentTradingRightField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcSyncingInstrumentTradingRightField(), true) {
   }
 
 }

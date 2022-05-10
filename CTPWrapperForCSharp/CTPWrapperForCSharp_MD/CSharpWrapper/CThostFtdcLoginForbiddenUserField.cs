@@ -31,7 +31,7 @@ public class CThostFtdcLoginForbiddenUserField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcLoginForbiddenUserField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcLoginForbiddenUserField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,45 @@ public class CThostFtdcLoginForbiddenUserField : global::System.IDisposable {
 
   public string BrokerID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_BrokerID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string UserID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_UserID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve1 {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
 
   public string IPAddress {
     set {
-      thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLoginForbiddenUserField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcLoginForbiddenUserField() : this(thostmdapiPINVOKE.new_CThostFtdcLoginForbiddenUserField(), true) {
+  public CThostFtdcLoginForbiddenUserField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcLoginForbiddenUserField(), true) {
   }
 
 }

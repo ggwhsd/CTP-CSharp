@@ -31,7 +31,7 @@ public class CThostFtdcForQuoteRspField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thosttradeapiPINVOKE.delete_CThostFtdcForQuoteRspField(swigCPtr);
+          ctpthosttradeapiPINVOKE.delete_CThostFtdcForQuoteRspField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,65 +41,65 @@ public class CThostFtdcForQuoteRspField : global::System.IDisposable {
 
   public string TradingDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_TradingDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_TradingDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_TradingDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_TradingDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string InstrumentID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_InstrumentID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ForQuoteSysID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteSysID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteSysID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteSysID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteSysID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ForQuoteTime {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteTime_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteTime_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteTime_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ForQuoteTime_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ActionDay {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ActionDay_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ActionDay_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ActionDay_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ActionDay_get(swigCPtr);
       return ret;
     } 
   }
 
   public string ExchangeID {
     set {
-      thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ExchangeID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ExchangeID_set(swigCPtr, value);
     } 
     get {
-      string ret = thosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ExchangeID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcForQuoteRspField_ExchangeID_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcForQuoteRspField() : this(thosttradeapiPINVOKE.new_CThostFtdcForQuoteRspField(), true) {
+  public CThostFtdcForQuoteRspField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcForQuoteRspField(), true) {
   }
 
 }

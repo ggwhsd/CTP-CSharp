@@ -31,7 +31,7 @@ public class CThostFtdcLogoutAllField : global::System.IDisposable {
       if (swigCPtr.Handle != global::System.IntPtr.Zero) {
         if (swigCMemOwn) {
           swigCMemOwn = false;
-          thostmdapiPINVOKE.delete_CThostFtdcLogoutAllField(swigCPtr);
+          ctpthostmdapiPINVOKE.delete_CThostFtdcLogoutAllField(swigCPtr);
         }
         swigCPtr = new global::System.Runtime.InteropServices.HandleRef(null, global::System.IntPtr.Zero);
       }
@@ -41,35 +41,35 @@ public class CThostFtdcLogoutAllField : global::System.IDisposable {
 
   public int FrontID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLogoutAllField_FrontID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_FrontID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcLogoutAllField_FrontID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_FrontID_get(swigCPtr);
       return ret;
     } 
   }
 
   public int SessionID {
     set {
-      thostmdapiPINVOKE.CThostFtdcLogoutAllField_SessionID_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_SessionID_set(swigCPtr, value);
     } 
     get {
-      int ret = thostmdapiPINVOKE.CThostFtdcLogoutAllField_SessionID_get(swigCPtr);
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_SessionID_get(swigCPtr);
       return ret;
     } 
   }
 
   public string SystemName {
     set {
-      thostmdapiPINVOKE.CThostFtdcLogoutAllField_SystemName_set(swigCPtr, value);
+      ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_SystemName_set(swigCPtr, value);
     } 
     get {
-      string ret = thostmdapiPINVOKE.CThostFtdcLogoutAllField_SystemName_get(swigCPtr);
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcLogoutAllField_SystemName_get(swigCPtr);
       return ret;
     } 
   }
 
-  public CThostFtdcLogoutAllField() : this(thostmdapiPINVOKE.new_CThostFtdcLogoutAllField(), true) {
+  public CThostFtdcLogoutAllField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcLogoutAllField(), true) {
   }
 
 }
