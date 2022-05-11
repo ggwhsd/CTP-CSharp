@@ -16,22 +16,35 @@ namespace CTP6_5_1ReleaseDemo
         {
             InitializeComponent();
         }
-        CustomMD CTPMD = null;
+        
+		CustomMD CTPMD = null;
+
+		private void ShowMsg(string msg)
+		{
+			//将后台线程的数据显示到前台界面
+			this.Invoke(new Action(()=> { textBox1.Text += $"{DateTime.Now.ToString("yyyy-MM-hh HH:mm:ss.fff")} {msg}\r\n"; }));
+		}
+
         private async void 连接行情ToolStripMenuItem_ClickAsync(object sender, EventArgs e)
         {
 			if (CTPMD == null)
 			{
 				CTPMD = new CustomMD();
+				CTPMD.logMessageCallBack += ShowMsg;
 			}
 			
-			CTPMD.broker ="8080";
+			CTPMD.broker ="4900";
 			CTPMD.userName = "use";
 			CTPMD.password = "password";
+
+		
+
+
 			CTPMD.CreateMDApi();
 
 			if (CTPMD != null && CTPMD.IsLogin == false)
 			{
-				CTPMD.Init("ctp行情前置代码");
+				CTPMD.Init("tcp://xxxxx:xxxxx");
 			}
 			else
 			{
@@ -48,7 +61,7 @@ namespace CTP6_5_1ReleaseDemo
         private void 订阅行情ToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
-			CTPMD?.Subscribe("ag2206");
+			CTPMD?.Subscribe("au2206");
 
 			List<string> instrIDs = new List<string>() { "ag2207","ag2208","CF207"};
 			CTPMD?.Subscribe(instrIDs);

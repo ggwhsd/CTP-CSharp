@@ -27,6 +27,8 @@ namespace CTP6_5_1ReleaseDemo
         public bool IsConnected { get => isConnected; }
         public bool IsLogin { get => isLogin; }
 
+        public Action<string> logMessageCallBack;
+
         public void CreateMDApi()
         {
             if (mdApi == null)
@@ -62,7 +64,7 @@ namespace CTP6_5_1ReleaseDemo
             loginReq.UserID = userName;
             loginReq.Password = password;
             int rt = mdApi.ReqUserLogin(loginReq, nRequest++);
-            Console.WriteLine($"{userName}网络能够连通");
+            logMessageCallBack?.Invoke($"{userName}网络能够连通");
 
         }
 
@@ -86,6 +88,7 @@ namespace CTP6_5_1ReleaseDemo
         ///订阅行情应答
         public override void OnRspSubMarketData(CThostFtdcSpecificInstrumentField pSpecificInstrument, CThostFtdcRspInfoField pRspInfo, int nRequestID, bool bIsLast)
         {
+            logMessageCallBack?.Invoke($"{pSpecificInstrument.InstrumentID} 订阅: {pRspInfo.ErrorMsg}");
 
         }
 
@@ -107,7 +110,8 @@ namespace CTP6_5_1ReleaseDemo
         ///深度行情通知
         public override void OnRtnDepthMarketData(CThostFtdcDepthMarketDataField pDepthMarketData)
         {
-            Console.WriteLine($"{pDepthMarketData.UpdateTime} 收到行情: {pDepthMarketData.InstrumentID} {pDepthMarketData.LastPrice}");
+            logMessageCallBack?.Invoke($"{pDepthMarketData.UpdateTime} 收到行情: {pDepthMarketData.InstrumentID} {pDepthMarketData.LastPrice}");
+
         }
 
         ///询价通知
@@ -138,7 +142,7 @@ namespace CTP6_5_1ReleaseDemo
         {
            
             if(instrIds!=null && instrIds.Count>0)
-                mdApi.SubscribeMarketData(instrIds.ToArray(), 1);
+                mdApi.SubscribeMarketData(instrIds.ToArray(), instrIds.Count);
         }
 
 
