@@ -499,6 +499,26 @@ public class CThostFtdcDepthMarketDataField : global::System.IDisposable {
     } 
   }
 
+  public double BandingUpperPrice {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcDepthMarketDataField_BandingUpperPrice_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcDepthMarketDataField_BandingUpperPrice_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double BandingLowerPrice {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcDepthMarketDataField_BandingLowerPrice_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcDepthMarketDataField_BandingLowerPrice_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcDepthMarketDataField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcDepthMarketDataField(), true) {
   }
 

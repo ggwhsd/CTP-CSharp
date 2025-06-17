@@ -229,6 +229,26 @@ public class CThostFtdcInputOrderActionField : global::System.IDisposable {
     } 
   }
 
+  public string OrderMemo {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInputOrderActionField_OrderMemo_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcInputOrderActionField_OrderMemo_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int SessionReqSeq {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInputOrderActionField_SessionReqSeq_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcInputOrderActionField_SessionReqSeq_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcInputOrderActionField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcInputOrderActionField(), true) {
   }
 

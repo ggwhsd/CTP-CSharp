@@ -179,12 +179,12 @@ public class CThostFtdcExchangeQuoteField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -359,12 +359,12 @@ public class CThostFtdcExchangeQuoteField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -375,6 +375,36 @@ public class CThostFtdcExchangeQuoteField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char TimeCondition {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_TimeCondition_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeQuoteField_TimeCondition_get(swigCPtr);
       return ret;
     } 
   }

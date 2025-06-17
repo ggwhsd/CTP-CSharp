@@ -59,12 +59,12 @@ public class CThostFtdcQryHisOrderField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -125,6 +125,16 @@ public class CThostFtdcQryHisOrderField : global::System.IDisposable {
     } 
     get {
       int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_SettlementID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryHisOrderField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }

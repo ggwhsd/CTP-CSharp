@@ -39,12 +39,12 @@ public class CThostFtdcIPListField : global::System.IDisposable {
     }
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcIPListField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcIPListField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcIPListField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcIPListField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -55,6 +55,16 @@ public class CThostFtdcIPListField : global::System.IDisposable {
     } 
     get {
       int ret = ctpthosttradeapiPINVOKE.CThostFtdcIPListField_IsWhite_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcIPListField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcIPListField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

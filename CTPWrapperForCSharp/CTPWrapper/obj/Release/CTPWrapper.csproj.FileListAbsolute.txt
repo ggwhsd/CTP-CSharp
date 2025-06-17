@@ -1,0 +1,6 @@
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\bin\Release\CTPWrapper.dll
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\bin\Release\CTPWrapper.pdb
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\obj\Release\CTPWrapper.csproj.AssemblyReference.cache
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\obj\Release\CTPWrapper.csproj.CoreCompileInputs.cache
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\obj\Release\CTPWrapper.dll
+C:\Users\a\Desktop\CTP-CSharp\CTPWrapperForCSharp\CTPWrapper\obj\Release\CTPWrapper.pdb

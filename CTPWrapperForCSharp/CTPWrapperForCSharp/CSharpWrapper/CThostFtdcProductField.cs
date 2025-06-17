@@ -39,12 +39,12 @@ public class CThostFtdcProductField : global::System.IDisposable {
     }
   }
 
-  public string ProductID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcProductField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -189,12 +189,12 @@ public class CThostFtdcProductField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeProductID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcProductField_ExchangeProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_ExchangeProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -205,6 +205,46 @@ public class CThostFtdcProductField : global::System.IDisposable {
     } 
     get {
       double ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_UnderlyingMultiple_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ProductID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeProductID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_ExchangeProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_ExchangeProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char OpenLimitControlLevel {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_OpenLimitControlLevel_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_OpenLimitControlLevel_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char OrderFreqControlLevel {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcProductField_OrderFreqControlLevel_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcProductField_OrderFreqControlLevel_get(swigCPtr);
       return ret;
     } 
   }

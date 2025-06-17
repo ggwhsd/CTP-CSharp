@@ -119,12 +119,12 @@ public class CThostFtdcInvestorPositionCombineDetailField : global::System.IDisp
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -219,12 +219,12 @@ public class CThostFtdcInvestorPositionCombineDetailField : global::System.IDisp
     } 
   }
 
-  public string CombInstrumentID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -245,6 +245,26 @@ public class CThostFtdcInvestorPositionCombineDetailField : global::System.IDisp
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_InvestUnitID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string CombInstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorPositionCombineDetailField_CombInstrumentID_get(swigCPtr);
       return ret;
     } 
   }

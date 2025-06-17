@@ -79,12 +79,12 @@ public class CThostFtdcExchangeForQuoteField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -139,12 +139,12 @@ public class CThostFtdcExchangeForQuoteField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -155,6 +155,26 @@ public class CThostFtdcExchangeForQuoteField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeForQuoteField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

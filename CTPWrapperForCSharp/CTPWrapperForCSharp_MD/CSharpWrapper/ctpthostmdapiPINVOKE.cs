@@ -256,6 +256,9 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ICT_CptMngPrdLetter_get")]
   public static extern char THOST_FTDC_ICT_CptMngPrdLetter_get();
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ICT_HKMCTwResidencePermit_get")]
+  public static extern char THOST_FTDC_ICT_HKMCTwResidencePermit_get();
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ICT_UniformSocialCreditCode_get")]
   public static extern char THOST_FTDC_ICT_UniformSocialCreditCode_get();
 
@@ -363,6 +366,9 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FC_DeleteOrder_get")]
   public static extern char THOST_FTDC_FC_DeleteOrder_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FC_ExitEmergency_get")]
+  public static extern char THOST_FTDC_FC_ExitEmergency_get();
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_BFC_ForceUserLogout_get")]
   public static extern char THOST_FTDC_BFC_ForceUserLogout_get();
@@ -841,6 +847,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FCC_PersonDeliv_get")]
   public static extern char THOST_FTDC_FCC_PersonDeliv_get();
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FCC_Notverifycapital_get")]
+  public static extern char THOST_FTDC_FCC_Notverifycapital_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FCC_LocalLackDeposit_get")]
+  public static extern char THOST_FTDC_FCC_LocalLackDeposit_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FCC_LocalViolationNocheck_get")]
+  public static extern char THOST_FTDC_FCC_LocalViolationNocheck_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FCC_LocalViolation_get")]
+  public static extern char THOST_FTDC_FCC_LocalViolation_get();
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ORDT_Normal_get")]
   public static extern char THOST_FTDC_ORDT_Normal_get();
 
@@ -1020,6 +1038,9 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IS_Closed_get")]
   public static extern char THOST_FTDC_IS_Closed_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IS_TransactionProcessing_get")]
+  public static extern char THOST_FTDC_IS_TransactionProcessing_get();
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IER_Automatic_get")]
   public static extern char THOST_FTDC_IER_Automatic_get();
@@ -1263,6 +1284,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TPID_PasswordPeriod_get")]
   public static extern char THOST_FTDC_TPID_PasswordPeriod_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TPID_PwdHistoryCmp_get")]
+  public static extern char THOST_FTDC_TPID_PwdHistoryCmp_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TPID_TranferChkProperty_get")]
+  public static extern char THOST_FTDC_TPID_TranferChkProperty_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TPID_TradeChkPhase_get")]
+  public static extern char THOST_FTDC_TPID_TradeChkPhase_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TPID_TradeChkPriceVol_get")]
+  public static extern char THOST_FTDC_TPID_TradeChkPriceVol_get();
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_FI_SettlementFund_get")]
   public static extern char THOST_FTDC_FI_SettlementFund_get();
@@ -1761,6 +1794,9 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_UET_Other_get")]
   public static extern char THOST_FTDC_UET_Other_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_UET_UpdateTradingAccountPassword_get")]
+  public static extern char THOST_FTDC_UET_UpdateTradingAccountPassword_get();
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ICS_Close_get")]
   public static extern char THOST_FTDC_ICS_Close_get();
@@ -3922,6 +3958,195 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TD_UNTRADE_get")]
   public static extern char THOST_FTDC_TD_UNTRADE_get();
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PS_tradeable_get")]
+  public static extern char THOST_FTDC_PS_tradeable_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PS_untradeable_get")]
+  public static extern char THOST_FTDC_PS_untradeable_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_SDS_Readable_get")]
+  public static extern char THOST_FTDC_SDS_Readable_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_SDS_Reading_get")]
+  public static extern char THOST_FTDC_SDS_Reading_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_SDS_Readend_get")]
+  public static extern char THOST_FTDC_SDS_Readend_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_SDS_OptErr_get")]
+  public static extern char THOST_FTDC_SDS_OptErr_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ACD_Add_get")]
+  public static extern char THOST_FTDC_ACD_Add_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ACD_Del_get")]
+  public static extern char THOST_FTDC_ACD_Del_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ACD_Upd_get")]
+  public static extern char THOST_FTDC_ACD_Upd_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OAC_Balance_get")]
+  public static extern char THOST_FTDC_OAC_Balance_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OAC_OrigFirst_get")]
+  public static extern char THOST_FTDC_OAC_OrigFirst_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PLCL_None_get")]
+  public static extern char THOST_FTDC_PLCL_None_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PLCL_Product_get")]
+  public static extern char THOST_FTDC_PLCL_Product_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PLCL_Inst_get")]
+  public static extern char THOST_FTDC_PLCL_Inst_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OFCL_None_get")]
+  public static extern char THOST_FTDC_OFCL_None_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OFCL_Product_get")]
+  public static extern char THOST_FTDC_OFCL_Product_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OFCL_Inst_get")]
+  public static extern char THOST_FTDC_OFCL_Inst_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EBL_False_get")]
+  public static extern char THOST_FTDC_EBL_False_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EBL_True_get")]
+  public static extern char THOST_FTDC_EBL_True_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ETR_USUAL_get")]
+  public static extern char THOST_FTDC_ETR_USUAL_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ETR_FNSP_get")]
+  public static extern char THOST_FTDC_ETR_FNSP_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ETR_BNSP_get")]
+  public static extern char THOST_FTDC_ETR_BNSP_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ETR_SPOT_get")]
+  public static extern char THOST_FTDC_ETR_SPOT_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EPF_None_get")]
+  public static extern char THOST_FTDC_EPF_None_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EPF_SPBM_get")]
+  public static extern char THOST_FTDC_EPF_SPBM_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EPF_RULE_get")]
+  public static extern char THOST_FTDC_EPF_RULE_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EPF_SPMM_get")]
+  public static extern char THOST_FTDC_EPF_SPMM_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EPF_RCAMS_get")]
+  public static extern char THOST_FTDC_EPF_RCAMS_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_WDPID_CashIn_get")]
+  public static extern char THOST_FTDC_WDPID_CashIn_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ITR_CloseOnly_get")]
+  public static extern char THOST_FTDC_ITR_CloseOnly_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ITR_Forbidden_get")]
+  public static extern char THOST_FTDC_ITR_Forbidden_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IMID_BothSide_get")]
+  public static extern char THOST_FTDC_IMID_BothSide_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IMID_MMSA_get")]
+  public static extern char THOST_FTDC_IMID_MMSA_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_IMID_SPMM_get")]
+  public static extern char THOST_FTDC_IMID_SPMM_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ERComb_BUC_get")]
+  public static extern char THOST_FTDC_ERComb_BUC_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ERComb_BEC_get")]
+  public static extern char THOST_FTDC_ERComb_BEC_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ERComb_BEP_get")]
+  public static extern char THOST_FTDC_ERComb_BEP_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ERComb_BUP_get")]
+  public static extern char THOST_FTDC_ERComb_BUP_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ERComb_CAS_get")]
+  public static extern char THOST_FTDC_ERComb_CAS_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EET_None_get")]
+  public static extern char THOST_FTDC_EET_None_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EET_SPBM_AddOnHedge_get")]
+  public static extern char THOST_FTDC_EET_SPBM_AddOnHedge_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EIC_Usual_get")]
+  public static extern char THOST_FTDC_EIC_Usual_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EIC_Delivery_get")]
+  public static extern char THOST_FTDC_EIC_Delivery_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_EIC_NonComb_get")]
+  public static extern char THOST_FTDC_EIC_NonComb_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PCF_None_get")]
+  public static extern char THOST_FTDC_PCF_None_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PCF_OnlyFrozen_get")]
+  public static extern char THOST_FTDC_PCF_OnlyFrozen_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PCF_PositionChange_get")]
+  public static extern char THOST_FTDC_PCF_PositionChange_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PRS_Init_get")]
+  public static extern char THOST_FTDC_PRS_Init_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PRS_Sync_get")]
+  public static extern char THOST_FTDC_PRS_Sync_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PRS_UserUpd_get")]
+  public static extern char THOST_FTDC_PRS_UserUpd_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PRS_SuperUserUpd_get")]
+  public static extern char THOST_FTDC_PRS_SuperUserUpd_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_PRS_SecUpd_get")]
+  public static extern char THOST_FTDC_PRS_SecUpd_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ASM_Trade_get")]
+  public static extern char THOST_FTDC_ASM_Trade_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ASM_MarketData_get")]
+  public static extern char THOST_FTDC_ASM_MarketData_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ASM_Other_get")]
+  public static extern char THOST_FTDC_ASM_Other_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ADV_V4_get")]
+  public static extern char THOST_FTDC_ADV_V4_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_ADV_V6_get")]
+  public static extern char THOST_FTDC_ADV_V6_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TGQS_QryIdle_get")]
+  public static extern char THOST_FTDC_TGQS_QryIdle_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_TGQS_QryBusy_get")]
+  public static extern char THOST_FTDC_TGQS_QryBusy_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OT_OPT_OFFSET_get")]
+  public static extern char THOST_FTDC_OT_OPT_OFFSET_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OT_FUT_OFFSET_get")]
+  public static extern char THOST_FTDC_OT_FUT_OFFSET_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OT_EXEC_OFFSET_get")]
+  public static extern char THOST_FTDC_OT_EXEC_OFFSET_get();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_THOST_FTDC_OT_PERFORM_OFFSET_get")]
+  public static extern char THOST_FTDC_OT_PERFORM_OFFSET_get();
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDisseminationField_SequenceSeries_set")]
   public static extern void CThostFtdcDisseminationField_SequenceSeries_set(global::System.Runtime.InteropServices.HandleRef jarg1, short jarg2);
 
@@ -4101,6 +4326,30 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_INETime_get")]
   public static extern string CThostFtdcRspUserLoginField_INETime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_SysVersion_set")]
+  public static extern void CThostFtdcRspUserLoginField_SysVersion_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_SysVersion_get")]
+  public static extern string CThostFtdcRspUserLoginField_SysVersion_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_GFEXTime_set")]
+  public static extern void CThostFtdcRspUserLoginField_GFEXTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_GFEXTime_get")]
+  public static extern string CThostFtdcRspUserLoginField_GFEXTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_LoginDRIdentityID_set")]
+  public static extern void CThostFtdcRspUserLoginField_LoginDRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_LoginDRIdentityID_get")]
+  public static extern int CThostFtdcRspUserLoginField_LoginDRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_UserDRIdentityID_set")]
+  public static extern void CThostFtdcRspUserLoginField_UserDRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspUserLoginField_UserDRIdentityID_get")]
+  public static extern int CThostFtdcRspUserLoginField_UserDRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRspUserLoginField")]
   public static extern global::System.IntPtr new_CThostFtdcRspUserLoginField();
@@ -4954,6 +5203,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcProductField_ExchangeProductID_get")]
   public static extern string CThostFtdcProductField_ExchangeProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcProductField_OpenLimitControlLevel_set")]
+  public static extern void CThostFtdcProductField_OpenLimitControlLevel_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcProductField_OpenLimitControlLevel_get")]
+  public static extern char CThostFtdcProductField_OpenLimitControlLevel_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcProductField_OrderFreqControlLevel_set")]
+  public static extern void CThostFtdcProductField_OrderFreqControlLevel_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcProductField_OrderFreqControlLevel_get")]
+  public static extern char CThostFtdcProductField_OrderFreqControlLevel_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcProductField")]
   public static extern global::System.IntPtr new_CThostFtdcProductField();
 
@@ -5242,6 +5503,24 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_BrokerID_get")]
   public static extern string CThostFtdcTraderField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_OrderCancelAlg_set")]
+  public static extern void CThostFtdcTraderField_OrderCancelAlg_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_OrderCancelAlg_get")]
+  public static extern char CThostFtdcTraderField_OrderCancelAlg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_TradeInstallCount_set")]
+  public static extern void CThostFtdcTraderField_TradeInstallCount_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_TradeInstallCount_get")]
+  public static extern int CThostFtdcTraderField_TradeInstallCount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_MDInstallCount_set")]
+  public static extern void CThostFtdcTraderField_MDInstallCount_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderField_MDInstallCount_get")]
+  public static extern int CThostFtdcTraderField_MDInstallCount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTraderField")]
   public static extern global::System.IntPtr new_CThostFtdcTraderField();
 
@@ -5325,6 +5604,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorField_MarginModelID_get")]
   public static extern string CThostFtdcInvestorField_MarginModelID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorField_IsOrderFreq_set")]
+  public static extern void CThostFtdcInvestorField_IsOrderFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorField_IsOrderFreq_get")]
+  public static extern char CThostFtdcInvestorField_IsOrderFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorField_IsOpenVolLimit_set")]
+  public static extern void CThostFtdcInvestorField_IsOpenVolLimit_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorField_IsOpenVolLimit_get")]
+  public static extern char CThostFtdcInvestorField_IsOpenVolLimit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorField")]
   public static extern global::System.IntPtr new_CThostFtdcInvestorField();
@@ -6550,6 +6841,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDepthMarketDataField_ExchangeInstID_get")]
   public static extern string CThostFtdcDepthMarketDataField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDepthMarketDataField_BandingUpperPrice_set")]
+  public static extern void CThostFtdcDepthMarketDataField_BandingUpperPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDepthMarketDataField_BandingUpperPrice_get")]
+  public static extern double CThostFtdcDepthMarketDataField_BandingUpperPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDepthMarketDataField_BandingLowerPrice_set")]
+  public static extern void CThostFtdcDepthMarketDataField_BandingLowerPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcDepthMarketDataField_BandingLowerPrice_get")]
+  public static extern double CThostFtdcDepthMarketDataField_BandingLowerPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcDepthMarketDataField")]
   public static extern global::System.IntPtr new_CThostFtdcDepthMarketDataField();
 
@@ -6831,6 +7134,12 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderOfferField_MaxOrderMessageReference_get")]
   public static extern string CThostFtdcTraderOfferField_MaxOrderMessageReference_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderOfferField_OrderCancelAlg_set")]
+  public static extern void CThostFtdcTraderOfferField_OrderCancelAlg_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderOfferField_OrderCancelAlg_get")]
+  public static extern char CThostFtdcTraderOfferField_OrderCancelAlg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTraderOfferField")]
   public static extern global::System.IntPtr new_CThostFtdcTraderOfferField();
@@ -7660,6 +7969,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderField_IPAddress_get")]
   public static extern string CThostFtdcInputOrderField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderField_OrderMemo_set")]
+  public static extern void CThostFtdcInputOrderField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderField_OrderMemo_get")]
+  public static extern string CThostFtdcInputOrderField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderField_SessionReqSeq_set")]
+  public static extern void CThostFtdcInputOrderField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderField_SessionReqSeq_get")]
+  public static extern int CThostFtdcInputOrderField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInputOrderField")]
   public static extern global::System.IntPtr new_CThostFtdcInputOrderField();
 
@@ -8061,6 +8382,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderField_IPAddress_get")]
   public static extern string CThostFtdcOrderField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderField_OrderMemo_set")]
+  public static extern void CThostFtdcOrderField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderField_OrderMemo_get")]
+  public static extern string CThostFtdcOrderField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderField_SessionReqSeq_set")]
+  public static extern void CThostFtdcOrderField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderField_SessionReqSeq_get")]
+  public static extern int CThostFtdcOrderField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcOrderField")]
   public static extern global::System.IntPtr new_CThostFtdcOrderField();
@@ -8518,6 +8851,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderActionField_IPAddress_get")]
   public static extern string CThostFtdcInputOrderActionField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderActionField_OrderMemo_set")]
+  public static extern void CThostFtdcInputOrderActionField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderActionField_OrderMemo_get")]
+  public static extern string CThostFtdcInputOrderActionField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderActionField_SessionReqSeq_set")]
+  public static extern void CThostFtdcInputOrderActionField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOrderActionField_SessionReqSeq_get")]
+  public static extern int CThostFtdcInputOrderActionField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInputOrderActionField")]
   public static extern global::System.IntPtr new_CThostFtdcInputOrderActionField();
 
@@ -8709,6 +9054,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderActionField_IPAddress_get")]
   public static extern string CThostFtdcOrderActionField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderActionField_OrderMemo_set")]
+  public static extern void CThostFtdcOrderActionField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderActionField_OrderMemo_get")]
+  public static extern string CThostFtdcOrderActionField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderActionField_SessionReqSeq_set")]
+  public static extern void CThostFtdcOrderActionField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOrderActionField_SessionReqSeq_get")]
+  public static extern int CThostFtdcOrderActionField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcOrderActionField")]
   public static extern global::System.IntPtr new_CThostFtdcOrderActionField();
@@ -9478,6 +9835,24 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_CurrencyID_get")]
   public static extern string CThostFtdcSyncDepositField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_IsFromSopt_set")]
+  public static extern void CThostFtdcSyncDepositField_IsFromSopt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_IsFromSopt_get")]
+  public static extern int CThostFtdcSyncDepositField_IsFromSopt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_TradingPassword_set")]
+  public static extern void CThostFtdcSyncDepositField_TradingPassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_TradingPassword_get")]
+  public static extern string CThostFtdcSyncDepositField_TradingPassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_IsSecAgentTranfer_set")]
+  public static extern void CThostFtdcSyncDepositField_IsSecAgentTranfer_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDepositField_IsSecAgentTranfer_get")]
+  public static extern int CThostFtdcSyncDepositField_IsSecAgentTranfer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDepositField")]
   public static extern global::System.IntPtr new_CThostFtdcSyncDepositField();
 
@@ -9615,6 +9990,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncingInvestorField_MarginModelID_get")]
   public static extern string CThostFtdcSyncingInvestorField_MarginModelID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncingInvestorField_IsOrderFreq_set")]
+  public static extern void CThostFtdcSyncingInvestorField_IsOrderFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncingInvestorField_IsOrderFreq_get")]
+  public static extern char CThostFtdcSyncingInvestorField_IsOrderFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncingInvestorField_IsOpenVolLimit_set")]
+  public static extern void CThostFtdcSyncingInvestorField_IsOpenVolLimit_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncingInvestorField_IsOpenVolLimit_get")]
+  public static extern char CThostFtdcSyncingInvestorField_IsOpenVolLimit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncingInvestorField")]
   public static extern global::System.IntPtr new_CThostFtdcSyncingInvestorField();
@@ -11193,6 +11580,12 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryDepthMarketDataField_InstrumentID_get")]
   public static extern string CThostFtdcQryDepthMarketDataField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryDepthMarketDataField_ProductClass_set")]
+  public static extern void CThostFtdcQryDepthMarketDataField_ProductClass_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryDepthMarketDataField_ProductClass_get")]
+  public static extern char CThostFtdcQryDepthMarketDataField_ProductClass_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryDepthMarketDataField")]
   public static extern global::System.IntPtr new_CThostFtdcQryDepthMarketDataField();
@@ -14116,6 +14509,30 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_IPAddress_get")]
   public static extern string CThostFtdcInputQuoteField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_ReplaceSysID_set")]
+  public static extern void CThostFtdcInputQuoteField_ReplaceSysID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_ReplaceSysID_get")]
+  public static extern string CThostFtdcInputQuoteField_ReplaceSysID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_TimeCondition_set")]
+  public static extern void CThostFtdcInputQuoteField_TimeCondition_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_TimeCondition_get")]
+  public static extern char CThostFtdcInputQuoteField_TimeCondition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_OrderMemo_set")]
+  public static extern void CThostFtdcInputQuoteField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_OrderMemo_get")]
+  public static extern string CThostFtdcInputQuoteField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_SessionReqSeq_set")]
+  public static extern void CThostFtdcInputQuoteField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteField_SessionReqSeq_get")]
+  public static extern int CThostFtdcInputQuoteField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInputQuoteField")]
   public static extern global::System.IntPtr new_CThostFtdcInputQuoteField();
 
@@ -14229,6 +14646,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteActionField_IPAddress_get")]
   public static extern string CThostFtdcInputQuoteActionField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteActionField_OrderMemo_set")]
+  public static extern void CThostFtdcInputQuoteActionField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteActionField_OrderMemo_get")]
+  public static extern string CThostFtdcInputQuoteActionField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteActionField_SessionReqSeq_set")]
+  public static extern void CThostFtdcInputQuoteActionField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputQuoteActionField_SessionReqSeq_get")]
+  public static extern int CThostFtdcInputQuoteActionField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInputQuoteActionField")]
   public static extern global::System.IntPtr new_CThostFtdcInputQuoteActionField();
@@ -14554,6 +14983,30 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_IPAddress_get")]
   public static extern string CThostFtdcQuoteField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_ReplaceSysID_set")]
+  public static extern void CThostFtdcQuoteField_ReplaceSysID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_ReplaceSysID_get")]
+  public static extern string CThostFtdcQuoteField_ReplaceSysID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_TimeCondition_set")]
+  public static extern void CThostFtdcQuoteField_TimeCondition_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_TimeCondition_get")]
+  public static extern char CThostFtdcQuoteField_TimeCondition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_OrderMemo_set")]
+  public static extern void CThostFtdcQuoteField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_OrderMemo_get")]
+  public static extern string CThostFtdcQuoteField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_SessionReqSeq_set")]
+  public static extern void CThostFtdcQuoteField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteField_SessionReqSeq_get")]
+  public static extern int CThostFtdcQuoteField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQuoteField")]
   public static extern global::System.IntPtr new_CThostFtdcQuoteField();
 
@@ -14733,6 +15186,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteActionField_IPAddress_get")]
   public static extern string CThostFtdcQuoteActionField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteActionField_OrderMemo_set")]
+  public static extern void CThostFtdcQuoteActionField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteActionField_OrderMemo_get")]
+  public static extern string CThostFtdcQuoteActionField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteActionField_SessionReqSeq_set")]
+  public static extern void CThostFtdcQuoteActionField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQuoteActionField_SessionReqSeq_get")]
+  public static extern int CThostFtdcQuoteActionField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQuoteActionField")]
   public static extern global::System.IntPtr new_CThostFtdcQuoteActionField();
@@ -15015,6 +15480,12 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcExchangeQuoteField_IPAddress_get")]
   public static extern string CThostFtdcExchangeQuoteField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcExchangeQuoteField_TimeCondition_set")]
+  public static extern void CThostFtdcExchangeQuoteField_TimeCondition_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcExchangeQuoteField_TimeCondition_get")]
+  public static extern char CThostFtdcExchangeQuoteField_TimeCondition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcExchangeQuoteField")]
   public static extern global::System.IntPtr new_CThostFtdcExchangeQuoteField();
@@ -16731,6 +17202,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInstrumentOrderCommRateField_InstrumentID_get")]
   public static extern string CThostFtdcInstrumentOrderCommRateField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_set")]
+  public static extern void CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_get")]
+  public static extern double CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_set")]
+  public static extern void CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_get")]
+  public static extern double CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInstrumentOrderCommRateField")]
   public static extern global::System.IntPtr new_CThostFtdcInstrumentOrderCommRateField();
@@ -18718,6 +19201,24 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcMarketDataUpdateTimeField")]
   public static extern void delete_CThostFtdcMarketDataUpdateTimeField(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMarketDataBandingPriceField_BandingUpperPrice_set")]
+  public static extern void CThostFtdcMarketDataBandingPriceField_BandingUpperPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMarketDataBandingPriceField_BandingUpperPrice_get")]
+  public static extern double CThostFtdcMarketDataBandingPriceField_BandingUpperPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMarketDataBandingPriceField_BandingLowerPrice_set")]
+  public static extern void CThostFtdcMarketDataBandingPriceField_BandingLowerPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMarketDataBandingPriceField_BandingLowerPrice_get")]
+  public static extern double CThostFtdcMarketDataBandingPriceField_BandingLowerPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcMarketDataBandingPriceField")]
+  public static extern global::System.IntPtr new_CThostFtdcMarketDataBandingPriceField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcMarketDataBandingPriceField")]
+  public static extern void delete_CThostFtdcMarketDataBandingPriceField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMarketDataExchangeField_ExchangeID_set")]
   public static extern void CThostFtdcMarketDataExchangeField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
 
@@ -19360,6 +19861,12 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMDTraderOfferField_MaxOrderMessageReference_get")]
   public static extern string CThostFtdcMDTraderOfferField_MaxOrderMessageReference_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMDTraderOfferField_OrderCancelAlg_set")]
+  public static extern void CThostFtdcMDTraderOfferField_OrderCancelAlg_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMDTraderOfferField_OrderCancelAlg_get")]
+  public static extern char CThostFtdcMDTraderOfferField_OrderCancelAlg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcMDTraderOfferField")]
   public static extern global::System.IntPtr new_CThostFtdcMDTraderOfferField();
 
@@ -19929,6 +20436,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcBrokerUserEventField_InstrumentID_get")]
   public static extern string CThostFtdcBrokerUserEventField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcBrokerUserEventField_DRIdentityID_set")]
+  public static extern void CThostFtdcBrokerUserEventField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcBrokerUserEventField_DRIdentityID_get")]
+  public static extern int CThostFtdcBrokerUserEventField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcBrokerUserEventField_TradingDay_set")]
+  public static extern void CThostFtdcBrokerUserEventField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcBrokerUserEventField_TradingDay_get")]
+  public static extern string CThostFtdcBrokerUserEventField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcBrokerUserEventField")]
   public static extern global::System.IntPtr new_CThostFtdcBrokerUserEventField();
@@ -21178,6 +21697,18 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderField_IPAddress_get")]
   public static extern string CThostFtdcErrOrderField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderField_OrderMemo_set")]
+  public static extern void CThostFtdcErrOrderField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderField_OrderMemo_get")]
+  public static extern string CThostFtdcErrOrderField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderField_SessionReqSeq_set")]
+  public static extern void CThostFtdcErrOrderField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderField_SessionReqSeq_get")]
+  public static extern int CThostFtdcErrOrderField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcErrOrderField")]
   public static extern global::System.IntPtr new_CThostFtdcErrOrderField();
 
@@ -21813,6 +22344,18 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderActionField_IPAddress_get")]
   public static extern string CThostFtdcErrOrderActionField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderActionField_OrderMemo_set")]
+  public static extern void CThostFtdcErrOrderActionField_OrderMemo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderActionField_OrderMemo_get")]
+  public static extern string CThostFtdcErrOrderActionField_OrderMemo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderActionField_SessionReqSeq_set")]
+  public static extern void CThostFtdcErrOrderActionField_SessionReqSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcErrOrderActionField_SessionReqSeq_get")]
+  public static extern int CThostFtdcErrOrderActionField_SessionReqSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcErrOrderActionField")]
   public static extern global::System.IntPtr new_CThostFtdcErrOrderActionField();
@@ -30430,17 +30973,17 @@ class ctpthostmdapiPINVOKE {
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQueryFreqField_QueryFreq_get")]
   public static extern int CThostFtdcQueryFreqField_QueryFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQueryFreqField_FTDPkgFreq_set")]
+  public static extern void CThostFtdcQueryFreqField_FTDPkgFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQueryFreqField_FTDPkgFreq_get")]
+  public static extern int CThostFtdcQueryFreqField_FTDPkgFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQueryFreqField")]
   public static extern global::System.IntPtr new_CThostFtdcQueryFreqField();
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQueryFreqField")]
   public static extern void delete_CThostFtdcQueryFreqField(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAuthForbiddenIPField_reserve1_set")]
-  public static extern void CThostFtdcAuthForbiddenIPField_reserve1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAuthForbiddenIPField_reserve1_get")]
-  public static extern string CThostFtdcAuthForbiddenIPField_reserve1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAuthForbiddenIPField_IPAddress_set")]
   public static extern void CThostFtdcAuthForbiddenIPField_IPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
@@ -30453,12 +30996,6 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcAuthForbiddenIPField")]
   public static extern void delete_CThostFtdcAuthForbiddenIPField(global::System.Runtime.InteropServices.HandleRef jarg1);
-
-  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryAuthForbiddenIPField_reserve1_set")]
-  public static extern void CThostFtdcQryAuthForbiddenIPField_reserve1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
-
-  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryAuthForbiddenIPField_reserve1_get")]
-  public static extern string CThostFtdcQryAuthForbiddenIPField_reserve1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryAuthForbiddenIPField_IPAddress_set")]
   public static extern void CThostFtdcQryAuthForbiddenIPField_IPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
@@ -30567,6 +31104,12 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserSystemInfoField_ClientPublicIP_get")]
   public static extern string CThostFtdcUserSystemInfoField_ClientPublicIP_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserSystemInfoField_ClientLoginRemark_set")]
+  public static extern void CThostFtdcUserSystemInfoField_ClientLoginRemark_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserSystemInfoField_ClientLoginRemark_get")]
+  public static extern string CThostFtdcUserSystemInfoField_ClientLoginRemark_get(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcUserSystemInfoField")]
   public static extern global::System.IntPtr new_CThostFtdcUserSystemInfoField();
@@ -30717,6 +31260,8508 @@ class ctpthostmdapiPINVOKE {
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcCombPromotionParamField")]
   public static extern void delete_CThostFtdcCombPromotionParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_TradingDay_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_TradingDay_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_BrokerID_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_BrokerID_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_UserID_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_UserID_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_Password_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_Password_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_UserProductInfo_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_UserProductInfo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_UserProductInfo_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_UserProductInfo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_InterfaceProductInfo_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_InterfaceProductInfo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_InterfaceProductInfo_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_InterfaceProductInfo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ProtocolInfo_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_ProtocolInfo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ProtocolInfo_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_ProtocolInfo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_MacAddress_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_MacAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_MacAddress_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_MacAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_OneTimePassword_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_OneTimePassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_OneTimePassword_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_OneTimePassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_reserve1_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_reserve1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_reserve1_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_reserve1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_LoginRemark_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_LoginRemark_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_LoginRemark_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_LoginRemark_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ClientIPPort_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_ClientIPPort_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ClientIPPort_get")]
+  public static extern int CThostFtdcReqUserLoginSMField_ClientIPPort_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ClientIPAddress_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_ClientIPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_ClientIPAddress_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_ClientIPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_BrokerName_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_BrokerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_BrokerName_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_BrokerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_AuthCode_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_AuthCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_AuthCode_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_AuthCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_AppID_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_AppID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_AppID_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_AppID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_PIN_set")]
+  public static extern void CThostFtdcReqUserLoginSMField_PIN_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqUserLoginSMField_PIN_get")]
+  public static extern string CThostFtdcReqUserLoginSMField_PIN_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcReqUserLoginSMField")]
+  public static extern global::System.IntPtr new_CThostFtdcReqUserLoginSMField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcReqUserLoginSMField")]
+  public static extern void delete_CThostFtdcReqUserLoginSMField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_BrokerID_set")]
+  public static extern void CThostFtdcQryRiskSettleInvstPositionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_BrokerID_get")]
+  public static extern string CThostFtdcQryRiskSettleInvstPositionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_InvestorID_set")]
+  public static extern void CThostFtdcQryRiskSettleInvstPositionField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_InvestorID_get")]
+  public static extern string CThostFtdcQryRiskSettleInvstPositionField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_InstrumentID_set")]
+  public static extern void CThostFtdcQryRiskSettleInvstPositionField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleInvstPositionField_InstrumentID_get")]
+  public static extern string CThostFtdcQryRiskSettleInvstPositionField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRiskSettleInvstPositionField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRiskSettleInvstPositionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRiskSettleInvstPositionField")]
+  public static extern void delete_CThostFtdcQryRiskSettleInvstPositionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleProductStatusField_ProductID_set")]
+  public static extern void CThostFtdcQryRiskSettleProductStatusField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRiskSettleProductStatusField_ProductID_get")]
+  public static extern string CThostFtdcQryRiskSettleProductStatusField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRiskSettleProductStatusField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRiskSettleProductStatusField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRiskSettleProductStatusField")]
+  public static extern void delete_CThostFtdcQryRiskSettleProductStatusField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InstrumentID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InstrumentID_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_BrokerID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_BrokerID_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InvestorID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InvestorID_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PosiDirection_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PosiDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PosiDirection_get")]
+  public static extern char CThostFtdcRiskSettleInvstPositionField_PosiDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_HedgeFlag_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_HedgeFlag_get")]
+  public static extern char CThostFtdcRiskSettleInvstPositionField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionDate_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PositionDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionDate_get")]
+  public static extern char CThostFtdcRiskSettleInvstPositionField_PositionDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_YdPosition_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_YdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_YdPosition_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_YdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_Position_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_Position_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_Position_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_Position_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_LongFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_LongFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_LongFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_LongFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ShortFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_ShortFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ShortFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_ShortFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_LongFrozenAmount_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_LongFrozenAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_LongFrozenAmount_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_LongFrozenAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ShortFrozenAmount_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_ShortFrozenAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ShortFrozenAmount_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_ShortFrozenAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenVolume_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_OpenVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenVolume_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_OpenVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseVolume_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CloseVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseVolume_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_CloseVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenAmount_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_OpenAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenAmount_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_OpenAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseAmount_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CloseAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseAmount_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_CloseAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionCost_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PositionCost_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionCost_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_PositionCost_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PreMargin_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PreMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PreMargin_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_PreMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_UseMargin_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_UseMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_UseMargin_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_UseMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenMargin_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_FrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenMargin_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_FrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenCash_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_FrozenCash_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenCash_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_FrozenCash_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenCommission_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_FrozenCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_FrozenCommission_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_FrozenCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CashIn_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CashIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CashIn_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_CashIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_Commission_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_Commission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_Commission_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_Commission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfit_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CloseProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfit_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_CloseProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionProfit_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PositionProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionProfit_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_PositionProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_SettlementPrice_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_SettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_SettlementPrice_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_SettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TradingDay_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TradingDay_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_SettlementID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_SettlementID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_SettlementID_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_SettlementID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenCost_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_OpenCost_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_OpenCost_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_OpenCost_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ExchangeMargin_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_ExchangeMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ExchangeMargin_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_ExchangeMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombPosition_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CombPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombPosition_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_CombPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombLongFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CombLongFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombLongFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_CombLongFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombShortFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CombShortFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CombShortFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_CombShortFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfitByDate_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CloseProfitByDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfitByDate_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_CloseProfitByDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfitByTrade_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_CloseProfitByTrade_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_CloseProfitByTrade_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_CloseProfitByTrade_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TodayPosition_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_TodayPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TodayPosition_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_TodayPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_MarginRateByMoney_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_MarginRateByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_MarginRateByMoney_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_MarginRateByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_MarginRateByVolume_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_MarginRateByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_MarginRateByVolume_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_MarginRateByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_StrikeFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_StrikeFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_StrikeFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_StrikeFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_StrikeFrozenAmount_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_StrikeFrozenAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_StrikeFrozenAmount_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_StrikeFrozenAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_AbandonFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_AbandonFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_AbandonFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_AbandonFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ExchangeID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_ExchangeID_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_YdStrikeFrozen_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_YdStrikeFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_YdStrikeFrozen_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_YdStrikeFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InvestUnitID_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_InvestUnitID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_InvestUnitID_get")]
+  public static extern string CThostFtdcRiskSettleInvstPositionField_InvestUnitID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionCostOffset_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_PositionCostOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_PositionCostOffset_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_PositionCostOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TasPosition_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_TasPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TasPosition_get")]
+  public static extern int CThostFtdcRiskSettleInvstPositionField_TasPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TasPositionCost_set")]
+  public static extern void CThostFtdcRiskSettleInvstPositionField_TasPositionCost_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleInvstPositionField_TasPositionCost_get")]
+  public static extern double CThostFtdcRiskSettleInvstPositionField_TasPositionCost_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRiskSettleInvstPositionField")]
+  public static extern global::System.IntPtr new_CThostFtdcRiskSettleInvstPositionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRiskSettleInvstPositionField")]
+  public static extern void delete_CThostFtdcRiskSettleInvstPositionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ExchangeID_set")]
+  public static extern void CThostFtdcRiskSettleProductStatusField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ExchangeID_get")]
+  public static extern string CThostFtdcRiskSettleProductStatusField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ProductID_set")]
+  public static extern void CThostFtdcRiskSettleProductStatusField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ProductID_get")]
+  public static extern string CThostFtdcRiskSettleProductStatusField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ProductStatus_set")]
+  public static extern void CThostFtdcRiskSettleProductStatusField_ProductStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskSettleProductStatusField_ProductStatus_get")]
+  public static extern char CThostFtdcRiskSettleProductStatusField_ProductStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRiskSettleProductStatusField")]
+  public static extern global::System.IntPtr new_CThostFtdcRiskSettleProductStatusField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRiskSettleProductStatusField")]
+  public static extern void delete_CThostFtdcRiskSettleProductStatusField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInfoField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInfoField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDeltaStatus_set")]
+  public static extern void CThostFtdcSyncDeltaInfoField_SyncDeltaStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDeltaStatus_get")]
+  public static extern char CThostFtdcSyncDeltaInfoField_SyncDeltaStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDescription_set")]
+  public static extern void CThostFtdcSyncDeltaInfoField_SyncDescription_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_SyncDescription_get")]
+  public static extern string CThostFtdcSyncDeltaInfoField_SyncDescription_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_IsOnlyTrdDelta_set")]
+  public static extern void CThostFtdcSyncDeltaInfoField_IsOnlyTrdDelta_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInfoField_IsOnlyTrdDelta_get")]
+  public static extern int CThostFtdcSyncDeltaInfoField_IsOnlyTrdDelta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInfoField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInfoField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInfoField")]
+  public static extern void delete_CThostFtdcSyncDeltaInfoField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaProductStatusField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaProductStatusField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaProductStatusField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaProductStatusField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaProductStatusField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaProductStatusField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ProductStatus_set")]
+  public static extern void CThostFtdcSyncDeltaProductStatusField_ProductStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductStatusField_ProductStatus_get")]
+  public static extern char CThostFtdcSyncDeltaProductStatusField_ProductStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaProductStatusField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaProductStatusField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaProductStatusField")]
+  public static extern void delete_CThostFtdcSyncDeltaProductStatusField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosDtlField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Direction_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Direction_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosDtlField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_OpenDate_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_OpenDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_OpenDate_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_OpenDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_TradeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_TradeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Volume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Volume_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosDtlField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_OpenPrice_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_OpenPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_OpenPrice_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_OpenPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SettlementID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_SettlementID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SettlementID_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosDtlField_SettlementID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradeType_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_TradeType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TradeType_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosDtlField_TradeType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CombInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CombInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosDtlField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByDate_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByDate_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByTrade_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByTrade_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByTrade_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_CloseProfitByTrade_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByDate_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByDate_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByTrade_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByTrade_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByTrade_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_PositionProfitByTrade_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Margin_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_Margin_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_MarginRateByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_LastSettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_LastSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_LastSettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_LastSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_SettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_SettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_CloseVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseVolume_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosDtlField_CloseVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseAmount_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_CloseAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_CloseAmount_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosDtlField_CloseAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TimeFirstVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_TimeFirstVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_TimeFirstVolume_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosDtlField_TimeFirstVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SpecPosiType_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_SpecPosiType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SpecPosiType_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosDtlField_SpecPosiType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosDtlField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosDtlField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosDtlField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosDtlField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvstPosDtlField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvstPosDtlField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvstPosDtlField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvstPosDtlField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_OpenDate_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_OpenDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_OpenDate_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_OpenDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_SettlementID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_SettlementID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_SettlementID_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_SettlementID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ComTradeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_ComTradeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ComTradeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_ComTradeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_TradeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_TradeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstPosCombDtlField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosCombDtlField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_Direction_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_Direction_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosCombDtlField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TotalAmt_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_TotalAmt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TotalAmt_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_TotalAmt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_Margin_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_Margin_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosCombDtlField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosCombDtlField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstPosCombDtlField_MarginRateByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_LegID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_LegID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_LegID_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_LegID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_LegMultiple_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_LegMultiple_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_LegMultiple_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_LegMultiple_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradeGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_TradeGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_TradeGroupID_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_TradeGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvstPosCombDtlField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvstPosCombDtlField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstPosCombDtlField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvstPosCombDtlField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvstPosCombDtlField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvstPosCombDtlField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvstPosCombDtlField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvstPosCombDtlField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaTradingAccountField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_AccountID_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_AccountID_get")]
+  public static extern string CThostFtdcSyncDeltaTradingAccountField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreMortgage_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreMortgage_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreMortgage_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreMortgage_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreCredit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreCredit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreCredit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreCredit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreDeposit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreDeposit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreDeposit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreDeposit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreBalance_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreBalance_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreBalance_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreBalance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_InterestBase_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_InterestBase_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_InterestBase_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_InterestBase_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Interest_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Interest_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Interest_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Interest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Deposit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Deposit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Deposit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Deposit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Withdraw_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Withdraw_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Withdraw_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Withdraw_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenCash_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FrozenCash_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenCash_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FrozenCash_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenCommission_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FrozenCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenCommission_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FrozenCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CurrMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_CurrMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CurrMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_CurrMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CashIn_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_CashIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CashIn_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_CashIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Commission_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Commission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Commission_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Commission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CloseProfit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_CloseProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CloseProfit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_CloseProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PositionProfit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PositionProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PositionProfit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PositionProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Balance_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Balance_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Balance_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Balance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Available_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Available_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Available_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Available_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_WithdrawQuota_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_WithdrawQuota_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_WithdrawQuota_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_WithdrawQuota_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Reserve_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Reserve_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Reserve_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Reserve_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaTradingAccountField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SettlementID_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SettlementID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SettlementID_get")]
+  public static extern int CThostFtdcSyncDeltaTradingAccountField_SettlementID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Credit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Credit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Credit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Credit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Mortgage_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_Mortgage_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_Mortgage_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_Mortgage_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ExchangeMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_ExchangeMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ExchangeMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_ExchangeMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_DeliveryMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_DeliveryMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_DeliveryMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_DeliveryMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ExchangeDeliveryMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_ExchangeDeliveryMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ExchangeDeliveryMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_ExchangeDeliveryMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ReserveBalance_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_ReserveBalance_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_ReserveBalance_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_ReserveBalance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CurrencyID_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_CurrencyID_get")]
+  public static extern string CThostFtdcSyncDeltaTradingAccountField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageIn_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageIn_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageOut_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageOut_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageOut_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_PreFundMortgageOut_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageIn_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FundMortgageIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageIn_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FundMortgageIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageOut_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FundMortgageOut_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageOut_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FundMortgageOut_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageAvailable_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FundMortgageAvailable_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FundMortgageAvailable_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FundMortgageAvailable_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_MortgageableFund_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_MortgageableFund_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_MortgageableFund_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_MortgageableFund_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductCommission_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductCommission_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenCommission_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenCommission_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductFrozenCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductCloseProfit_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductCloseProfit_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductCloseProfit_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductCloseProfit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfitByAlg_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfitByAlg_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfitByAlg_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductPositionProfitByAlg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductExchangeMargin_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SpecProductExchangeMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SpecProductExchangeMargin_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_SpecProductExchangeMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenSwap_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_FrozenSwap_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_FrozenSwap_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_FrozenSwap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_RemainSwap_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_RemainSwap_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_RemainSwap_get")]
+  public static extern double CThostFtdcSyncDeltaTradingAccountField_RemainSwap_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaTradingAccountField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaTradingAccountField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaTradingAccountField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaTradingAccountField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaTradingAccountField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaTradingAccountField")]
+  public static extern void delete_CThostFtdcSyncDeltaTradingAccountField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInitInvstMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInitInvstMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_LastRiskTotalExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_LastRiskSpecTotalExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_ThisSyncSpecExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecInvstMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecInvstMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecInvstMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecInvstMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaInitInvstMarginField_RemainRiskSpecExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInitInvstMarginField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInitInvstMarginField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInitInvstMarginField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInitInvstMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInitInvstMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInitInvstMarginField")]
+  public static extern void delete_CThostFtdcSyncDeltaInitInvstMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaDceCombInstrumentField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeInstID_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeInstID_get")]
+  public static extern string CThostFtdcSyncDeltaDceCombInstrumentField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_TradeGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_TradeGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_TradeGroupID_get")]
+  public static extern int CThostFtdcSyncDeltaDceCombInstrumentField_TradeGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombHedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_CombHedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombHedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaDceCombInstrumentField_CombHedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombinationType_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_CombinationType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_CombinationType_get")]
+  public static extern char CThostFtdcSyncDeltaDceCombInstrumentField_CombinationType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_Direction_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_Direction_get")]
+  public static extern char CThostFtdcSyncDeltaDceCombInstrumentField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaDceCombInstrumentField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_Xparameter_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_Xparameter_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_Xparameter_get")]
+  public static extern double CThostFtdcSyncDeltaDceCombInstrumentField_Xparameter_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaDceCombInstrumentField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaDceCombInstrumentField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDceCombInstrumentField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaDceCombInstrumentField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaDceCombInstrumentField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaDceCombInstrumentField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaDceCombInstrumentField")]
+  public static extern void delete_CThostFtdcSyncDeltaDceCombInstrumentField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InvestorRange_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InvestorRange_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateField_LongMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateField_ShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_IsRelative_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_IsRelative_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_IsRelative_get")]
+  public static extern int CThostFtdcSyncDeltaInvstMarginRateField_IsRelative_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvstMarginRateField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvstMarginRateField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvstMarginRateField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvstMarginRateField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvstMarginRateField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaExchMarginRateField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaExchMarginRateField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaExchMarginRateField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaExchMarginRateField_LongMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaExchMarginRateField_ShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaExchMarginRateField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaExchMarginRateField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaExchMarginRateField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaExchMarginRateField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaExchMarginRateField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaExchMarginRateField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaExchMarginRateField")]
+  public static extern void delete_CThostFtdcSyncDeltaExchMarginRateField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaOptExchMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaOptExchMarginField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_SShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_HShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_AShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptExchMarginField_MShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaOptExchMarginField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaOptExchMarginField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptExchMarginField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaOptExchMarginField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaOptExchMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaOptExchMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaOptExchMarginField")]
+  public static extern void delete_CThostFtdcSyncDeltaOptExchMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstMarginField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InvestorRange_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InvestorRange_get")]
+  public static extern char CThostFtdcSyncDeltaOptInvstMarginField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_SShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_HShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_AShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_IsRelative_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_IsRelative_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_IsRelative_get")]
+  public static extern int CThostFtdcSyncDeltaOptInvstMarginField_IsRelative_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstMarginField_MShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaOptInvstMarginField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstMarginField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstMarginField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaOptInvstMarginField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaOptInvstMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaOptInvstMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaOptInvstMarginField")]
+  public static extern void delete_CThostFtdcSyncDeltaOptInvstMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateULField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InvestorRange_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InvestorRange_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateULField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateULField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstMarginRateULField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateULField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateULField_LongMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstMarginRateULField_ShortMarginRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvstMarginRateULField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvstMarginRateULField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstMarginRateULField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvstMarginRateULField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvstMarginRateULField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvstMarginRateULField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvstMarginRateULField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvstMarginRateULField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstCommRateField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InvestorRange_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InvestorRange_get")]
+  public static extern char CThostFtdcSyncDeltaOptInvstCommRateField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstCommRateField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaOptInvstCommRateField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_OpenRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_CloseRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_CloseTodayRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaOptInvstCommRateField_StrikeRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaOptInvstCommRateField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaOptInvstCommRateField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaOptInvstCommRateField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaOptInvstCommRateField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaOptInvstCommRateField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaOptInvstCommRateField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaOptInvstCommRateField")]
+  public static extern void delete_CThostFtdcSyncDeltaOptInvstCommRateField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstCommRateField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InvestorRange_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InvestorRange_get")]
+  public static extern char CThostFtdcSyncDeltaInvstCommRateField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstCommRateField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvstCommRateField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_OpenRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_CloseRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByMoney_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByMoney_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByMoney_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByMoney_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByVolume_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByVolume_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByVolume_get")]
+  public static extern double CThostFtdcSyncDeltaInvstCommRateField_CloseTodayRatioByVolume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvstCommRateField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvstCommRateField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvstCommRateField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvstCommRateField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvstCommRateField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvstCommRateField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvstCommRateField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvstCommRateField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaProductExchRateField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaProductExchRateField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_QuoteCurrencyID_set")]
+  public static extern void CThostFtdcSyncDeltaProductExchRateField_QuoteCurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_QuoteCurrencyID_get")]
+  public static extern string CThostFtdcSyncDeltaProductExchRateField_QuoteCurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ExchangeRate_set")]
+  public static extern void CThostFtdcSyncDeltaProductExchRateField_ExchangeRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ExchangeRate_get")]
+  public static extern double CThostFtdcSyncDeltaProductExchRateField_ExchangeRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaProductExchRateField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaProductExchRateField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaProductExchRateField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaProductExchRateField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaProductExchRateField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaProductExchRateField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaProductExchRateField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaProductExchRateField")]
+  public static extern void delete_CThostFtdcSyncDeltaProductExchRateField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ExchangeInstID_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ExchangeInstID_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LastPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_LastPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LastPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_LastPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreClosePrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_PreClosePrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreClosePrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_PreClosePrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreOpenInterest_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_PreOpenInterest_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreOpenInterest_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_PreOpenInterest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_OpenPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_OpenPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_OpenPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_OpenPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_HighestPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_HighestPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_HighestPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_HighestPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LowestPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_LowestPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LowestPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_LowestPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_Volume_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_Volume_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_Turnover_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_Turnover_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_Turnover_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_Turnover_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_OpenInterest_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_OpenInterest_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_OpenInterest_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_OpenInterest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ClosePrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_ClosePrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ClosePrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_ClosePrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_SettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_SettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_SettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_SettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpperLimitPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_UpperLimitPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpperLimitPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_UpperLimitPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LowerLimitPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_LowerLimitPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_LowerLimitPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_LowerLimitPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreDelta_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_PreDelta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_PreDelta_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_PreDelta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_CurrDelta_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_CurrDelta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_CurrDelta_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_CurrDelta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpdateTime_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_UpdateTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpdateTime_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_UpdateTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpdateMillisec_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_UpdateMillisec_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_UpdateMillisec_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_UpdateMillisec_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice1_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidPrice1_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice1_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BidPrice1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume1_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidVolume1_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume1_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_BidVolume1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice1_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskPrice1_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice1_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AskPrice1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume1_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskVolume1_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume1_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_AskVolume1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice2_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidPrice2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice2_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BidPrice2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume2_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidVolume2_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume2_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_BidVolume2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice2_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskPrice2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice2_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AskPrice2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume2_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskVolume2_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume2_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_AskVolume2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice3_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidPrice3_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice3_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BidPrice3_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume3_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidVolume3_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume3_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_BidVolume3_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice3_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskPrice3_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice3_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AskPrice3_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume3_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskVolume3_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume3_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_AskVolume3_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice4_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidPrice4_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice4_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BidPrice4_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume4_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidVolume4_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume4_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_BidVolume4_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice4_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskPrice4_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice4_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AskPrice4_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume4_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskVolume4_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume4_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_AskVolume4_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice5_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidPrice5_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidPrice5_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BidPrice5_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume5_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BidVolume5_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BidVolume5_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_BidVolume5_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice5_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskPrice5_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskPrice5_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AskPrice5_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume5_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AskVolume5_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AskVolume5_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_AskVolume5_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AveragePrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_AveragePrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_AveragePrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_AveragePrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ActionDay_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_ActionDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ActionDay_get")]
+  public static extern string CThostFtdcSyncDeltaDepthMarketDataField_ActionDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BandingUpperPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BandingUpperPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BandingUpperPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BandingUpperPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BandingLowerPrice_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_BandingLowerPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_BandingLowerPrice_get")]
+  public static extern double CThostFtdcSyncDeltaDepthMarketDataField_BandingLowerPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaDepthMarketDataField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaDepthMarketDataField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaDepthMarketDataField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaDepthMarketDataField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaDepthMarketDataField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaDepthMarketDataField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaDepthMarketDataField")]
+  public static extern void delete_CThostFtdcSyncDeltaDepthMarketDataField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaIndexPriceField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaIndexPriceField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaIndexPriceField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaIndexPriceField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_ClosePrice_set")]
+  public static extern void CThostFtdcSyncDeltaIndexPriceField_ClosePrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_ClosePrice_get")]
+  public static extern double CThostFtdcSyncDeltaIndexPriceField_ClosePrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaIndexPriceField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaIndexPriceField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaIndexPriceField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaIndexPriceField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaIndexPriceField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaIndexPriceField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaIndexPriceField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaIndexPriceField")]
+  public static extern void delete_CThostFtdcSyncDeltaIndexPriceField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaEWarrantOffsetField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaEWarrantOffsetField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaEWarrantOffsetField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaEWarrantOffsetField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaEWarrantOffsetField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_Direction_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_Direction_get")]
+  public static extern char CThostFtdcSyncDeltaEWarrantOffsetField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaEWarrantOffsetField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_Volume_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_Volume_get")]
+  public static extern int CThostFtdcSyncDeltaEWarrantOffsetField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaEWarrantOffsetField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaEWarrantOffsetField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaEWarrantOffsetField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaEWarrantOffsetField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaEWarrantOffsetField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaEWarrantOffsetField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaEWarrantOffsetField")]
+  public static extern void delete_CThostFtdcSyncDeltaEWarrantOffsetField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSPBMFutureParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMFutureParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcSPBMFutureParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMFutureParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_Cvf_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_Cvf_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_Cvf_get")]
+  public static extern int CThostFtdcSPBMFutureParameterField_Cvf_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_TimeRange_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_TimeRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_TimeRange_get")]
+  public static extern char CThostFtdcSPBMFutureParameterField_TimeRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_MarginRate_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_MarginRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_MarginRate_get")]
+  public static extern double CThostFtdcSPBMFutureParameterField_MarginRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_LockRateX_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_LockRateX_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_LockRateX_get")]
+  public static extern double CThostFtdcSPBMFutureParameterField_LockRateX_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_AddOnRate_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_AddOnRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_AddOnRate_get")]
+  public static extern double CThostFtdcSPBMFutureParameterField_AddOnRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcSPBMFutureParameterField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_AddOnLockRateX2_set")]
+  public static extern void CThostFtdcSPBMFutureParameterField_AddOnLockRateX2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMFutureParameterField_AddOnLockRateX2_get")]
+  public static extern double CThostFtdcSPBMFutureParameterField_AddOnLockRateX2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMFutureParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMFutureParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMFutureParameterField")]
+  public static extern void delete_CThostFtdcSPBMFutureParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSPBMOptionParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMOptionParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcSPBMOptionParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMOptionParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_Cvf_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_Cvf_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_Cvf_get")]
+  public static extern int CThostFtdcSPBMOptionParameterField_Cvf_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_DownPrice_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_DownPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_DownPrice_get")]
+  public static extern double CThostFtdcSPBMOptionParameterField_DownPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_Delta_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_Delta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_Delta_get")]
+  public static extern double CThostFtdcSPBMOptionParameterField_Delta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_SlimiDelta_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_SlimiDelta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_SlimiDelta_get")]
+  public static extern double CThostFtdcSPBMOptionParameterField_SlimiDelta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcSPBMOptionParameterField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMOptionParameterField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcSPBMOptionParameterField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMOptionParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMOptionParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMOptionParameterField")]
+  public static extern void delete_CThostFtdcSPBMOptionParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSPBMIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSPBMIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_IntraRateY_set")]
+  public static extern void CThostFtdcSPBMIntraParameterField_IntraRateY_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_IntraRateY_get")]
+  public static extern double CThostFtdcSPBMIntraParameterField_IntraRateY_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_AddOnIntraRateY2_set")]
+  public static extern void CThostFtdcSPBMIntraParameterField_AddOnIntraRateY2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMIntraParameterField_AddOnIntraRateY2_get")]
+  public static extern double CThostFtdcSPBMIntraParameterField_AddOnIntraRateY2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMIntraParameterField")]
+  public static extern void delete_CThostFtdcSPBMIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSPBMInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_SpreadId_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_SpreadId_get")]
+  public static extern int CThostFtdcSPBMInterParameterField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_InterRateZ_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_InterRateZ_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_InterRateZ_get")]
+  public static extern double CThostFtdcSPBMInterParameterField_InterRateZ_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMInterParameterField")]
+  public static extern void delete_CThostFtdcSPBMInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncSPBMParameterEndField_TradingDay_set")]
+  public static extern void CThostFtdcSyncSPBMParameterEndField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncSPBMParameterEndField_TradingDay_get")]
+  public static extern string CThostFtdcSyncSPBMParameterEndField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncSPBMParameterEndField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncSPBMParameterEndField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncSPBMParameterEndField")]
+  public static extern void delete_CThostFtdcSyncSPBMParameterEndField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMFutureParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMFutureParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcQrySPBMFutureParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcQrySPBMFutureParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMFutureParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMFutureParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMFutureParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMFutureParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMFutureParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMFutureParameterField")]
+  public static extern void delete_CThostFtdcQrySPBMFutureParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMOptionParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMOptionParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcQrySPBMOptionParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcQrySPBMOptionParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMOptionParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMOptionParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMOptionParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMOptionParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMOptionParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMOptionParameterField")]
+  public static extern void delete_CThostFtdcQrySPBMOptionParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMIntraParameterField")]
+  public static extern void delete_CThostFtdcQrySPBMIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMInterParameterField")]
+  public static extern void delete_CThostFtdcQrySPBMInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMPortfDefinitionField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMPortfDefinitionField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_PortfolioDefID_set")]
+  public static extern void CThostFtdcSPBMPortfDefinitionField_PortfolioDefID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_PortfolioDefID_get")]
+  public static extern int CThostFtdcSPBMPortfDefinitionField_PortfolioDefID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMPortfDefinitionField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMPortfDefinitionField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_IsSPBM_set")]
+  public static extern void CThostFtdcSPBMPortfDefinitionField_IsSPBM_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMPortfDefinitionField_IsSPBM_get")]
+  public static extern int CThostFtdcSPBMPortfDefinitionField_IsSPBM_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMPortfDefinitionField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMPortfDefinitionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMPortfDefinitionField")]
+  public static extern void delete_CThostFtdcSPBMPortfDefinitionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMInvestorPortfDefField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMInvestorPortfDefField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_BrokerID_set")]
+  public static extern void CThostFtdcSPBMInvestorPortfDefField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_BrokerID_get")]
+  public static extern string CThostFtdcSPBMInvestorPortfDefField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_InvestorID_set")]
+  public static extern void CThostFtdcSPBMInvestorPortfDefField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_InvestorID_get")]
+  public static extern string CThostFtdcSPBMInvestorPortfDefField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_PortfolioDefID_set")]
+  public static extern void CThostFtdcSPBMInvestorPortfDefField_PortfolioDefID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMInvestorPortfDefField_PortfolioDefID_get")]
+  public static extern int CThostFtdcSPBMInvestorPortfDefField_PortfolioDefID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMInvestorPortfDefField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMInvestorPortfDefField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMInvestorPortfDefField")]
+  public static extern void delete_CThostFtdcSPBMInvestorPortfDefField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_InvestorRange_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_InvestorRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_InvestorRange_get")]
+  public static extern char CThostFtdcInvestorPortfMarginRatioField_InvestorRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginRatioField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginRatioField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginRatioField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_MarginRatio_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_MarginRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_MarginRatio_get")]
+  public static extern double CThostFtdcInvestorPortfMarginRatioField_MarginRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_ProductGroupID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginRatioField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginRatioField_ProductGroupID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginRatioField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorPortfMarginRatioField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorPortfMarginRatioField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorPortfMarginRatioField")]
+  public static extern void delete_CThostFtdcInvestorPortfMarginRatioField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMPortfDefinitionField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMPortfDefinitionField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_PortfolioDefID_set")]
+  public static extern void CThostFtdcQrySPBMPortfDefinitionField_PortfolioDefID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_PortfolioDefID_get")]
+  public static extern int CThostFtdcQrySPBMPortfDefinitionField_PortfolioDefID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMPortfDefinitionField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMPortfDefinitionField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMPortfDefinitionField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMPortfDefinitionField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMPortfDefinitionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMPortfDefinitionField")]
+  public static extern void delete_CThostFtdcQrySPBMPortfDefinitionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMInvestorPortfDefField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMInvestorPortfDefField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_BrokerID_set")]
+  public static extern void CThostFtdcQrySPBMInvestorPortfDefField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_BrokerID_get")]
+  public static extern string CThostFtdcQrySPBMInvestorPortfDefField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_InvestorID_set")]
+  public static extern void CThostFtdcQrySPBMInvestorPortfDefField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMInvestorPortfDefField_InvestorID_get")]
+  public static extern string CThostFtdcQrySPBMInvestorPortfDefField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMInvestorPortfDefField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMInvestorPortfDefField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMInvestorPortfDefField")]
+  public static extern void delete_CThostFtdcQrySPBMInvestorPortfDefField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorPortfMarginRatioField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorPortfMarginRatioField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorPortfMarginRatioField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorPortfMarginRatioField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_ExchangeID_set")]
+  public static extern void CThostFtdcQryInvestorPortfMarginRatioField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_ExchangeID_get")]
+  public static extern string CThostFtdcQryInvestorPortfMarginRatioField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_ProductGroupID_set")]
+  public static extern void CThostFtdcQryInvestorPortfMarginRatioField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfMarginRatioField_ProductGroupID_get")]
+  public static extern string CThostFtdcQryInvestorPortfMarginRatioField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorPortfMarginRatioField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorPortfMarginRatioField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorPortfMarginRatioField")]
+  public static extern void delete_CThostFtdcQryInvestorPortfMarginRatioField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorProdSPBMDetailField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorProdSPBMDetailField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorProdSPBMDetailField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcInvestorProdSPBMDetailField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_IntraInstrMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_IntraInstrMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_IntraInstrMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_IntraInstrMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_BCollectingMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_BCollectingMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_BCollectingMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_BCollectingMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_SCollectingMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_SCollectingMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_SCollectingMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_SCollectingMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_IntraProdMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_IntraProdMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_IntraProdMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_IntraProdMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_NetMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_NetMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_NetMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_NetMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_InterProdMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_InterProdMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_InterProdMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_InterProdMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_SingleMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_SingleMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_SingleMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_SingleMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_AddOnMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_AddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_AddOnMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_AddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_DeliveryMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_DeliveryMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_DeliveryMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_DeliveryMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_CallOptionMinRisk_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_CallOptionMinRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_CallOptionMinRisk_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_CallOptionMinRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_PutOptionMinRisk_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_PutOptionMinRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_PutOptionMinRisk_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_PutOptionMinRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionMinRisk_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_OptionMinRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionMinRisk_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_OptionMinRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionValueOffset_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_OptionValueOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionValueOffset_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_OptionValueOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionRoyalty_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_OptionRoyalty_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_OptionRoyalty_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_OptionRoyalty_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_RealOptionValueOffset_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_RealOptionValueOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_RealOptionValueOffset_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_RealOptionValueOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_Margin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_Margin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdSPBMDetailField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdSPBMDetailField_ExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdSPBMDetailField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorProdSPBMDetailField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorProdSPBMDetailField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorProdSPBMDetailField")]
+  public static extern void delete_CThostFtdcInvestorProdSPBMDetailField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_ExchangeID_set")]
+  public static extern void CThostFtdcQryInvestorProdSPBMDetailField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_ExchangeID_get")]
+  public static extern string CThostFtdcQryInvestorProdSPBMDetailField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorProdSPBMDetailField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorProdSPBMDetailField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorProdSPBMDetailField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorProdSPBMDetailField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQryInvestorProdSPBMDetailField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdSPBMDetailField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQryInvestorProdSPBMDetailField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorProdSPBMDetailField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorProdSPBMDetailField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorProdSPBMDetailField")]
+  public static extern void delete_CThostFtdcQryInvestorProdSPBMDetailField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcPortfTradeParamSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_BrokerID_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_BrokerID_get")]
+  public static extern string CThostFtdcPortfTradeParamSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_InvestorID_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_InvestorID_get")]
+  public static extern string CThostFtdcPortfTradeParamSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_Portfolio_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_Portfolio_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_Portfolio_get")]
+  public static extern char CThostFtdcPortfTradeParamSettingField_Portfolio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_IsActionVerify_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_IsActionVerify_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_IsActionVerify_get")]
+  public static extern int CThostFtdcPortfTradeParamSettingField_IsActionVerify_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_IsCloseVerify_set")]
+  public static extern void CThostFtdcPortfTradeParamSettingField_IsCloseVerify_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcPortfTradeParamSettingField_IsCloseVerify_get")]
+  public static extern int CThostFtdcPortfTradeParamSettingField_IsCloseVerify_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcPortfTradeParamSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcPortfTradeParamSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcPortfTradeParamSettingField")]
+  public static extern void delete_CThostFtdcPortfTradeParamSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorTradingRightField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorTradingRightField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorTradingRightField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorTradingRightField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_InvstTradingRight_set")]
+  public static extern void CThostFtdcInvestorTradingRightField_InvstTradingRight_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorTradingRightField_InvstTradingRight_get")]
+  public static extern char CThostFtdcInvestorTradingRightField_InvstTradingRight_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorTradingRightField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorTradingRightField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorTradingRightField")]
+  public static extern void delete_CThostFtdcInvestorTradingRightField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_BrokerID_set")]
+  public static extern void CThostFtdcMortgageParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_BrokerID_get")]
+  public static extern string CThostFtdcMortgageParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_AccountID_set")]
+  public static extern void CThostFtdcMortgageParamField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_AccountID_get")]
+  public static extern string CThostFtdcMortgageParamField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_MortgageBalance_set")]
+  public static extern void CThostFtdcMortgageParamField_MortgageBalance_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_MortgageBalance_get")]
+  public static extern double CThostFtdcMortgageParamField_MortgageBalance_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_CheckMortgageRatio_set")]
+  public static extern void CThostFtdcMortgageParamField_CheckMortgageRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMortgageParamField_CheckMortgageRatio_get")]
+  public static extern int CThostFtdcMortgageParamField_CheckMortgageRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcMortgageParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcMortgageParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcMortgageParamField")]
+  public static extern void delete_CThostFtdcMortgageParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_BrokerID_set")]
+  public static extern void CThostFtdcWithDrawParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_BrokerID_get")]
+  public static extern string CThostFtdcWithDrawParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_AccountID_set")]
+  public static extern void CThostFtdcWithDrawParamField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_AccountID_get")]
+  public static extern string CThostFtdcWithDrawParamField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_WithDrawParamID_set")]
+  public static extern void CThostFtdcWithDrawParamField_WithDrawParamID_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_WithDrawParamID_get")]
+  public static extern char CThostFtdcWithDrawParamField_WithDrawParamID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_WithDrawParamValue_set")]
+  public static extern void CThostFtdcWithDrawParamField_WithDrawParamValue_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcWithDrawParamField_WithDrawParamValue_get")]
+  public static extern string CThostFtdcWithDrawParamField_WithDrawParamValue_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcWithDrawParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcWithDrawParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcWithDrawParamField")]
+  public static extern void delete_CThostFtdcWithDrawParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_BrokerID_set")]
+  public static extern void CThostFtdcThostUserFunctionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_BrokerID_get")]
+  public static extern string CThostFtdcThostUserFunctionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_UserID_set")]
+  public static extern void CThostFtdcThostUserFunctionField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_UserID_get")]
+  public static extern string CThostFtdcThostUserFunctionField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_ThostFunctionCode_set")]
+  public static extern void CThostFtdcThostUserFunctionField_ThostFunctionCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcThostUserFunctionField_ThostFunctionCode_get")]
+  public static extern int CThostFtdcThostUserFunctionField_ThostFunctionCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcThostUserFunctionField")]
+  public static extern global::System.IntPtr new_CThostFtdcThostUserFunctionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcThostUserFunctionField")]
+  public static extern void delete_CThostFtdcThostUserFunctionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryThostUserFunctionField_BrokerID_set")]
+  public static extern void CThostFtdcQryThostUserFunctionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryThostUserFunctionField_BrokerID_get")]
+  public static extern string CThostFtdcQryThostUserFunctionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryThostUserFunctionField_UserID_set")]
+  public static extern void CThostFtdcQryThostUserFunctionField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryThostUserFunctionField_UserID_get")]
+  public static extern string CThostFtdcQryThostUserFunctionField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryThostUserFunctionField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryThostUserFunctionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryThostUserFunctionField")]
+  public static extern void delete_CThostFtdcQryThostUserFunctionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSPBMAddOnInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSPBMAddOnInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_SpreadId_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_SpreadId_get")]
+  public static extern int CThostFtdcSPBMAddOnInterParameterField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_AddOnInterRateZ2_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_AddOnInterRateZ2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_AddOnInterRateZ2_get")]
+  public static extern double CThostFtdcSPBMAddOnInterParameterField_AddOnInterRateZ2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMAddOnInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcSPBMAddOnInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPBMAddOnInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcSPBMAddOnInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPBMAddOnInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPBMAddOnInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPBMAddOnInterParameterField")]
+  public static extern void delete_CThostFtdcSPBMAddOnInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQrySPBMAddOnInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQrySPBMAddOnInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMAddOnInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMAddOnInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcQrySPBMAddOnInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPBMAddOnInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcQrySPBMAddOnInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPBMAddOnInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPBMAddOnInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPBMAddOnInterParameterField")]
+  public static extern void delete_CThostFtdcQrySPBMAddOnInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorCommoditySPMMMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorCommoditySPMMMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorCommoditySPMMMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorCommoditySPMMMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_CommodityID_set")]
+  public static extern void CThostFtdcQryInvestorCommoditySPMMMarginField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommoditySPMMMarginField_CommodityID_get")]
+  public static extern string CThostFtdcQryInvestorCommoditySPMMMarginField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorCommoditySPMMMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorCommoditySPMMMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorCommoditySPMMMarginField")]
+  public static extern void delete_CThostFtdcQryInvestorCommoditySPMMMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorCommodityGroupSPMMMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorCommodityGroupSPMMMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorCommodityGroupSPMMMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorCommodityGroupSPMMMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_CommodityGroupID_set")]
+  public static extern void CThostFtdcQryInvestorCommodityGroupSPMMMarginField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorCommodityGroupSPMMMarginField_CommodityGroupID_get")]
+  public static extern string CThostFtdcQryInvestorCommodityGroupSPMMMarginField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorCommodityGroupSPMMMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorCommodityGroupSPMMMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorCommodityGroupSPMMMarginField")]
+  public static extern void delete_CThostFtdcQryInvestorCommodityGroupSPMMMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPMMInstParamField_InstrumentID_set")]
+  public static extern void CThostFtdcQrySPMMInstParamField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPMMInstParamField_InstrumentID_get")]
+  public static extern string CThostFtdcQrySPMMInstParamField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPMMInstParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPMMInstParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPMMInstParamField")]
+  public static extern void delete_CThostFtdcQrySPMMInstParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPMMProductParamField_ProductID_set")]
+  public static extern void CThostFtdcQrySPMMProductParamField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQrySPMMProductParamField_ProductID_get")]
+  public static extern string CThostFtdcQrySPMMProductParamField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQrySPMMProductParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcQrySPMMProductParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQrySPMMProductParamField")]
+  public static extern void delete_CThostFtdcQrySPMMProductParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorCommoditySPMMMarginField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorCommoditySPMMMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorCommoditySPMMMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CommodityID_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CommodityID_get")]
+  public static extern string CThostFtdcInvestorCommoditySPMMMarginField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_MarginBeforeDiscount_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_MarginBeforeDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_MarginBeforeDiscount_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_MarginBeforeDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_MarginNoDiscount_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_MarginNoDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_MarginNoDiscount_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_MarginNoDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongPosRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_LongPosRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongPosRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_LongPosRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongOpenFrozenRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_LongOpenFrozenRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongOpenFrozenRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_LongOpenFrozenRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongCloseFrozenRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_LongCloseFrozenRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_LongCloseFrozenRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_LongCloseFrozenRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortPosRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_ShortPosRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortPosRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_ShortPosRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortOpenFrozenRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_ShortOpenFrozenRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortOpenFrozenRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_ShortOpenFrozenRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortCloseFrozenRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_ShortCloseFrozenRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_ShortCloseFrozenRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_ShortCloseFrozenRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_IntraCommodityRate_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_IntraCommodityRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_IntraCommodityRate_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_IntraCommodityRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_OptionDiscountRate_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_OptionDiscountRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_OptionDiscountRate_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_OptionDiscountRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_PosDiscount_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_PosDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_PosDiscount_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_PosDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_OpenFrozenDiscount_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_OpenFrozenDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_OpenFrozenDiscount_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_OpenFrozenDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_NetRisk_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_NetRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_NetRisk_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_NetRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CloseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_CloseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CloseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_CloseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_FrozenCommission_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_FrozenCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_FrozenCommission_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_FrozenCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_Commission_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_Commission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_Commission_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_Commission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_FrozenCash_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_FrozenCash_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_FrozenCash_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_FrozenCash_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CashIn_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_CashIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_CashIn_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_CashIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_StrikeFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorCommoditySPMMMarginField_StrikeFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommoditySPMMMarginField_StrikeFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorCommoditySPMMMarginField_StrikeFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorCommoditySPMMMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorCommoditySPMMMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorCommoditySPMMMarginField")]
+  public static extern void delete_CThostFtdcInvestorCommoditySPMMMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorCommodityGroupSPMMMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CommodityGroupID_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CommodityGroupID_get")]
+  public static extern string CThostFtdcInvestorCommodityGroupSPMMMarginField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginBeforeDiscount_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginBeforeDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginBeforeDiscount_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginBeforeDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginNoDiscount_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginNoDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginNoDiscount_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_MarginNoDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_LongRisk_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_LongRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_LongRisk_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_LongRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ShortRisk_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_ShortRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ShortRisk_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_ShortRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CloseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_CloseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CloseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_CloseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityRate_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityRate_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MiniMarginRatio_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_MiniMarginRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_MiniMarginRatio_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_MiniMarginRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_AdjustRatio_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_AdjustRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_AdjustRatio_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_AdjustRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_IntraCommodityDiscount_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_IntraCommodityDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_IntraCommodityDiscount_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_IntraCommodityDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityDiscount_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityDiscount_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_InterCommodityDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchMargin_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchMargin_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorMargin_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorMargin_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_InvestorMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCommission_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCommission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCommission_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCommission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_Commission_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_Commission_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_Commission_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_Commission_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCash_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCash_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCash_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_FrozenCash_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CashIn_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_CashIn_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_CashIn_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_CashIn_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_StrikeFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorCommodityGroupSPMMMarginField_StrikeFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorCommodityGroupSPMMMarginField_StrikeFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorCommodityGroupSPMMMarginField_StrikeFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorCommodityGroupSPMMMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorCommodityGroupSPMMMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorCommodityGroupSPMMMarginField")]
+  public static extern void delete_CThostFtdcInvestorCommodityGroupSPMMMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSPMMInstParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSPMMInstParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_InstrumentID_set")]
+  public static extern void CThostFtdcSPMMInstParamField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_InstrumentID_get")]
+  public static extern string CThostFtdcSPMMInstParamField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_InstMarginCalID_set")]
+  public static extern void CThostFtdcSPMMInstParamField_InstMarginCalID_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_InstMarginCalID_get")]
+  public static extern char CThostFtdcSPMMInstParamField_InstMarginCalID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_CommodityID_set")]
+  public static extern void CThostFtdcSPMMInstParamField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_CommodityID_get")]
+  public static extern string CThostFtdcSPMMInstParamField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSPMMInstParamField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMInstParamField_CommodityGroupID_get")]
+  public static extern string CThostFtdcSPMMInstParamField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPMMInstParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPMMInstParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPMMInstParamField")]
+  public static extern void delete_CThostFtdcSPMMInstParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSPMMProductParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSPMMProductParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_ProductID_set")]
+  public static extern void CThostFtdcSPMMProductParamField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_ProductID_get")]
+  public static extern string CThostFtdcSPMMProductParamField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_CommodityID_set")]
+  public static extern void CThostFtdcSPMMProductParamField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_CommodityID_get")]
+  public static extern string CThostFtdcSPMMProductParamField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSPMMProductParamField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSPMMProductParamField_CommodityGroupID_get")]
+  public static extern string CThostFtdcSPMMProductParamField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSPMMProductParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSPMMProductParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSPMMProductParamField")]
+  public static extern void delete_CThostFtdcSPMMProductParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTraderAssignField_TraderID_set")]
+  public static extern void CThostFtdcQryTraderAssignField_TraderID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTraderAssignField_TraderID_get")]
+  public static extern string CThostFtdcQryTraderAssignField_TraderID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryTraderAssignField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryTraderAssignField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryTraderAssignField")]
+  public static extern void delete_CThostFtdcQryTraderAssignField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_BrokerID_set")]
+  public static extern void CThostFtdcTraderAssignField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_BrokerID_get")]
+  public static extern string CThostFtdcTraderAssignField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_ExchangeID_set")]
+  public static extern void CThostFtdcTraderAssignField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_ExchangeID_get")]
+  public static extern string CThostFtdcTraderAssignField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_TraderID_set")]
+  public static extern void CThostFtdcTraderAssignField_TraderID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_TraderID_get")]
+  public static extern string CThostFtdcTraderAssignField_TraderID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_ParticipantID_set")]
+  public static extern void CThostFtdcTraderAssignField_ParticipantID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_ParticipantID_get")]
+  public static extern string CThostFtdcTraderAssignField_ParticipantID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_DRIdentityID_set")]
+  public static extern void CThostFtdcTraderAssignField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTraderAssignField_DRIdentityID_get")]
+  public static extern int CThostFtdcTraderAssignField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTraderAssignField")]
+  public static extern global::System.IntPtr new_CThostFtdcTraderAssignField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcTraderAssignField")]
+  public static extern void delete_CThostFtdcTraderAssignField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorInfoCntSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorInfoCntSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorInfoCntSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_ProductID_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_ProductID_get")]
+  public static extern string CThostFtdcInvestorInfoCntSettingField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_IsCalInfoComm_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_IsCalInfoComm_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_IsCalInfoComm_get")]
+  public static extern int CThostFtdcInvestorInfoCntSettingField_IsCalInfoComm_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_IsLimitInfoMax_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_IsLimitInfoMax_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_IsLimitInfoMax_get")]
+  public static extern int CThostFtdcInvestorInfoCntSettingField_IsLimitInfoMax_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_InfoMaxLimit_set")]
+  public static extern void CThostFtdcInvestorInfoCntSettingField_InfoMaxLimit_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCntSettingField_InfoMaxLimit_get")]
+  public static extern int CThostFtdcInvestorInfoCntSettingField_InfoMaxLimit_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorInfoCntSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorInfoCntSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorInfoCntSettingField")]
+  public static extern void delete_CThostFtdcInvestorInfoCntSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_TradingDay_set")]
+  public static extern void CThostFtdcRCAMSCombProductInfoField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_TradingDay_get")]
+  public static extern string CThostFtdcRCAMSCombProductInfoField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSCombProductInfoField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSCombProductInfoField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ProductID_set")]
+  public static extern void CThostFtdcRCAMSCombProductInfoField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ProductID_get")]
+  public static extern string CThostFtdcRCAMSCombProductInfoField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_CombProductID_set")]
+  public static extern void CThostFtdcRCAMSCombProductInfoField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_CombProductID_get")]
+  public static extern string CThostFtdcRCAMSCombProductInfoField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ProductGroupID_set")]
+  public static extern void CThostFtdcRCAMSCombProductInfoField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSCombProductInfoField_ProductGroupID_get")]
+  public static extern string CThostFtdcRCAMSCombProductInfoField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSCombProductInfoField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSCombProductInfoField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSCombProductInfoField")]
+  public static extern void delete_CThostFtdcRCAMSCombProductInfoField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRCAMSInstrParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRCAMSInstrParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSInstrParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSInstrParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_ProductID_set")]
+  public static extern void CThostFtdcRCAMSInstrParameterField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_ProductID_get")]
+  public static extern string CThostFtdcRCAMSInstrParameterField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_HedgeRate_set")]
+  public static extern void CThostFtdcRCAMSInstrParameterField_HedgeRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInstrParameterField_HedgeRate_get")]
+  public static extern double CThostFtdcRCAMSInstrParameterField_HedgeRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSInstrParameterField")]
+  public static extern void delete_CThostFtdcRCAMSInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRCAMSIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRCAMSIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_CombProductID_set")]
+  public static extern void CThostFtdcRCAMSIntraParameterField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_CombProductID_get")]
+  public static extern string CThostFtdcRCAMSIntraParameterField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_HedgeRate_set")]
+  public static extern void CThostFtdcRCAMSIntraParameterField_HedgeRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSIntraParameterField_HedgeRate_get")]
+  public static extern double CThostFtdcRCAMSIntraParameterField_HedgeRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSIntraParameterField")]
+  public static extern void delete_CThostFtdcRCAMSIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRCAMSInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_ProductGroupID_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_ProductGroupID_get")]
+  public static extern string CThostFtdcRCAMSInterParameterField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_Priority_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_Priority_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_Priority_get")]
+  public static extern int CThostFtdcRCAMSInterParameterField_Priority_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CreditRate_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_CreditRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CreditRate_get")]
+  public static extern double CThostFtdcRCAMSInterParameterField_CreditRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CombProduct1_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_CombProduct1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CombProduct1_get")]
+  public static extern string CThostFtdcRCAMSInterParameterField_CombProduct1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CombProduct2_set")]
+  public static extern void CThostFtdcRCAMSInterParameterField_CombProduct2_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInterParameterField_CombProduct2_get")]
+  public static extern string CThostFtdcRCAMSInterParameterField_CombProduct2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSInterParameterField")]
+  public static extern void delete_CThostFtdcRCAMSInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_TradingDay_set")]
+  public static extern void CThostFtdcRCAMSShortOptAdjustParamField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_TradingDay_get")]
+  public static extern string CThostFtdcRCAMSShortOptAdjustParamField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSShortOptAdjustParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSShortOptAdjustParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_CombProductID_set")]
+  public static extern void CThostFtdcRCAMSShortOptAdjustParamField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_CombProductID_get")]
+  public static extern string CThostFtdcRCAMSShortOptAdjustParamField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_HedgeFlag_set")]
+  public static extern void CThostFtdcRCAMSShortOptAdjustParamField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_HedgeFlag_get")]
+  public static extern char CThostFtdcRCAMSShortOptAdjustParamField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_AdjustValue_set")]
+  public static extern void CThostFtdcRCAMSShortOptAdjustParamField_AdjustValue_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSShortOptAdjustParamField_AdjustValue_get")]
+  public static extern double CThostFtdcRCAMSShortOptAdjustParamField_AdjustValue_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSShortOptAdjustParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSShortOptAdjustParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSShortOptAdjustParamField")]
+  public static extern void delete_CThostFtdcRCAMSShortOptAdjustParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchangeID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchangeID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_BrokerID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_BrokerID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_InvestorID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_InvestorID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_InstrumentID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_InstrumentID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_HedgeFlag_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_HedgeFlag_get")]
+  public static extern char CThostFtdcRCAMSInvestorCombPositionField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_PosiDirection_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_PosiDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_PosiDirection_get")]
+  public static extern char CThostFtdcRCAMSInvestorCombPositionField_PosiDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_CombInstrumentID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_CombInstrumentID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_LegID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_LegID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_LegID_get")]
+  public static extern int CThostFtdcRCAMSInvestorCombPositionField_LegID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchangeInstID_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchangeInstID_get")]
+  public static extern string CThostFtdcRCAMSInvestorCombPositionField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_TotalAmt_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_TotalAmt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_TotalAmt_get")]
+  public static extern int CThostFtdcRCAMSInvestorCombPositionField_TotalAmt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchMargin_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_ExchMargin_get")]
+  public static extern double CThostFtdcRCAMSInvestorCombPositionField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_Margin_set")]
+  public static extern void CThostFtdcRCAMSInvestorCombPositionField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRCAMSInvestorCombPositionField_Margin_get")]
+  public static extern double CThostFtdcRCAMSInvestorCombPositionField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRCAMSInvestorCombPositionField")]
+  public static extern global::System.IntPtr new_CThostFtdcRCAMSInvestorCombPositionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRCAMSInvestorCombPositionField")]
+  public static extern void delete_CThostFtdcRCAMSInvestorCombPositionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorProdRCAMSMarginField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorProdRCAMSMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorProdRCAMSMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CombProductID_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CombProductID_get")]
+  public static extern string CThostFtdcInvestorProdRCAMSMarginField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_HedgeFlag_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_HedgeFlag_get")]
+  public static extern char CThostFtdcInvestorProdRCAMSMarginField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ProductGroupID_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ProductGroupID_get")]
+  public static extern string CThostFtdcInvestorProdRCAMSMarginField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_RiskBeforeDiscount_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_RiskBeforeDiscount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_RiskBeforeDiscount_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_RiskBeforeDiscount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_IntraInstrRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_IntraInstrRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_IntraInstrRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_IntraInstrRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_BPosRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_BPosRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_BPosRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_BPosRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_SPosRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_SPosRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_SPosRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_SPosRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_IntraProdRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_IntraProdRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_IntraProdRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_IntraProdRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_NetRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_NetRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_NetRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_NetRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_InterProdRisk_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_InterProdRisk_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_InterProdRisk_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_InterProdRisk_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ShortOptRiskAdj_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_ShortOptRiskAdj_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ShortOptRiskAdj_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_ShortOptRiskAdj_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_OptionRoyalty_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_OptionRoyalty_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_OptionRoyalty_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_OptionRoyalty_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSACloseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_MMSACloseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSACloseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_MMSACloseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CloseCombFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_CloseCombFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CloseCombFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_CloseCombFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CloseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_CloseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CloseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_CloseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSAOpenFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_MMSAOpenFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSAOpenFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_MMSAOpenFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_DeliveryOpenFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_DeliveryOpenFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_DeliveryOpenFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_DeliveryOpenFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_OpenFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_OpenFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_OpenFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_OpenFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_UseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_UseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_UseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_UseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSAExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_MMSAExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_MMSAExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_MMSAExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_DeliveryExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_DeliveryExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_DeliveryExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_DeliveryExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CombExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_CombExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_CombExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_CombExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_ExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_UseMargin_set")]
+  public static extern void CThostFtdcInvestorProdRCAMSMarginField_UseMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRCAMSMarginField_UseMargin_get")]
+  public static extern double CThostFtdcInvestorProdRCAMSMarginField_UseMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorProdRCAMSMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorProdRCAMSMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorProdRCAMSMarginField")]
+  public static extern void delete_CThostFtdcInvestorProdRCAMSMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_ProductID_set")]
+  public static extern void CThostFtdcQryRCAMSCombProductInfoField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_ProductID_get")]
+  public static extern string CThostFtdcQryRCAMSCombProductInfoField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_CombProductID_set")]
+  public static extern void CThostFtdcQryRCAMSCombProductInfoField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_CombProductID_get")]
+  public static extern string CThostFtdcQryRCAMSCombProductInfoField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_ProductGroupID_set")]
+  public static extern void CThostFtdcQryRCAMSCombProductInfoField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSCombProductInfoField_ProductGroupID_get")]
+  public static extern string CThostFtdcQryRCAMSCombProductInfoField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSCombProductInfoField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSCombProductInfoField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSCombProductInfoField")]
+  public static extern void delete_CThostFtdcQryRCAMSCombProductInfoField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInstrParameterField_ProductID_set")]
+  public static extern void CThostFtdcQryRCAMSInstrParameterField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInstrParameterField_ProductID_get")]
+  public static extern string CThostFtdcQryRCAMSInstrParameterField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSInstrParameterField")]
+  public static extern void delete_CThostFtdcQryRCAMSInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSIntraParameterField_CombProductID_set")]
+  public static extern void CThostFtdcQryRCAMSIntraParameterField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSIntraParameterField_CombProductID_get")]
+  public static extern string CThostFtdcQryRCAMSIntraParameterField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSIntraParameterField")]
+  public static extern void delete_CThostFtdcQryRCAMSIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_ProductGroupID_set")]
+  public static extern void CThostFtdcQryRCAMSInterParameterField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_ProductGroupID_get")]
+  public static extern string CThostFtdcQryRCAMSInterParameterField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_CombProduct1_set")]
+  public static extern void CThostFtdcQryRCAMSInterParameterField_CombProduct1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_CombProduct1_get")]
+  public static extern string CThostFtdcQryRCAMSInterParameterField_CombProduct1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_CombProduct2_set")]
+  public static extern void CThostFtdcQryRCAMSInterParameterField_CombProduct2_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInterParameterField_CombProduct2_get")]
+  public static extern string CThostFtdcQryRCAMSInterParameterField_CombProduct2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSInterParameterField")]
+  public static extern void delete_CThostFtdcQryRCAMSInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSShortOptAdjustParamField_CombProductID_set")]
+  public static extern void CThostFtdcQryRCAMSShortOptAdjustParamField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSShortOptAdjustParamField_CombProductID_get")]
+  public static extern string CThostFtdcQryRCAMSShortOptAdjustParamField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSShortOptAdjustParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSShortOptAdjustParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSShortOptAdjustParamField")]
+  public static extern void delete_CThostFtdcQryRCAMSShortOptAdjustParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_BrokerID_set")]
+  public static extern void CThostFtdcQryRCAMSInvestorCombPositionField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_BrokerID_get")]
+  public static extern string CThostFtdcQryRCAMSInvestorCombPositionField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_InvestorID_set")]
+  public static extern void CThostFtdcQryRCAMSInvestorCombPositionField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_InvestorID_get")]
+  public static extern string CThostFtdcQryRCAMSInvestorCombPositionField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_InstrumentID_set")]
+  public static extern void CThostFtdcQryRCAMSInvestorCombPositionField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_InstrumentID_get")]
+  public static extern string CThostFtdcQryRCAMSInvestorCombPositionField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_CombInstrumentID_set")]
+  public static extern void CThostFtdcQryRCAMSInvestorCombPositionField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRCAMSInvestorCombPositionField_CombInstrumentID_get")]
+  public static extern string CThostFtdcQryRCAMSInvestorCombPositionField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRCAMSInvestorCombPositionField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRCAMSInvestorCombPositionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRCAMSInvestorCombPositionField")]
+  public static extern void delete_CThostFtdcQryRCAMSInvestorCombPositionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorProdRCAMSMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorProdRCAMSMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorProdRCAMSMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorProdRCAMSMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_CombProductID_set")]
+  public static extern void CThostFtdcQryInvestorProdRCAMSMarginField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_CombProductID_get")]
+  public static extern string CThostFtdcQryInvestorProdRCAMSMarginField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_ProductGroupID_set")]
+  public static extern void CThostFtdcQryInvestorProdRCAMSMarginField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRCAMSMarginField_ProductGroupID_get")]
+  public static extern string CThostFtdcQryInvestorProdRCAMSMarginField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorProdRCAMSMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorProdRCAMSMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorProdRCAMSMarginField")]
+  public static extern void delete_CThostFtdcQryInvestorProdRCAMSMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRULEInstrParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRULEInstrParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcRULEInstrParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_InstrumentClass_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_InstrumentClass_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_InstrumentClass_get")]
+  public static extern char CThostFtdcRULEInstrParameterField_InstrumentClass_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_StdInstrumentID_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_StdInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_StdInstrumentID_get")]
+  public static extern string CThostFtdcRULEInstrParameterField_StdInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BSpecRatio_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_BSpecRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BSpecRatio_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_BSpecRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SSpecRatio_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_SSpecRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SSpecRatio_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_SSpecRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BHedgeRatio_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_BHedgeRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BHedgeRatio_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_BHedgeRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SHedgeRatio_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_SHedgeRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SHedgeRatio_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_SHedgeRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BAddOnMargin_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_BAddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_BAddOnMargin_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_BAddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SAddOnMargin_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_SAddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_SAddOnMargin_get")]
+  public static extern double CThostFtdcRULEInstrParameterField_SAddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_CommodityGroupID_set")]
+  public static extern void CThostFtdcRULEInstrParameterField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInstrParameterField_CommodityGroupID_get")]
+  public static extern int CThostFtdcRULEInstrParameterField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRULEInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRULEInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRULEInstrParameterField")]
+  public static extern void delete_CThostFtdcRULEInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRULEIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRULEIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcRULEIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_StdInstrumentID_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_StdInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_StdInstrumentID_get")]
+  public static extern string CThostFtdcRULEIntraParameterField_StdInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_StdInstrMargin_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_StdInstrMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_StdInstrMargin_get")]
+  public static extern double CThostFtdcRULEIntraParameterField_StdInstrMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_UsualIntraRate_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_UsualIntraRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_UsualIntraRate_get")]
+  public static extern double CThostFtdcRULEIntraParameterField_UsualIntraRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_DeliveryIntraRate_set")]
+  public static extern void CThostFtdcRULEIntraParameterField_DeliveryIntraRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEIntraParameterField_DeliveryIntraRate_get")]
+  public static extern double CThostFtdcRULEIntraParameterField_DeliveryIntraRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRULEIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRULEIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRULEIntraParameterField")]
+  public static extern void delete_CThostFtdcRULEIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcRULEInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcRULEInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcRULEInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcRULEInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_SpreadId_set")]
+  public static extern void CThostFtdcRULEInterParameterField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_SpreadId_get")]
+  public static extern int CThostFtdcRULEInterParameterField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_InterRate_set")]
+  public static extern void CThostFtdcRULEInterParameterField_InterRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_InterRate_get")]
+  public static extern double CThostFtdcRULEInterParameterField_InterRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcRULEInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcRULEInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcRULEInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcRULEInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg1PropFactor_set")]
+  public static extern void CThostFtdcRULEInterParameterField_Leg1PropFactor_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg1PropFactor_get")]
+  public static extern int CThostFtdcRULEInterParameterField_Leg1PropFactor_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg2PropFactor_set")]
+  public static extern void CThostFtdcRULEInterParameterField_Leg2PropFactor_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_Leg2PropFactor_get")]
+  public static extern int CThostFtdcRULEInterParameterField_Leg2PropFactor_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_CommodityGroupID_set")]
+  public static extern void CThostFtdcRULEInterParameterField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_CommodityGroupID_get")]
+  public static extern int CThostFtdcRULEInterParameterField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_CommodityGroupName_set")]
+  public static extern void CThostFtdcRULEInterParameterField_CommodityGroupName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRULEInterParameterField_CommodityGroupName_get")]
+  public static extern string CThostFtdcRULEInterParameterField_CommodityGroupName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRULEInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcRULEInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRULEInterParameterField")]
+  public static extern void delete_CThostFtdcRULEInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInstrParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQryRULEInstrParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInstrParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQryRULEInstrParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInstrParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcQryRULEInstrParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInstrParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcQryRULEInstrParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRULEInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRULEInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRULEInstrParameterField")]
+  public static extern void delete_CThostFtdcQryRULEInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQryRULEIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQryRULEIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQryRULEIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQryRULEIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRULEIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRULEIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRULEIntraParameterField")]
+  public static extern void delete_CThostFtdcQryRULEIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcQryRULEInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcQryRULEInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcQryRULEInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcQryRULEInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcQryRULEInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcQryRULEInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_CommodityGroupID_set")]
+  public static extern void CThostFtdcQryRULEInterParameterField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryRULEInterParameterField_CommodityGroupID_get")]
+  public static extern int CThostFtdcQryRULEInterParameterField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryRULEInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryRULEInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryRULEInterParameterField")]
+  public static extern void delete_CThostFtdcQryRULEInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorProdRULEMarginField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorProdRULEMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorProdRULEMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcInvestorProdRULEMarginField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InstrumentClass_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_InstrumentClass_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InstrumentClass_get")]
+  public static extern char CThostFtdcInvestorProdRULEMarginField_InstrumentClass_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_CommodityGroupID_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_CommodityGroupID_get")]
+  public static extern int CThostFtdcInvestorProdRULEMarginField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_BStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_BStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_SStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_SStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdOpenFrozen_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_BStdOpenFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdOpenFrozen_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_BStdOpenFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdOpenFrozen_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_SStdOpenFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdOpenFrozen_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_SStdOpenFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdCloseFrozen_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_BStdCloseFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_BStdCloseFrozen_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_BStdCloseFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdCloseFrozen_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_SStdCloseFrozen_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SStdCloseFrozen_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_SStdCloseFrozen_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_IntraProdStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_IntraProdStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_IntraProdStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_IntraProdStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_NetStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_NetStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_NetStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_NetStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InterProdStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_InterProdStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InterProdStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_InterProdStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SingleStdPosition_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_SingleStdPosition_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SingleStdPosition_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_SingleStdPosition_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_IntraProdMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_IntraProdMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_IntraProdMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_IntraProdMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InterProdMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_InterProdMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_InterProdMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_InterProdMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SingleMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_SingleMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_SingleMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_SingleMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_NonCombMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_NonCombMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_NonCombMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_NonCombMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_AddOnMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_AddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_AddOnMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_AddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ExchMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_ExchMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_AddOnFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_AddOnFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_AddOnFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_AddOnFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_OpenFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_OpenFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_OpenFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_OpenFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_CloseFrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_CloseFrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_CloseFrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_CloseFrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_Margin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_Margin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_FrozenMargin_set")]
+  public static extern void CThostFtdcInvestorProdRULEMarginField_FrozenMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorProdRULEMarginField_FrozenMargin_get")]
+  public static extern double CThostFtdcInvestorProdRULEMarginField_FrozenMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorProdRULEMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorProdRULEMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorProdRULEMarginField")]
+  public static extern void delete_CThostFtdcInvestorProdRULEMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_ExchangeID_set")]
+  public static extern void CThostFtdcQryInvestorProdRULEMarginField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_ExchangeID_get")]
+  public static extern string CThostFtdcQryInvestorProdRULEMarginField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorProdRULEMarginField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorProdRULEMarginField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorProdRULEMarginField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorProdRULEMarginField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcQryInvestorProdRULEMarginField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcQryInvestorProdRULEMarginField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_CommodityGroupID_set")]
+  public static extern void CThostFtdcQryInvestorProdRULEMarginField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorProdRULEMarginField_CommodityGroupID_get")]
+  public static extern int CThostFtdcQryInvestorProdRULEMarginField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorProdRULEMarginField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorProdRULEMarginField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorProdRULEMarginField")]
+  public static extern void delete_CThostFtdcQryInvestorProdRULEMarginField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMPortfDefinitionField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_PortfolioDefID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_PortfolioDefID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_PortfolioDefID_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMPortfDefinitionField_PortfolioDefID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMPortfDefinitionField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_IsSPBM_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_IsSPBM_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_IsSPBM_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMPortfDefinitionField_IsSPBM_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMPortfDefinitionField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMPortfDefinitionField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMPortfDefinitionField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMPortfDefinitionField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMPortfDefinitionField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMPortfDefinitionField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMPortfDefinitionField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMPortfDefinitionField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInvstPortfDefField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInvstPortfDefField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInvstPortfDefField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_PortfolioDefID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_PortfolioDefID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_PortfolioDefID_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMInvstPortfDefField_PortfolioDefID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMInvstPortfDefField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInvstPortfDefField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInvstPortfDefField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMInvstPortfDefField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMInvstPortfDefField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMInvstPortfDefField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMInvstPortfDefField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMInvstPortfDefField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMFutureParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMFutureParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMFutureParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMFutureParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_Cvf_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_Cvf_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_Cvf_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMFutureParameterField_Cvf_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_TimeRange_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_TimeRange_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_TimeRange_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMFutureParameterField_TimeRange_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_MarginRate_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_MarginRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_MarginRate_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMFutureParameterField_MarginRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_LockRateX_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_LockRateX_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_LockRateX_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMFutureParameterField_LockRateX_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnRate_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnRate_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMFutureParameterField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnLockRateX2_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnLockRateX2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnLockRateX2_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMFutureParameterField_AddOnLockRateX2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMFutureParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMFutureParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMFutureParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMFutureParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMFutureParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMFutureParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMFutureParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMFutureParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMOptionParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMOptionParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMOptionParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMOptionParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_Cvf_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_Cvf_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_Cvf_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMOptionParameterField_Cvf_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_DownPrice_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_DownPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_DownPrice_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMOptionParameterField_DownPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_Delta_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_Delta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_Delta_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMOptionParameterField_Delta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_SlimiDelta_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_SlimiDelta_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_SlimiDelta_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMOptionParameterField_SlimiDelta_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_PreSettlementPrice_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_PreSettlementPrice_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_PreSettlementPrice_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMOptionParameterField_PreSettlementPrice_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMOptionParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMOptionParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMOptionParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMOptionParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMOptionParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMOptionParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMOptionParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMOptionParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_IntraRateY_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_IntraRateY_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_IntraRateY_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMIntraParameterField_IntraRateY_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_AddOnIntraRateY2_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_AddOnIntraRateY2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_AddOnIntraRateY2_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMIntraParameterField_AddOnIntraRateY2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMIntraParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMIntraParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMIntraParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMIntraParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMIntraParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_SpreadId_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_SpreadId_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMInterParameterField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_InterRateZ_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_InterRateZ_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_InterRateZ_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMInterParameterField_InterRateZ_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMInterParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMInterParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMInterParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMInterParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMInterParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMAddOnInterParamField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMAddOnInterParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_SpreadId_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_SpreadId_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMAddOnInterParamField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_AddOnInterRateZ2_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_AddOnInterRateZ2_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_AddOnInterRateZ2_get")]
+  public static extern double CThostFtdcSyncDeltaSPBMAddOnInterParamField_AddOnInterRateZ2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaSPBMAddOnInterParamField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPBMAddOnInterParamField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPBMAddOnInterParamField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPBMAddOnInterParamField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPBMAddOnInterParamField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPBMAddOnInterParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPBMAddOnInterParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPBMAddOnInterParamField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPBMAddOnInterParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMInstParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMInstParamField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_InstMarginCalID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_InstMarginCalID_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_InstMarginCalID_get")]
+  public static extern char CThostFtdcSyncDeltaSPMMInstParamField_InstMarginCalID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_CommodityID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_CommodityID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMInstParamField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_CommodityGroupID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMInstParamField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPMMInstParamField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMInstParamField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMInstParamField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPMMInstParamField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPMMInstParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPMMInstParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPMMInstParamField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPMMInstParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMProductParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMProductParamField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_CommodityID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_CommodityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_CommodityID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMProductParamField_CommodityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_CommodityGroupID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMProductParamField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPMMProductParamField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMProductParamField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMProductParamField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPMMProductParamField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPMMProductParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPMMProductParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPMMProductParamField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPMMProductParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaInvestorSPMMModelField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaInvestorSPMMModelField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaInvestorSPMMModelField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_SPMMModelID_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_SPMMModelID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_SPMMModelID_get")]
+  public static extern string CThostFtdcSyncDeltaInvestorSPMMModelField_SPMMModelID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaInvestorSPMMModelField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaInvestorSPMMModelField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaInvestorSPMMModelField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaInvestorSPMMModelField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaInvestorSPMMModelField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaInvestorSPMMModelField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaInvestorSPMMModelField")]
+  public static extern void delete_CThostFtdcSyncDeltaInvestorSPMMModelField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMModelParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_SPMMModelID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_SPMMModelID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_SPMMModelID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMModelParamField_SPMMModelID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_CommodityGroupID_get")]
+  public static extern string CThostFtdcSyncDeltaSPMMModelParamField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_IntraCommodityRate_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_IntraCommodityRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_IntraCommodityRate_get")]
+  public static extern double CThostFtdcSyncDeltaSPMMModelParamField_IntraCommodityRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_InterCommodityRate_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_InterCommodityRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_InterCommodityRate_get")]
+  public static extern double CThostFtdcSyncDeltaSPMMModelParamField_InterCommodityRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_OptionDiscountRate_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_OptionDiscountRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_OptionDiscountRate_get")]
+  public static extern double CThostFtdcSyncDeltaSPMMModelParamField_OptionDiscountRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_MiniMarginRatio_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_MiniMarginRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_MiniMarginRatio_get")]
+  public static extern double CThostFtdcSyncDeltaSPMMModelParamField_MiniMarginRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaSPMMModelParamField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaSPMMModelParamField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaSPMMModelParamField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaSPMMModelParamField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaSPMMModelParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaSPMMModelParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaSPMMModelParamField")]
+  public static extern void delete_CThostFtdcSyncDeltaSPMMModelParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombProdInfoField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombProdInfoField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_CombProductID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_CombProductID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombProdInfoField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductGroupID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombProdInfoField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSCombProdInfoField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombProdInfoField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombProdInfoField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSCombProdInfoField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSCombProdInfoField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSCombProdInfoField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSCombProdInfoField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSCombProdInfoField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInstrParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInstrParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ProductID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ProductID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInstrParameterField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_HedgeRate_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_HedgeRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_HedgeRate_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSInstrParameterField_HedgeRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSInstrParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInstrParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInstrParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInstrParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSInstrParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_CombProductID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_CombProductID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSIntraParameterField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_HedgeRate_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_HedgeRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_HedgeRate_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSIntraParameterField_HedgeRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSIntraParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSIntraParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSIntraParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSIntraParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSIntraParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ProductGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_ProductGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ProductGroupID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInterParameterField_ProductGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_Priority_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_Priority_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_Priority_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInterParameterField_Priority_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CreditRate_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_CreditRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CreditRate_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSInterParameterField_CreditRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct1_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct1_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct1_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct1_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct2_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct2_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct2_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInterParameterField_CombProduct2_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSInterParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInterParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInterParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInterParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSInterParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSSOptAdjParamField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_CombProductID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_CombProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_CombProductID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSSOptAdjParamField_CombProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSSOptAdjParamField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_AdjustValue_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_AdjustValue_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_AdjustValue_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSSOptAdjParamField_AdjustValue_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSSOptAdjParamField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSSOptAdjParamField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSSOptAdjParamField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSSOptAdjParamField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSSOptAdjParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSSOptAdjParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSSOptAdjParamField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSSOptAdjParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ProdGroup_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ProdGroup_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ProdGroup_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ProdGroup_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_RuleId_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_RuleId_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_RuleId_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_RuleId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Priority_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Priority_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Priority_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Priority_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSCombRuleDtlField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_CombMargin_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_CombMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_CombMargin_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSCombRuleDtlField_CombMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeInstID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeInstID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegID_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Direction_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Direction_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSCombRuleDtlField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegMultiple_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegMultiple_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegMultiple_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSCombRuleDtlField_LegMultiple_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSCombRuleDtlField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSCombRuleDtlField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSCombRuleDtlField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSCombRuleDtlField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSCombRuleDtlField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSCombRuleDtlField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSCombRuleDtlField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSCombRuleDtlField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_BrokerID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_BrokerID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_InvestorID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_InvestorID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_HedgeFlag_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_HedgeFlag_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSInvstCombPosField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_PosiDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_PosiDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_PosiDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSInvstCombPosField_PosiDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_CombInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_CombInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_LegID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_LegID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_LegID_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInvstCombPosField_LegID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeInstID_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeInstID_get")]
+  public static extern string CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_TotalAmt_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_TotalAmt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_TotalAmt_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInvstCombPosField_TotalAmt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchMargin_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchMargin_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSInvstCombPosField_ExchMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_Margin_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_Margin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_Margin_get")]
+  public static extern double CThostFtdcSyncDeltaRCAMSInvstCombPosField_Margin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRCAMSInvstCombPosField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRCAMSInvstCombPosField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRCAMSInvstCombPosField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRCAMSInvstCombPosField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRCAMSInvstCombPosField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRCAMSInvstCombPosField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRCAMSInvstCombPosField")]
+  public static extern void delete_CThostFtdcSyncDeltaRCAMSInvstCombPosField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInstrParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInstrParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentClass_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentClass_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentClass_get")]
+  public static extern char CThostFtdcSyncDeltaRULEInstrParameterField_InstrumentClass_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_StdInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_StdInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_StdInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInstrParameterField_StdInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BSpecRatio_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_BSpecRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BSpecRatio_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_BSpecRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SSpecRatio_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_SSpecRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SSpecRatio_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_SSpecRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BHedgeRatio_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_BHedgeRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BHedgeRatio_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_BHedgeRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SHedgeRatio_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_SHedgeRatio_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SHedgeRatio_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_SHedgeRatio_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BAddOnMargin_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_BAddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_BAddOnMargin_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_BAddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SAddOnMargin_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_SAddOnMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SAddOnMargin_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInstrParameterField_SAddOnMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_CommodityGroupID_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInstrParameterField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRULEInstrParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInstrParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInstrParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInstrParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRULEInstrParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRULEInstrParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRULEInstrParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRULEInstrParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRULEIntraParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEIntraParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaRULEIntraParameterField_ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrumentID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrumentID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrMargin_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrMargin_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrMargin_get")]
+  public static extern double CThostFtdcSyncDeltaRULEIntraParameterField_StdInstrMargin_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_UsualIntraRate_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_UsualIntraRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_UsualIntraRate_get")]
+  public static extern double CThostFtdcSyncDeltaRULEIntraParameterField_UsualIntraRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_DeliveryIntraRate_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_DeliveryIntraRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_DeliveryIntraRate_get")]
+  public static extern double CThostFtdcSyncDeltaRULEIntraParameterField_DeliveryIntraRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRULEIntraParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRULEIntraParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEIntraParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRULEIntraParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRULEIntraParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRULEIntraParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRULEIntraParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRULEIntraParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_TradingDay_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_TradingDay_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInterParameterField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_ExchangeID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_ExchangeID_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInterParameterField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_SpreadId_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_SpreadId_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_SpreadId_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInterParameterField_SpreadId_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_InterRate_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_InterRate_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_InterRate_get")]
+  public static extern double CThostFtdcSyncDeltaRULEInterParameterField_InterRate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg1ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_Leg1ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg1ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInterParameterField_Leg1ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg2ProdFamilyCode_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_Leg2ProdFamilyCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg2ProdFamilyCode_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInterParameterField_Leg2ProdFamilyCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg1PropFactor_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_Leg1PropFactor_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg1PropFactor_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInterParameterField_Leg1PropFactor_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg2PropFactor_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_Leg2PropFactor_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_Leg2PropFactor_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInterParameterField_Leg2PropFactor_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupID_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupID_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupName_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupName_get")]
+  public static extern string CThostFtdcSyncDeltaRULEInterParameterField_CommodityGroupName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_ActionDirection_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_ActionDirection_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_ActionDirection_get")]
+  public static extern char CThostFtdcSyncDeltaRULEInterParameterField_ActionDirection_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_SyncDeltaSequenceNo_set")]
+  public static extern void CThostFtdcSyncDeltaRULEInterParameterField_SyncDeltaSequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSyncDeltaRULEInterParameterField_SyncDeltaSequenceNo_get")]
+  public static extern int CThostFtdcSyncDeltaRULEInterParameterField_SyncDeltaSequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSyncDeltaRULEInterParameterField")]
+  public static extern global::System.IntPtr new_CThostFtdcSyncDeltaRULEInterParameterField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSyncDeltaRULEInterParameterField")]
+  public static extern void delete_CThostFtdcSyncDeltaRULEInterParameterField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_BrokerID_set")]
+  public static extern void CThostFtdcIpAddrParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_BrokerID_get")]
+  public static extern string CThostFtdcIpAddrParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Address_set")]
+  public static extern void CThostFtdcIpAddrParamField_Address_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Address_get")]
+  public static extern string CThostFtdcIpAddrParamField_Address_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_DRIdentityID_set")]
+  public static extern void CThostFtdcIpAddrParamField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_DRIdentityID_get")]
+  public static extern int CThostFtdcIpAddrParamField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_DRIdentityName_set")]
+  public static extern void CThostFtdcIpAddrParamField_DRIdentityName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_DRIdentityName_get")]
+  public static extern string CThostFtdcIpAddrParamField_DRIdentityName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrSrvMode_set")]
+  public static extern void CThostFtdcIpAddrParamField_AddrSrvMode_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrSrvMode_get")]
+  public static extern char CThostFtdcIpAddrParamField_AddrSrvMode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrVer_set")]
+  public static extern void CThostFtdcIpAddrParamField_AddrVer_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrVer_get")]
+  public static extern char CThostFtdcIpAddrParamField_AddrVer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrNo_set")]
+  public static extern void CThostFtdcIpAddrParamField_AddrNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrNo_get")]
+  public static extern int CThostFtdcIpAddrParamField_AddrNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrName_set")]
+  public static extern void CThostFtdcIpAddrParamField_AddrName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_AddrName_get")]
+  public static extern string CThostFtdcIpAddrParamField_AddrName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_IsSM_set")]
+  public static extern void CThostFtdcIpAddrParamField_IsSM_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_IsSM_get")]
+  public static extern int CThostFtdcIpAddrParamField_IsSM_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_IsLocalAddr_set")]
+  public static extern void CThostFtdcIpAddrParamField_IsLocalAddr_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_IsLocalAddr_get")]
+  public static extern int CThostFtdcIpAddrParamField_IsLocalAddr_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Remark_set")]
+  public static extern void CThostFtdcIpAddrParamField_Remark_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Remark_get")]
+  public static extern string CThostFtdcIpAddrParamField_Remark_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Site_set")]
+  public static extern void CThostFtdcIpAddrParamField_Site_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_Site_get")]
+  public static extern string CThostFtdcIpAddrParamField_Site_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_NetOperator_set")]
+  public static extern void CThostFtdcIpAddrParamField_NetOperator_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcIpAddrParamField_NetOperator_get")]
+  public static extern string CThostFtdcIpAddrParamField_NetOperator_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcIpAddrParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcIpAddrParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcIpAddrParamField")]
+  public static extern void delete_CThostFtdcIpAddrParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryIpAddrParamField_BrokerID_set")]
+  public static extern void CThostFtdcQryIpAddrParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryIpAddrParamField_BrokerID_get")]
+  public static extern string CThostFtdcQryIpAddrParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryIpAddrParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryIpAddrParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryIpAddrParamField")]
+  public static extern void delete_CThostFtdcQryIpAddrParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_BrokerID_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_BrokerID_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_UserID_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_UserID_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Address_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_Address_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Address_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_Address_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_DRIdentityID_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_DRIdentityID_get")]
+  public static extern int CThostFtdcTGIpAddrParamField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_DRIdentityName_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_DRIdentityName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_DRIdentityName_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_DRIdentityName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrSrvMode_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_AddrSrvMode_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrSrvMode_get")]
+  public static extern char CThostFtdcTGIpAddrParamField_AddrSrvMode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrVer_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_AddrVer_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrVer_get")]
+  public static extern char CThostFtdcTGIpAddrParamField_AddrVer_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrNo_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_AddrNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrNo_get")]
+  public static extern int CThostFtdcTGIpAddrParamField_AddrNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrName_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_AddrName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_AddrName_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_AddrName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_IsSM_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_IsSM_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_IsSM_get")]
+  public static extern int CThostFtdcTGIpAddrParamField_IsSM_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_IsLocalAddr_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_IsLocalAddr_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_IsLocalAddr_get")]
+  public static extern int CThostFtdcTGIpAddrParamField_IsLocalAddr_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Remark_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_Remark_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Remark_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_Remark_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Site_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_Site_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_Site_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_Site_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_NetOperator_set")]
+  public static extern void CThostFtdcTGIpAddrParamField_NetOperator_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGIpAddrParamField_NetOperator_get")]
+  public static extern string CThostFtdcTGIpAddrParamField_NetOperator_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTGIpAddrParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcTGIpAddrParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcTGIpAddrParamField")]
+  public static extern void delete_CThostFtdcTGIpAddrParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_BrokerID_set")]
+  public static extern void CThostFtdcQryTGIpAddrParamField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_BrokerID_get")]
+  public static extern string CThostFtdcQryTGIpAddrParamField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_UserID_set")]
+  public static extern void CThostFtdcQryTGIpAddrParamField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_UserID_get")]
+  public static extern string CThostFtdcQryTGIpAddrParamField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_AppID_set")]
+  public static extern void CThostFtdcQryTGIpAddrParamField_AppID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryTGIpAddrParamField_AppID_get")]
+  public static extern string CThostFtdcQryTGIpAddrParamField_AppID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryTGIpAddrParamField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryTGIpAddrParamField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryTGIpAddrParamField")]
+  public static extern void delete_CThostFtdcQryTGIpAddrParamField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGSessionQryStatusField_LastQryFreq_set")]
+  public static extern void CThostFtdcTGSessionQryStatusField_LastQryFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGSessionQryStatusField_LastQryFreq_get")]
+  public static extern int CThostFtdcTGSessionQryStatusField_LastQryFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGSessionQryStatusField_QryStatus_set")]
+  public static extern void CThostFtdcTGSessionQryStatusField_QryStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTGSessionQryStatusField_QryStatus_get")]
+  public static extern char CThostFtdcTGSessionQryStatusField_QryStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTGSessionQryStatusField")]
+  public static extern global::System.IntPtr new_CThostFtdcTGSessionQryStatusField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcTGSessionQryStatusField")]
+  public static extern void delete_CThostFtdcTGSessionQryStatusField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_BrokerID_set")]
+  public static extern void CThostFtdcLocalAddrConfigField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_BrokerID_get")]
+  public static extern string CThostFtdcLocalAddrConfigField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_PeerAddr_set")]
+  public static extern void CThostFtdcLocalAddrConfigField_PeerAddr_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_PeerAddr_get")]
+  public static extern string CThostFtdcLocalAddrConfigField_PeerAddr_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_NetMask_set")]
+  public static extern void CThostFtdcLocalAddrConfigField_NetMask_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_NetMask_get")]
+  public static extern string CThostFtdcLocalAddrConfigField_NetMask_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_DRIdentityID_set")]
+  public static extern void CThostFtdcLocalAddrConfigField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_DRIdentityID_get")]
+  public static extern int CThostFtdcLocalAddrConfigField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_LocalAddress_set")]
+  public static extern void CThostFtdcLocalAddrConfigField_LocalAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcLocalAddrConfigField_LocalAddress_get")]
+  public static extern string CThostFtdcLocalAddrConfigField_LocalAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcLocalAddrConfigField")]
+  public static extern global::System.IntPtr new_CThostFtdcLocalAddrConfigField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcLocalAddrConfigField")]
+  public static extern void delete_CThostFtdcLocalAddrConfigField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryLocalAddrConfigField_BrokerID_set")]
+  public static extern void CThostFtdcQryLocalAddrConfigField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryLocalAddrConfigField_BrokerID_get")]
+  public static extern string CThostFtdcQryLocalAddrConfigField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryLocalAddrConfigField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryLocalAddrConfigField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryLocalAddrConfigField")]
+  public static extern void delete_CThostFtdcQryLocalAddrConfigField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeCode_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_TradeCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeCode_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_TradeCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankBranchID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankBranchID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerBranchID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BrokerBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerBranchID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BrokerBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeDate_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_TradeDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeDate_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_TradeDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeTime_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_TradeTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradeTime_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_TradeTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSerial_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSerial_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradingDay_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TradingDay_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_PlateSerial_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_PlateSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_PlateSerial_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_PlateSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_LastFragment_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_LastFragment_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_LastFragment_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_LastFragment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SessionID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SessionID_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CustomerName_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_CustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CustomerName_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_CustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_IdCardType_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_IdCardType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_IdCardType_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_IdCardType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_IdentifiedCardNo_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_IdentifiedCardNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_IdentifiedCardNo_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_IdentifiedCardNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CustType_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_CustType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CustType_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_CustType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankAccount_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankAccount_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankAccount_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankAccount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankPassWord_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankPassWord_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankPassWord_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankPassWord_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_AccountID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_AccountID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_Password_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_Password_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_FutureSerial_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_FutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_FutureSerial_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_FutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_InstallID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_InstallID_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_UserID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_UserID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_VerifyCertNoFlag_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_VerifyCertNoFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_VerifyCertNoFlag_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_VerifyCertNoFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CurrencyID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_CurrencyID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_Digest_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_Digest_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_Digest_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_Digest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankAccType_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankAccType_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_BankAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_DeviceID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_DeviceID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_DeviceID_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_DeviceID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSecuAccType_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankSecuAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSecuAccType_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_BankSecuAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerIDByBank_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BrokerIDByBank_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BrokerIDByBank_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BrokerIDByBank_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSecuAcc_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankSecuAcc_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankSecuAcc_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_BankSecuAcc_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankPwdFlag_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_BankPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_BankPwdFlag_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_BankPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SecuPwdFlag_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_SecuPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SecuPwdFlag_get")]
+  public static extern char CThostFtdcReqQueryBankAccountBySecField_SecuPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_OperNo_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_OperNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_OperNo_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_OperNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_RequestID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_RequestID_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_TID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_TID_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_TID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_LongCustomerName_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_LongCustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_LongCustomerName_get")]
+  public static extern string CThostFtdcReqQueryBankAccountBySecField_LongCustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_DRIdentityID_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_DRIdentityID_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SecFutureSerial_set")]
+  public static extern void CThostFtdcReqQueryBankAccountBySecField_SecFutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqQueryBankAccountBySecField_SecFutureSerial_get")]
+  public static extern int CThostFtdcReqQueryBankAccountBySecField_SecFutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcReqQueryBankAccountBySecField")]
+  public static extern global::System.IntPtr new_CThostFtdcReqQueryBankAccountBySecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcReqQueryBankAccountBySecField")]
+  public static extern void delete_CThostFtdcReqQueryBankAccountBySecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeCode_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_TradeCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeCode_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_TradeCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankBranchID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankBranchID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerBranchID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BrokerBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerBranchID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BrokerBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeDate_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_TradeDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeDate_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_TradeDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeTime_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_TradeTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradeTime_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_TradeTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSerial_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSerial_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradingDay_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TradingDay_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_PlateSerial_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_PlateSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_PlateSerial_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_PlateSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_LastFragment_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_LastFragment_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_LastFragment_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_LastFragment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SessionID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SessionID_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CustomerName_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_CustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CustomerName_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_CustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_IdCardType_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_IdCardType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_IdCardType_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_IdCardType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_IdentifiedCardNo_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_IdentifiedCardNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_IdentifiedCardNo_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_IdentifiedCardNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CustType_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_CustType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CustType_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_CustType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankAccount_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankAccount_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankAccount_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankAccount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankPassWord_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankPassWord_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankPassWord_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankPassWord_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_AccountID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_AccountID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_Password_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_Password_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_FutureSerial_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_FutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_FutureSerial_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_FutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_InstallID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_InstallID_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_UserID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_UserID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_VerifyCertNoFlag_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_VerifyCertNoFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_VerifyCertNoFlag_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_VerifyCertNoFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CurrencyID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_CurrencyID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_Digest_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_Digest_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_Digest_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_Digest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankAccType_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankAccType_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_BankAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_DeviceID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_DeviceID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_DeviceID_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_DeviceID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSecuAccType_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankSecuAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSecuAccType_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_BankSecuAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerIDByBank_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BrokerIDByBank_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BrokerIDByBank_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BrokerIDByBank_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSecuAcc_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankSecuAcc_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankSecuAcc_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_BankSecuAcc_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankPwdFlag_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankPwdFlag_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_BankPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SecuPwdFlag_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_SecuPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SecuPwdFlag_get")]
+  public static extern char CThostFtdcRspQueryBankAccountBySecField_SecuPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_OperNo_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_OperNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_OperNo_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_OperNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_RequestID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_RequestID_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_TID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_TID_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_TID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankUseAmount_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankUseAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankUseAmount_get")]
+  public static extern double CThostFtdcRspQueryBankAccountBySecField_BankUseAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankFetchAmount_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_BankFetchAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_BankFetchAmount_get")]
+  public static extern double CThostFtdcRspQueryBankAccountBySecField_BankFetchAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_LongCustomerName_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_LongCustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_LongCustomerName_get")]
+  public static extern string CThostFtdcRspQueryBankAccountBySecField_LongCustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_DRIdentityID_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_DRIdentityID_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SecFutureSerial_set")]
+  public static extern void CThostFtdcRspQueryBankAccountBySecField_SecFutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspQueryBankAccountBySecField_SecFutureSerial_get")]
+  public static extern int CThostFtdcRspQueryBankAccountBySecField_SecFutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRspQueryBankAccountBySecField")]
+  public static extern global::System.IntPtr new_CThostFtdcRspQueryBankAccountBySecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRspQueryBankAccountBySecField")]
+  public static extern void delete_CThostFtdcRspQueryBankAccountBySecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeCode_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TradeCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeCode_get")]
+  public static extern string CThostFtdcReqTransferBySecField_TradeCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankBranchID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankBranchID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerBranchID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BrokerBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerBranchID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BrokerBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeDate_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TradeDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeDate_get")]
+  public static extern string CThostFtdcReqTransferBySecField_TradeDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeTime_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TradeTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeTime_get")]
+  public static extern string CThostFtdcReqTransferBySecField_TradeTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSerial_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSerial_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradingDay_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradingDay_get")]
+  public static extern string CThostFtdcReqTransferBySecField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_PlateSerial_set")]
+  public static extern void CThostFtdcReqTransferBySecField_PlateSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_PlateSerial_get")]
+  public static extern int CThostFtdcReqTransferBySecField_PlateSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_LastFragment_set")]
+  public static extern void CThostFtdcReqTransferBySecField_LastFragment_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_LastFragment_get")]
+  public static extern char CThostFtdcReqTransferBySecField_LastFragment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SessionID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SessionID_get")]
+  public static extern int CThostFtdcReqTransferBySecField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustomerName_set")]
+  public static extern void CThostFtdcReqTransferBySecField_CustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustomerName_get")]
+  public static extern string CThostFtdcReqTransferBySecField_CustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_IdCardType_set")]
+  public static extern void CThostFtdcReqTransferBySecField_IdCardType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_IdCardType_get")]
+  public static extern char CThostFtdcReqTransferBySecField_IdCardType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_IdentifiedCardNo_set")]
+  public static extern void CThostFtdcReqTransferBySecField_IdentifiedCardNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_IdentifiedCardNo_get")]
+  public static extern string CThostFtdcReqTransferBySecField_IdentifiedCardNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustType_set")]
+  public static extern void CThostFtdcReqTransferBySecField_CustType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustType_get")]
+  public static extern char CThostFtdcReqTransferBySecField_CustType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankAccount_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankAccount_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankAccount_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankAccount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankPassWord_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankPassWord_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankPassWord_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankPassWord_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_AccountID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_AccountID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Password_set")]
+  public static extern void CThostFtdcReqTransferBySecField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Password_get")]
+  public static extern string CThostFtdcReqTransferBySecField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_InstallID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_InstallID_get")]
+  public static extern int CThostFtdcReqTransferBySecField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FutureSerial_set")]
+  public static extern void CThostFtdcReqTransferBySecField_FutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FutureSerial_get")]
+  public static extern int CThostFtdcReqTransferBySecField_FutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_UserID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_UserID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_VerifyCertNoFlag_set")]
+  public static extern void CThostFtdcReqTransferBySecField_VerifyCertNoFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_VerifyCertNoFlag_get")]
+  public static extern char CThostFtdcReqTransferBySecField_VerifyCertNoFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CurrencyID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CurrencyID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeAmount_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TradeAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TradeAmount_get")]
+  public static extern double CThostFtdcReqTransferBySecField_TradeAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FutureFetchAmount_set")]
+  public static extern void CThostFtdcReqTransferBySecField_FutureFetchAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FutureFetchAmount_get")]
+  public static extern double CThostFtdcReqTransferBySecField_FutureFetchAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FeePayFlag_set")]
+  public static extern void CThostFtdcReqTransferBySecField_FeePayFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_FeePayFlag_get")]
+  public static extern char CThostFtdcReqTransferBySecField_FeePayFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustFee_set")]
+  public static extern void CThostFtdcReqTransferBySecField_CustFee_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_CustFee_get")]
+  public static extern double CThostFtdcReqTransferBySecField_CustFee_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerFee_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BrokerFee_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerFee_get")]
+  public static extern double CThostFtdcReqTransferBySecField_BrokerFee_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Message_set")]
+  public static extern void CThostFtdcReqTransferBySecField_Message_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Message_get")]
+  public static extern string CThostFtdcReqTransferBySecField_Message_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Digest_set")]
+  public static extern void CThostFtdcReqTransferBySecField_Digest_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_Digest_get")]
+  public static extern string CThostFtdcReqTransferBySecField_Digest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankAccType_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankAccType_get")]
+  public static extern char CThostFtdcReqTransferBySecField_BankAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_DeviceID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_DeviceID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_DeviceID_get")]
+  public static extern string CThostFtdcReqTransferBySecField_DeviceID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSecuAccType_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankSecuAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSecuAccType_get")]
+  public static extern char CThostFtdcReqTransferBySecField_BankSecuAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerIDByBank_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BrokerIDByBank_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BrokerIDByBank_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BrokerIDByBank_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSecuAcc_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankSecuAcc_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankSecuAcc_get")]
+  public static extern string CThostFtdcReqTransferBySecField_BankSecuAcc_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankPwdFlag_set")]
+  public static extern void CThostFtdcReqTransferBySecField_BankPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_BankPwdFlag_get")]
+  public static extern char CThostFtdcReqTransferBySecField_BankPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SecuPwdFlag_set")]
+  public static extern void CThostFtdcReqTransferBySecField_SecuPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SecuPwdFlag_get")]
+  public static extern char CThostFtdcReqTransferBySecField_SecuPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_OperNo_set")]
+  public static extern void CThostFtdcReqTransferBySecField_OperNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_OperNo_get")]
+  public static extern string CThostFtdcReqTransferBySecField_OperNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_RequestID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_RequestID_get")]
+  public static extern int CThostFtdcReqTransferBySecField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TID_get")]
+  public static extern int CThostFtdcReqTransferBySecField_TID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TransferStatus_set")]
+  public static extern void CThostFtdcReqTransferBySecField_TransferStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_TransferStatus_get")]
+  public static extern char CThostFtdcReqTransferBySecField_TransferStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_LongCustomerName_set")]
+  public static extern void CThostFtdcReqTransferBySecField_LongCustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_LongCustomerName_get")]
+  public static extern string CThostFtdcReqTransferBySecField_LongCustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_DRIdentityID_set")]
+  public static extern void CThostFtdcReqTransferBySecField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_DRIdentityID_get")]
+  public static extern int CThostFtdcReqTransferBySecField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SecFutureSerial_set")]
+  public static extern void CThostFtdcReqTransferBySecField_SecFutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcReqTransferBySecField_SecFutureSerial_get")]
+  public static extern int CThostFtdcReqTransferBySecField_SecFutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcReqTransferBySecField")]
+  public static extern global::System.IntPtr new_CThostFtdcReqTransferBySecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcReqTransferBySecField")]
+  public static extern void delete_CThostFtdcReqTransferBySecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeCode_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TradeCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeCode_get")]
+  public static extern string CThostFtdcRspTransferBySecField_TradeCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankBranchID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankBranchID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerBranchID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BrokerBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerBranchID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BrokerBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeDate_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TradeDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeDate_get")]
+  public static extern string CThostFtdcRspTransferBySecField_TradeDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeTime_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TradeTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeTime_get")]
+  public static extern string CThostFtdcRspTransferBySecField_TradeTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSerial_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSerial_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradingDay_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradingDay_get")]
+  public static extern string CThostFtdcRspTransferBySecField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_PlateSerial_set")]
+  public static extern void CThostFtdcRspTransferBySecField_PlateSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_PlateSerial_get")]
+  public static extern int CThostFtdcRspTransferBySecField_PlateSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_LastFragment_set")]
+  public static extern void CThostFtdcRspTransferBySecField_LastFragment_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_LastFragment_get")]
+  public static extern char CThostFtdcRspTransferBySecField_LastFragment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SessionID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SessionID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustomerName_set")]
+  public static extern void CThostFtdcRspTransferBySecField_CustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustomerName_get")]
+  public static extern string CThostFtdcRspTransferBySecField_CustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_IdCardType_set")]
+  public static extern void CThostFtdcRspTransferBySecField_IdCardType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_IdCardType_get")]
+  public static extern char CThostFtdcRspTransferBySecField_IdCardType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_IdentifiedCardNo_set")]
+  public static extern void CThostFtdcRspTransferBySecField_IdentifiedCardNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_IdentifiedCardNo_get")]
+  public static extern string CThostFtdcRspTransferBySecField_IdentifiedCardNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustType_set")]
+  public static extern void CThostFtdcRspTransferBySecField_CustType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustType_get")]
+  public static extern char CThostFtdcRspTransferBySecField_CustType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankAccount_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankAccount_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankAccount_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankAccount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankPassWord_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankPassWord_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankPassWord_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankPassWord_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_AccountID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_AccountID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Password_set")]
+  public static extern void CThostFtdcRspTransferBySecField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Password_get")]
+  public static extern string CThostFtdcRspTransferBySecField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_InstallID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_InstallID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FutureSerial_set")]
+  public static extern void CThostFtdcRspTransferBySecField_FutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FutureSerial_get")]
+  public static extern int CThostFtdcRspTransferBySecField_FutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_UserID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_UserID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_VerifyCertNoFlag_set")]
+  public static extern void CThostFtdcRspTransferBySecField_VerifyCertNoFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_VerifyCertNoFlag_get")]
+  public static extern char CThostFtdcRspTransferBySecField_VerifyCertNoFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CurrencyID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CurrencyID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeAmount_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TradeAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TradeAmount_get")]
+  public static extern double CThostFtdcRspTransferBySecField_TradeAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FutureFetchAmount_set")]
+  public static extern void CThostFtdcRspTransferBySecField_FutureFetchAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FutureFetchAmount_get")]
+  public static extern double CThostFtdcRspTransferBySecField_FutureFetchAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FeePayFlag_set")]
+  public static extern void CThostFtdcRspTransferBySecField_FeePayFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_FeePayFlag_get")]
+  public static extern char CThostFtdcRspTransferBySecField_FeePayFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustFee_set")]
+  public static extern void CThostFtdcRspTransferBySecField_CustFee_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_CustFee_get")]
+  public static extern double CThostFtdcRspTransferBySecField_CustFee_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerFee_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BrokerFee_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerFee_get")]
+  public static extern double CThostFtdcRspTransferBySecField_BrokerFee_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Message_set")]
+  public static extern void CThostFtdcRspTransferBySecField_Message_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Message_get")]
+  public static extern string CThostFtdcRspTransferBySecField_Message_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Digest_set")]
+  public static extern void CThostFtdcRspTransferBySecField_Digest_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_Digest_get")]
+  public static extern string CThostFtdcRspTransferBySecField_Digest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankAccType_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankAccType_get")]
+  public static extern char CThostFtdcRspTransferBySecField_BankAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_DeviceID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_DeviceID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_DeviceID_get")]
+  public static extern string CThostFtdcRspTransferBySecField_DeviceID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSecuAccType_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankSecuAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSecuAccType_get")]
+  public static extern char CThostFtdcRspTransferBySecField_BankSecuAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerIDByBank_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BrokerIDByBank_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BrokerIDByBank_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BrokerIDByBank_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSecuAcc_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankSecuAcc_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankSecuAcc_get")]
+  public static extern string CThostFtdcRspTransferBySecField_BankSecuAcc_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankPwdFlag_set")]
+  public static extern void CThostFtdcRspTransferBySecField_BankPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_BankPwdFlag_get")]
+  public static extern char CThostFtdcRspTransferBySecField_BankPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SecuPwdFlag_set")]
+  public static extern void CThostFtdcRspTransferBySecField_SecuPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SecuPwdFlag_get")]
+  public static extern char CThostFtdcRspTransferBySecField_SecuPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_OperNo_set")]
+  public static extern void CThostFtdcRspTransferBySecField_OperNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_OperNo_get")]
+  public static extern string CThostFtdcRspTransferBySecField_OperNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_RequestID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_RequestID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_TID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TransferStatus_set")]
+  public static extern void CThostFtdcRspTransferBySecField_TransferStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_TransferStatus_get")]
+  public static extern char CThostFtdcRspTransferBySecField_TransferStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_ErrorID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_ErrorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_ErrorID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_ErrorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_ErrorMsg_set")]
+  public static extern void CThostFtdcRspTransferBySecField_ErrorMsg_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_ErrorMsg_get")]
+  public static extern string CThostFtdcRspTransferBySecField_ErrorMsg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_LongCustomerName_set")]
+  public static extern void CThostFtdcRspTransferBySecField_LongCustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_LongCustomerName_get")]
+  public static extern string CThostFtdcRspTransferBySecField_LongCustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_DRIdentityID_set")]
+  public static extern void CThostFtdcRspTransferBySecField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_DRIdentityID_get")]
+  public static extern int CThostFtdcRspTransferBySecField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SecFutureSerial_set")]
+  public static extern void CThostFtdcRspTransferBySecField_SecFutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRspTransferBySecField_SecFutureSerial_get")]
+  public static extern int CThostFtdcRspTransferBySecField_SecFutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRspTransferBySecField")]
+  public static extern global::System.IntPtr new_CThostFtdcRspTransferBySecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRspTransferBySecField")]
+  public static extern void delete_CThostFtdcRspTransferBySecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeCode_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_TradeCode_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeCode_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_TradeCode_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankBranchID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankBranchID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerBranchID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BrokerBranchID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerBranchID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BrokerBranchID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeDate_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_TradeDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeDate_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_TradeDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeTime_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_TradeTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradeTime_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_TradeTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSerial_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSerial_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradingDay_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TradingDay_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_PlateSerial_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_PlateSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_PlateSerial_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_PlateSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_LastFragment_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_LastFragment_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_LastFragment_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_LastFragment_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SessionID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SessionID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CustomerName_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_CustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CustomerName_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_CustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_IdCardType_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_IdCardType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_IdCardType_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_IdCardType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_IdentifiedCardNo_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_IdentifiedCardNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_IdentifiedCardNo_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_IdentifiedCardNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CustType_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_CustType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CustType_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_CustType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankAccount_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankAccount_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankAccount_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankAccount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankPassWord_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankPassWord_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankPassWord_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankPassWord_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_AccountID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_AccountID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_Password_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_Password_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_Password_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_Password_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_FutureSerial_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_FutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_FutureSerial_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_FutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_InstallID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_InstallID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_UserID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_UserID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_VerifyCertNoFlag_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_VerifyCertNoFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_VerifyCertNoFlag_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_VerifyCertNoFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CurrencyID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_CurrencyID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_Digest_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_Digest_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_Digest_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_Digest_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankAccType_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankAccType_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_BankAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_DeviceID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_DeviceID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_DeviceID_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_DeviceID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAccType_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAccType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAccType_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAccType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerIDByBank_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BrokerIDByBank_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BrokerIDByBank_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BrokerIDByBank_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAcc_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAcc_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAcc_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_BankSecuAcc_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankPwdFlag_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankPwdFlag_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_BankPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SecuPwdFlag_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_SecuPwdFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SecuPwdFlag_get")]
+  public static extern char CThostFtdcNotifyQueryFutureAccountBySecField_SecuPwdFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_OperNo_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_OperNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_OperNo_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_OperNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_RequestID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_RequestID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_TID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_TID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_TID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankUseAmount_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankUseAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankUseAmount_get")]
+  public static extern double CThostFtdcNotifyQueryFutureAccountBySecField_BankUseAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankFetchAmount_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_BankFetchAmount_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_BankFetchAmount_get")]
+  public static extern double CThostFtdcNotifyQueryFutureAccountBySecField_BankFetchAmount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_ErrorID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_ErrorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_ErrorID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_ErrorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_ErrorMsg_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_ErrorMsg_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_ErrorMsg_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_ErrorMsg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_LongCustomerName_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_LongCustomerName_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_LongCustomerName_get")]
+  public static extern string CThostFtdcNotifyQueryFutureAccountBySecField_LongCustomerName_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_DRIdentityID_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_DRIdentityID_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SecFutureSerial_set")]
+  public static extern void CThostFtdcNotifyQueryFutureAccountBySecField_SecFutureSerial_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcNotifyQueryFutureAccountBySecField_SecFutureSerial_get")]
+  public static extern int CThostFtdcNotifyQueryFutureAccountBySecField_SecFutureSerial_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcNotifyQueryFutureAccountBySecField")]
+  public static extern global::System.IntPtr new_CThostFtdcNotifyQueryFutureAccountBySecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcNotifyQueryFutureAccountBySecField")]
+  public static extern void delete_CThostFtdcNotifyQueryFutureAccountBySecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcExitEmergencyField_BrokerID_set")]
+  public static extern void CThostFtdcExitEmergencyField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcExitEmergencyField_BrokerID_get")]
+  public static extern string CThostFtdcExitEmergencyField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcExitEmergencyField")]
+  public static extern global::System.IntPtr new_CThostFtdcExitEmergencyField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcExitEmergencyField")]
+  public static extern void delete_CThostFtdcExitEmergencyField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginModelField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginModelField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginModelField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginModelField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_MarginModelID_set")]
+  public static extern void CThostFtdcInvestorPortfMarginModelField_MarginModelID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfMarginModelField_MarginModelID_get")]
+  public static extern string CThostFtdcInvestorPortfMarginModelField_MarginModelID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorPortfMarginModelField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorPortfMarginModelField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorPortfMarginModelField")]
+  public static extern void delete_CThostFtdcInvestorPortfMarginModelField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorPortfSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorPortfSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorPortfSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorPortfSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorPortfSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorPortfSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_HedgeFlag_set")]
+  public static extern void CThostFtdcInvestorPortfSettingField_HedgeFlag_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_HedgeFlag_get")]
+  public static extern char CThostFtdcInvestorPortfSettingField_HedgeFlag_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_UsePortf_set")]
+  public static extern void CThostFtdcInvestorPortfSettingField_UsePortf_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorPortfSettingField_UsePortf_get")]
+  public static extern int CThostFtdcInvestorPortfSettingField_UsePortf_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorPortfSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorPortfSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorPortfSettingField")]
+  public static extern void delete_CThostFtdcInvestorPortfSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcQryInvestorPortfSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcQryInvestorPortfSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorPortfSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorPortfSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorPortfSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorPortfSettingField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorPortfSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorPortfSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorPortfSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorPortfSettingField")]
+  public static extern void delete_CThostFtdcQryInvestorPortfSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_BrokerID_set")]
+  public static extern void CThostFtdcUserPasswordUpdateFromSecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_BrokerID_get")]
+  public static extern string CThostFtdcUserPasswordUpdateFromSecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_UserID_set")]
+  public static extern void CThostFtdcUserPasswordUpdateFromSecField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_UserID_get")]
+  public static extern string CThostFtdcUserPasswordUpdateFromSecField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_OldPassword_set")]
+  public static extern void CThostFtdcUserPasswordUpdateFromSecField_OldPassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_OldPassword_get")]
+  public static extern string CThostFtdcUserPasswordUpdateFromSecField_OldPassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_NewPassword_set")]
+  public static extern void CThostFtdcUserPasswordUpdateFromSecField_NewPassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_NewPassword_get")]
+  public static extern string CThostFtdcUserPasswordUpdateFromSecField_NewPassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_FromSec_set")]
+  public static extern void CThostFtdcUserPasswordUpdateFromSecField_FromSec_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcUserPasswordUpdateFromSecField_FromSec_get")]
+  public static extern int CThostFtdcUserPasswordUpdateFromSecField_FromSec_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcUserPasswordUpdateFromSecField")]
+  public static extern global::System.IntPtr new_CThostFtdcUserPasswordUpdateFromSecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcUserPasswordUpdateFromSecField")]
+  public static extern void delete_CThostFtdcUserPasswordUpdateFromSecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_BrokerID_set")]
+  public static extern void CThostFtdcSettlementInfoConfirmFromSecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_BrokerID_get")]
+  public static extern string CThostFtdcSettlementInfoConfirmFromSecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_InvestorID_set")]
+  public static extern void CThostFtdcSettlementInfoConfirmFromSecField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_InvestorID_get")]
+  public static extern string CThostFtdcSettlementInfoConfirmFromSecField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_ConfirmDate_set")]
+  public static extern void CThostFtdcSettlementInfoConfirmFromSecField_ConfirmDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_ConfirmDate_get")]
+  public static extern string CThostFtdcSettlementInfoConfirmFromSecField_ConfirmDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_ConfirmTime_set")]
+  public static extern void CThostFtdcSettlementInfoConfirmFromSecField_ConfirmTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_ConfirmTime_get")]
+  public static extern string CThostFtdcSettlementInfoConfirmFromSecField_ConfirmTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_FromSec_set")]
+  public static extern void CThostFtdcSettlementInfoConfirmFromSecField_FromSec_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcSettlementInfoConfirmFromSecField_FromSec_get")]
+  public static extern int CThostFtdcSettlementInfoConfirmFromSecField_FromSec_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcSettlementInfoConfirmFromSecField")]
+  public static extern global::System.IntPtr new_CThostFtdcSettlementInfoConfirmFromSecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcSettlementInfoConfirmFromSecField")]
+  public static extern void delete_CThostFtdcSettlementInfoConfirmFromSecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_BrokerID_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_BrokerID_get")]
+  public static extern string CThostFtdcTradingAccountPasswordUpdateFromSecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_AccountID_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_AccountID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_AccountID_get")]
+  public static extern string CThostFtdcTradingAccountPasswordUpdateFromSecField_AccountID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_OldPassword_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_OldPassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_OldPassword_get")]
+  public static extern string CThostFtdcTradingAccountPasswordUpdateFromSecField_OldPassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_NewPassword_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_NewPassword_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_NewPassword_get")]
+  public static extern string CThostFtdcTradingAccountPasswordUpdateFromSecField_NewPassword_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_CurrencyID_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_CurrencyID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_CurrencyID_get")]
+  public static extern string CThostFtdcTradingAccountPasswordUpdateFromSecField_CurrencyID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_FromSec_set")]
+  public static extern void CThostFtdcTradingAccountPasswordUpdateFromSecField_FromSec_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcTradingAccountPasswordUpdateFromSecField_FromSec_get")]
+  public static extern int CThostFtdcTradingAccountPasswordUpdateFromSecField_FromSec_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcTradingAccountPasswordUpdateFromSecField")]
+  public static extern global::System.IntPtr new_CThostFtdcTradingAccountPasswordUpdateFromSecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcTradingAccountPasswordUpdateFromSecField")]
+  public static extern void delete_CThostFtdcTradingAccountPasswordUpdateFromSecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_BrokerID_set")]
+  public static extern void CThostFtdcRiskForbiddenRightField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_BrokerID_get")]
+  public static extern string CThostFtdcRiskForbiddenRightField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_InvestorID_set")]
+  public static extern void CThostFtdcRiskForbiddenRightField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_InvestorID_get")]
+  public static extern string CThostFtdcRiskForbiddenRightField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_InstrumentID_set")]
+  public static extern void CThostFtdcRiskForbiddenRightField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_InstrumentID_get")]
+  public static extern string CThostFtdcRiskForbiddenRightField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_UserID_set")]
+  public static extern void CThostFtdcRiskForbiddenRightField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcRiskForbiddenRightField_UserID_get")]
+  public static extern string CThostFtdcRiskForbiddenRightField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcRiskForbiddenRightField")]
+  public static extern global::System.IntPtr new_CThostFtdcRiskForbiddenRightField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcRiskForbiddenRightField")]
+  public static extern void delete_CThostFtdcRiskForbiddenRightField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ExchangeID_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ExchangeID_get")]
+  public static extern string CThostFtdcInvestorInfoCommRecField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_BrokerID_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_BrokerID_get")]
+  public static extern string CThostFtdcInvestorInfoCommRecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InvestorID_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InvestorID_get")]
+  public static extern string CThostFtdcInvestorInfoCommRecField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InstrumentID_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InstrumentID_get")]
+  public static extern string CThostFtdcInvestorInfoCommRecField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_OrderCount_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_OrderCount_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_OrderCount_get")]
+  public static extern int CThostFtdcInvestorInfoCommRecField_OrderCount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_OrderActionCount_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_OrderActionCount_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_OrderActionCount_get")]
+  public static extern int CThostFtdcInvestorInfoCommRecField_OrderActionCount_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ForQuoteCnt_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_ForQuoteCnt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ForQuoteCnt_get")]
+  public static extern int CThostFtdcInvestorInfoCommRecField_ForQuoteCnt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InfoComm_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_InfoComm_set(global::System.Runtime.InteropServices.HandleRef jarg1, double jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InfoComm_get")]
+  public static extern double CThostFtdcInvestorInfoCommRecField_InfoComm_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_IsOptSeries_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_IsOptSeries_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_IsOptSeries_get")]
+  public static extern int CThostFtdcInvestorInfoCommRecField_IsOptSeries_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ProductID_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_ProductID_get")]
+  public static extern string CThostFtdcInvestorInfoCommRecField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InfoCnt_set")]
+  public static extern void CThostFtdcInvestorInfoCommRecField_InfoCnt_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInvestorInfoCommRecField_InfoCnt_get")]
+  public static extern int CThostFtdcInvestorInfoCommRecField_InfoCnt_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInvestorInfoCommRecField")]
+  public static extern global::System.IntPtr new_CThostFtdcInvestorInfoCommRecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInvestorInfoCommRecField")]
+  public static extern void delete_CThostFtdcInvestorInfoCommRecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_InvestorID_set")]
+  public static extern void CThostFtdcQryInvestorInfoCommRecField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_InvestorID_get")]
+  public static extern string CThostFtdcQryInvestorInfoCommRecField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_InstrumentID_set")]
+  public static extern void CThostFtdcQryInvestorInfoCommRecField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_InstrumentID_get")]
+  public static extern string CThostFtdcQryInvestorInfoCommRecField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_BrokerID_set")]
+  public static extern void CThostFtdcQryInvestorInfoCommRecField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryInvestorInfoCommRecField_BrokerID_get")]
+  public static extern string CThostFtdcQryInvestorInfoCommRecField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryInvestorInfoCommRecField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryInvestorInfoCommRecField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryInvestorInfoCommRecField")]
+  public static extern void delete_CThostFtdcQryInvestorInfoCommRecField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_CombInstrumentID_set")]
+  public static extern void CThostFtdcCombLegField_CombInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_CombInstrumentID_get")]
+  public static extern string CThostFtdcCombLegField_CombInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegID_set")]
+  public static extern void CThostFtdcCombLegField_LegID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegID_get")]
+  public static extern int CThostFtdcCombLegField_LegID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegInstrumentID_set")]
+  public static extern void CThostFtdcCombLegField_LegInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegInstrumentID_get")]
+  public static extern string CThostFtdcCombLegField_LegInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_Direction_set")]
+  public static extern void CThostFtdcCombLegField_Direction_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_Direction_get")]
+  public static extern char CThostFtdcCombLegField_Direction_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegMultiple_set")]
+  public static extern void CThostFtdcCombLegField_LegMultiple_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_LegMultiple_get")]
+  public static extern int CThostFtdcCombLegField_LegMultiple_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_ImplyLevel_set")]
+  public static extern void CThostFtdcCombLegField_ImplyLevel_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCombLegField_ImplyLevel_get")]
+  public static extern int CThostFtdcCombLegField_ImplyLevel_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcCombLegField")]
+  public static extern global::System.IntPtr new_CThostFtdcCombLegField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcCombLegField")]
+  public static extern void delete_CThostFtdcCombLegField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryCombLegField_LegInstrumentID_set")]
+  public static extern void CThostFtdcQryCombLegField_LegInstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryCombLegField_LegInstrumentID_get")]
+  public static extern string CThostFtdcQryCombLegField_LegInstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryCombLegField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryCombLegField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryCombLegField")]
+  public static extern void delete_CThostFtdcQryCombLegField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_BrokerID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_BrokerID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_InvestorID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_InvestorID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_InstrumentID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_InstrumentID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_UnderlyingInstrID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_UnderlyingInstrID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_UnderlyingInstrID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_UnderlyingInstrID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_ProductID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_ProductID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_OffsetType_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_OffsetType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_OffsetType_get")]
+  public static extern char CThostFtdcInputOffsetSettingField_OffsetType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_Volume_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_Volume_get")]
+  public static extern int CThostFtdcInputOffsetSettingField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_IsOffset_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_IsOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_IsOffset_get")]
+  public static extern int CThostFtdcInputOffsetSettingField_IsOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_RequestID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_RequestID_get")]
+  public static extern int CThostFtdcInputOffsetSettingField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_UserID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_UserID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_IPAddress_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_IPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_IPAddress_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_MacAddress_set")]
+  public static extern void CThostFtdcInputOffsetSettingField_MacAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcInputOffsetSettingField_MacAddress_get")]
+  public static extern string CThostFtdcInputOffsetSettingField_MacAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcInputOffsetSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcInputOffsetSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcInputOffsetSettingField")]
+  public static extern void delete_CThostFtdcInputOffsetSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_BrokerID_set")]
+  public static extern void CThostFtdcOffsetSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_BrokerID_get")]
+  public static extern string CThostFtdcOffsetSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InvestorID_set")]
+  public static extern void CThostFtdcOffsetSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InvestorID_get")]
+  public static extern string CThostFtdcOffsetSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InstrumentID_set")]
+  public static extern void CThostFtdcOffsetSettingField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InstrumentID_get")]
+  public static extern string CThostFtdcOffsetSettingField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_UnderlyingInstrID_set")]
+  public static extern void CThostFtdcOffsetSettingField_UnderlyingInstrID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_UnderlyingInstrID_get")]
+  public static extern string CThostFtdcOffsetSettingField_UnderlyingInstrID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ProductID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ProductID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_OffsetType_set")]
+  public static extern void CThostFtdcOffsetSettingField_OffsetType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_OffsetType_get")]
+  public static extern char CThostFtdcOffsetSettingField_OffsetType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_Volume_set")]
+  public static extern void CThostFtdcOffsetSettingField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_Volume_get")]
+  public static extern int CThostFtdcOffsetSettingField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_IsOffset_set")]
+  public static extern void CThostFtdcOffsetSettingField_IsOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_IsOffset_get")]
+  public static extern int CThostFtdcOffsetSettingField_IsOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_RequestID_set")]
+  public static extern void CThostFtdcOffsetSettingField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_RequestID_get")]
+  public static extern int CThostFtdcOffsetSettingField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_UserID_set")]
+  public static extern void CThostFtdcOffsetSettingField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_UserID_get")]
+  public static extern string CThostFtdcOffsetSettingField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_IPAddress_set")]
+  public static extern void CThostFtdcOffsetSettingField_IPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_IPAddress_get")]
+  public static extern string CThostFtdcOffsetSettingField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_MacAddress_set")]
+  public static extern void CThostFtdcOffsetSettingField_MacAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_MacAddress_get")]
+  public static extern string CThostFtdcOffsetSettingField_MacAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeInstID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeInstID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeSerialNo_set")]
+  public static extern void CThostFtdcOffsetSettingField_ExchangeSerialNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeSerialNo_get")]
+  public static extern string CThostFtdcOffsetSettingField_ExchangeSerialNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeProductID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ExchangeProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExchangeProductID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ExchangeProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ParticipantID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ParticipantID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ParticipantID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ParticipantID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ClientID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ClientID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ClientID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ClientID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_TraderID_set")]
+  public static extern void CThostFtdcOffsetSettingField_TraderID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_TraderID_get")]
+  public static extern string CThostFtdcOffsetSettingField_TraderID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InstallID_set")]
+  public static extern void CThostFtdcOffsetSettingField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InstallID_get")]
+  public static extern int CThostFtdcOffsetSettingField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_OrderSubmitStatus_set")]
+  public static extern void CThostFtdcOffsetSettingField_OrderSubmitStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_OrderSubmitStatus_get")]
+  public static extern char CThostFtdcOffsetSettingField_OrderSubmitStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_TradingDay_set")]
+  public static extern void CThostFtdcOffsetSettingField_TradingDay_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_TradingDay_get")]
+  public static extern string CThostFtdcOffsetSettingField_TradingDay_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SettlementID_set")]
+  public static extern void CThostFtdcOffsetSettingField_SettlementID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SettlementID_get")]
+  public static extern int CThostFtdcOffsetSettingField_SettlementID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InsertDate_set")]
+  public static extern void CThostFtdcOffsetSettingField_InsertDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InsertDate_get")]
+  public static extern string CThostFtdcOffsetSettingField_InsertDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InsertTime_set")]
+  public static extern void CThostFtdcOffsetSettingField_InsertTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_InsertTime_get")]
+  public static extern string CThostFtdcOffsetSettingField_InsertTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_CancelTime_set")]
+  public static extern void CThostFtdcOffsetSettingField_CancelTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_CancelTime_get")]
+  public static extern string CThostFtdcOffsetSettingField_CancelTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExecResult_set")]
+  public static extern void CThostFtdcOffsetSettingField_ExecResult_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ExecResult_get")]
+  public static extern char CThostFtdcOffsetSettingField_ExecResult_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SequenceNo_set")]
+  public static extern void CThostFtdcOffsetSettingField_SequenceNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SequenceNo_get")]
+  public static extern int CThostFtdcOffsetSettingField_SequenceNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_FrontID_set")]
+  public static extern void CThostFtdcOffsetSettingField_FrontID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_FrontID_get")]
+  public static extern int CThostFtdcOffsetSettingField_FrontID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SessionID_set")]
+  public static extern void CThostFtdcOffsetSettingField_SessionID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_SessionID_get")]
+  public static extern int CThostFtdcOffsetSettingField_SessionID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_StatusMsg_set")]
+  public static extern void CThostFtdcOffsetSettingField_StatusMsg_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_StatusMsg_get")]
+  public static extern string CThostFtdcOffsetSettingField_StatusMsg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ActiveUserID_set")]
+  public static extern void CThostFtdcOffsetSettingField_ActiveUserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_ActiveUserID_get")]
+  public static extern string CThostFtdcOffsetSettingField_ActiveUserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_BrokerOffsetSettingSeq_set")]
+  public static extern void CThostFtdcOffsetSettingField_BrokerOffsetSettingSeq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcOffsetSettingField_BrokerOffsetSettingSeq_get")]
+  public static extern int CThostFtdcOffsetSettingField_BrokerOffsetSettingSeq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcOffsetSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcOffsetSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcOffsetSettingField")]
+  public static extern void delete_CThostFtdcOffsetSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_BrokerID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_BrokerID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InvestorID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InvestorID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InstrumentID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_InstrumentID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InstrumentID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_InstrumentID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_UnderlyingInstrID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_UnderlyingInstrID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_UnderlyingInstrID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_UnderlyingInstrID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ProductID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ProductID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_OffsetType_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_OffsetType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_OffsetType_get")]
+  public static extern char CThostFtdcCancelOffsetSettingField_OffsetType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_Volume_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_Volume_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_Volume_get")]
+  public static extern int CThostFtdcCancelOffsetSettingField_Volume_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_IsOffset_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_IsOffset_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_IsOffset_get")]
+  public static extern int CThostFtdcCancelOffsetSettingField_IsOffset_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_RequestID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_RequestID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_RequestID_get")]
+  public static extern int CThostFtdcCancelOffsetSettingField_RequestID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_UserID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_UserID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_UserID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_UserID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ExchangeID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ExchangeID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_IPAddress_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_IPAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_IPAddress_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_IPAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_MacAddress_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_MacAddress_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_MacAddress_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_MacAddress_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeInstID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ExchangeInstID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeInstID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ExchangeInstID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeSerialNo_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ExchangeSerialNo_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeSerialNo_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ExchangeSerialNo_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeProductID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ExchangeProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ExchangeProductID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ExchangeProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_TraderID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_TraderID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_TraderID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_TraderID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InstallID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_InstallID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_InstallID_get")]
+  public static extern int CThostFtdcCancelOffsetSettingField_InstallID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ParticipantID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ParticipantID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ParticipantID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ParticipantID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ClientID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ClientID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ClientID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ClientID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_OrderActionStatus_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_OrderActionStatus_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_OrderActionStatus_get")]
+  public static extern char CThostFtdcCancelOffsetSettingField_OrderActionStatus_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_StatusMsg_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_StatusMsg_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_StatusMsg_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_StatusMsg_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionLocalID_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ActionLocalID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionLocalID_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ActionLocalID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionDate_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ActionDate_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionDate_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ActionDate_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionTime_set")]
+  public static extern void CThostFtdcCancelOffsetSettingField_ActionTime_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcCancelOffsetSettingField_ActionTime_get")]
+  public static extern string CThostFtdcCancelOffsetSettingField_ActionTime_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcCancelOffsetSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcCancelOffsetSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcCancelOffsetSettingField")]
+  public static extern void delete_CThostFtdcCancelOffsetSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_BrokerID_set")]
+  public static extern void CThostFtdcQryOffsetSettingField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_BrokerID_get")]
+  public static extern string CThostFtdcQryOffsetSettingField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_InvestorID_set")]
+  public static extern void CThostFtdcQryOffsetSettingField_InvestorID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_InvestorID_get")]
+  public static extern string CThostFtdcQryOffsetSettingField_InvestorID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_ProductID_set")]
+  public static extern void CThostFtdcQryOffsetSettingField_ProductID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_ProductID_get")]
+  public static extern string CThostFtdcQryOffsetSettingField_ProductID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_OffsetType_set")]
+  public static extern void CThostFtdcQryOffsetSettingField_OffsetType_set(global::System.Runtime.InteropServices.HandleRef jarg1, char jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryOffsetSettingField_OffsetType_get")]
+  public static extern char CThostFtdcQryOffsetSettingField_OffsetType_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryOffsetSettingField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryOffsetSettingField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryOffsetSettingField")]
+  public static extern void delete_CThostFtdcQryOffsetSettingField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_BrokerID_set")]
+  public static extern void CThostFtdcAddrAppIDRelationField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_BrokerID_get")]
+  public static extern string CThostFtdcAddrAppIDRelationField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_Address_set")]
+  public static extern void CThostFtdcAddrAppIDRelationField_Address_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_Address_get")]
+  public static extern string CThostFtdcAddrAppIDRelationField_Address_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_DRIdentityID_set")]
+  public static extern void CThostFtdcAddrAppIDRelationField_DRIdentityID_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_DRIdentityID_get")]
+  public static extern int CThostFtdcAddrAppIDRelationField_DRIdentityID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_AppID_set")]
+  public static extern void CThostFtdcAddrAppIDRelationField_AppID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcAddrAppIDRelationField_AppID_get")]
+  public static extern string CThostFtdcAddrAppIDRelationField_AppID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcAddrAppIDRelationField")]
+  public static extern global::System.IntPtr new_CThostFtdcAddrAppIDRelationField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcAddrAppIDRelationField")]
+  public static extern void delete_CThostFtdcAddrAppIDRelationField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryAddrAppIDRelationField_BrokerID_set")]
+  public static extern void CThostFtdcQryAddrAppIDRelationField_BrokerID_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcQryAddrAppIDRelationField_BrokerID_get")]
+  public static extern string CThostFtdcQryAddrAppIDRelationField_BrokerID_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcQryAddrAppIDRelationField")]
+  public static extern global::System.IntPtr new_CThostFtdcQryAddrAppIDRelationField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcQryAddrAppIDRelationField")]
+  public static extern void delete_CThostFtdcQryAddrAppIDRelationField(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_FrontAddr_set")]
+  public static extern void CThostFtdcFrontInfoField_FrontAddr_set(global::System.Runtime.InteropServices.HandleRef jarg1, string jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_FrontAddr_get")]
+  public static extern string CThostFtdcFrontInfoField_FrontAddr_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_QryFreq_set")]
+  public static extern void CThostFtdcFrontInfoField_QryFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_QryFreq_get")]
+  public static extern int CThostFtdcFrontInfoField_QryFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_FTDPkgFreq_set")]
+  public static extern void CThostFtdcFrontInfoField_FTDPkgFreq_set(global::System.Runtime.InteropServices.HandleRef jarg1, int jarg2);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcFrontInfoField_FTDPkgFreq_get")]
+  public static extern int CThostFtdcFrontInfoField_FTDPkgFreq_get(global::System.Runtime.InteropServices.HandleRef jarg1);
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_new_CThostFtdcFrontInfoField")]
+  public static extern global::System.IntPtr new_CThostFtdcFrontInfoField();
+
+  [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_delete_CThostFtdcFrontInfoField")]
+  public static extern void delete_CThostFtdcFrontInfoField(global::System.Runtime.InteropServices.HandleRef jarg1);
 
   [global::System.Runtime.InteropServices.DllImport("ctpthostmdapi", EntryPoint="CSharp_CThostFtdcMdSpi_OnFrontConnected")]
   public static extern void CThostFtdcMdSpi_OnFrontConnected(global::System.Runtime.InteropServices.HandleRef jarg1);

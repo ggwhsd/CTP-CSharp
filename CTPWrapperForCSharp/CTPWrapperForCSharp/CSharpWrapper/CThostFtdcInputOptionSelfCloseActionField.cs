@@ -149,12 +149,12 @@ public class CThostFtdcInputOptionSelfCloseActionField : global::System.IDisposa
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -169,12 +169,12 @@ public class CThostFtdcInputOptionSelfCloseActionField : global::System.IDisposa
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -185,6 +185,26 @@ public class CThostFtdcInputOptionSelfCloseActionField : global::System.IDisposa
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseActionField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

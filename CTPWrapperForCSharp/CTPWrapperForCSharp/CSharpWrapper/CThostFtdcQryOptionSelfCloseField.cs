@@ -59,12 +59,12 @@ public class CThostFtdcQryOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -105,6 +105,16 @@ public class CThostFtdcQryOptionSelfCloseField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InsertTimeEnd_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryOptionSelfCloseField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }

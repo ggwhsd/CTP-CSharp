@@ -149,12 +149,12 @@ public class CThostFtdcErrExecOrderActionField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -169,12 +169,12 @@ public class CThostFtdcErrExecOrderActionField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -205,6 +205,26 @@ public class CThostFtdcErrExecOrderActionField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_ErrorMsg_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrExecOrderActionField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

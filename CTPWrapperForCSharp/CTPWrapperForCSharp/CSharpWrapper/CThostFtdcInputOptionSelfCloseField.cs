@@ -59,12 +59,12 @@ public class CThostFtdcInputOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -189,12 +189,12 @@ public class CThostFtdcInputOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -205,6 +205,26 @@ public class CThostFtdcInputOptionSelfCloseField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInputOptionSelfCloseField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

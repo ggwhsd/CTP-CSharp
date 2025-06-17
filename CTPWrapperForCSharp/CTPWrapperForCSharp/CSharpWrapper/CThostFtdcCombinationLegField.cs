@@ -39,12 +39,12 @@ public class CThostFtdcCombinationLegField : global::System.IDisposable {
     }
   }
 
-  public string CombInstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_CombInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -59,12 +59,12 @@ public class CThostFtdcCombinationLegField : global::System.IDisposable {
     } 
   }
 
-  public string LegInstrumentID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_LegInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_LegInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -95,6 +95,26 @@ public class CThostFtdcCombinationLegField : global::System.IDisposable {
     } 
     get {
       int ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_ImplyLevel_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string CombInstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_CombInstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string LegInstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_LegInstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcCombinationLegField_LegInstrumentID_get(swigCPtr);
       return ret;
     } 
   }

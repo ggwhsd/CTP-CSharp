@@ -259,12 +259,12 @@ public class CThostFtdcQuoteActionField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -289,12 +289,12 @@ public class CThostFtdcQuoteActionField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -305,6 +305,46 @@ public class CThostFtdcQuoteActionField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string OrderMemo {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_OrderMemo_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_OrderMemo_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int SessionReqSeq {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_SessionReqSeq_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQuoteActionField_SessionReqSeq_get(swigCPtr);
       return ret;
     } 
   }

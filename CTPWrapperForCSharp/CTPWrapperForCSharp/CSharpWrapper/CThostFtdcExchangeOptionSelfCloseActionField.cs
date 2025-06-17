@@ -189,12 +189,12 @@ public class CThostFtdcExchangeOptionSelfCloseActionField : global::System.IDisp
     } 
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -209,12 +209,12 @@ public class CThostFtdcExchangeOptionSelfCloseActionField : global::System.IDisp
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -225,6 +225,26 @@ public class CThostFtdcExchangeOptionSelfCloseActionField : global::System.IDisp
     } 
     get {
       char ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_OptSelfCloseFlag_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_IPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcExchangeOptionSelfCloseActionField_ExchangeInstID_get(swigCPtr);
       return ret;
     } 
   }

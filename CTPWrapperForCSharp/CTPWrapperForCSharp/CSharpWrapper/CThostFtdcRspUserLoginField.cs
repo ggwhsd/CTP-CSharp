@@ -169,6 +169,46 @@ public class CThostFtdcRspUserLoginField : global::System.IDisposable {
     } 
   }
 
+  public string SysVersion {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_SysVersion_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_SysVersion_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string GFEXTime {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_GFEXTime_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_GFEXTime_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int LoginDRIdentityID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_LoginDRIdentityID_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_LoginDRIdentityID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int UserDRIdentityID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_UserDRIdentityID_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcRspUserLoginField_UserDRIdentityID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcRspUserLoginField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcRspUserLoginField(), true) {
   }
 

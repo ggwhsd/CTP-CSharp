@@ -569,6 +569,46 @@ public class CThostFtdcQuoteField : global::System.IDisposable {
     } 
   }
 
+  public string ReplaceSysID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQuoteField_ReplaceSysID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQuoteField_ReplaceSysID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char TimeCondition {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQuoteField_TimeCondition_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQuoteField_TimeCondition_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string OrderMemo {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQuoteField_OrderMemo_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcQuoteField_OrderMemo_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int SessionReqSeq {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQuoteField_SessionReqSeq_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcQuoteField_SessionReqSeq_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcQuoteField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQuoteField(), true) {
   }
 

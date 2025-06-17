@@ -229,6 +229,26 @@ public class CThostFtdcProductField : global::System.IDisposable {
     } 
   }
 
+  public char OpenLimitControlLevel {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_OpenLimitControlLevel_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_OpenLimitControlLevel_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char OrderFreqControlLevel {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcProductField_OrderFreqControlLevel_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcProductField_OrderFreqControlLevel_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcProductField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcProductField(), true) {
   }
 

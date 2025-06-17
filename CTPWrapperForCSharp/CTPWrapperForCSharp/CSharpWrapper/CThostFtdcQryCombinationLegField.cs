@@ -39,12 +39,12 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
     }
   }
 
-  public string CombInstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -55,6 +55,26 @@ public class CThostFtdcQryCombinationLegField : global::System.IDisposable {
     } 
     get {
       int ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_LegID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve2 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_reserve2_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_reserve2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string CombInstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryCombinationLegField_CombInstrumentID_get(swigCPtr);
       return ret;
     } 
   }

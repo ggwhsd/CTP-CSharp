@@ -39,12 +39,12 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
     }
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -69,22 +69,22 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
 
-  public string ProductID {
+  public string reserve3 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve3_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve3_get(swigCPtr);
       return ret;
     } 
   }
@@ -299,12 +299,12 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
     } 
   }
 
-  public string UnderlyingInstrID {
+  public string reserve4 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve4_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_reserve4_get(swigCPtr);
       return ret;
     } 
   }
@@ -345,6 +345,46 @@ public class CThostFtdcInstrumentField : global::System.IDisposable {
     } 
     get {
       char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_CombinationType_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ProductID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_ProductID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string UnderlyingInstrID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentField_UnderlyingInstrID_get(swigCPtr);
       return ret;
     } 
   }

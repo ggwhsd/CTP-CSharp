@@ -99,6 +99,36 @@ public class CThostFtdcSyncDepositField : global::System.IDisposable {
     } 
   }
 
+  public int IsFromSopt {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_IsFromSopt_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_IsFromSopt_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string TradingPassword {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_TradingPassword_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_TradingPassword_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int IsSecAgentTranfer {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_IsSecAgentTranfer_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcSyncDepositField_IsSecAgentTranfer_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcSyncDepositField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcSyncDepositField(), true) {
   }
 

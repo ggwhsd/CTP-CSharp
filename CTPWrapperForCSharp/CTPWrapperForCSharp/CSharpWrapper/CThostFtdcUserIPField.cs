@@ -59,6 +59,36 @@ public class CThostFtdcUserIPField : global::System.IDisposable {
     } 
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string reserve2 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_reserve2_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_reserve2_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string MacAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_MacAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string IPAddress {
     set {
       ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_IPAddress_set(swigCPtr, value);
@@ -75,16 +105,6 @@ public class CThostFtdcUserIPField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_IPMask_get(swigCPtr);
-      return ret;
-    } 
-  }
-
-  public string MacAddress {
-    set {
-      ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_MacAddress_set(swigCPtr, value);
-    } 
-    get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserIPField_MacAddress_get(swigCPtr);
       return ret;
     } 
   }

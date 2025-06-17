@@ -39,12 +39,12 @@ public class CThostFtdcQryDepthMarketDataField : global::System.IDisposable {
     }
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -55,6 +55,26 @@ public class CThostFtdcQryDepthMarketDataField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_ExchangeID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char ProductClass {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_ProductClass_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcQryDepthMarketDataField_ProductClass_get(swigCPtr);
       return ret;
     } 
   }

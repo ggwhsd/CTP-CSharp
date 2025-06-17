@@ -399,6 +399,16 @@ public class CThostFtdcExchangeQuoteField : global::System.IDisposable {
     } 
   }
 
+  public char TimeCondition {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcExchangeQuoteField_TimeCondition_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcExchangeQuoteField_TimeCondition_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcExchangeQuoteField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcExchangeQuoteField(), true) {
   }
 

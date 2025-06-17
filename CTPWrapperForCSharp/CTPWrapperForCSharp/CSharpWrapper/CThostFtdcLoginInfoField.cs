@@ -99,12 +99,12 @@ public class CThostFtdcLoginInfoField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -265,6 +265,16 @@ public class CThostFtdcLoginInfoField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_Password_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcLoginInfoField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

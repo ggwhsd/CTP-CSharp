@@ -39,6 +39,16 @@ public class CThostFtdcQryIPListField : global::System.IDisposable {
     }
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryIPListField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryIPListField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string IPAddress {
     set {
       ctpthosttradeapiPINVOKE.CThostFtdcQryIPListField_IPAddress_set(swigCPtr, value);

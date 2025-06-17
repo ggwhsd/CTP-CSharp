@@ -59,12 +59,12 @@ public class CThostFtdcErrorConditionalOrderField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -289,12 +289,12 @@ public class CThostFtdcErrorConditionalOrderField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -669,12 +669,12 @@ public class CThostFtdcErrorConditionalOrderField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve3 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve3_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_reserve3_get(swigCPtr);
       return ret;
     } 
   }
@@ -685,6 +685,36 @@ public class CThostFtdcErrorConditionalOrderField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcErrorConditionalOrderField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

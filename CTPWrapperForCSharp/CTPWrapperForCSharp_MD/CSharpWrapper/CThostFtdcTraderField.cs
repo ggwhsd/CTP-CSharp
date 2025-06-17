@@ -99,6 +99,36 @@ public class CThostFtdcTraderField : global::System.IDisposable {
     } 
   }
 
+  public char OrderCancelAlg {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcTraderField_OrderCancelAlg_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcTraderField_OrderCancelAlg_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int TradeInstallCount {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcTraderField_TradeInstallCount_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcTraderField_TradeInstallCount_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int MDInstallCount {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcTraderField_MDInstallCount_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcTraderField_MDInstallCount_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcTraderField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcTraderField(), true) {
   }
 

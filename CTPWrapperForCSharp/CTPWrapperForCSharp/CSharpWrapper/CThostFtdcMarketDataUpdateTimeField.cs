@@ -39,12 +39,12 @@ public class CThostFtdcMarketDataUpdateTimeField : global::System.IDisposable {
     }
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -75,6 +75,16 @@ public class CThostFtdcMarketDataUpdateTimeField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_ActionDay_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcMarketDataUpdateTimeField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }

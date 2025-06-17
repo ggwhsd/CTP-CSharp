@@ -139,6 +139,26 @@ public class CThostFtdcBrokerUserEventField : global::System.IDisposable {
     } 
   }
 
+  public int DRIdentityID {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_DRIdentityID_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_DRIdentityID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string TradingDay {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_TradingDay_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcBrokerUserEventField_TradingDay_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcBrokerUserEventField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcBrokerUserEventField(), true) {
   }
 

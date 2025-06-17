@@ -59,6 +59,16 @@ public class CThostFtdcQryStrikeOffsetField : global::System.IDisposable {
     } 
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryStrikeOffsetField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryStrikeOffsetField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string InstrumentID {
     set {
       ctpthosttradeapiPINVOKE.CThostFtdcQryStrikeOffsetField_InstrumentID_set(swigCPtr, value);

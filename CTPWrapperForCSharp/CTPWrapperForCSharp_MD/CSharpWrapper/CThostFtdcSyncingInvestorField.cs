@@ -169,6 +169,26 @@ public class CThostFtdcSyncingInvestorField : global::System.IDisposable {
     } 
   }
 
+  public char IsOrderFreq {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsOrderFreq_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsOrderFreq_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public char IsOpenVolLimit {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsOpenVolLimit_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcSyncingInvestorField_IsOpenVolLimit_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcSyncingInvestorField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcSyncingInvestorField(), true) {
   }
 

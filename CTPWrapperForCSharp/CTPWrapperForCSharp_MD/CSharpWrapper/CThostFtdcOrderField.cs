@@ -699,6 +699,26 @@ public class CThostFtdcOrderField : global::System.IDisposable {
     } 
   }
 
+  public string OrderMemo {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcOrderField_OrderMemo_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcOrderField_OrderMemo_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public int SessionReqSeq {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcOrderField_SessionReqSeq_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthostmdapiPINVOKE.CThostFtdcOrderField_SessionReqSeq_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcOrderField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcOrderField(), true) {
   }
 

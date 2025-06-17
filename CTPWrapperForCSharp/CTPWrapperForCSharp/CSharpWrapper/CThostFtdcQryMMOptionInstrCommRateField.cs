@@ -59,6 +59,16 @@ public class CThostFtdcQryMMOptionInstrCommRateField : global::System.IDisposabl
     } 
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string InstrumentID {
     set {
       ctpthosttradeapiPINVOKE.CThostFtdcQryMMOptionInstrCommRateField_InstrumentID_set(swigCPtr, value);

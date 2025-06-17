@@ -2,7 +2,7 @@
 
 所有接口名称都和C++的CTP api版本文档描述中的一致。
 
-2025-06-16 更新了CTP 6.7.9_P1_20250319的API版本。
+2025-06-16 更新了CTP 6.7.9_P1_20250319的API版本，CTP-CSharp\Release 目录下。
 
 2022-5-10  新增了示例项目Example目录下，在代码中填入ctp的登录信息，仿真就可以登录行情了。
 
@@ -15,15 +15,11 @@
 
 
 
-
-
-
-
-
 Release中的文件并非由最终由工程编译生成，这些工程只是给个转换的过程，用于学习，并不是一直更新的。
+
 Release文件夹中有Release版本的CTP接口。
 
-
+对于非开发环境部署，需要安装微软的运行库，参考网站：https://learn.microsoft.com/zh-cn/cpp/windows/latest-supported-vc-redist?view=msvc-170  。
 
 # 项目构建描述
 
@@ -32,21 +28,18 @@ Release文件夹中有Release版本的CTP接口。
 在CTPWrapperForCSharp_MD和CTPWrapperForCSharp目录下，执行以下命令，转换c++为封装的c#代码文件，这个是第一步。
 ```swig.exe -c++ -csharp CTP2CSharp.idl```
 
-* CTPWrapperForCSharp_MD负责封装行情DLL。
+* CTPWrapperForCSharp_MD负责封装行情DLL。将CTPWrapperForCSharp.dll改名为ctpthostmdapi.dll。
 
-* CTPWrapperForCSharp负责封装交易DLL。
+* CTPWrapperForCSharp负责封装交易DLL。将CTPWrapperForCSharp_MD.dll改名为ctpthosttradeapi.dll。
 
-* 先建立一个C#的工程名为CSharpCTP
+* 先建立一个存放cs代码的文件名为 CSharpLibraryCS。
 
-* 将debug目录下的Dll文件都拷贝到CSharpCTP的工程目录下。
+* 建立c#库工程，CTPWrapper，右键添加项，添加以上文件夹下面的所有cs文件代码。生成一个C#的CTPWrapper项目的dll文件。
 
-* 将CTPWrapperForCSharp.dll改名为ctpthosttradeapi.dll 
+* 将Release目录下的Dll文件都拷贝到 CTP-CSharp\Release 的工程目录下。一共有 ctpthostmdapi.dll、ctpthosttradeapi.dll、thostmduserapi_se.dll、thosttraderapi_se.dll、CTPWrapper.dll。
 
-* 将CTPWrapperForCSharp_MD.dll改名为ctpthosttradeapi.dll
 
-* 将thostmduserapi_se.dll和thosttraderapi_se.dll拷贝到CSharpCTP工程的debug目录下
 
-* 将CSharpLibraryCS中的所有文件拷贝到CSharpCTP的目录中，并通过VS2017添加现有项目，将这些文件添加到工程中。
 
 # 代码演示
 

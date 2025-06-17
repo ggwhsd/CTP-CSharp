@@ -59,12 +59,12 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -179,12 +179,12 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -419,12 +419,12 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
     } 
   }
 
-  public string IPAddress {
+  public string reserve3 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve3_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_reserve3_get(swigCPtr);
       return ret;
     } 
   }
@@ -435,6 +435,36 @@ public class CThostFtdcOptionSelfCloseField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_MacAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string IPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcOptionSelfCloseField_IPAddress_get(swigCPtr);
       return ret;
     } 
   }

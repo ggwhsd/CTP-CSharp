@@ -229,6 +229,16 @@ public class CThostFtdcMDTraderOfferField : global::System.IDisposable {
     } 
   }
 
+  public char OrderCancelAlg {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderCancelAlg_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthosttradeapiPINVOKE.CThostFtdcMDTraderOfferField_OrderCancelAlg_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcMDTraderOfferField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcMDTraderOfferField(), true) {
   }
 

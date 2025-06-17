@@ -129,6 +129,16 @@ public class CThostFtdcUserSystemInfoField : global::System.IDisposable {
     } 
   }
 
+  public string ClientLoginRemark {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginRemark_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthostmdapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginRemark_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcUserSystemInfoField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcUserSystemInfoField(), true) {
   }
 

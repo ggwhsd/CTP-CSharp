@@ -49,12 +49,12 @@ public class CThostFtdcInstrumentStatusField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -69,12 +69,12 @@ public class CThostFtdcInstrumentStatusField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -115,6 +115,26 @@ public class CThostFtdcInstrumentStatusField : global::System.IDisposable {
     } 
     get {
       char ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_EnterReason_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInstrumentStatusField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }

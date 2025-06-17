@@ -49,12 +49,12 @@ public class CThostFtdcDepthMarketDataField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -69,12 +69,12 @@ public class CThostFtdcDepthMarketDataField : global::System.IDisposable {
     } 
   }
 
-  public string ExchangeInstID {
+  public string reserve2 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_ExchangeInstID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_reserve2_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_ExchangeInstID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_reserve2_get(swigCPtr);
       return ret;
     } 
   }
@@ -475,6 +475,46 @@ public class CThostFtdcDepthMarketDataField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_ActionDay_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_InstrumentID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ExchangeInstID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_ExchangeInstID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_ExchangeInstID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double BandingUpperPrice {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_BandingUpperPrice_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_BandingUpperPrice_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double BandingLowerPrice {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_BandingLowerPrice_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthosttradeapiPINVOKE.CThostFtdcDepthMarketDataField_BandingLowerPrice_get(swigCPtr);
       return ret;
     } 
   }

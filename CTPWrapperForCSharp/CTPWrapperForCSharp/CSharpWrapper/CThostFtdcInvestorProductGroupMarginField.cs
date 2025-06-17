@@ -39,12 +39,12 @@ public class CThostFtdcInvestorProductGroupMarginField : global::System.IDisposa
     }
   }
 
-  public string ProductGroupID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -325,6 +325,16 @@ public class CThostFtdcInvestorProductGroupMarginField : global::System.IDisposa
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_InvestUnitID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ProductGroupID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcInvestorProductGroupMarginField_ProductGroupID_get(swigCPtr);
       return ret;
     } 
   }

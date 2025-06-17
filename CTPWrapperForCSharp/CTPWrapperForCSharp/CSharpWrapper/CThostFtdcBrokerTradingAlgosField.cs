@@ -59,12 +59,12 @@ public class CThostFtdcBrokerTradingAlgosField : global::System.IDisposable {
     } 
   }
 
-  public string InstrumentID {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -95,6 +95,16 @@ public class CThostFtdcBrokerTradingAlgosField : global::System.IDisposable {
     } 
     get {
       char ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_HandleTradingAccountAlgoID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string InstrumentID {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcBrokerTradingAlgosField_InstrumentID_get(swigCPtr);
       return ret;
     } 
   }

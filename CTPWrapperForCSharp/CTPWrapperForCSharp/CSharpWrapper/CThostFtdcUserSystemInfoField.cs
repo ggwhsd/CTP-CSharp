@@ -79,12 +79,12 @@ public class CThostFtdcUserSystemInfoField : global::System.IDisposable {
     } 
   }
 
-  public string ClientPublicIP {
+  public string reserve1 {
     set {
-      ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_set(swigCPtr, value);
+      ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_reserve1_set(swigCPtr, value);
     } 
     get {
-      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_get(swigCPtr);
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_reserve1_get(swigCPtr);
       return ret;
     } 
   }
@@ -115,6 +115,26 @@ public class CThostFtdcUserSystemInfoField : global::System.IDisposable {
     } 
     get {
       string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientAppID_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ClientPublicIP {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientPublicIP_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ClientLoginRemark {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginRemark_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcUserSystemInfoField_ClientLoginRemark_get(swigCPtr);
       return ret;
     } 
   }

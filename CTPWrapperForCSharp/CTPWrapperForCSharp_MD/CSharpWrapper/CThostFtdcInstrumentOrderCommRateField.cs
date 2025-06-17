@@ -139,6 +139,26 @@ public class CThostFtdcInstrumentOrderCommRateField : global::System.IDisposable
     } 
   }
 
+  public double OrderCommByTrade {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderCommByTrade_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public double OrderActionCommByTrade {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_set(swigCPtr, value);
+    } 
+    get {
+      double ret = ctpthostmdapiPINVOKE.CThostFtdcInstrumentOrderCommRateField_OrderActionCommByTrade_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcInstrumentOrderCommRateField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcInstrumentOrderCommRateField(), true) {
   }
 

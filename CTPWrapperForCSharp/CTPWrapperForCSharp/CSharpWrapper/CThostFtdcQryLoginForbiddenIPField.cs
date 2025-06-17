@@ -39,6 +39,16 @@ public class CThostFtdcQryLoginForbiddenIPField : global::System.IDisposable {
     }
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public string IPAddress {
     set {
       ctpthosttradeapiPINVOKE.CThostFtdcQryLoginForbiddenIPField_IPAddress_set(swigCPtr, value);

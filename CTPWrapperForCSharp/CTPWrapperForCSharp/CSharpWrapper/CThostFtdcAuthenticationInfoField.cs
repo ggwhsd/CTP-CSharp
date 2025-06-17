@@ -109,6 +109,26 @@ public class CThostFtdcAuthenticationInfoField : global::System.IDisposable {
     } 
   }
 
+  public string reserve1 {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcAuthenticationInfoField_reserve1_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcAuthenticationInfoField_reserve1_get(swigCPtr);
+      return ret;
+    } 
+  }
+
+  public string ClientIPAddress {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcAuthenticationInfoField_ClientIPAddress_set(swigCPtr, value);
+    } 
+    get {
+      string ret = ctpthosttradeapiPINVOKE.CThostFtdcAuthenticationInfoField_ClientIPAddress_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcAuthenticationInfoField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcAuthenticationInfoField(), true) {
   }
 

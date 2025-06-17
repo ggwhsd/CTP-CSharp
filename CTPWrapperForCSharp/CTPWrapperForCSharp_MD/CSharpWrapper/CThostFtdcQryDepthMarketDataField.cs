@@ -69,6 +69,16 @@ public class CThostFtdcQryDepthMarketDataField : global::System.IDisposable {
     } 
   }
 
+  public char ProductClass {
+    set {
+      ctpthostmdapiPINVOKE.CThostFtdcQryDepthMarketDataField_ProductClass_set(swigCPtr, value);
+    } 
+    get {
+      char ret = ctpthostmdapiPINVOKE.CThostFtdcQryDepthMarketDataField_ProductClass_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcQryDepthMarketDataField() : this(ctpthostmdapiPINVOKE.new_CThostFtdcQryDepthMarketDataField(), true) {
   }
 

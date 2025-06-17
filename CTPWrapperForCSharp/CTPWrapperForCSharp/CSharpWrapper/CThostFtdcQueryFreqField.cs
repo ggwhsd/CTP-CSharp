@@ -49,6 +49,16 @@ public class CThostFtdcQueryFreqField : global::System.IDisposable {
     } 
   }
 
+  public int FTDPkgFreq {
+    set {
+      ctpthosttradeapiPINVOKE.CThostFtdcQueryFreqField_FTDPkgFreq_set(swigCPtr, value);
+    } 
+    get {
+      int ret = ctpthosttradeapiPINVOKE.CThostFtdcQueryFreqField_FTDPkgFreq_get(swigCPtr);
+      return ret;
+    } 
+  }
+
   public CThostFtdcQueryFreqField() : this(ctpthosttradeapiPINVOKE.new_CThostFtdcQueryFreqField(), true) {
   }
 
