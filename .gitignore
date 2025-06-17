@@ -1,4 +1,5 @@
 *.csv
+CTPWrapperForCSharp/CSharpLibraryCS
 CTPWrapperForCSharp/CTPWrapperForCSharp/Debug
 CTPWrapperForCSharp/TPWrapperForCSharp_MD/Debug
 CTPWrapperForCSharp/CTPWrapperForCSharp/Release
